@@ -19,36 +19,18 @@ from sklearn.inspection import permutation_importance
 
 
 class FootballMatchPredictor:
-    """
-    Класс для прогнозирования результатов футбольных матчей с использованием моделей Пуассона.
-    
-    Attributes:
-        df (pd.DataFrame): DataFrame с историческими данными о матчах
-        home_model (PoissonRegressor): Модель для предсказания голов домашней команды
-        away_model (PoissonRegressor): Модель для предсказания голов гостевой команды
-        features (list): Список используемых признаков для прогнозирования
-    """
+    #Класс для прогнозирования результатов футбольных матчей с использованием моделей Пуассона.
+
     
     def __init__(self, data_path="football.csv"):
-        """
-        Инициализация прогнозиста.
-        
-        Args:
-            data_path (str): Путь к файлу с данными о матчах
-        """
+        #Инициализация прогнозиста.
+
         self.df = self._load_and_prepare_data(data_path)
         self.home_model, self.away_model, self.features = self._train_poisson_models()
     
     def _load_and_prepare_data(self, data_path):
-        """
-        Загрузка и подготовка данных.
+        #Загрузка и подготовка данных.
         
-        Args:
-            data_path (str): Путь к файлу с данными
-            
-        Returns:
-            pd.DataFrame: Подготовленный DataFrame
-        """
         df = pd.read_csv(data_path)
         
         # Создаем временный числовой столбец для результатов
@@ -87,15 +69,8 @@ class FootballMatchPredictor:
         return df
     
     def _calculate_head_to_head(self, df):
-        """
-        Расчет статистики личных встреч между командами.
+        #Расчет статистики личных встреч между командами.
         
-        Args:
-            df (pd.DataFrame): Исходный DataFrame
-            
-        Returns:
-            pd.DataFrame: DataFrame с добавленной статистикой
-        """
         df["HeadToHeadWinRate"] = 0.5  # Значение по умолчанию
         
         for index, row in df.iterrows():
@@ -111,12 +86,8 @@ class FootballMatchPredictor:
         return df
     
     def _train_poisson_models(self):
-        """
-        Обучение моделей Пуассона для голов домашней и гостевой команд.
-        
-        Returns:
-            tuple: (home_model, away_model, features)
-        """
+        #Обучение моделей Пуассона для голов домашней и гостевой команд.
+
         features = ['HomeAttack', 'AwayDefense', 'HomeLast3Goals', 'AwayLast3Conceded']
         
         # Модель для голов хозяев
@@ -130,20 +101,8 @@ class FootballMatchPredictor:
         return home_model, away_model, features
     
     def predict_match(self, home_team, away_team, n_simulations=10000):
-        """
-        Прогноз для конкретного матча.
-        
-        Args:
-            home_team (str): Название домашней команды
-            away_team (str): Название гостевой команды
-            n_simulations (int): Количество симуляций для Монте-Карло
-            
-        Returns:
-            dict: Результаты прогноза с ожидаемым счетом, вероятностями исходов и вероятными счетами
-            
-        Raises:
-            ValueError: Если одна из команд не найдена в данных
-        """
+        #Прогноз для конкретного матча.
+
         # Проверка наличия команд в данных
         if home_team not in self.df['HomeTeam'].values:
             raise ValueError(f"Домашняя команда '{home_team}' не найдена в данных")
@@ -191,17 +150,8 @@ class FootballMatchPredictor:
         }
     
     def _calculate_outcome_probabilities(self, home_exp, away_exp, max_goals=10):
-        """
-        Расчет вероятностей исходов матча.
-        
-        Args:
-            home_exp (float): Ожидаемое количество голов домашней команды
-            away_exp (float): Ожидаемое количество голов гостевой команды
-            max_goals (int): Максимальное количество голов для расчета
-            
-        Returns:
-            tuple: (вероятность победы хозяев, вероятность ничьи, вероятность победы гостей)
-        """
+        #Расчет вероятностей исходов матча.
+
         home_win_prob = np.sum([poisson.pmf(i, home_exp) * poisson.pmf(j, away_exp)
                              for i in range(0, max_goals) for j in range(0, i)])
         
@@ -213,17 +163,8 @@ class FootballMatchPredictor:
         return home_win_prob, draw_prob, away_win_prob
     
     def _simulate_scores(self, home_exp, away_exp, n=10000):
-        """
-        Моделирование вероятных счетов методом Монте-Карло.
-        
-        Args:
-            home_exp (float): Ожидаемое количество голов домашней команды
-            away_exp (float): Ожидаемое количество голов гостевой команды
-            n (int): Количество симуляций
-            
-        Returns:
-            dict: Словарь с вероятными счетами и их вероятностями
-        """
+        #Моделирование вероятных счетов методом Монте-Карло.    
+
         home_goals = poisson.rvs(home_exp, size=n)
         away_goals = poisson.rvs(away_exp, size=n)
         
@@ -231,12 +172,8 @@ class FootballMatchPredictor:
         return score_probs.sort_values(ascending=False).head(10).to_dict()
     
     def get_team_list(self):
-        """
-        Возвращает список всех уникальных команд в данных.
+        #Возвращает список всех уникальных команд в данных.
         
-        Returns:
-            tuple: (home_teams, away_teams) - списки домашних и гостевых команд
-        """
         home_teams = sorted(self.df['HomeTeam'].unique().tolist())
         away_teams = sorted(self.df['AwayTeam'].unique().tolist())
         return home_teams, away_teams
