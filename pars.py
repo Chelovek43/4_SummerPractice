@@ -9,59 +9,13 @@ import json
 import time
 
 
-"""selected_data = {
-            # Основная информация
-            'match_id': game['id'],
-            'date': game['date'],
-            'status': game['status'],
-            
-            # Команды
-            'home_team': game['homeTeam']['name'],
-            'away_team': game['awayTeam']['name'],
-            
-            # Результаты
-            'home_score': game['homeResult'],
-            'away_score': game['awayResult'],
-            'home_ht_score': game['homeHTResult'],
-            'away_ht_score': game['awayHTResult'],
-            
-            # Лига
-            'league': game['season']['league']['name'],
-            'round': game['roundName'],
-            
-            # Коэффициенты
-            'odds_home': match_winner.get('Home', None),
-            'odds_draw': match_winner.get('Draw', None),
-            'odds_away': match_winner.get('Away', None),
-            'over_1.5': total_goals.get('Over 1.5', None),
-            'under_1.5': total_goals.get('Under 1.5', None),
-            'home_over_0.5': home_total.get('Over 0.5', None),
-            'home_under_0.5': home_total.get('Under 0.5', None),
-            'away_over_0.5': away_total.get('Over 0.5', None),
-            'away_under_0.5': away_total.get('Under 0.5', None),
-            
-            # Статистика
-            'shots_on_target_home': stats['shotsOnGoalHome'],
-            'shots_on_target_away': stats['shotsOnGoalAway'],
-            'possession_home': stats['ballPossessionHome'],
-            'possession_away': stats['ballPossessionAway'],
-            'corners_home': stats['cornerKicksHome'],
-            'corners_away': stats['cornerKicksAway'],
-            
-            # Составы
-            'home_formation': lineups['homeFormation'],
-            'away_formation': lineups['awayFormation'],
-            'home_coach': lineups['homeCoach']['name'],
-            'away_coach': lineups['awayCoach']['name']
-        }
-"""
-
 # Конфигурация API
-API_KEY = "lhcuwv1jvp9rgakz"  # Публичный ключ (замените на свой)
+API_KEY = "lhcuwv1jvp9rgakz"  # Используйте Публичный ключ (или мой ключ, забирайте, ограничение - 300 запросов/мин)
 #MATCH_ID = ""  # Пример ID матча
 BASE_URL = "https://api.sstats.net"
 """
-START_ID = 1208501
+Посмотрите ID матчей и укажите их ниже, лучше до 300 за раз, например
+START_ID = 1208501 
 END_ID = 1208835
 """
 START_ID = 1208781
