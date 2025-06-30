@@ -82,8 +82,7 @@ class FootballPredictorApp(QMainWindow):
             self.away_combo.setCurrentIndex(0 if len(away_teams) == 1 else 1)
     
     def predict_match(self):
-        #Обработчик нажатия кнопки прогноза
-
+        # Обработчик нажатия кнопки прогноза
         home_team = self.home_combo.currentText()
         away_team = self.away_combo.currentText()
         
@@ -92,32 +91,67 @@ class FootballPredictorApp(QMainWindow):
             return
         
         try:
-            prediction = self.predictor.predict_match(home_team, away_team)
-            self.display_prediction(prediction)
+            # Получаем прогноз от модели Пуассона
+            poisson_pred = self.predictor.predict_match(home_team, away_team)
+            
+            # Получаем прогноз от Random Forest
+            rf_pred = self.predictor.predict_with_rf(home_team, away_team)
+            
+            # Объединяем результаты
+            combined_pred = {
+                'poisson': poisson_pred,
+                'random_forest': rf_pred
+            }
+            
+            self.display_prediction(combined_pred)
         except Exception as e:
             QMessageBox.critical(self, "Ошибка", f"Ошибка прогноза: {str(e)}")
-    
-    def display_prediction(self, prediction):
-        #Отображает результаты прогноза
 
-        home = prediction['teams']['home']
-        away = prediction['teams']['away']
-        home_goals = prediction['expected_score']['home']
-        away_goals = prediction['expected_score']['away']
+    def display_prediction(self, prediction):
+        # Отображает результаты прогноза от обеих моделей
+        home = prediction['poisson']['teams']['home']
+        away = prediction['poisson']['teams']['away']
         
         text = f"=== Match Prediction: {home} vs {away} ===\n\n"
-        text += f"Expected score: {home_goals} - {away_goals}\n\n"
-        text += "Outcome probabilities:\n"
-        text += f"- {home} win: {prediction['outcome_probabilities']['home_win']*100:.1f}%\n"
-        text += f"- Draw: {prediction['outcome_probabilities']['draw']*100:.1f}%\n"
-        text += f"- {away} win: {prediction['outcome_probabilities']['away_win']*100:.1f}%\n\n"
-        text += "Most probable scores:\n"
         
-        for score, prob in prediction['likely_scores'].items():
+        # Результаты модели Пуассона
+        text += "=== Poisson Model ===\n"
+        text += f"Expected score: {prediction['poisson']['expected_score']['home']} - {prediction['poisson']['expected_score']['away']}\n\n"
+        text += "Outcome probabilities:\n"
+        text += f"- {home} win: {prediction['poisson']['outcome_probabilities']['home_win']*100:.1f}%\n"
+        text += f"- Draw: {prediction['poisson']['outcome_probabilities']['draw']*100:.1f}%\n"
+        text += f"- {away} win: {prediction['poisson']['outcome_probabilities']['away_win']*100:.1f}%\n\n"
+        
+        text += "Most probable scores:\n"
+        for score, prob in prediction['poisson']['likely_scores'].items():
             text += f"{score[0]}-{score[1]}: {prob*100:.2f}%\n"
+        
+        # Разделитель
+        text += "\n" + "="*40 + "\n\n"
+        
+        # Результаты Random Forest
+        rf_pred = prediction['random_forest']
+        text += "=== Random Forest Model ===\n"
+        text += f"Model used: {rf_pred['model_used']}\n"
+        text += f"Match type: {'Close match (draw likely)' if rf_pred['is_close_match'] else 'Regular match'}\n\n"
+        
+        text += "Outcome probabilities:\n"
+        text += f"- {home} win: {rf_pred['probabilities']['home_win']*100:.1f}%\n"
+        text += f"- Draw: {rf_pred['probabilities']['draw']*100:.1f}%\n"
+        text += f"- {away} win: {rf_pred['probabilities']['away_win']*100:.1f}%\n\n"
+        
+        text += f"Predicted outcome: {self.translate_outcome(rf_pred['predicted_outcome'])}\n"
         
         self.result_display.setPlainText(text)
 
+    def translate_outcome(self, outcome_code):
+        # Переводит коды исходов в читаемый вид
+        translations = {
+            'H': 'Home win',
+            'D': 'Draw',
+            'A': 'Away win'
+        }
+        return translations.get(outcome_code, outcome_code)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
