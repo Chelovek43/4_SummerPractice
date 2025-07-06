@@ -1,4 +1,1035 @@
 match_id,date,status,home_team,away_team,home_score,away_score,home_ht_score,away_ht_score,league,round,odds_home,odds_draw,odds_away,over_1.5,under_1.5,home_over_0.5,home_under_0.5,away_over_0.5,away_under_0.5,shots_on_target_home,shots_on_target_away,possession_home,possession_away,corners_home,corners_away,home_formation,away_formation,home_coach,away_coach
+720739,2021-08-14T20:00:00+00:00,8,Alaves,Real Madrid,1,4,0,0,La Liga,Regular Season - 1,6.0,4.2,1.57,,,,,,,4.0,7.0,41,59,,4.0,4-2-3-1,4-3-3,Javi Calleja,C. Ancelotti
+720740,2021-08-15T18:00:00+00:00,8,Barcelona,Real Sociedad,4,2,2,0,La Liga,Regular Season - 1,1.65,3.8,5.0,,,,,,,8.0,3.0,62,38,5.0,3.0,4-3-3,4-2-3-1,R. Koeman,Imanol Alguacil
+720741,2021-08-15T15:30:00+00:00,8,Celta Vigo,Atletico Madrid,1,2,0,1,La Liga,Regular Season - 1,3.5,3.25,2.15,,,,,,,2.0,5.0,53,47,2.0,5.0,4-1-3-2,3-1-4-2,E. Coudet,D. Simeone
+720742,2021-08-14T17:30:00+00:00,8,Mallorca,Real Betis,1,1,1,0,La Liga,Regular Season - 1,2.45,3.1,3.1,,,,,,,2.0,,34,66,3.0,3.0,4-3-3,4-2-3-1,Luis García,M. Pellegrini
+720743,2021-08-14T17:30:00+00:00,8,Cadiz,Levante,1,1,0,1,La Liga,Regular Season - 1,3.3,3.25,2.2,,,,,,,2.0,3.0,43,57,2.0,4.0,4-2-3-1,4-4-2,Álvaro,Paco López
+720744,2021-08-14T20:00:00+00:00,8,Osasuna,Espanyol,0,0,0,0,La Liga,Regular Season - 1,2.55,3.2,2.87,,,,,,,1.0,3.0,53,47,4.0,6.0,4-4-2,4-4-2,Arrasate,Vicente Moreno
+720745,2021-08-15T20:15:00+00:00,8,Sevilla,Rayo Vallecano,3,0,1,0,La Liga,Regular Season - 1,1.36,4.75,10.0,,,,,,,8.0,3.0,75,25,4.0,,3-4-2-1,4-2-3-1,Lopetegui,Andoni Iraola
+720746,2021-08-13T19:00:00+00:00,8,Valencia,Getafe,1,0,1,0,La Liga,Regular Season - 1,2.37,3.0,3.3,1.57,2.37,,,,,2.0,4.0,26,74,1.0,9.0,4-4-2,5-3-2,José Bordalás,Míchel
+720747,2021-08-16T18:00:00+00:00,8,Villarreal,Granada CF,0,0,0,0,La Liga,Regular Season - 1,1.53,4.33,5.75,,,,,,,4.0,1.0,61,39,6.0,2.0,4-4-2,4-3-3,Unai Emery,Robert Moreno
+720748,2021-08-16T20:00:00+00:00,8,Elche,Athletic Club,0,0,0,0,La Liga,Regular Season - 1,3.6,3.1,2.2,1.53,2.5,,,,,2.0,3.0,50,50,6.0,8.0,3-5-2,4-4-2,Fran Escribá,Marcelino
+720749,2021-08-21T15:00:00+00:00,8,Alaves,Mallorca,0,1,0,0,La Liga,Regular Season - 2,2.2,3.2,3.6,1.53,2.5,,,,,4.0,2.0,47,53,1.0,8.0,4-2-3-1,4-2-3-1,Javi Calleja,Luis García
+720750,2021-08-21T20:00:00+00:00,8,Athletic Club,Barcelona,1,1,0,0,La Liga,Regular Season - 2,4.2,3.8,1.75,,,,,,,7.0,3.0,33,67,13.0,2.0,4-4-2,4-3-3,Marcelino,R. Koeman
+720751,2021-08-22T17:30:00+00:00,8,Atletico Madrid,Elche,1,0,1,0,La Liga,Regular Season - 2,1.28,5.25,11.0,,,,,,,4.0,2.0,42,58,2.0,1.0,3-1-4-2,5-3-2,D. Simeone,Fran Escribá
+720752,2021-08-20T19:00:00+00:00,8,Real Betis,Cadiz,1,1,1,1,La Liga,Regular Season - 2,1.45,4.5,6.5,,,,,,,7.0,3.0,74,26,4.0,5.0,4-2-3-1,4-4-2,M. Pellegrini,Álvaro
+720753,2021-08-23T18:00:00+00:00,8,Getafe,Sevilla,0,1,0,0,La Liga,Regular Season - 2,3.1,2.9,2.55,1.57,2.37,,,,,,3.0,39,61,5.0,4.0,4-4-2,4-2-3-1,Míchel,Lopetegui
+720754,2021-08-21T17:30:00+00:00,8,Granada CF,Valencia,1,1,1,0,La Liga,Regular Season - 2,2.5,3.2,2.87,,,,,,,2.0,7.0,46,54,2.0,6.0,5-3-2,4-4-2,Robert Moreno,José Bordalás
+720755,2021-08-21T17:30:00+00:00,8,Espanyol,Villarreal,0,0,0,0,La Liga,Regular Season - 2,2.9,3.25,2.5,,,,,,,3.0,2.0,40,60,9.0,7.0,4-4-2,4-4-2,Vicente Moreno,Unai Emery
+720756,2021-08-22T20:00:00+00:00,8,Levante,Real Madrid,3,3,0,1,La Liga,Regular Season - 2,5.75,4.5,1.53,,,,,,,4.0,5.0,39,61,4.0,6.0,4-3-3,4-3-3,Paco López,C. Ancelotti
+720757,2021-08-23T20:00:00+00:00,8,Osasuna,Celta Vigo,0,0,0,0,La Liga,Regular Season - 2,2.45,3.1,3.0,,,,,,,7.0,,46,54,1.0,2.0,4-1-4-1,4-1-3-2,Arrasate,E. Coudet
+720758,2021-08-22T15:00:00+00:00,8,Real Sociedad,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 2,1.44,4.33,8.5,,,,,,,8.0,1.0,61,39,5.0,4.0,4-1-4-1,4-2-3-1,Imanol Alguacil,Andoni Iraola
+720759,2021-08-29T20:00:00+00:00,8,Atletico Madrid,Villarreal,2,2,0,0,La Liga,Regular Season - 3,1.72,3.5,5.5,,,,,,,4.0,2.0,49,51,16.0,,3-1-4-2,4-4-2,D. Simeone,Unai Emery
+720760,2021-08-29T15:00:00+00:00,8,Barcelona,Getafe,2,1,2,1,La Liga,Regular Season - 3,1.36,4.75,8.0,,,,,,,3.0,3.0,67,33,3.0,2.0,4-3-3,4-4-2,R. Koeman,Míchel
+720761,2021-08-28T20:00:00+00:00,8,Real Betis,Real Madrid,0,1,0,0,La Liga,Regular Season - 3,3.75,3.8,1.9,,,,,,,6.0,3.0,51,49,3.0,7.0,4-2-3-1,4-3-3,M. Pellegrini,C. Ancelotti
+720762,2021-08-28T15:00:00+00:00,8,Celta Vigo,Athletic Club,0,1,0,1,La Liga,Regular Season - 3,2.37,3.2,3.0,,,,,,,,2.0,62,38,5.0,4.0,4-1-3-2,4-4-2,E. Coudet,Marcelino
+720763,2021-08-27T18:00:00+00:00,8,Mallorca,Espanyol,1,0,1,0,La Liga,Regular Season - 3,2.8,2.9,2.75,1.57,2.37,,,,,6.0,3.0,47,53,2.0,2.0,4-2-3-1,4-4-2,Luis García,Vicente Moreno
+720764,2021-08-29T17:30:00+00:00,8,Cadiz,Osasuna,2,3,1,0,La Liga,Regular Season - 3,3.4,3.0,2.25,1.61,2.3,,,,,3.0,4.0,27,73,4.0,11.0,4-1-4-1,4-1-4-1,Álvaro,Arrasate
+720765,2021-08-28T17:30:00+00:00,8,Real Sociedad,Levante,1,0,1,0,La Liga,Regular Season - 3,1.45,4.2,7.0,,,,,,,2.0,,52,48,2.0,2.0,4-1-4-1,4-4-2,Imanol Alguacil,Paco López
+720766,2021-08-27T20:15:00+00:00,8,Valencia,Alaves,3,0,2,0,La Liga,Regular Season - 3,1.7,3.5,5.25,,,,,,,4.0,2.0,49,51,4.0,4.0,4-4-2,4-4-2,José Bordalás,Javi Calleja
+720767,2021-08-29T17:30:00+00:00,8,Rayo Vallecano,Granada CF,4,0,3,0,La Liga,Regular Season - 3,2.05,3.3,3.8,,,,,,,6.0,3.0,47,53,5.0,6.0,4-2-3-1,4-3-3,Andoni Iraola,Robert Moreno
+720768,2021-08-28T17:30:00+00:00,8,Elche,Sevilla,1,1,1,1,La Liga,Regular Season - 3,5.0,3.5,1.75,,,,,,,4.0,5.0,29,71,5.0,3.0,5-3-2,4-3-3,Fran Escribá,Lopetegui
+720769,2021-09-11T19:00:00+00:00,8,Athletic Club,Mallorca,2,0,0,0,La Liga,Regular Season - 4,1.75,3.5,5.0,,,,,,,5.0,1.0,48,52,7.0,2.0,4-4-2,4-2-3-1,Marcelino,Luis García
+720770,2021-09-13T18:00:00+00:00,8,Getafe,Elche,0,1,0,0,La Liga,Regular Season - 4,1.72,3.2,6.5,1.61,2.3,,,,,1.0,3.0,56,44,8.0,2.0,3-1-4-2,3-5-2,Míchel,Fran Escribá
+720771,2021-09-12T16:30:00+00:00,8,Cadiz,Real Sociedad,0,2,0,0,La Liga,Regular Season - 4,5.5,3.75,1.65,,,,,,,1.0,4.0,22,78,2.0,8.0,4-4-2,4-1-4-1,Álvaro,Imanol Alguacil
+720772,2021-09-13T20:00:00+00:00,8,Granada CF,Real Betis,1,2,0,1,La Liga,Regular Season - 4,3.1,3.3,2.3,,,,,,,2.0,9.0,43,57,6.0,8.0,4-3-3,4-2-3-1,Robert Moreno,M. Pellegrini
+720773,2021-09-12T12:00:00+00:00,8,Espanyol,Atletico Madrid,1,2,1,0,La Liga,Regular Season - 4,4.75,3.4,1.85,,,,,,,3.0,3.0,42,58,6.0,3.0,4-5-1,3-4-2-1,Vicente Moreno,D. Simeone
+720774,2021-09-11T16:30:00+00:00,8,Levante,Rayo Vallecano,1,1,1,0,La Liga,Regular Season - 4,2.15,3.25,3.6,,,,,,,2.0,6.0,45,55,2.0,5.0,4-3-3,4-2-3-1,Paco López,Andoni Iraola
+720775,2021-09-12T14:15:00+00:00,8,Osasuna,Valencia,1,4,1,1,La Liga,Regular Season - 4,2.25,3.1,3.5,,,,,,,2.0,4.0,57,43,4.0,4.0,4-1-4-1,4-4-2,Arrasate,José Bordalás
+720776,2021-09-12T19:00:00+00:00,8,Real Madrid,Celta Vigo,5,2,1,2,La Liga,Regular Season - 4,1.4,5.25,7.0,,,,,,,11.0,4.0,60,40,7.0,3.0,4-4-2,4-1-3-2,C. Ancelotti,E. Coudet
+720777,2021-12-21T20:30:00+00:00,8,Sevilla,Barcelona,1,1,1,1,La Liga,Regular Season - 4,2.4,3.25,3.1,,,,,,,1.0,7.0,41,59,4.0,9.0,4-3-3,4-3-3,Lopetegui,Xavi
+720778,2021-12-21T18:00:00+00:00,8,Villarreal,Alaves,5,2,2,1,La Liga,Regular Season - 4,1.36,5.0,8.5,,,,,,,10.0,2.0,62,38,6.0,2.0,4-4-2,4-4-2,Unai Emery,Javi Calleja
+720779,2021-09-18T19:00:00+00:00,8,Alaves,Osasuna,0,2,0,2,La Liga,Regular Season - 5,3.4,3.0,2.35,1.53,2.5,,,,,3.0,5.0,56,44,2.0,8.0,4-4-2,4-3-3,Javi Calleja,Arrasate
+720780,2021-09-18T14:15:00+00:00,8,Atletico Madrid,Athletic Club,0,0,0,0,La Liga,Regular Season - 5,1.61,3.5,6.5,,,,,,,2.0,,55,45,5.0,5.0,3-1-4-2,4-4-2,D. Simeone,Marcelino
+720781,2021-09-20T19:00:00+00:00,8,Barcelona,Granada CF,1,1,0,1,La Liga,Regular Season - 5,1.28,5.75,9.5,,,,,,,6.0,2.0,77,23,12.0,4.0,4-3-3,4-1-4-1,R. Koeman,Robert Moreno
+720782,2021-09-19T16:30:00+00:00,8,Real Betis,Espanyol,2,2,2,1,La Liga,Regular Season - 5,1.83,3.5,4.33,,,,,,,9.0,4.0,60,40,10.0,4.0,4-2-3-1,4-1-4-1,M. Pellegrini,Vicente Moreno
+720783,2021-09-17T19:00:00+00:00,8,Celta Vigo,Cadiz,1,2,0,2,La Liga,Regular Season - 5,1.4,4.5,8.5,,,,,,,4.0,3.0,78,22,7.0,1.0,4-1-3-2,4-1-4-1,E. Coudet,Álvaro
+720784,2021-09-19T12:00:00+00:00,8,Mallorca,Villarreal,0,0,0,0,La Liga,Regular Season - 5,3.3,3.25,2.25,,,,,,,1.0,3.0,34,66,3.0,1.0,4-4-2,4-3-3,Luis García,Unai Emery
+720785,2021-09-19T14:15:00+00:00,8,Real Sociedad,Sevilla,0,0,0,0,La Liga,Regular Season - 5,2.4,3.1,3.2,,,,,,,4.0,4.0,47,53,5.0,6.0,4-4-2,4-3-3,Imanol Alguacil,Lopetegui
+720786,2021-09-19T19:00:00+00:00,8,Valencia,Real Madrid,1,2,0,0,La Liga,Regular Season - 5,4.5,3.8,1.75,,,,,,,4.0,10.0,39,61,2.0,5.0,4-4-2,4-4-1-1,José Bordalás,C. Ancelotti
+720787,2021-09-18T12:00:00+00:00,8,Rayo Vallecano,Getafe,3,0,1,0,La Liga,Regular Season - 5,2.5,3.0,3.1,1.61,2.3,,,,,5.0,3.0,50,50,5.0,3.0,4-2-3-1,4-4-2,Andoni Iraola,Míchel
+720788,2021-09-18T16:30:00+00:00,8,Elche,Levante,1,1,1,0,La Liga,Regular Season - 5,2.3,3.1,3.4,1.5,2.62,,,,,2.0,6.0,54,46,4.0,7.0,5-3-2,3-5-2,Fran Escribá,Paco López
+720789,2021-09-21T20:00:00+00:00,8,Athletic Club,Rayo Vallecano,1,2,1,1,La Liga,Regular Season - 6,1.75,3.5,5.0,,,,,,,1.0,3.0,47,53,2.0,1.0,4-4-2,4-2-3-1,Marcelino,Andoni Iraola
+720790,2021-09-21T17:30:00+00:00,8,Getafe,Atletico Madrid,1,2,1,0,La Liga,Regular Season - 6,6.5,3.5,1.61,1.57,2.37,,,,,1.0,4.0,32,68,2.0,5.0,5-3-2,4-2-3-1,Míchel,D. Simeone
+720791,2021-09-23T20:00:00+00:00,8,Cadiz,Barcelona,0,0,0,0,La Liga,Regular Season - 6,7.0,4.5,1.44,,,,,,,3.0,2.0,32,68,4.0,5.0,4-4-2,4-3-3,Álvaro,R. Koeman
+720792,2021-09-23T17:30:00+00:00,8,Granada CF,Real Sociedad,2,3,1,0,La Liga,Regular Season - 6,4.2,3.3,1.95,,,,,,,2.0,11.0,38,62,4.0,7.0,4-3-3,4-4-2,Robert Moreno,Imanol Alguacil
+720793,2021-09-22T17:30:00+00:00,8,Espanyol,Alaves,1,0,0,0,La Liga,Regular Season - 6,1.75,3.5,5.0,,,,,,,2.0,2.0,53,47,4.0,8.0,4-2-3-1,4-4-2,Vicente Moreno,Javi Calleja
+720794,2021-09-21T20:00:00+00:00,8,Levante,Celta Vigo,0,2,0,0,La Liga,Regular Season - 6,3.1,3.4,2.3,,,,,,,2.0,2.0,45,55,2.0,4.0,3-5-2,4-1-3-2,Paco López,E. Coudet
+720795,2021-09-23T17:30:00+00:00,8,Osasuna,Real Betis,1,3,1,1,La Liga,Regular Season - 6,2.25,3.3,3.2,,,,,,,3.0,9.0,48,52,4.0,7.0,4-3-3,4-2-3-1,Arrasate,M. Pellegrini
+720796,2021-09-22T20:00:00+00:00,8,Real Madrid,Mallorca,6,1,3,1,La Liga,Regular Season - 6,1.2,7.0,12.0,,,,,,,12.0,5.0,59,41,3.0,2.0,4-3-3,4-2-3-1,C. Ancelotti,Luis García
+720797,2021-09-22T17:30:00+00:00,8,Sevilla,Valencia,3,1,3,1,La Liga,Regular Season - 6,1.57,4.0,6.0,,,,,,,5.0,3.0,58,42,1.0,4.0,4-3-3,4-4-2,Lopetegui,José Bordalás
+720798,2021-09-22T20:00:00+00:00,8,Villarreal,Elche,4,1,2,1,La Liga,Regular Season - 6,1.44,4.33,7.5,,,,,,,9.0,3.0,60,40,8.0,7.0,4-3-3,3-5-2,Unai Emery,Fran Escribá
+720799,2021-09-25T12:00:00+00:00,8,Alaves,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 7,8.5,4.0,1.44,,,,,,,1.0,1.0,29,71,3.0,8.0,5-4-1,3-1-4-2,Javi Calleja,D. Simeone
+720800,2021-09-26T14:15:00+00:00,8,Barcelona,Levante,3,0,2,0,La Liga,Regular Season - 7,1.44,4.5,7.0,,,,,,,12.0,2.0,70,30,11.0,1.0,4-2-3-1,4-4-2,R. Koeman,Paco López
+720801,2021-09-26T19:00:00+00:00,8,Real Betis,Getafe,2,0,1,0,La Liga,Regular Season - 7,1.6,3.8,6.0,,,,,,,5.0,3.0,51,49,3.0,3.0,4-2-3-1,3-5-2,M. Pellegrini,Míchel
+720802,2021-09-27T19:00:00+00:00,8,Celta Vigo,Granada CF,1,0,0,0,La Liga,Regular Season - 7,1.55,4.0,6.0,,,,,,,5.0,4.0,73,27,5.0,3.0,4-1-3-2,4-4-2,E. Coudet,Robert Moreno
+720803,2021-09-26T12:00:00+00:00,8,Mallorca,Osasuna,2,3,2,1,La Liga,Regular Season - 7,2.45,3.1,3.2,1.5,2.62,,,,,8.0,6.0,56,44,5.0,5.0,4-2-3-1,4-1-4-1,Luis García,Arrasate
+720804,2021-09-25T19:00:00+00:00,8,Real Madrid,Villarreal,0,0,0,0,La Liga,Regular Season - 7,1.45,4.75,6.5,,,,,,,2.0,2.0,49,51,6.0,3.0,4-3-3,4-3-3,C. Ancelotti,Unai Emery
+720805,2021-09-26T16:30:00+00:00,8,Real Sociedad,Elche,1,0,0,0,La Liga,Regular Season - 7,1.45,4.1,8.0,,,,,,,5.0,2.0,64,36,6.0,1.0,4-2-3-1,4-3-1-2,Imanol Alguacil,Fran Escribá
+720806,2021-09-25T16:30:00+00:00,8,Sevilla,Espanyol,2,0,1,0,La Liga,Regular Season - 7,1.4,4.5,8.5,,,,,,,5.0,2.0,54,46,4.0,8.0,4-3-3,4-1-4-1,Lopetegui,Vicente Moreno
+720807,2021-09-25T14:15:00+00:00,8,Valencia,Athletic Club,1,1,0,0,La Liga,Regular Season - 7,2.8,3.2,2.6,,,,,,,6.0,4.0,52,48,4.0,5.0,4-4-2,4-4-2,José Bordalás,Marcelino
+720808,2021-09-26T16:30:00+00:00,8,Rayo Vallecano,Cadiz,3,1,2,1,La Liga,Regular Season - 7,1.6,3.8,6.0,,,,,,,6.0,1.0,59,41,4.0,3.0,4-2-3-1,4-1-4-1,Andoni Iraola,Álvaro
+720809,2021-10-01T19:00:00+00:00,8,Athletic Club,Alaves,1,0,1,0,La Liga,Regular Season - 8,1.55,3.75,7.0,,,,,,,5.0,5.0,56,44,13.0,9.0,4-4-2,5-4-1,Marcelino,Javi Calleja
+720810,2021-10-02T19:00:00+00:00,8,Atletico Madrid,Barcelona,2,0,2,0,La Liga,Regular Season - 8,1.9,3.5,4.0,,,,,,,3.0,2.0,29,71,2.0,6.0,3-1-4-2,4-2-3-1,D. Simeone,R. Koeman
+720811,2021-10-02T14:15:00+00:00,8,Mallorca,Levante,1,0,0,0,La Liga,Regular Season - 8,2.25,3.2,3.4,,,,,,,7.0,2.0,53,47,8.0,3.0,4-2-3-1,4-4-2,Luis García,Paco López
+720812,2021-10-03T16:30:00+00:00,8,Getafe,Real Sociedad,1,1,1,0,La Liga,Regular Season - 8,3.5,2.9,2.35,1.57,2.37,,,,,2.0,5.0,38,62,2.0,5.0,4-3-3,4-2-3-1,Míchel,Imanol Alguacil
+720813,2021-10-02T16:30:00+00:00,8,Cadiz,Valencia,0,0,0,0,La Liga,Regular Season - 8,3.4,3.1,2.3,1.5,2.62,,,,,1.0,4.0,32,68,1.0,3.0,4-4-2,4-4-2,Álvaro,José Bordalás
+720814,2021-10-03T19:00:00+00:00,8,Granada CF,Sevilla,1,0,1,0,La Liga,Regular Season - 8,5.25,3.5,1.72,,,,,,,1.0,3.0,32,68,2.0,6.0,4-2-3-1,4-3-3,Robert Moreno,Lopetegui
+720815,2021-10-03T14:15:00+00:00,8,Espanyol,Real Madrid,2,1,1,0,La Liga,Regular Season - 8,5.25,4.0,1.61,,,,,,,4.0,4.0,35,65,2.0,8.0,4-1-4-1,4-1-3-2,Vicente Moreno,C. Ancelotti
+720816,2021-10-02T12:00:00+00:00,8,Osasuna,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 8,2.15,3.25,3.5,,,,,,,3.0,,51,49,6.0,3.0,4-3-3,4-4-2,Arrasate,Andoni Iraola
+720817,2021-10-03T16:30:00+00:00,8,Villarreal,Real Betis,2,0,1,0,La Liga,Regular Season - 8,1.95,3.5,3.9,,,,,,,5.0,3.0,58,42,4.0,6.0,4-1-4-1,4-2-3-1,Unai Emery,M. Pellegrini
+720818,2021-10-03T12:00:00+00:00,8,Elche,Celta Vigo,1,0,0,0,La Liga,Regular Season - 8,3.25,3.0,2.45,1.5,2.62,,,,,5.0,1.0,45,55,7.0,4.0,3-5-2,4-1-3-2,Fran Escribá,E. Coudet
+720819,2021-10-18T17:00:00+00:00,8,Alaves,Real Betis,0,1,0,0,La Liga,Regular Season - 9,3.6,3.3,2.1,,,,,,,2.0,4.0,36,64,7.0,7.0,4-4-2,4-2-3-1,Javi Calleja,M. Pellegrini
+720820,2021-10-17T19:00:00+00:00,8,Barcelona,Valencia,3,1,2,1,La Liga,Regular Season - 9,1.5,4.5,6.0,,,,,,,5.0,3.0,61,39,9.0,3.0,4-3-3,4-1-4-1,R. Koeman,José Bordalás
+720821,2021-10-17T14:15:00+00:00,8,Celta Vigo,Sevilla,0,1,0,0,La Liga,Regular Season - 9,2.8,3.0,2.75,,,,,,,3.0,2.0,46,54,5.0,4.0,4-1-3-2,4-3-3,E. Coudet,Lopetegui
+720822,2021-12-22T18:00:00+00:00,8,Granada CF,Atletico Madrid,2,1,1,1,La Liga,Regular Season - 9,6.0,3.8,1.6,,,,,,,4.0,3.0,40,60,2.0,7.0,4-4-2,3-1-4-2,Robert Moreno,D. Simeone
+720823,2021-10-18T19:00:00+00:00,8,Espanyol,Cadiz,2,0,1,0,La Liga,Regular Season - 9,1.65,3.5,6.0,,,,,,,6.0,2.0,54,46,7.0,9.0,4-2-3-1,4-1-4-1,Vicente Moreno,Álvaro
+720824,2021-10-16T16:30:00+00:00,8,Levante,Getafe,0,0,0,0,La Liga,Regular Season - 9,2.4,2.9,3.4,1.53,2.5,,,,,2.0,4.0,53,47,3.0,11.0,4-1-4-1,4-4-1-1,,Quique Sánchez Flores
+720825,2021-12-01T20:00:00+00:00,8,Real Madrid,Athletic Club,1,0,1,0,La Liga,Regular Season - 9,1.45,4.5,7.0,,,,,,,7.0,2.0,62,38,7.0,6.0,4-3-3,4-4-2,C. Ancelotti,Marcelino
+720826,2021-10-16T19:00:00+00:00,8,Real Sociedad,Mallorca,1,0,0,0,La Liga,Regular Season - 9,1.44,4.2,7.5,,,,,,,2.0,1.0,50,50,2.0,6.0,4-2-3-1,4-2-3-1,Imanol Alguacil,Luis García
+720827,2021-10-17T12:00:00+00:00,8,Rayo Vallecano,Elche,2,1,1,1,La Liga,Regular Season - 9,1.75,3.4,5.25,1.5,2.62,,,,,4.0,3.0,53,47,6.0,2.0,4-4-1-1,4-4-2,Andoni Iraola,Fran Escribá
+720828,2021-10-17T16:30:00+00:00,8,Villarreal,Osasuna,1,2,0,1,La Liga,Regular Season - 9,1.53,4.0,6.5,,,,,,,6.0,2.0,73,27,4.0,4.0,4-3-3,5-3-2,Unai Emery,Arrasate
+720829,2021-10-23T19:00:00+00:00,8,Athletic Club,Villarreal,2,1,1,1,La Liga,Regular Season - 10,2.3,3.2,3.2,,,,,,,7.0,3.0,52,48,9.0,2.0,4-4-2,4-4-2,Marcelino,Unai Emery
+720830,2021-10-24T19:00:00+00:00,8,Atletico Madrid,Real Sociedad,2,2,0,1,La Liga,Regular Season - 10,1.65,3.75,5.5,,,,,,,4.0,4.0,56,44,4.0,3.0,4-3-3,3-4-1-2,D. Simeone,Imanol Alguacil
+720831,2021-10-24T14:15:00+00:00,8,Barcelona,Real Madrid,1,2,0,1,La Liga,Regular Season - 10,2.37,3.6,2.8,,,,,,,2.0,5.0,52,48,7.0,4.0,4-3-3,4-3-3,R. Koeman,C. Ancelotti
+720832,2021-10-24T16:30:00+00:00,8,Real Betis,Rayo Vallecano,3,2,2,1,La Liga,Regular Season - 10,1.75,3.75,4.5,,,,,,,5.0,3.0,46,54,4.0,4.0,4-2-3-1,4-2-3-1,M. Pellegrini,Andoni Iraola
+720833,2021-10-25T19:00:00+00:00,8,Getafe,Celta Vigo,0,3,0,0,La Liga,Regular Season - 10,2.6,3.0,3.0,1.57,2.37,,,,,2.0,8.0,34,66,2.0,7.0,4-4-1-1,4-1-3-2,Quique Sánchez Flores,E. Coudet
+720834,2021-10-23T14:15:00+00:00,8,Cadiz,Alaves,0,2,0,1,La Liga,Regular Season - 10,2.45,2.9,3.25,1.53,2.5,,,,,4.0,4.0,61,39,14.0,3.0,4-4-2,4-2-3-1,Álvaro,Javi Calleja
+720835,2021-10-22T19:00:00+00:00,8,Osasuna,Granada CF,1,1,1,0,La Liga,Regular Season - 10,1.65,3.6,6.0,,,,,,,6.0,4.0,42,58,4.0,1.0,4-1-4-1,4-4-2,Arrasate,Robert Moreno
+720836,2021-10-24T12:00:00+00:00,8,Sevilla,Levante,5,3,3,1,La Liga,Regular Season - 10,1.45,4.33,7.5,,,,,,,11.0,7.0,61,39,10.0,3.0,4-2-3-1,4-4-2,Lopetegui,
+720837,2021-10-23T12:00:00+00:00,8,Valencia,Mallorca,2,2,0,2,La Liga,Regular Season - 10,1.72,3.5,5.0,,,,,,,6.0,4.0,73,27,5.0,,4-4-2,4-2-3-1,José Bordalás,Luis García
+720838,2021-10-23T16:30:00+00:00,8,Elche,Espanyol,2,2,1,0,La Liga,Regular Season - 10,2.45,3.0,3.2,1.53,2.5,,,,,7.0,7.0,58,42,3.0,7.0,4-2-2-2,4-2-3-1,Fran Escribá,Vicente Moreno
+720839,2021-10-26T17:00:00+00:00,8,Alaves,Elche,1,0,0,0,La Liga,Regular Season - 11,2.15,2.9,4.0,1.61,2.3,,,,,5.0,1.0,38,62,4.0,7.0,4-2-3-1,4-4-2,Javi Calleja,Fran Escribá
+720840,2021-10-27T18:00:00+00:00,8,Real Betis,Valencia,4,1,2,1,La Liga,Regular Season - 11,1.8,3.75,4.33,,,,,,,9.0,4.0,61,39,4.0,7.0,4-2-3-1,4-4-2,M. Pellegrini,José Bordalás
+720841,2021-10-28T17:00:00+00:00,8,Celta Vigo,Real Sociedad,0,2,0,0,La Liga,Regular Season - 11,2.87,3.2,2.55,,,,,,,6.0,4.0,57,43,7.0,6.0,4-1-3-2,4-2-3-1,E. Coudet,Imanol Alguacil
+720842,2021-10-27T17:00:00+00:00,8,Mallorca,Sevilla,1,1,1,0,La Liga,Regular Season - 11,5.0,3.2,1.83,1.5,2.62,,,,,4.0,3.0,30,70,4.0,2.0,4-4-2,4-3-3,Luis García,Lopetegui
+720843,2021-10-28T18:00:00+00:00,8,Granada CF,Getafe,1,1,0,1,La Liga,Regular Season - 11,2.25,2.9,3.75,1.66,2.2,,,,,3.0,4.0,77,23,5.0,,4-2-3-1,4-4-2,Robert Moreno,Quique Sánchez Flores
+720844,2021-10-26T19:00:00+00:00,8,Espanyol,Athletic Club,1,1,1,0,La Liga,Regular Season - 11,2.8,3.1,2.65,,,,,,,3.0,7.0,46,54,8.0,12.0,4-2-3-1,4-4-2,Vicente Moreno,Marcelino
+720845,2021-10-28T19:30:00+00:00,8,Levante,Atletico Madrid,2,2,1,1,La Liga,Regular Season - 11,6.5,4.2,1.5,,,,,,,3.0,3.0,35,65,5.0,2.0,5-3-2,3-4-2-1,,D. Simeone
+720846,2021-10-27T19:30:00+00:00,8,Real Madrid,Osasuna,0,0,0,0,La Liga,Regular Season - 11,1.25,5.75,11.0,,,,,,,3.0,,75,25,11.0,3.0,4-3-3,5-3-2,C. Ancelotti,Arrasate
+720847,2021-10-27T17:00:00+00:00,8,Rayo Vallecano,Barcelona,1,0,1,0,La Liga,Regular Season - 11,4.0,3.75,1.83,,,,,,,3.0,1.0,31,69,3.0,7.0,4-2-3-1,4-3-3,Andoni Iraola,R. Koeman
+720848,2021-10-26T19:30:00+00:00,8,Villarreal,Cadiz,3,3,1,2,La Liga,Regular Season - 11,1.3,5.25,10.0,,,,,,,5.0,4.0,77,23,8.0,2.0,4-3-3,4-1-4-1,Unai Emery,Álvaro
+720849,2021-10-31T15:15:00+00:00,8,Atletico Madrid,Real Betis,3,0,1,0,La Liga,Regular Season - 12,1.5,4.33,6.5,,,,,,,9.0,1.0,47,53,13.0,,3-4-2-1,4-2-3-1,D. Simeone,M. Pellegrini
+720850,2021-10-30T19:00:00+00:00,8,Barcelona,Alaves,1,1,0,0,La Liga,Regular Season - 12,1.22,6.5,12.0,,,,,,,5.0,2.0,79,21,9.0,,4-3-3,4-2-3-1,Sergi Barjuan,Javi Calleja
+720851,2021-10-31T17:30:00+00:00,8,Getafe,Espanyol,2,1,1,1,La Liga,Regular Season - 12,2.55,3.0,3.0,1.61,2.3,,,,,7.0,3.0,44,56,6.0,11.0,4-4-2,4-2-3-1,Quique Sánchez Flores,Vicente Moreno
+720852,2021-10-31T13:00:00+00:00,8,Cadiz,Mallorca,1,1,0,1,La Liga,Regular Season - 12,2.75,2.9,3.0,1.5,2.62,,,,,2.0,5.0,44,56,6.0,5.0,4-4-2,4-2-3-1,Álvaro,Luis García
+720853,2021-11-01T20:00:00+00:00,8,Levante,Granada CF,0,3,0,2,La Liga,Regular Season - 12,2.05,3.25,3.8,,,,,,,3.0,6.0,48,52,3.0,5.0,3-1-4-2,4-4-2,,Robert Moreno
+720854,2021-10-31T20:00:00+00:00,8,Real Sociedad,Athletic Club,1,1,0,0,La Liga,Regular Season - 12,2.15,3.1,3.75,,,,,,,3.0,5.0,54,46,2.0,7.0,4-2-3-1,4-4-2,Imanol Alguacil,Marcelino
+720855,2021-10-30T14:15:00+00:00,8,Sevilla,Osasuna,2,0,1,0,La Liga,Regular Season - 12,1.5,4.0,7.5,,,,,,,4.0,3.0,64,36,4.0,5.0,4-3-3,4-4-2,Lopetegui,Arrasate
+720856,2021-10-30T16:30:00+00:00,8,Valencia,Villarreal,2,0,1,0,La Liga,Regular Season - 12,3.0,3.3,2.4,,,,,,,3.0,1.0,25,75,7.0,6.0,4-1-4-1,4-4-1-1,José Bordalás,Unai Emery
+720857,2021-11-01T17:30:00+00:00,8,Rayo Vallecano,Celta Vigo,0,0,0,0,La Liga,Regular Season - 12,2.25,3.1,3.5,,,,,,,5.0,4.0,53,47,4.0,7.0,4-2-3-1,4-1-3-2,Andoni Iraola,E. Coudet
+720858,2021-10-30T12:00:00+00:00,8,Elche,Real Madrid,1,2,0,1,La Liga,Regular Season - 12,7.0,4.1,1.5,,,,,,,4.0,5.0,44,56,5.0,4.0,4-4-1-1,4-3-3,Fran Escribá,C. Ancelotti
+720859,2021-11-06T17:30:00+00:00,8,Alaves,Levante,2,1,0,1,La Liga,Regular Season - 13,2.35,3.1,3.3,,,,,,,3.0,7.0,61,39,1.0,3.0,4-3-3,4-4-1-1,Javi Calleja,
+720860,2021-11-05T20:00:00+00:00,8,Athletic Club,Cadiz,0,1,0,1,La Liga,Regular Season - 13,1.4,4.5,8.0,,,,,,,5.0,4.0,70,30,5.0,1.0,4-4-2,4-4-2,Marcelino,Álvaro
+720861,2021-11-07T20:00:00+00:00,8,Real Betis,Sevilla,0,2,0,0,La Liga,Regular Season - 13,2.87,3.25,2.55,,,,,,,1.0,2.0,26,74,2.0,1.0,4-2-3-1,4-3-3,M. Pellegrini,Lopetegui
+720862,2021-11-06T15:15:00+00:00,8,Celta Vigo,Barcelona,3,3,0,3,La Liga,Regular Season - 13,3.75,3.5,2.0,,,,,,,4.0,6.0,53,47,3.0,1.0,4-1-3-2,4-3-3,E. Coudet,Sergi Barjuan
+720863,2021-11-07T17:30:00+00:00,8,Mallorca,Elche,2,2,0,0,La Liga,Regular Season - 13,2.1,3.1,4.0,1.5,2.62,,,,,6.0,2.0,52,48,3.0,3.0,4-2-3-1,4-4-2,Luis García,Fran Escribá
+720864,2021-11-06T13:00:00+00:00,8,Espanyol,Granada CF,2,0,2,0,La Liga,Regular Season - 13,1.8,3.6,4.5,,,,,,,6.0,5.0,43,57,5.0,3.0,4-1-4-1,4-4-2,Vicente Moreno,Robert Moreno
+720865,2021-11-07T17:30:00+00:00,8,Osasuna,Real Sociedad,0,2,0,0,La Liga,Regular Season - 13,3.2,3.2,2.3,,,,,,,2.0,4.0,43,57,5.0,2.0,4-2-3-1,4-3-3,Arrasate,Imanol Alguacil
+720866,2021-11-06T20:00:00+00:00,8,Real Madrid,Rayo Vallecano,2,1,2,0,La Liga,Regular Season - 13,1.36,5.25,7.5,,,,,,,7.0,7.0,55,45,4.0,5.0,4-3-3,4-2-3-1,C. Ancelotti,Andoni Iraola
+720867,2021-11-07T15:15:00+00:00,8,Valencia,Atletico Madrid,3,3,0,1,La Liga,Regular Season - 13,4.2,3.3,1.95,,,,,,,5.0,7.0,48,52,9.0,,4-1-4-1,3-4-2-1,José Bordalás,D. Simeone
+720868,2021-11-07T13:00:00+00:00,8,Villarreal,Getafe,1,0,1,0,La Liga,Regular Season - 13,1.45,4.2,8.0,,,,,,,4.0,2.0,67,33,6.0,4.0,4-2-2-2,5-3-2,Unai Emery,Quique Sánchez Flores
+720869,2021-11-20T17:30:00+00:00,8,Atletico Madrid,Osasuna,1,0,0,0,La Liga,Regular Season - 14,1.45,4.2,8.0,,,,,,,2.0,3.0,61,39,7.0,4.0,4-1-4-1,5-3-2,D. Simeone,Arrasate
+720870,2021-11-20T20:00:00+00:00,8,Barcelona,Espanyol,1,0,0,0,La Liga,Regular Season - 14,1.5,4.33,7.0,,,,,,,6.0,2.0,65,35,4.0,4.0,4-3-3,4-1-4-1,Xavi,Vicente Moreno
+720871,2021-11-20T13:00:00+00:00,8,Celta Vigo,Villarreal,1,1,0,1,La Liga,Regular Season - 14,2.37,3.2,3.1,,,,,,,3.0,6.0,57,43,3.0,5.0,4-1-3-2,4-4-1-1,E. Coudet,Unai Emery
+720872,2021-11-21T13:00:00+00:00,8,Getafe,Cadiz,4,0,1,0,La Liga,Regular Season - 14,2.0,3.0,4.5,1.61,2.3,,,,,8.0,2.0,47,53,3.0,7.0,5-3-2,4-4-2,Quique Sánchez Flores,Álvaro
+720873,2021-11-21T15:15:00+00:00,8,Granada CF,Real Madrid,1,4,1,2,La Liga,Regular Season - 14,8.0,5.0,1.36,,,,,,,3.0,10.0,32,68,8.0,6.0,4-4-2,4-3-3,Robert Moreno,C. Ancelotti
+720874,2021-11-19T20:00:00+00:00,8,Levante,Athletic Club,0,0,0,0,La Liga,Regular Season - 14,3.75,3.3,2.05,,,,,,,2.0,2.0,49,51,6.0,3.0,4-3-3,4-4-2,,Marcelino
+720875,2021-11-21T20:00:00+00:00,8,Real Sociedad,Valencia,0,0,0,0,La Liga,Regular Season - 14,1.57,4.2,5.75,,,,,,,2.0,3.0,62,38,2.0,4.0,4-2-3-1,4-2-3-1,Imanol Alguacil,José Bordalás
+720876,2021-11-20T15:15:00+00:00,8,Sevilla,Alaves,2,2,1,2,La Liga,Regular Season - 14,1.44,4.2,8.0,,,,,,,6.0,3.0,68,32,5.0,2.0,4-3-3,4-1-4-1,Lopetegui,Javi Calleja
+720877,2021-11-22T20:00:00+00:00,8,Rayo Vallecano,Mallorca,3,1,2,0,La Liga,Regular Season - 14,1.85,3.4,4.5,,,,,,,6.0,5.0,53,47,6.0,4.0,4-2-3-1,4-2-3-1,Andoni Iraola,Luis García
+720878,2021-11-21T17:30:00+00:00,8,Elche,Real Betis,0,3,0,3,La Liga,Regular Season - 14,3.25,3.2,2.3,,,,,,,4.0,4.0,58,42,10.0,1.0,3-5-2,4-2-3-1,Fran Escribá,M. Pellegrini
+720879,2021-11-27T13:00:00+00:00,8,Alaves,Celta Vigo,1,2,1,1,La Liga,Regular Season - 15,3.1,3.1,2.45,,,,,,,5.0,5.0,42,58,5.0,3.0,4-3-3,4-1-3-2,Javi Calleja,E. Coudet
+720880,2021-11-26T20:00:00+00:00,8,Athletic Club,Granada CF,2,2,1,2,La Liga,Regular Season - 15,1.36,4.75,9.0,,,,,,,5.0,4.0,63,37,8.0,3.0,4-4-2,4-4-2,Marcelino,Robert Moreno
+720881,2021-11-28T13:00:00+00:00,8,Real Betis,Levante,3,1,0,1,La Liga,Regular Season - 15,1.7,4.0,4.5,,,,,,,8.0,2.0,60,40,5.0,8.0,4-2-3-1,4-1-4-1,M. Pellegrini,
+720882,2021-11-27T17:30:00+00:00,8,Mallorca,Getafe,0,0,0,0,La Liga,Regular Season - 15,2.25,2.9,3.75,1.61,2.3,,,,,2.0,,53,47,2.0,,4-2-3-1,5-3-2,Luis García,Quique Sánchez Flores
+720883,2021-11-28T17:30:00+00:00,8,Cadiz,Atletico Madrid,1,4,0,0,La Liga,Regular Season - 15,7.5,4.2,1.45,,,,,,,1.0,7.0,37,63,4.0,8.0,4-4-2,4-4-2,Álvaro,D. Simeone
+720884,2021-11-28T15:15:00+00:00,8,Espanyol,Real Sociedad,1,0,0,0,La Liga,Regular Season - 15,2.9,3.2,2.5,,,,,,,2.0,4.0,40,60,2.0,9.0,4-2-3-1,4-4-2,Vicente Moreno,Imanol Alguacil
+720885,2021-11-29T20:00:00+00:00,8,Osasuna,Elche,1,1,1,1,La Liga,Regular Season - 15,1.8,3.4,5.0,,,,,,,4.0,4.0,50,50,5.0,4.0,4-4-2,4-4-2,Arrasate,Mantecón
+720886,2021-11-28T20:00:00+00:00,8,Real Madrid,Sevilla,2,1,1,1,La Liga,Regular Season - 15,1.66,4.0,5.0,,,,,,,4.0,6.0,53,47,,4.0,4-3-3,4-3-3,C. Ancelotti,Lopetegui
+720887,2021-11-27T15:15:00+00:00,8,Valencia,Rayo Vallecano,1,1,1,0,La Liga,Regular Season - 15,2.0,3.3,4.0,,,,,,,4.0,6.0,42,58,3.0,9.0,4-4-2,4-2-3-1,José Bordalás,Andoni Iraola
+720888,2021-11-27T20:00:00+00:00,8,Villarreal,Barcelona,1,3,0,0,La Liga,Regular Season - 15,2.7,3.3,2.55,,,,,,,2.0,6.0,50,50,4.0,4.0,4-4-2,4-3-3,Unai Emery,Xavi
+720889,2021-12-04T17:30:00+00:00,8,Atletico Madrid,Mallorca,1,2,0,0,La Liga,Regular Season - 16,1.33,5.0,10.0,,,,,,,6.0,3.0,59,41,8.0,5.0,4-4-2,4-2-3-1,D. Simeone,Luis García
+720890,2021-12-04T15:15:00+00:00,8,Barcelona,Real Betis,0,1,0,0,La Liga,Regular Season - 16,1.5,4.33,6.5,,,,,,,3.0,2.0,63,37,6.0,1.0,4-3-3,4-2-3-1,Xavi,M. Pellegrini
+720891,2021-12-05T20:00:00+00:00,8,Celta Vigo,Valencia,1,2,1,1,La Liga,Regular Season - 16,1.9,3.5,4.2,,,,,,,5.0,5.0,67,33,6.0,4.0,4-1-3-2,4-5-1,E. Coudet,José Bordalás
+720892,2021-12-06T20:00:00+00:00,8,Getafe,Athletic Club,0,0,0,0,La Liga,Regular Season - 16,3.6,2.9,2.3,1.61,2.3,,,,,5.0,3.0,45,55,5.0,3.0,5-3-2,4-4-2,Quique Sánchez Flores,Marcelino
+720893,2021-12-03T20:00:00+00:00,8,Granada CF,Alaves,2,1,1,0,La Liga,Regular Season - 16,2.3,3.1,3.4,,,,,,,2.0,2.0,44,56,3.0,5.0,4-4-2,4-3-3,Robert Moreno,Javi Calleja
+720894,2021-12-05T17:30:00+00:00,8,Levante,Osasuna,0,0,0,0,La Liga,Regular Season - 16,2.3,3.25,3.2,,,,,,,3.0,1.0,58,42,7.0,2.0,4-3-3,5-3-2,A. Lisci,Arrasate
+720895,2021-12-04T20:00:00+00:00,8,Real Sociedad,Real Madrid,0,2,0,0,La Liga,Regular Season - 16,3.6,3.5,2.05,,,,,,,,8.0,51,49,5.0,5.0,4-4-2,4-3-3,Imanol Alguacil,C. Ancelotti
+720896,2021-12-04T13:00:00+00:00,8,Sevilla,Villarreal,1,0,1,0,La Liga,Regular Season - 16,1.95,3.3,4.1,,,,,,,3.0,2.0,45,55,5.0,8.0,4-3-3,4-4-2,Lopetegui,Unai Emery
+720897,2021-12-05T13:00:00+00:00,8,Rayo Vallecano,Espanyol,1,0,0,0,La Liga,Regular Season - 16,2.05,3.25,3.8,,,,,,,,3.0,50,50,6.0,3.0,4-2-3-1,4-1-4-1,Andoni Iraola,Vicente Moreno
+720898,2021-12-05T15:15:00+00:00,8,Elche,Cadiz,3,1,1,0,La Liga,Regular Season - 16,2.05,3.1,4.0,1.53,2.5,,,,,3.0,6.0,57,43,3.0,3.0,4-4-2,4-4-2,Francisco,Álvaro
+720899,2021-12-11T15:15:00+00:00,8,Alaves,Getafe,1,1,0,1,La Liga,Regular Season - 17,2.5,2.8,3.4,1.66,2.2,,,,,1.0,2.0,65,35,1.0,1.0,4-1-4-1,5-3-2,Javi Calleja,Quique Sánchez Flores
+720900,2021-12-11T20:00:00+00:00,8,Athletic Club,Sevilla,0,1,0,1,La Liga,Regular Season - 17,2.37,2.9,3.4,1.57,2.37,,,,,2.0,1.0,55,45,9.0,2.0,4-4-2,4-2-3-1,Marcelino,Lopetegui
+720901,2021-12-12T17:30:00+00:00,8,Real Betis,Real Sociedad,4,0,1,0,La Liga,Regular Season - 17,2.25,3.3,3.25,,,,,,,5.0,5.0,48,52,4.0,7.0,4-2-3-1,4-2-3-1,M. Pellegrini,Imanol Alguacil
+720902,2021-12-10T20:00:00+00:00,8,Mallorca,Celta Vigo,0,0,0,0,La Liga,Regular Season - 17,2.8,2.9,2.8,1.53,2.5,,,,,1.0,5.0,48,52,7.0,4.0,4-4-2,4-1-3-2,Luis García,E. Coudet
+720903,2021-12-13T20:00:00+00:00,8,Cadiz,Granada CF,1,1,1,0,La Liga,Regular Season - 17,2.5,3.1,3.0,,,,,,,3.0,5.0,34,66,8.0,1.0,4-4-1-1,4-4-2,Álvaro,Robert Moreno
+720904,2021-12-11T13:00:00+00:00,8,Espanyol,Levante,4,3,1,2,La Liga,Regular Season - 17,1.9,3.5,4.0,,,,,,,8.0,5.0,52,48,4.0,2.0,4-3-3,4-4-2,Vicente Moreno,A. Lisci
+720905,2021-12-12T15:15:00+00:00,8,Osasuna,Barcelona,2,2,1,1,La Liga,Regular Season - 17,4.2,3.4,1.9,,,,,,,3.0,2.0,38,62,6.0,5.0,4-1-4-1,3-3-3-1,Arrasate,Xavi
+720906,2021-12-12T20:00:00+00:00,8,Real Madrid,Atletico Madrid,2,0,1,0,La Liga,Regular Season - 17,1.8,3.7,4.5,,,,,,,3.0,6.0,61,39,3.0,6.0,4-3-3,4-4-2,C. Ancelotti,D. Simeone
+720907,2021-12-11T17:30:00+00:00,8,Valencia,Elche,2,1,1,0,La Liga,Regular Season - 17,1.57,3.8,6.5,,,,,,,8.0,4.0,41,59,8.0,1.0,4-4-2,4-4-2,José Bordalás,Francisco
+720908,2021-12-12T13:00:00+00:00,8,Villarreal,Rayo Vallecano,2,0,2,0,La Liga,Regular Season - 17,1.72,3.8,4.75,,,,,,,5.0,7.0,52,48,5.0,6.0,4-4-2,4-2-3-1,Unai Emery,Andoni Iraola
+720909,2021-12-19T15:15:00+00:00,8,Athletic Club,Real Betis,3,2,1,1,La Liga,Regular Season - 18,2.15,3.4,3.4,,,,,,,6.0,8.0,44,56,5.0,6.0,4-4-2,4-2-3-1,Marcelino,M. Pellegrini
+720910,2021-12-18T17:30:00+00:00,8,Barcelona,Elche,3,2,2,0,La Liga,Regular Season - 18,1.25,5.5,12.0,,,,,,,8.0,3.0,73,27,5.0,,3-3-1-3,4-4-2,Xavi,Francisco
+720911,2021-12-17T20:00:00+00:00,8,Celta Vigo,Espanyol,3,1,1,0,La Liga,Regular Season - 18,1.95,3.4,4.1,,,,,,,5.0,3.0,52,48,3.0,3.0,4-1-3-2,4-4-2,E. Coudet,Vicente Moreno
+720912,2021-12-19T17:30:00+00:00,8,Getafe,Osasuna,1,0,0,0,La Liga,Regular Season - 18,2.2,2.87,3.9,1.66,2.2,,,,,4.0,2.0,49,51,4.0,3.0,5-3-2,4-3-3,Quique Sánchez Flores,Arrasate
+720913,2021-12-19T13:00:00+00:00,8,Granada CF,Mallorca,4,1,1,1,La Liga,Regular Season - 18,2.45,3.1,3.1,,,,,,,6.0,5.0,46,54,4.0,2.0,4-4-2,4-2-3-1,Robert Moreno,Luis García
+720914,2021-12-20T20:00:00+00:00,8,Levante,Valencia,3,4,2,1,La Liga,Regular Season - 18,3.0,3.4,2.35,,,,,,,9.0,8.0,51,49,6.0,4.0,4-4-2,4-4-2,A. Lisci,José Bordalás
+720915,2021-12-19T20:00:00+00:00,8,Real Madrid,Cadiz,0,0,0,0,La Liga,Regular Season - 18,1.11,9.0,21.0,,,,,,,9.0,,82,18,13.0,2.0,4-3-3,4-4-2,C. Ancelotti,Álvaro
+720916,2021-12-18T15:15:00+00:00,8,Real Sociedad,Villarreal,1,3,1,1,La Liga,Regular Season - 18,2.25,3.2,3.4,,,,,,,4.0,8.0,39,61,5.0,5.0,4-4-2,4-4-2,Imanol Alguacil,Unai Emery
+720917,2021-12-18T20:00:00+00:00,8,Sevilla,Atletico Madrid,2,1,1,1,La Liga,Regular Season - 18,2.9,3.0,2.7,1.57,2.37,,,,,2.0,3.0,55,45,4.0,7.0,4-3-3,3-1-4-2,Lopetegui,D. Simeone
+720918,2021-12-18T13:00:00+00:00,8,Rayo Vallecano,Alaves,2,0,2,0,La Liga,Regular Season - 18,1.7,3.6,5.25,,,,,,,5.0,4.0,62,38,5.0,5.0,4-2-3-1,4-1-4-1,Andoni Iraola,Javi Calleja
+720919,2022-01-02T17:30:00+00:00,8,Alaves,Real Sociedad,1,1,0,1,La Liga,Regular Season - 19,4.75,3.3,1.85,,,,,,,5.0,4.0,35,65,2.0,3.0,4-4-2,4-2-3-1,Mendilibar,Imanol Alguacil
+720920,2022-01-02T15:15:00+00:00,8,Atletico Madrid,Rayo Vallecano,2,0,1,0,La Liga,Regular Season - 19,1.44,4.2,8.0,,,,,,,5.0,,50,50,8.0,2.0,4-4-2,4-2-3-1,D. Simeone,Andoni Iraola
+720921,2022-01-02T17:30:00+00:00,8,Real Betis,Celta Vigo,0,2,0,2,La Liga,Regular Season - 19,1.8,3.75,4.33,,,,,,,7.0,5.0,54,46,3.0,3.0,4-2-3-1,4-1-3-2,M. Pellegrini,E. Coudet
+720922,2022-01-02T20:00:00+00:00,8,Mallorca,Barcelona,0,1,0,1,La Liga,Regular Season - 19,3.7,3.2,2.1,,,,,,,3.0,4.0,35,65,4.0,3.0,4-2-3-1,4-3-3,Luis García,Xavi
+720923,2022-01-02T13:00:00+00:00,8,Getafe,Real Madrid,1,0,1,0,La Liga,Regular Season - 19,6.5,4.0,1.53,,,,,,,3.0,4.0,26,74,2.0,9.0,5-3-2,4-3-3,Quique Sánchez Flores,C. Ancelotti
+720924,2022-01-03T20:15:00+00:00,8,Cadiz,Sevilla,0,1,0,0,La Liga,Regular Season - 19,5.75,3.6,1.65,,,,,,,2.0,4.0,25,75,2.0,8.0,4-2-3-1,3-1-4-2,Álvaro,Lopetegui
+720925,2022-01-03T20:00:00+00:00,8,Osasuna,Athletic Club,1,3,1,2,La Liga,Regular Season - 19,3.4,2.87,2.4,1.57,2.37,,,,,4.0,5.0,57,43,4.0,5.0,3-5-2,4-4-2,Arrasate,Marcelino
+720926,2021-12-31T15:15:00+00:00,8,Valencia,Espanyol,1,2,0,0,La Liga,Regular Season - 19,1.75,3.6,4.8,,,,,,,2.0,4.0,37,63,7.0,5.0,4-4-2,4-3-3,José Bordalás,Vicente Moreno
+720927,2022-01-03T18:00:00+00:00,8,Villarreal,Levante,5,0,3,0,La Liga,Regular Season - 19,1.36,5.25,7.5,,,,,,,7.0,3.0,58,42,6.0,5.0,4-4-2,4-1-4-1,Unai Emery,A. Lisci
+720928,2022-01-02T15:15:00+00:00,8,Elche,Granada CF,0,0,0,0,La Liga,Regular Season - 19,2.6,3.1,2.9,,,,,,,2.0,5.0,48,52,6.0,3.0,4-4-1-1,4-4-2,Francisco,Robert Moreno
+720929,2022-01-09T17:30:00+00:00,8,Alaves,Athletic Club,0,0,0,0,La Liga,Regular Season - 20,4.0,3.25,2.0,,,,,,,1.0,2.0,42,58,7.0,5.0,4-4-2,4-4-2,Mendilibar,Marcelino
+720930,2022-01-08T17:30:00+00:00,8,Granada CF,Barcelona,1,1,0,0,La Liga,Regular Season - 20,4.5,4.0,1.72,,,,,,,4.0,1.0,35,65,3.0,2.0,4-4-2,4-3-3,Robert Moreno,Xavi
+720931,2022-01-10T20:00:00+00:00,8,Espanyol,Elche,1,2,1,2,La Liga,Regular Season - 20,1.72,3.6,5.0,,,,,,,2.0,2.0,54,46,13.0,,4-4-2,4-4-2,Vicente Moreno,Francisco
+720932,2022-01-08T13:00:00+00:00,8,Levante,Mallorca,2,0,0,0,La Liga,Regular Season - 20,2.15,3.25,3.5,,,,,,,8.0,8.0,43,57,5.0,5.0,5-3-2,4-2-3-1,A. Lisci,Luis García
+720933,2022-01-09T17:30:00+00:00,8,Osasuna,Cadiz,2,0,1,0,La Liga,Regular Season - 20,1.6,3.6,6.5,,,,,,,5.0,1.0,60,40,5.0,7.0,4-4-2,4-4-2,Arrasate,Álvaro
+720934,2022-01-08T20:00:00+00:00,8,Real Madrid,Valencia,4,1,1,0,La Liga,Regular Season - 20,1.33,5.25,9.0,,,,,,,8.0,7.0,67,33,3.0,8.0,4-3-3,4-4-2,C. Ancelotti,José Bordalás
+720935,2022-01-08T15:15:00+00:00,8,Real Sociedad,Celta Vigo,1,0,1,0,La Liga,Regular Season - 20,1.8,3.5,4.7,,,,,,,3.0,,41,59,6.0,4.0,4-3-3,4-1-3-2,Imanol Alguacil,E. Coudet
+720936,2022-01-09T15:15:00+00:00,8,Sevilla,Getafe,1,0,1,0,La Liga,Regular Season - 20,1.53,3.6,8.0,1.57,2.37,,,,,1.0,2.0,67,33,5.0,2.0,4-3-3,5-3-2,Lopetegui,Quique Sánchez Flores
+720937,2022-01-09T13:00:00+00:00,8,Rayo Vallecano,Real Betis,1,1,0,1,La Liga,Regular Season - 20,2.8,3.4,2.45,,,,,,,7.0,5.0,58,42,6.0,4.0,4-2-3-1,4-2-3-1,Andoni Iraola,M. Pellegrini
+720938,2022-01-09T20:00:00+00:00,8,Villarreal,Atletico Madrid,2,2,1,1,La Liga,Regular Season - 20,2.5,3.2,2.9,,,,,,,3.0,5.0,60,40,7.0,3.0,4-4-2,4-4-2,Unai Emery,D. Simeone
+720939,2021-12-22T20:30:00+00:00,8,Athletic Club,Real Madrid,1,2,1,2,La Liga,Regular Season - 21,3.25,3.3,2.2,,,,,,,2.0,7.0,40,60,7.0,,4-4-2,4-3-3,Marcelino,C. Ancelotti
+720940,2022-02-16T18:00:00+00:00,8,Atletico Madrid,Levante,0,1,0,0,La Liga,Regular Season - 21,1.28,6.2,11.25,,,,,,,1.0,5.0,54,46,5.0,3.0,4-4-2,5-3-2,D. Simeone,A. Lisci
+720941,2022-04-24T19:00:00+00:00,8,Barcelona,Rayo Vallecano,0,1,0,1,La Liga,Regular Season - 21,1.31,6.05,9.65,,,,,,,5.0,1.0,71,29,9.0,1.0,4-3-3,4-2-3-1,Xavi,Andoni Iraola
+720942,2022-01-18T19:00:00+00:00,8,Real Betis,Alaves,4,0,3,0,La Liga,Regular Season - 21,1.53,4.2,6.0,,,,,,,5.0,2.0,61,39,8.0,3.0,4-2-3-1,4-4-2,M. Pellegrini,Mendilibar
+720943,2022-01-19T18:00:00+00:00,8,Celta Vigo,Osasuna,2,0,2,0,La Liga,Regular Season - 21,1.75,3.6,4.75,,,,,,,3.0,,47,53,,5.0,4-3-1-2,4-3-3,E. Coudet,Arrasate
+720944,2022-03-02T20:00:00+00:00,8,Mallorca,Real Sociedad,0,2,0,1,La Liga,Regular Season - 21,3.15,3.05,2.46,,,,,,,1.0,3.0,52,48,3.0,4.0,4-2-3-1,4-2-3-1,Luis García,Imanol Alguacil
+720945,2022-01-20T18:00:00+00:00,8,Getafe,Granada CF,4,2,1,1,La Liga,Regular Season - 21,2.0,3.1,4.2,1.53,2.37,,,,,4.0,4.0,50,50,4.0,8.0,5-3-2,4-4-2,Quique Sánchez Flores,Robert Moreno
+720946,2022-01-18T20:30:00+00:00,8,Cadiz,Espanyol,2,2,0,1,La Liga,Regular Season - 21,2.9,3.25,2.5,,,,,,,4.0,7.0,47,53,3.0,2.0,4-4-2,4-2-3-1,Sergio,Vicente Moreno
+720947,2022-01-19T20:30:00+00:00,8,Valencia,Sevilla,1,1,1,1,La Liga,Regular Season - 21,2.9,3.2,2.5,,,,,,,2.0,3.0,32,68,4.0,4.0,5-3-2,4-3-3,José Bordalás,Lopetegui
+720948,2022-01-16T13:00:00+00:00,8,Elche,Villarreal,1,0,0,0,La Liga,Regular Season - 21,5.5,3.8,1.61,,,,,,,2.0,4.0,49,51,3.0,8.0,4-4-2,4-4-2,Francisco,Unai Emery
+720949,2022-01-23T20:00:00+00:00,8,Alaves,Barcelona,0,1,0,0,La Liga,Regular Season - 22,5.75,3.8,1.61,,,,,,,2.0,4.0,24,76,1.0,10.0,4-2-3-1,4-3-3,Mendilibar,Xavi
+720950,2022-01-22T20:00:00+00:00,8,Atletico Madrid,Valencia,3,2,0,2,La Liga,Regular Season - 22,1.4,4.5,8.5,,,,,,,6.0,3.0,65,35,5.0,4.0,4-4-2,5-3-2,D. Simeone,José Bordalás
+720951,2022-01-23T13:00:00+00:00,8,Granada CF,Osasuna,0,2,0,0,La Liga,Regular Season - 22,2.5,3.1,3.0,,,,,,,2.0,7.0,55,45,4.0,3.0,4-4-2,4-4-2,Robert Moreno,Arrasate
+720952,2022-01-21T20:00:00+00:00,8,Espanyol,Real Betis,1,4,1,2,La Liga,Regular Season - 22,3.0,3.4,2.37,,,,,,,4.0,8.0,38,62,6.0,5.0,4-2-3-1,4-2-3-1,Vicente Moreno,M. Pellegrini
+720953,2022-01-22T13:00:00+00:00,8,Levante,Cadiz,0,2,0,1,La Liga,Regular Season - 22,1.7,3.6,5.25,,,,,,,8.0,2.0,66,34,8.0,2.0,4-4-2,4-4-2,A. Lisci,Sergio
+720954,2022-01-23T15:15:00+00:00,8,Real Madrid,Elche,2,2,0,1,La Liga,Regular Season - 22,1.16,8.0,13.0,,,,,,,8.0,2.0,65,35,10.0,3.0,4-3-3,4-4-2,C. Ancelotti,Francisco
+720955,2022-01-23T17:30:00+00:00,8,Real Sociedad,Getafe,0,0,0,0,La Liga,Regular Season - 22,1.75,3.4,5.25,1.5,2.5,,,,,3.0,2.0,70,30,7.0,2.0,4-3-3,5-3-2,Imanol Alguacil,Quique Sánchez Flores
+720956,2022-01-22T17:30:00+00:00,8,Sevilla,Celta Vigo,2,2,0,2,La Liga,Regular Season - 22,1.9,3.25,4.33,,,,,,,5.0,4.0,65,35,7.0,,4-3-3,4-1-3-2,Lopetegui,E. Coudet
+720957,2022-01-23T17:30:00+00:00,8,Rayo Vallecano,Athletic Club,0,1,0,1,La Liga,Regular Season - 22,2.62,3.1,2.87,,,,,,,3.0,3.0,67,33,9.0,7.0,4-2-3-1,4-4-2,Andoni Iraola,Marcelino
+720958,2022-01-22T15:15:00+00:00,8,Villarreal,Mallorca,3,0,2,0,La Liga,Regular Season - 22,1.55,4.0,6.5,,,,,,,6.0,2.0,56,44,10.0,6.0,4-4-2,4-3-3,Unai Emery,Luis García
+720959,2022-02-07T20:00:00+00:00,8,Athletic Club,Espanyol,2,1,2,1,La Liga,Regular Season - 23,1.63,3.85,5.6,,,,,,,4.0,3.0,43,57,5.0,3.0,4-4-2,4-2-3-1,Marcelino,Vicente Moreno
+720960,2022-02-06T15:15:00+00:00,8,Barcelona,Atletico Madrid,4,2,3,1,La Liga,Regular Season - 23,2.34,3.3,3.38,,,,,,,4.0,4.0,57,43,3.0,5.0,4-3-3,4-3-3,Xavi,D. Simeone
+720961,2022-02-06T17:30:00+00:00,8,Real Betis,Villarreal,0,2,0,1,La Liga,Regular Season - 23,2.48,3.4,2.85,,,,,,,3.0,3.0,60,40,6.0,6.0,4-2-3-1,4-4-2,M. Pellegrini,Unai Emery
+720962,2022-02-05T17:30:00+00:00,8,Celta Vigo,Rayo Vallecano,2,0,1,0,La Liga,Regular Season - 23,1.93,3.38,4.25,,,,,,,3.0,,52,48,7.0,2.0,4-1-3-2,4-2-3-1,E. Coudet,Andoni Iraola
+720963,2022-02-05T15:15:00+00:00,8,Mallorca,Cadiz,2,1,1,1,La Liga,Regular Season - 23,1.9,3.25,4.6,,,,,,,5.0,5.0,46,54,6.0,4.0,4-2-3-1,4-4-2,Luis García,Sergio
+720964,2022-02-04T20:00:00+00:00,8,Getafe,Levante,3,0,2,0,La Liga,Regular Season - 23,2.03,3.05,4.3,,,,,,,8.0,2.0,41,59,2.0,8.0,5-3-2,3-4-3,Quique Sánchez Flores,A. Lisci
+720965,2022-02-05T20:00:00+00:00,8,Osasuna,Sevilla,0,0,0,0,La Liga,Regular Season - 23,3.65,3.0,2.27,,,,,,,3.0,4.0,27,73,1.0,1.0,4-1-4-1,3-4-3,Arrasate,Lopetegui
+720966,2022-02-06T20:00:00+00:00,8,Real Madrid,Granada CF,1,0,0,0,La Liga,Regular Season - 23,1.28,6.25,11.5,,,,,,,11.0,3.0,66,34,9.0,2.0,4-3-3,4-4-2,C. Ancelotti,Robert Moreno
+720967,2022-02-06T13:00:00+00:00,8,Valencia,Real Sociedad,0,0,0,0,La Liga,Regular Season - 23,3.7,3.25,2.12,,,,,,,3.0,2.0,40,60,9.0,9.0,5-3-2,4-3-3,José Bordalás,Imanol Alguacil
+720968,2022-02-05T13:00:00+00:00,8,Elche,Alaves,3,1,0,1,La Liga,Regular Season - 23,2.47,2.9,3.3,,,,,,,4.0,2.0,60,40,7.0,3.0,4-4-2,4-4-2,Francisco,Mendilibar
+720969,2022-02-13T13:00:00+00:00,8,Alaves,Valencia,2,1,1,0,La Liga,Regular Season - 24,2.61,3.0,3.0,,,,,,,5.0,4.0,41,59,5.0,9.0,4-1-4-1,4-4-2,Mendilibar,José Bordalás
+720970,2022-02-12T20:00:00+00:00,8,Atletico Madrid,Getafe,4,3,3,3,La Liga,Regular Season - 24,1.55,4.05,7.25,,,,,,,7.0,4.0,50,50,5.0,4.0,4-4-2,5-3-2,D. Simeone,Quique Sánchez Flores
+720971,2022-02-14T20:00:00+00:00,8,Mallorca,Athletic Club,3,2,2,0,La Liga,Regular Season - 24,3.0,2.95,2.65,,,,,,,5.0,2.0,45,55,6.0,6.0,4-4-2,4-4-2,Luis García,Marcelino
+720972,2022-02-12T13:00:00+00:00,8,Cadiz,Celta Vigo,0,0,0,0,La Liga,Regular Season - 24,4.1,3.25,2.01,,,,,,,2.0,1.0,44,56,3.0,3.0,4-4-2,4-1-3-2,Sergio,E. Coudet
+720973,2022-02-13T20:00:00+00:00,8,Espanyol,Barcelona,2,2,1,1,La Liga,Regular Season - 24,5.25,4.25,1.65,,,,,,,4.0,4.0,36,64,3.0,5.0,4-1-4-1,4-3-3,Vicente Moreno,Xavi
+720974,2022-02-13T15:15:00+00:00,8,Levante,Real Betis,2,4,1,3,La Liga,Regular Season - 24,3.25,3.45,2.21,,,,,,,4.0,11.0,41,59,5.0,7.0,3-4-2-1,4-2-3-1,A. Lisci,M. Pellegrini
+720975,2022-02-13T17:30:00+00:00,8,Real Sociedad,Granada CF,2,0,1,0,La Liga,Regular Season - 24,1.37,5.0,8.4,,,,,,,8.0,2.0,57,43,6.0,5.0,4-2-3-1,4-4-2,Imanol Alguacil,Robert Moreno
+720976,2022-02-11T20:00:00+00:00,8,Sevilla,Elche,2,0,0,0,La Liga,Regular Season - 24,1.41,4.45,8.65,,,,,,,6.0,1.0,57,43,5.0,4.0,3-4-2-1,4-4-2,Lopetegui,Francisco
+720977,2022-02-12T17:30:00+00:00,8,Rayo Vallecano,Osasuna,0,3,0,2,La Liga,Regular Season - 24,2.23,3.0,3.7,,,,,,,3.0,5.0,55,45,4.0,5.0,4-2-3-1,4-3-3,Andoni Iraola,Arrasate
+720978,2022-02-12T15:15:00+00:00,8,Villarreal,Real Madrid,0,0,0,0,La Liga,Regular Season - 24,2.75,3.3,2.75,,,,,,,2.0,6.0,44,56,3.0,3.0,4-4-2,4-3-3,Unai Emery,C. Ancelotti
+720979,2022-02-20T20:00:00+00:00,8,Athletic Club,Real Sociedad,4,0,0,0,La Liga,Regular Season - 25,2.2,3.0,3.75,,,,,,,8.0,2.0,47,53,6.0,4.0,4-4-2,4-2-3-1,Marcelino,Imanol Alguacil
+720980,2022-02-20T17:30:00+00:00,8,Real Betis,Mallorca,2,1,1,0,La Liga,Regular Season - 25,1.58,4.15,5.65,,,,,,,5.0,1.0,55,45,4.0,7.0,4-2-3-1,4-4-2,M. Pellegrini,Luis García
+720981,2022-02-21T20:00:00+00:00,8,Celta Vigo,Levante,1,1,0,0,La Liga,Regular Season - 25,1.64,3.95,5.35,,,,,,,4.0,3.0,63,37,2.0,5.0,4-1-3-2,5-3-2,E. Coudet,A. Lisci
+720982,2022-02-19T17:30:00+00:00,8,Cadiz,Getafe,1,1,1,1,La Liga,Regular Season - 25,3.1,2.7,2.85,,,,,,,2.0,1.0,65,35,7.0,2.0,3-4-1-2,5-3-2,Sergio,Quique Sánchez Flores
+720983,2022-02-19T13:00:00+00:00,8,Granada CF,Villarreal,1,4,0,2,La Liga,Regular Season - 25,4.1,3.6,1.89,,,,,,,5.0,7.0,38,62,9.0,2.0,4-3-3,4-4-2,Robert Moreno,Unai Emery
+720984,2022-02-20T13:00:00+00:00,8,Espanyol,Sevilla,1,1,0,1,La Liga,Regular Season - 25,3.75,3.05,2.21,,,,,,,4.0,2.0,44,56,3.0,7.0,4-1-4-1,4-3-3,Vicente Moreno,Lopetegui
+720985,2022-02-19T15:15:00+00:00,8,Osasuna,Atletico Madrid,0,3,0,1,La Liga,Regular Season - 25,3.55,3.05,2.29,,,,,,,4.0,4.0,62,38,4.0,2.0,4-1-4-1,4-4-2,Arrasate,D. Simeone
+720986,2022-02-19T20:00:00+00:00,8,Real Madrid,Alaves,3,0,0,0,La Liga,Regular Season - 25,1.22,7.3,14.25,,,,,,,9.0,2.0,70,30,7.0,1.0,4-3-3,4-1-4-1,C. Ancelotti,Mendilibar
+720987,2022-02-20T15:15:00+00:00,8,Valencia,Barcelona,1,4,0,3,La Liga,Regular Season - 25,3.9,3.8,1.95,,,,,,,5.0,6.0,36,64,8.0,3.0,4-4-2,4-3-3,José Bordalás,Xavi
+720988,2022-02-18T20:00:00+00:00,8,Elche,Rayo Vallecano,2,1,0,0,La Liga,Regular Season - 25,3.0,2.95,2.7,,,,,,,5.0,2.0,44,56,2.0,3.0,4-4-2,4-2-3-1,Francisco,Andoni Iraola
+720989,2022-02-26T20:00:00+00:00,8,Atletico Madrid,Celta Vigo,2,0,1,0,La Liga,Regular Season - 26,1.72,3.65,5.8,,,,,,,6.0,2.0,36,64,5.0,9.0,3-5-2,4-1-3-2,D. Simeone,E. Coudet
+720990,2022-02-27T20:00:00+00:00,8,Barcelona,Athletic Club,4,0,1,0,La Liga,Regular Season - 26,1.52,4.55,6.65,,,,,,,7.0,3.0,72,28,5.0,,4-3-3,4-4-2,Xavi,Marcelino
+720991,2022-02-26T13:00:00+00:00,8,Mallorca,Valencia,0,1,0,1,La Liga,Regular Season - 26,2.33,3.2,3.25,,,,,,,3.0,4.0,67,33,14.0,1.0,4-2-3-1,3-4-1-2,Luis García,José Bordalás
+720992,2022-02-26T15:15:00+00:00,8,Getafe,Alaves,2,2,0,1,La Liga,Regular Season - 26,1.95,3.05,4.85,,,,,,,3.0,3.0,49,51,6.0,1.0,3-5-2,4-1-4-1,Quique Sánchez Flores,Mendilibar
+720993,2022-02-28T20:00:00+00:00,8,Granada CF,Cadiz,0,0,0,0,La Liga,Regular Season - 26,2.15,3.1,3.8,,,,,,,1.0,4.0,37,63,,4.0,3-4-3,3-4-3,Robert Moreno,Sergio
+720994,2022-02-25T20:00:00+00:00,8,Levante,Elche,3,0,1,0,La Liga,Regular Season - 26,2.04,3.3,3.9,,,,,,,4.0,3.0,43,57,3.0,3.0,3-4-2-1,4-4-2,A. Lisci,Francisco
+720995,2022-02-27T17:30:00+00:00,8,Real Sociedad,Osasuna,1,0,0,0,La Liga,Regular Season - 26,2.25,2.8,3.6,,,,,,,5.0,1.0,58,42,6.0,5.0,4-2-3-1,4-4-1-1,Imanol Alguacil,Arrasate
+720996,2022-02-27T15:15:00+00:00,8,Sevilla,Real Betis,2,1,2,0,La Liga,Regular Season - 26,2.24,3.2,3.45,,,,,,,3.0,2.0,46,54,4.0,4.0,4-3-3,4-2-3-1,Lopetegui,M. Pellegrini
+720997,2022-02-26T17:30:00+00:00,8,Rayo Vallecano,Real Madrid,0,1,0,0,La Liga,Regular Season - 26,6.1,4.35,1.57,,,,,,,5.0,6.0,34,66,5.0,9.0,4-2-3-1,4-3-3,Andoni Iraola,C. Ancelotti
+720998,2022-02-27T13:00:00+00:00,8,Villarreal,Espanyol,5,1,3,0,La Liga,Regular Season - 26,1.53,4.45,5.8,,,,,,,11.0,2.0,65,35,10.0,3.0,4-4-2,4-1-4-1,Unai Emery,Vicente Moreno
+720999,2022-03-04T20:00:00+00:00,8,Alaves,Sevilla,0,0,0,0,La Liga,Regular Season - 27,4.3,3.15,2.0,,,,,,,2.0,4.0,34,66,5.0,5.0,4-4-1-1,4-3-3,Mendilibar,Lopetegui
+721000,2022-03-07T20:00:00+00:00,8,Athletic Club,Levante,3,1,0,0,La Liga,Regular Season - 27,1.51,4.35,6.25,,,,,,,9.0,2.0,50,50,4.0,3.0,4-4-2,3-4-3,Marcelino,A. Lisci
+721001,2022-03-06T20:00:00+00:00,8,Real Betis,Atletico Madrid,1,3,1,1,La Liga,Regular Season - 27,3.55,3.3,2.25,,,,,,,6.0,6.0,65,35,10.0,3.0,4-2-3-1,5-3-2,M. Pellegrini,D. Simeone
+721002,2022-03-06T17:30:00+00:00,8,Celta Vigo,Mallorca,4,3,2,1,La Liga,Regular Season - 27,1.96,3.3,4.25,,,,,,,8.0,3.0,59,41,4.0,5.0,4-1-3-2,5-3-2,E. Coudet,Luis García
+721003,2022-03-06T13:00:00+00:00,8,Cadiz,Rayo Vallecano,2,0,0,0,La Liga,Regular Season - 27,2.52,2.95,3.2,,,,,,,7.0,3.0,47,53,5.0,6.0,4-4-2,4-2-3-1,Sergio,Andoni Iraola
+721004,2022-03-05T15:15:00+00:00,8,Espanyol,Getafe,2,0,2,0,La Liga,Regular Season - 27,2.16,3.05,3.9,,,,,,,1.0,3.0,55,45,1.0,5.0,4-2-3-1,3-5-2,Vicente Moreno,Quique Sánchez Flores
+721005,2022-03-05T13:00:00+00:00,8,Osasuna,Villarreal,1,0,0,0,La Liga,Regular Season - 27,3.38,3.25,2.26,,,,,,,3.0,1.0,28,72,6.0,8.0,4-4-2,4-4-2,Arrasate,Unai Emery
+721006,2022-03-05T20:00:00+00:00,8,Real Madrid,Real Sociedad,4,1,2,1,La Liga,Regular Season - 27,1.53,4.7,6.15,,,,,,,8.0,1.0,64,36,7.0,1.0,4-3-3,4-4-2,C. Ancelotti,Imanol Alguacil
+721007,2022-03-05T17:30:00+00:00,8,Valencia,Granada CF,3,1,0,0,La Liga,Regular Season - 27,1.89,3.65,4.05,,,,,,,4.0,,52,48,3.0,6.0,4-3-3,4-5-1,José Bordalás,Robert Moreno
+721008,2022-03-06T15:15:00+00:00,8,Elche,Barcelona,1,2,1,0,La Liga,Regular Season - 27,7.6,4.95,1.43,,,,,,,3.0,9.0,32,68,5.0,6.0,4-4-2,4-3-3,Francisco,Xavi
+721009,2022-03-11T20:00:00+00:00,8,Atletico Madrid,Cadiz,2,1,1,1,La Liga,Regular Season - 28,1.33,5.1,9.95,,,,,,,5.0,3.0,46,54,,4.0,5-3-2,4-4-2,D. Simeone,Sergio
+721010,2022-03-13T20:00:00+00:00,8,Barcelona,Osasuna,4,0,3,0,La Liga,Regular Season - 28,1.35,5.2,8.7,,,,,,,9.0,3.0,72,28,5.0,1.0,4-3-3,4-4-1-1,Xavi,Arrasate
+721011,2022-03-13T15:15:00+00:00,8,Real Betis,Athletic Club,1,0,1,0,La Liga,Regular Season - 28,2.2,3.38,3.38,,,,,,,5.0,2.0,51,49,5.0,6.0,4-2-3-1,4-4-2,M. Pellegrini,Marcelino
+721012,2022-03-14T20:00:00+00:00,8,Mallorca,Real Madrid,0,3,0,0,La Liga,Regular Season - 28,5.8,4.45,1.58,,,,,,,3.0,5.0,38,62,1.0,6.0,4-4-2,4-3-3,Luis García,C. Ancelotti
+721013,2022-03-12T20:00:00+00:00,8,Getafe,Valencia,0,0,0,0,La Liga,Regular Season - 28,2.43,3.15,3.1,,,,,,,6.0,,53,47,5.0,3.0,5-3-2,3-4-2-1,Quique Sánchez Flores,José Bordalás
+721014,2022-03-12T15:15:00+00:00,8,Granada CF,Elche,0,1,0,1,La Liga,Regular Season - 28,2.2,3.3,3.4,,,,,,,4.0,2.0,57,43,3.0,3.0,5-3-2,4-4-2,,Francisco
+721015,2022-03-12T13:00:00+00:00,8,Levante,Espanyol,1,1,0,0,La Liga,Regular Season - 28,2.38,3.4,3.0,,,,,,,3.0,1.0,56,44,8.0,2.0,3-4-3,4-3-3,A. Lisci,Vicente Moreno
+721016,2022-03-13T17:30:00+00:00,8,Real Sociedad,Alaves,1,0,0,0,La Liga,Regular Season - 28,1.52,4.15,6.55,,,,,,,6.0,4.0,60,40,6.0,4.0,4-1-4-1,4-2-3-1,Imanol Alguacil,Mendilibar
+721017,2022-03-13T13:00:00+00:00,8,Rayo Vallecano,Sevilla,1,1,0,0,La Liga,Regular Season - 28,3.45,3.15,2.24,,,,,,,2.0,2.0,43,57,5.0,6.0,4-2-3-1,4-2-3-1,Andoni Iraola,Lopetegui
+721018,2022-03-12T17:30:00+00:00,8,Villarreal,Celta Vigo,1,0,0,0,La Liga,Regular Season - 28,1.69,3.95,4.85,,,,,,,3.0,2.0,50,50,5.0,6.0,4-4-1-1,4-1-3-2,Unai Emery,E. Coudet
+721019,2022-03-19T13:00:00+00:00,8,Alaves,Granada CF,2,3,0,0,La Liga,Regular Season - 29,1.97,3.38,4.1,,,,,,,6.0,3.0,50,50,6.0,2.0,4-4-2,5-3-2,Mendilibar,
+721020,2022-03-18T20:00:00+00:00,8,Athletic Club,Getafe,1,1,1,1,La Liga,Regular Season - 29,1.69,3.45,5.95,,,,,,,11.0,2.0,66,34,8.0,2.0,4-4-2,5-3-2,Marcelino,Quique Sánchez Flores
+721021,2022-03-20T15:15:00+00:00,8,Celta Vigo,Real Betis,0,0,0,0,La Liga,Regular Season - 29,2.1,3.3,3.65,,,,,,,3.0,1.0,52,48,2.0,2.0,4-1-3-2,4-2-3-1,E. Coudet,M. Pellegrini
+721022,2022-03-20T15:15:00+00:00,8,Cadiz,Villarreal,1,0,0,0,La Liga,Regular Season - 29,3.5,3.4,2.13,,,,,,,7.0,1.0,42,58,6.0,3.0,4-4-2,4-4-2,Sergio,Unai Emery
+721023,2022-03-20T13:00:00+00:00,8,Espanyol,Mallorca,1,0,1,0,La Liga,Regular Season - 29,2.18,3.25,3.55,,,,,,,3.0,4.0,45,55,6.0,6.0,4-2-3-1,4-4-2,Vicente Moreno,Luis García
+721024,2022-03-19T17:30:00+00:00,8,Osasuna,Levante,3,1,1,0,La Liga,Regular Season - 29,1.87,3.5,4.3,,,,,,,7.0,4.0,45,55,6.0,1.0,4-3-3,5-3-2,Arrasate,A. Lisci
+721025,2022-03-20T20:00:00+00:00,8,Real Madrid,Barcelona,0,4,0,2,La Liga,Regular Season - 29,2.34,3.5,3.15,,,,,,,4.0,10.0,41,59,4.0,3.0,4-2-4,4-3-3,C. Ancelotti,Xavi
+721026,2022-03-20T17:30:00+00:00,8,Sevilla,Real Sociedad,0,0,0,0,La Liga,Regular Season - 29,2.13,3.1,3.85,,,,,,,,2.0,60,40,7.0,3.0,4-2-3-1,4-3-3,Lopetegui,Imanol Alguacil
+721027,2022-03-19T20:00:00+00:00,8,Rayo Vallecano,Atletico Madrid,0,1,0,0,La Liga,Regular Season - 29,4.0,3.25,2.12,,,,,,,3.0,3.0,55,45,3.0,6.0,4-2-3-1,3-5-2,Andoni Iraola,D. Simeone
+721028,2022-03-19T15:15:00+00:00,8,Elche,Valencia,0,1,0,0,La Liga,Regular Season - 29,2.75,3.05,2.75,,,,,,,2.0,3.0,56,44,4.0,2.0,4-4-2,4-1-4-1,Francisco,José Bordalás
+721029,2022-04-03T12:00:00+00:00,8,Athletic Club,Elche,2,1,1,0,La Liga,Regular Season - 30,1.45,4.6,7.0,,,,,,,6.0,2.0,48,52,7.0,4.0,4-4-2,4-4-2,Marcelino,Francisco
+721030,2022-04-02T19:00:00+00:00,8,Atletico Madrid,Alaves,4,1,1,0,La Liga,Regular Season - 30,1.43,4.75,8.4,,,,,,,8.0,1.0,49,51,7.0,2.0,4-4-2,4-3-3,D. Simeone,Mendilibar
+721031,2022-04-03T19:00:00+00:00,8,Barcelona,Sevilla,1,0,0,0,La Liga,Regular Season - 30,1.43,4.85,7.95,,,,,,,6.0,3.0,55,45,9.0,2.0,4-3-3,4-2-3-1,Xavi,Lopetegui
+721032,2022-04-03T14:15:00+00:00,8,Real Betis,Osasuna,4,1,2,0,La Liga,Regular Season - 30,1.95,3.4,4.1,,,,,,,8.0,3.0,55,45,11.0,7.0,4-2-3-1,4-3-3,M. Pellegrini,Arrasate
+721033,2022-04-02T16:30:00+00:00,8,Celta Vigo,Real Madrid,1,2,0,1,La Liga,Regular Season - 30,4.3,3.8,1.87,,,,,,,4.0,6.0,55,45,9.0,3.0,4-1-3-2,4-3-3,E. Coudet,C. Ancelotti
+721034,2022-04-02T12:00:00+00:00,8,Getafe,Mallorca,1,0,0,0,La Liga,Regular Season - 30,1.98,3.1,4.5,,,,,,,3.0,1.0,62,38,5.0,1.0,3-5-2,5-3-2,Quique Sánchez Flores,J. Aguirre
+721035,2022-04-03T16:30:00+00:00,8,Granada CF,Rayo Vallecano,2,2,0,2,La Liga,Regular Season - 30,2.75,3.05,2.8,,,,,,,9.0,4.0,64,36,5.0,4.0,4-4-2,4-2-3-1,,Andoni Iraola
+721036,2022-04-02T14:15:00+00:00,8,Levante,Villarreal,2,0,0,0,La Liga,Regular Season - 30,5.0,4.2,1.64,,,,,,,4.0,2.0,41,59,1.0,8.0,5-3-2,4-4-2,A. Lisci,Unai Emery
+721037,2022-04-04T19:00:00+00:00,8,Real Sociedad,Espanyol,1,0,0,0,La Liga,Regular Season - 30,1.55,4.0,6.4,,,,,,,6.0,2.0,68,32,6.0,,4-2-3-1,4-4-1-1,Imanol Alguacil,Vicente Moreno
+721038,2022-04-03T16:30:00+00:00,8,Valencia,Cadiz,0,0,0,0,La Liga,Regular Season - 30,2.07,3.2,3.9,,,,,,,1.0,3.0,51,49,4.0,3.0,3-4-2-1,4-4-2,José Bordalás,Sergio
+721039,2022-04-09T14:15:00+00:00,8,Mallorca,Atletico Madrid,1,0,0,0,La Liga,Regular Season - 31,4.35,3.2,2.05,,,,,,,3.0,1.0,33,67,1.0,6.0,5-3-2,3-5-2,J. Aguirre,D. Simeone
+721040,2022-04-09T12:00:00+00:00,8,Cadiz,Real Betis,1,2,0,0,La Liga,Regular Season - 31,3.3,3.15,2.33,,,,,,,4.0,3.0,40,60,8.0,4.0,4-4-2,4-2-3-1,Sergio,M. Pellegrini
+721041,2022-04-10T14:15:00+00:00,8,Espanyol,Celta Vigo,1,0,0,0,La Liga,Regular Season - 31,2.9,3.15,2.57,,,,,,,2.0,5.0,47,53,2.0,3.0,4-2-3-1,4-1-3-2,Vicente Moreno,E. Coudet
+721042,2022-04-10T19:00:00+00:00,8,Levante,Barcelona,2,3,0,0,La Liga,Regular Season - 31,6.75,5.1,1.46,,,,,,,6.0,7.0,36,64,4.0,3.0,5-3-2,4-3-3,A. Lisci,Xavi
+721043,2022-04-10T12:00:00+00:00,8,Osasuna,Alaves,1,0,0,0,La Liga,Regular Season - 31,2.02,3.3,4.0,,,,,,,4.0,2.0,65,35,7.0,3.0,4-3-3,4-2-3-1,Arrasate,Mendilibar
+721044,2022-04-09T19:00:00+00:00,8,Real Madrid,Getafe,2,0,1,0,La Liga,Regular Season - 31,1.47,4.65,7.5,,,,,,,8.0,,69,31,10.0,2.0,4-3-3,5-3-2,C. Ancelotti,Quique Sánchez Flores
+721045,2022-04-08T19:00:00+00:00,8,Sevilla,Granada CF,4,2,1,1,La Liga,Regular Season - 31,1.42,4.6,7.7,,,,,,,8.0,5.0,73,27,14.0,3.0,4-2-3-1,5-3-2,Lopetegui,
+721046,2022-04-11T19:00:00+00:00,8,Rayo Vallecano,Valencia,1,1,0,0,La Liga,Regular Season - 31,2.39,3.15,3.2,,,,,,,4.0,2.0,56,44,5.0,4.0,4-2-3-1,4-1-4-1,Andoni Iraola,José Bordalás
+721047,2022-04-09T16:30:00+00:00,8,Villarreal,Athletic Club,1,1,0,1,La Liga,Regular Season - 31,2.65,3.15,2.8,,,,,,,5.0,6.0,60,40,7.0,2.0,4-4-2,4-4-2,Unai Emery,Marcelino
+721048,2022-04-10T16:30:00+00:00,8,Elche,Real Sociedad,1,2,1,2,La Liga,Regular Season - 31,4.8,3.45,1.82,,,,,,,1.0,6.0,50,50,8.0,9.0,4-4-2,4-3-1-2,Francisco,Imanol Alguacil
+721049,2022-04-16T14:15:00+00:00,8,Alaves,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 32,2.8,3.0,2.8,,,,,,,5.0,3.0,38,62,2.0,12.0,4-4-2,4-2-3-1,Mendilibar,Andoni Iraola
+721050,2022-04-17T16:30:00+00:00,8,Athletic Club,Celta Vigo,0,2,0,2,La Liga,Regular Season - 32,1.75,3.6,5.0,,,,,,,2.0,4.0,50,50,5.0,4.0,4-4-2,4-1-3-2,Marcelino,E. Coudet
+721051,2022-04-17T14:15:00+00:00,8,Atletico Madrid,Espanyol,2,1,0,0,La Liga,Regular Season - 32,1.37,5.1,9.6,,,,,,,3.0,5.0,52,48,6.0,3.0,3-5-2,3-4-2-1,D. Simeone,Vicente Moreno
+721052,2022-04-18T19:00:00+00:00,8,Barcelona,Cadiz,0,1,0,0,La Liga,Regular Season - 32,1.17,8.5,18.0,,,,,,,6.0,4.0,75,25,8.0,1.0,4-3-3,4-2-3-1,Xavi,Sergio
+721053,2022-04-16T19:00:00+00:00,8,Getafe,Villarreal,1,2,0,2,La Liga,Regular Season - 32,3.3,3.0,2.4,,,,,,,5.0,6.0,40,60,6.0,6.0,3-5-2,4-4-2,Quique Sánchez Flores,Unai Emery
+721054,2022-04-17T12:00:00+00:00,8,Granada CF,Levante,1,4,0,1,La Liga,Regular Season - 32,2.34,3.3,3.1,,,,,,,4.0,8.0,53,47,13.0,2.0,5-3-2,5-3-2,,A. Lisci
+721055,2022-04-15T19:00:00+00:00,8,Real Sociedad,Real Betis,0,0,0,0,La Liga,Regular Season - 32,1.98,3.5,3.85,,,,,,,2.0,2.0,57,43,8.0,1.0,4-3-1-2,4-2-3-1,Imanol Alguacil,M. Pellegrini
+721056,2022-04-17T19:00:00+00:00,8,Sevilla,Real Madrid,2,3,2,0,La Liga,Regular Season - 32,2.95,3.45,2.49,,,,,,,2.0,6.0,41,59,,3.0,4-2-3-1,4-3-3,Lopetegui,C. Ancelotti
+721057,2022-04-16T16:30:00+00:00,8,Valencia,Osasuna,1,2,0,0,La Liga,Regular Season - 32,2.21,3.2,3.5,,,,,,,4.0,3.0,52,48,9.0,5.0,4-4-2,4-4-2,José Bordalás,Arrasate
+721058,2022-04-16T12:00:00+00:00,8,Elche,Mallorca,3,0,1,0,La Liga,Regular Season - 32,2.9,2.85,2.8,,,,,,,2.0,2.0,52,48,2.0,1.0,5-4-1,5-4-1,Francisco,J. Aguirre
+721059,2022-04-20T17:00:00+00:00,8,Atletico Madrid,Granada CF,0,0,0,0,La Liga,Regular Season - 33,1.37,5.0,8.3,,,,,,,1.0,2.0,64,36,11.0,1.0,3-5-2,4-2-3-1,D. Simeone,Karanka
+721060,2022-04-19T19:00:00+00:00,8,Real Betis,Elche,0,1,0,0,La Liga,Regular Season - 33,1.46,4.5,6.85,,,,,,,3.0,1.0,65,35,2.0,3.0,4-2-3-1,5-4-1,M. Pellegrini,Francisco
+721061,2022-04-20T18:00:00+00:00,8,Celta Vigo,Getafe,0,2,0,1,La Liga,Regular Season - 33,2.08,3.0,4.2,,,,,,,2.0,3.0,71,29,2.0,1.0,4-3-1-2,3-5-2,E. Coudet,Quique Sánchez Flores
+721062,2022-04-19T17:00:00+00:00,8,Mallorca,Alaves,2,1,2,0,La Liga,Regular Season - 33,1.85,3.38,4.8,,,,,,,3.0,4.0,40,60,,6.0,4-4-1-1,4-2-3-1,J. Aguirre,Mendilibar
+721063,2022-04-21T18:00:00+00:00,8,Cadiz,Athletic Club,2,3,0,3,La Liga,Regular Season - 33,3.15,2.9,2.57,,,,,,,8.0,7.0,58,42,4.0,1.0,4-4-2,4-4-2,Sergio,Marcelino
+721064,2022-04-21T17:00:00+00:00,8,Espanyol,Rayo Vallecano,0,1,0,1,La Liga,Regular Season - 33,2.7,3.05,2.8,,,,,,,2.0,2.0,57,43,3.0,10.0,4-3-3,4-2-3-1,Vicente Moreno,Andoni Iraola
+721065,2022-04-21T17:00:00+00:00,8,Levante,Sevilla,2,3,1,2,La Liga,Regular Season - 33,3.45,3.4,2.26,,,,,,,6.0,6.0,45,55,10.0,4.0,5-3-2,4-2-3-1,A. Lisci,Lopetegui
+721066,2022-04-20T19:30:00+00:00,8,Osasuna,Real Madrid,1,3,1,2,La Liga,Regular Season - 33,3.95,3.8,1.94,,,,,,,3.0,11.0,35,65,3.0,4.0,4-5-1,4-3-3,Arrasate,C. Ancelotti
+721067,2022-04-21T19:30:00+00:00,8,Real Sociedad,Barcelona,0,1,0,1,La Liga,Regular Season - 33,3.25,3.55,2.27,,,,,,,5.0,1.0,56,44,5.0,3.0,4-1-3-2,4-3-3,Imanol Alguacil,Xavi
+721068,2022-04-19T19:30:00+00:00,8,Villarreal,Valencia,2,0,2,0,La Liga,Regular Season - 33,1.31,5.65,9.2,,,,,,,5.0,1.0,58,42,3.0,2.0,4-4-1-1,3-5-1-1,Unai Emery,José Bordalás
+721069,2022-04-30T12:00:00+00:00,8,Alaves,Villarreal,2,1,2,0,La Liga,Regular Season - 34,3.3,3.3,2.24,,,,,,,5.0,6.0,33,67,5.0,8.0,4-2-3-1,4-2-3-1,Mendilibar,Unai Emery
+721070,2022-04-30T19:00:00+00:00,8,Athletic Club,Atletico Madrid,2,0,1,0,La Liga,Regular Season - 34,2.9,3.0,2.85,,,,,,,4.0,3.0,43,57,5.0,3.0,4-4-2,5-4-1,Marcelino,D. Simeone
+721071,2022-05-01T19:00:00+00:00,8,Barcelona,Mallorca,2,1,1,0,La Liga,Regular Season - 34,1.23,6.55,11.75,,,,,,,5.0,2.0,71,29,5.0,2.0,4-3-3,3-4-1-2,Xavi,J. Aguirre
+721072,2022-05-02T19:00:00+00:00,8,Getafe,Real Betis,0,0,0,0,La Liga,Regular Season - 34,2.85,3.05,2.7,,,,,,,2.0,4.0,35,65,2.0,4.0,3-5-2,4-2-3-1,Quique Sánchez Flores,M. Pellegrini
+721073,2022-05-01T14:15:00+00:00,8,Granada CF,Celta Vigo,1,1,0,0,La Liga,Regular Season - 34,2.9,3.3,2.5,,,,,,,6.0,6.0,42,58,5.0,4.0,4-4-1-1,4-1-3-2,Karanka,E. Coudet
+721074,2022-04-30T14:15:00+00:00,8,Real Madrid,Espanyol,4,0,2,0,La Liga,Regular Season - 34,1.45,5.1,6.85,,,,,,,5.0,6.0,58,42,6.0,8.0,4-3-3,4-4-2,C. Ancelotti,Vicente Moreno
+721075,2022-04-29T19:00:00+00:00,8,Sevilla,Cadiz,1,1,1,0,La Liga,Regular Season - 34,1.55,4.0,6.55,,,,,,,6.0,4.0,57,43,5.0,6.0,4-2-3-1,4-2-3-1,Lopetegui,Sergio
+721076,2022-04-30T16:30:00+00:00,8,Valencia,Levante,1,1,1,0,La Liga,Regular Season - 34,2.08,3.38,3.65,,,,,,,1.0,6.0,32,68,1.0,7.0,5-3-2,5-3-2,José Bordalás,A. Lisci
+721077,2022-05-01T16:30:00+00:00,8,Rayo Vallecano,Real Sociedad,1,1,0,1,La Liga,Regular Season - 34,3.7,3.1,1.95,,,,,,,7.0,3.0,44,56,8.0,5.0,4-2-3-1,4-3-1-2,Andoni Iraola,Imanol Alguacil
+721078,2022-05-01T12:00:00+00:00,8,Elche,Osasuna,1,1,0,0,La Liga,Regular Season - 34,2.75,3.0,2.85,,,,,,,4.0,3.0,57,43,7.0,4.0,5-4-1,5-3-2,Francisco,Arrasate
+721079,2022-05-07T14:15:00+00:00,8,Athletic Club,Valencia,0,0,0,0,La Liga,Regular Season - 35,1.42,4.55,7.85,,,,,,,5.0,1.0,59,41,4.0,2.0,4-4-2,5-3-2,Marcelino,José Bordalás
+721080,2022-05-08T19:00:00+00:00,8,Atletico Madrid,Real Madrid,1,0,1,0,La Liga,Regular Season - 35,1.82,3.8,4.55,,,,,,,2.0,6.0,41,59,4.0,6.0,4-4-2,4-3-3,D. Simeone,C. Ancelotti
+721081,2022-05-07T19:00:00+00:00,8,Real Betis,Barcelona,1,2,0,0,La Liga,Regular Season - 35,3.0,3.7,2.33,,,,,,,5.0,5.0,42,58,4.0,8.0,4-2-3-1,4-3-3,M. Pellegrini,Xavi
+721082,2022-05-07T16:30:00+00:00,8,Celta Vigo,Alaves,4,0,2,0,La Liga,Regular Season - 35,1.75,3.6,5.0,,,,,,,8.0,1.0,67,33,7.0,1.0,4-1-3-2,4-2-3-1,E. Coudet,Mendilibar
+721083,2022-05-07T12:00:00+00:00,8,Mallorca,Granada CF,2,6,1,1,La Liga,Regular Season - 35,1.9,3.5,4.0,,,,,,,8.0,7.0,59,41,5.0,5.0,4-3-3,4-2-3-1,J. Aguirre,Karanka
+721084,2022-05-08T12:00:00+00:00,8,Getafe,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 35,2.1,3.1,3.9,1.57,2.37,,,,,6.0,1.0,44,56,4.0,5.0,3-5-2,4-2-3-1,Quique Sánchez Flores,Andoni Iraola
+721085,2022-05-07T16:30:00+00:00,8,Cadiz,Elche,3,0,0,0,La Liga,Regular Season - 35,1.6,3.8,6.0,,,,,,,7.0,2.0,55,45,8.0,1.0,4-4-2,3-4-3,Sergio,Francisco
+721086,2022-05-08T16:30:00+00:00,8,Espanyol,Osasuna,1,1,0,1,La Liga,Regular Season - 35,2.37,3.4,3.0,,,,,,,3.0,5.0,51,49,6.0,6.0,3-5-2,4-3-3,Vicente Moreno,Arrasate
+721087,2022-05-06T19:00:00+00:00,8,Levante,Real Sociedad,2,1,0,0,La Liga,Regular Season - 35,3.25,3.45,2.19,,,,,,,7.0,6.0,35,65,7.0,6.0,5-3-2,4-3-1-2,A. Lisci,Imanol Alguacil
+721088,2022-05-08T14:15:00+00:00,8,Villarreal,Sevilla,1,1,0,0,La Liga,Regular Season - 35,2.11,3.3,3.7,,,,,,,7.0,2.0,53,47,4.0,2.0,4-4-1-1,4-3-3,Unai Emery,Lopetegui
+721089,2022-05-11T17:00:00+00:00,8,Alaves,Espanyol,2,1,1,1,La Liga,Regular Season - 36,2.1,3.3,3.65,,,,,,,9.0,3.0,46,54,12.0,3.0,4-2-3-1,4-3-3,Mendilibar,Vicente Moreno
+721090,2022-05-10T19:30:00+00:00,8,Barcelona,Celta Vigo,3,1,2,0,La Liga,Regular Season - 36,1.4,5.25,8.0,,,,,,,4.0,5.0,54,46,2.0,8.0,4-2-3-1,4-1-3-2,Xavi,E. Coudet
+721091,2022-05-10T18:00:00+00:00,8,Granada CF,Athletic Club,1,0,1,0,La Liga,Regular Season - 36,3.65,3.38,2.09,,,,,,,2.0,1.0,41,59,2.0,7.0,4-3-3,4-4-2,Karanka,Marcelino
+721092,2022-05-11T17:00:00+00:00,8,Osasuna,Getafe,1,1,1,1,La Liga,Regular Season - 36,2.57,2.8,3.25,,,,,,,1.0,,68,32,7.0,2.0,4-2-3-1,5-3-2,Arrasate,Quique Sánchez Flores
+721093,2022-05-12T19:30:00+00:00,8,Real Madrid,Levante,6,0,4,0,La Liga,Regular Season - 36,1.4,5.9,6.95,,,,,,,16.0,1.0,54,46,6.0,6.0,4-3-3,5-3-2,C. Ancelotti,A. Lisci
+721094,2022-05-12T17:00:00+00:00,8,Real Sociedad,Cadiz,3,0,1,0,La Liga,Regular Season - 36,1.6,3.8,6.1,,,,,,,7.0,1.0,53,47,2.0,12.0,4-3-1-2,4-4-1-1,Imanol Alguacil,Sergio
+721095,2022-05-11T18:30:00+00:00,8,Sevilla,Mallorca,0,0,0,0,La Liga,Regular Season - 36,1.61,3.85,5.95,,,,,,,4.0,2.0,72,28,6.0,3.0,4-3-3,5-3-2,Lopetegui,J. Aguirre
+721096,2022-05-10T17:00:00+00:00,8,Valencia,Real Betis,0,3,0,0,La Liga,Regular Season - 36,3.25,3.25,2.3,,,,,,,5.0,5.0,45,55,7.0,3.0,5-3-2,4-2-3-1,José Bordalás,M. Pellegrini
+721097,2022-05-12T18:00:00+00:00,8,Rayo Vallecano,Villarreal,1,5,1,4,La Liga,Regular Season - 36,4.05,3.65,1.89,,,,,,,3.0,8.0,56,44,9.0,3.0,4-2-3-1,4-3-3,Andoni Iraola,Unai Emery
+721098,2022-05-11T19:30:00+00:00,8,Elche,Atletico Madrid,0,2,0,1,La Liga,Regular Season - 36,6.75,4.15,1.56,,,,,,,,6.0,56,44,6.0,3.0,4-2-3-1,3-5-2,Francisco,D. Simeone
+721099,2022-05-15T17:30:00+00:00,8,Athletic Club,Osasuna,2,0,1,0,La Liga,Regular Season - 37,1.48,4.55,6.5,,,,,,,8.0,1.0,45,55,10.0,6.0,4-4-2,4-4-2,Marcelino,Arrasate
+721100,2022-05-15T17:30:00+00:00,8,Atletico Madrid,Sevilla,1,1,1,0,La Liga,Regular Season - 37,1.95,3.1,4.75,1.5,2.62,,,,,3.0,4.0,41,59,4.0,5.0,3-1-4-2,4-3-3,D. Simeone,Lopetegui
+721101,2022-05-15T17:30:00+00:00,8,Real Betis,Granada CF,2,0,1,0,La Liga,Regular Season - 37,1.55,4.5,5.5,,,,,,,4.0,4.0,61,39,4.0,9.0,4-2-3-1,4-3-3,M. Pellegrini,Karanka
+721102,2022-05-15T17:30:00+00:00,8,Celta Vigo,Elche,1,0,1,0,La Liga,Regular Season - 37,1.36,5.0,8.0,,,,,,,5.0,1.0,49,51,7.0,5.0,4-1-3-2,5-3-2,E. Coudet,Francisco
+721103,2022-05-15T17:30:00+00:00,8,Mallorca,Rayo Vallecano,2,1,1,0,La Liga,Regular Season - 37,1.75,3.4,5.0,,,,,,,5.0,4.0,45,55,5.0,3.0,5-3-2,4-2-3-1,J. Aguirre,Andoni Iraola
+721104,2022-05-15T17:30:00+00:00,8,Getafe,Barcelona,0,0,0,0,La Liga,Regular Season - 37,3.75,3.3,2.05,,,,,,,3.0,1.0,29,71,5.0,5.0,5-3-2,4-3-3,Quique Sánchez Flores,Xavi
+721105,2022-05-15T17:30:00+00:00,8,Cadiz,Real Madrid,1,1,1,1,La Liga,Regular Season - 37,2.6,3.5,2.62,,,,,,,7.0,7.0,38,62,10.0,2.0,4-4-2,4-3-3,Sergio,C. Ancelotti
+721106,2022-05-14T16:30:00+00:00,8,Espanyol,Valencia,1,1,1,1,La Liga,Regular Season - 37,2.75,3.5,2.45,,,,,,,3.0,5.0,48,52,2.0,3.0,4-4-2,5-3-2,Luis Blanco,José Bordalás
+721107,2022-05-15T17:30:00+00:00,8,Levante,Alaves,3,1,0,1,La Liga,Regular Season - 37,2.8,3.8,2.25,,,,,,,5.0,2.0,64,36,3.0,4.0,4-4-2,4-2-3-1,A. Lisci,Mendilibar
+721108,2022-05-15T17:30:00+00:00,8,Villarreal,Real Sociedad,1,2,1,0,La Liga,Regular Season - 37,2.15,3.4,3.4,,,,,,,4.0,6.0,49,51,4.0,3.0,4-4-2,4-3-1-2,Unai Emery,Imanol Alguacil
+721109,2022-05-22T18:00:00+00:00,8,Alaves,Cadiz,0,1,0,0,La Liga,Regular Season - 38,4.5,4.0,1.72,,,,,,,2,6,50,50,4,4,4-2-3-1,4-4-2,Mendilibar,Sergio
+721110,2022-05-22T20:00:00+00:00,8,Barcelona,Villarreal,0,2,0,1,La Liga,Regular Season - 38,2.0,4.0,3.25,,,,,,,3,3,70,30,12,1,4-3-3,4-4-2,Xavi,Unai Emery
+721111,2022-05-22T18:00:00+00:00,8,Granada CF,Espanyol,0,0,0,0,La Liga,Regular Season - 38,1.44,4.75,6.5,,,,,,,5,5,39,61,7,3,4-3-3,4-2-2-2,Karanka,Luis Blanco
+721112,2022-05-22T18:00:00+00:00,8,Osasuna,Mallorca,0,2,0,0,La Liga,Regular Season - 38,2.8,3.4,2.5,,,,,,,1,6,63,37,5,7,4-3-3,5-3-2,Arrasate,J. Aguirre
+721113,2022-05-20T19:00:00+00:00,8,Real Madrid,Real Betis,0,0,0,0,La Liga,Regular Season - 38,1.5,5.0,5.5,,,,,,,3,2,52,48,8,5,4-3-3,4-2-3-1,C. Ancelotti,M. Pellegrini
+721114,2022-05-22T20:00:00+00:00,8,Real Sociedad,Atletico Madrid,1,2,0,0,La Liga,Regular Season - 38,2.7,3.1,2.8,,,,,,,3,5,62,38,3,2,4-3-1-2,3-1-4-2,Imanol Alguacil,D. Simeone
+878040,2022-10-19T18:00:00+00:00,8,Real Sociedad,Mallorca,1,0,1,0,La Liga,Regular Season - 10,1.55,3.94,7.91,,,,,2.11,1.8,7,3,51,49,10,7.0,4-1-3-2,5-4-1,Imanol Alguacil,J. Aguirre
+878041,2022-10-20T18:00:00+00:00,8,Osasuna,Espanyol,1,0,0,0,La Liga,Regular Season - 10,2.21,3.39,3.64,,,,,1.52,2.68,5,3,65,35,9,2.0,4-1-4-1,4-4-2,Arrasate,Diego Martínez
+878042,2022-10-24T19:00:00+00:00,8,Celta Vigo,Getafe,1,1,0,1,La Liga,Regular Season - 11,1.75,3.46,6.12,,,,,1.86,2.03,5,1,72,28,10,,4-1-3-2,5-3-2,E. Coudet,Quique Sánchez Flores
+878043,2022-10-22T19:00:00+00:00,8,Real Madrid,Sevilla,3,1,1,0,La Liga,Regular Season - 11,1.38,5.12,9.23,,,,,1.78,2.14,6,2,56,44,4,3.0,4-3-3,4-3-3,C. Ancelotti,J. Sampaoli
+878044,2022-10-23T16:30:00+00:00,8,Girona,Osasuna,1,1,1,1,La Liga,Regular Season - 11,2.53,3.27,3.12,,,,,,,1,2,50,50,3,5.0,4-4-1-1,4-1-4-1,Míchel,Arrasate
+878045,2022-10-23T19:00:00+00:00,8,Barcelona,Athletic Club,4,0,3,0,La Liga,Regular Season - 11,1.47,5.01,6.97,,,,,1.59,2.49,7,3,66,34,1,2.0,4-3-3,4-2-3-1,Xavi,Ernesto Valverde
+878046,2022-10-23T14:15:00+00:00,8,Real Betis,Atletico Madrid,1,2,0,0,La Liga,Regular Season - 11,3.26,3.2,2.48,,,1.48,2.83,,,4,3,55,45,7,4.0,4-2-3-1,4-4-2,M. Pellegrini,D. Simeone
+878047,2022-10-23T12:00:00+00:00,8,Espanyol,Elche,2,2,1,1,La Liga,Regular Season - 11,1.66,3.91,5.94,,,,,1.7,2.27,5,4,41,59,5,3.0,4-3-3,5-3-2,Diego Martínez,
+878055,2022-10-29T12:00:00+00:00,8,Almeria,Celta Vigo,3,1,0,1,La Liga,Regular Season - 12,3.32,3.39,2.35,,,1.43,3.02,,,5,3.0,62,38,6,4,4-1-4-1,4-1-3-2,Rubí,E. Coudet
+878056,2022-10-29T14:15:00+00:00,8,Cadiz,Atletico Madrid,3,2,1,0,La Liga,Regular Season - 12,6.41,3.68,1.68,,,1.92,1.97,,,7,7.0,41,59,5,3,4-4-2,3-5-2,Sergio,D. Simeone
+878057,2022-10-29T19:00:00+00:00,8,Valencia,Barcelona,0,1,0,0,La Liga,Regular Season - 12,5.56,4.52,1.6,,,1.51,2.73,,,2,2.0,33,67,3,10,4-3-3,4-3-3,G. Gattuso,Xavi
+878058,2022-10-30T20:00:00+00:00,8,Real Sociedad,Real Betis,0,2,0,0,La Liga,Regular Season - 12,1.99,3.44,4.34,,,,,1.57,2.55,7,4.0,58,42,5,3,4-1-3-2,4-2-3-1,Imanol Alguacil,M. Pellegrini
+878059,2022-10-28T19:00:00+00:00,8,Mallorca,Espanyol,1,1,0,0,La Liga,Regular Season - 12,2.36,3.09,3.63,1.55,2.61,,,1.6,2.48,5,2.0,52,48,4,4,5-4-1,4-3-3,J. Aguirre,Diego Martínez
+878060,2022-10-29T16:30:00+00:00,8,Sevilla,Rayo Vallecano,0,1,0,0,La Liga,Regular Season - 12,2.1,3.39,3.96,,,,,1.55,2.61,4,5.0,62,38,6,6,4-2-3-1,4-2-3-1,J. Sampaoli,Andoni Iraola
+878061,2022-10-30T15:15:00+00:00,8,Real Madrid,Girona,1,1,0,0,La Liga,Regular Season - 12,1.26,6.51,11.65,,,,,1.77,2.13,6,2.0,58,42,7,1,4-3-3,4-1-4-1,C. Ancelotti,Míchel
+878062,2022-11-06T13:00:00+00:00,8,Atletico Madrid,Espanyol,1,1,0,0,La Liga,Regular Season - 13,1.51,4.54,7.09,,,,,1.81,2.09,7,2.0,67,33,12,2,4-4-2,4-3-3,D. Simeone,Diego Martínez
+878063,2022-11-06T20:00:00+00:00,8,Real Betis,Sevilla,1,1,1,0,La Liga,Regular Season - 13,2.2,3.27,3.81,,,,,1.54,2.62,4,6.0,37,63,1,4,4-2-3-1,4-2-3-1,M. Pellegrini,J. Sampaoli
+878064,2022-11-05T17:30:00+00:00,8,Celta Vigo,Osasuna,1,2,1,2,La Liga,Regular Season - 13,2.31,3.3,3.49,,,,,1.5,2.76,5,4.0,62,38,2,3,4-4-2,4-3-3,Carlos Carvalhal,Arrasate
+878065,2022-11-06T15:15:00+00:00,8,Real Sociedad,Valencia,1,1,1,1,La Liga,Regular Season - 13,1.99,3.42,4.39,,,,,1.62,2.43,4,3.0,27,73,1,8,4-3-1-2,4-3-3,Imanol Alguacil,G. Gattuso
+878066,2022-11-07T20:00:00+00:00,8,Rayo Vallecano,Real Madrid,3,2,2,2,La Liga,Regular Season - 13,5.62,4.04,1.67,,,1.65,2.37,,,7,2.0,45,55,4,5,4-2-3-1,4-3-3,Andoni Iraola,C. Ancelotti
+878067,2022-11-04T20:00:00+00:00,8,Girona,Athletic Club,2,1,0,0,La Liga,Regular Season - 13,3.99,3.68,2.0,,,1.49,2.79,,,10,7.0,42,58,7,1,4-1-4-1,4-2-3-1,Míchel,Ernesto Valverde
+878068,2022-11-05T15:15:00+00:00,8,Valladolid,Elche,2,1,1,0,La Liga,Regular Season - 13,1.89,3.79,4.34,,,,,1.53,2.65,11,2.0,51,49,8,4,4-3-3,4-3-3,Pacheta,Alberto Gallego
+878069,2022-11-06T17:30:00+00:00,8,Villarreal,Mallorca,0,2,0,1,La Liga,Regular Season - 13,1.78,3.59,5.51,,,,,1.77,2.15,2,5.0,71,29,5,2,4-2-3-1,5-4-1,Quique Setién,J. Aguirre
+878070,2022-11-05T13:00:00+00:00,8,Getafe,Cadiz,0,0,0,0,La Liga,Regular Season - 13,2.17,3.02,4.35,1.68,2.3,,,1.8,2.11,2,4.0,53,47,5,5,5-3-2,4-4-2,Quique Sánchez Flores,Sergio
+878071,2022-11-05T20:00:00+00:00,8,Barcelona,Almeria,2,0,0,0,La Liga,Regular Season - 13,1.12,10.94,24.6,,,,,2.07,1.82,13,1.0,70,30,9,1,4-3-3,5-3-2,Xavi,Rubí
+878072,2022-11-08T19:00:00+00:00,8,Athletic Club,Valladolid,3,0,1,0,La Liga,Regular Season - 14,1.42,4.76,8.98,,,,,1.81,2.1,6,,44,56,10,2,4-1-4-1,4-4-2,Ernesto Valverde,Pacheta
+878073,2022-11-08T18:00:00+00:00,8,Elche,Girona,1,2,1,1,La Liga,Regular Season - 14,3.54,3.37,2.26,,,1.5,2.77,,,2,3.0,45,55,2,4,4-2-3-1,4-1-4-1,Mantecón,Míchel
+878074,2022-11-09T19:00:00+00:00,8,Espanyol,Villarreal,0,1,0,0,La Liga,Regular Season - 14,2.92,3.33,2.64,,,,,,,6,3.0,45,55,4,6,4-2-3-1,4-3-3,Diego Martínez,Quique Setién
+878075,2022-11-09T18:00:00+00:00,8,Almeria,Getafe,1,0,1,0,La Liga,Regular Season - 14,2.08,3.2,4.35,,,,,1.69,2.29,3,3.0,55,45,7,6,4-1-4-1,5-3-2,Rubí,Quique Sánchez Flores
+878076,2022-11-09T20:30:00+00:00,8,Mallorca,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 14,4.01,3.05,2.25,1.7,2.27,1.78,2.14,,,3,5.0,37,63,2,5,5-4-1,4-4-2,J. Aguirre,D. Simeone
+878077,2022-11-08T20:30:00+00:00,8,Osasuna,Barcelona,1,2,1,0,La Liga,Regular Season - 14,6.35,4.36,1.57,,,1.63,2.41,,,3,3.0,47,53,3,6,4-4-1-1,4-3-3,Arrasate,Xavi
+878078,2022-11-10T19:00:00+00:00,8,Valencia,Real Betis,3,0,0,0,La Liga,Regular Season - 14,2.21,3.32,3.74,,,,,1.51,2.71,6,1.0,62,38,5,5,4-3-3,4-2-3-1,G. Gattuso,M. Pellegrini
+878079,2022-11-10T18:00:00+00:00,8,Rayo Vallecano,Celta Vigo,0,0,0,0,La Liga,Regular Season - 14,2.25,3.31,3.63,,,,,1.52,2.69,3,3.0,59,41,5,3,4-2-3-1,3-4-3,Andoni Iraola,Carlos Carvalhal
+878080,2022-11-10T20:30:00+00:00,8,Real Madrid,Cadiz,2,1,1,0,La Liga,Regular Season - 14,1.19,7.6,16.42,,,,,2.11,1.78,5,5.0,67,33,7,1,4-3-3,4-4-2,C. Ancelotti,Sergio
+878081,2022-11-09T18:00:00+00:00,8,Sevilla,Real Sociedad,1,2,1,2,La Liga,Regular Season - 14,2.64,3.25,2.99,,,,,,,3,9.0,31,69,2,1,4-2-3-1,4-3-1-2,J. Sampaoli,Imanol Alguacil
+878082,2022-12-29T20:30:00+00:00,8,Atletico Madrid,Elche,2,0,0,0,La Liga,Regular Season - 15,1.32,5.5,11.25,,,,,2.07,1.81,4,1.0,62,38,3,5,3-4-2-1,3-4-2-1,D. Simeone,Pablo Machín
+878083,2022-12-31T13:00:00+00:00,8,Barcelona,Espanyol,1,1,1,0,La Liga,Regular Season - 15,1.22,7.0,15.0,,,,,2.0,1.88,6,1.0,77,23,9,2,4-3-3,4-2-3-1,Xavi,Diego Martínez
+878084,2022-12-30T18:15:00+00:00,8,Celta Vigo,Sevilla,1,1,1,0,La Liga,Regular Season - 15,2.31,3.18,3.63,,,,,1.56,2.57,5,5.0,43,57,5,6,5-3-2,3-4-2-1,Carlos Carvalhal,J. Sampaoli
+878085,2022-12-30T16:00:00+00:00,8,Getafe,Mallorca,2,0,0,0,La Liga,Regular Season - 15,3.22,2.8,2.83,1.85,2.06,1.68,2.29,1.61,2.45,6,,56,44,4,2,5-3-2,5-4-1,Quique Sánchez Flores,J. Aguirre
+878086,2022-12-29T16:00:00+00:00,8,Girona,Rayo Vallecano,2,2,1,1,La Liga,Regular Season - 15,2.27,3.4,3.48,,,,,,,7,4.0,60,40,2,4,4-1-4-1,4-2-3-1,Míchel,Andoni Iraola
+878087,2022-12-29T18:15:00+00:00,8,Real Betis,Athletic Club,0,0,0,0,La Liga,Regular Season - 15,3.24,3.46,2.36,,,,,,,5,,53,47,2,6,4-2-3-1,4-2-3-1,M. Pellegrini,Ernesto Valverde
+878088,2022-12-31T15:15:00+00:00,8,Real Sociedad,Osasuna,2,0,1,0,La Liga,Regular Season - 15,1.95,3.43,4.55,,,,,1.65,2.36,2,3.0,52,48,3,2,4-1-3-2,5-3-2,Imanol Alguacil,Arrasate
+878089,2022-12-30T20:30:00+00:00,8,Valladolid,Real Madrid,0,2,0,0,La Liga,Regular Season - 15,7.04,4.9,1.47,,,1.59,2.49,,,4,8.0,39,61,5,9,4-3-3,4-3-3,Pacheta,C. Ancelotti
+878090,2022-12-31T15:15:00+00:00,8,Villarreal,Valencia,2,1,1,1,La Liga,Regular Season - 15,2.16,3.36,3.83,,,,,1.45,2.95,8,4.0,53,47,5,2,4-3-3,4-3-3,Quique Setién,G. Gattuso
+878091,2022-12-30T18:15:00+00:00,8,Cadiz,Almeria,1,1,0,1,La Liga,Regular Season - 15,2.2,3.34,3.73,,,,,1.49,2.8,5,8.0,50,50,3,2,4-4-2,4-1-4-1,Sergio,Rubí
+878092,2023-01-09T20:00:00+00:00,8,Athletic Club,Osasuna,0,0,0,0,La Liga,Regular Season - 16,1.6,3.91,6.95,,,,,1.84,2.06,3,1.0,60,40,14,1,4-2-3-1,4-3-3,Ernesto Valverde,Arrasate
+878093,2023-01-08T20:00:00+00:00,8,Atletico Madrid,Barcelona,0,1,0,1,La Liga,Regular Season - 16,3.08,3.29,2.54,,,,,,,5,2.0,41,59,7,4,4-4-2,4-3-3,D. Simeone,Xavi
+878094,2023-01-07T17:30:00+00:00,8,Mallorca,Valladolid,1,0,0,0,La Liga,Regular Season - 16,2.03,3.21,4.59,1.58,2.53,,,1.79,2.13,4,1.0,42,58,6,2,3-4-2-1,4-3-3,J. Aguirre,Pacheta
+878095,2023-01-07T20:00:00+00:00,8,Espanyol,Girona,2,2,0,1,La Liga,Regular Season - 16,2.56,3.41,2.96,,,,,,,6,5.0,44,56,5,2,4-3-3,4-1-4-1,Diego Martínez,Míchel
+878096,2023-01-08T13:00:00+00:00,8,Almeria,Real Sociedad,0,2,0,0,La Liga,Regular Season - 16,4.57,3.44,1.95,,,1.59,2.49,,,1,6.0,44,56,4,2,4-3-3,4-1-3-2,Rubí,Imanol Alguacil
+878097,2023-01-08T15:15:00+00:00,8,Rayo Vallecano,Real Betis,1,2,1,2,La Liga,Regular Season - 16,2.46,3.23,3.27,,,,,1.48,2.84,3,3.0,62,38,5,7,4-4-1-1,4-2-3-1,Andoni Iraola,M. Pellegrini
+878098,2023-01-06T17:30:00+00:00,8,Elche,Celta Vigo,0,1,0,1,La Liga,Regular Season - 16,4.22,3.32,2.06,,,1.65,2.36,,,5,7.0,57,43,8,4,3-4-3,5-3-2,Pablo Machín,Carlos Carvalhal
+878099,2023-01-08T17:30:00+00:00,8,Sevilla,Getafe,2,1,1,0,La Liga,Regular Season - 16,1.88,3.29,5.33,,,,,1.89,1.99,5,2.0,58,42,3,4,3-1-4-2,5-3-2,J. Sampaoli,Quique Sánchez Flores
+878100,2023-01-06T20:00:00+00:00,8,Valencia,Cadiz,0,1,0,1,La Liga,Regular Season - 16,1.61,4.15,6.21,,,,,1.72,2.22,2,2.0,74,26,13,2,4-3-3,4-2-3-1,G. Gattuso,Sergio
+878101,2023-01-07T15:15:00+00:00,8,Villarreal,Real Madrid,2,1,0,0,La Liga,Regular Season - 16,3.51,3.81,2.1,,,,,,,5.0,3.0,49,51,6.0,5.0,4-3-3,4-3-3,Quique Setién,C. Ancelotti
+878102,2023-01-13T20:00:00+00:00,8,Celta Vigo,Villarreal,1,1,0,1,La Liga,Regular Season - 17,2.84,3.15,2.84,,,,,,,8.0,1.0,51,49,13.0,3.0,3-4-2-1,4-1-4-1,Carlos Carvalhal,Quique Setién
+878103,2023-01-16T20:00:00+00:00,8,Cadiz,Elche,1,1,1,0,La Liga,Regular Season - 17,1.93,3.47,4.56,,,,,1.65,2.36,3.0,5.0,50,50,3.0,6.0,4-4-1-1,3-4-3,Sergio,Pablo Machín
+878104,2023-02-02T20:00:00+00:00,8,Real Madrid,Valencia,2,0,0,0,La Liga,Regular Season - 17,1.38,5.44,8.49,,,,,1.73,2.21,7.0,,71,29,6.0,6.0,4-3-3,4-3-3,C. Ancelotti,G. Gattuso
+878105,2023-01-15T15:15:00+00:00,8,Almeria,Atletico Madrid,1,1,1,1,La Liga,Regular Season - 17,4.77,3.72,1.83,,,1.6,2.49,,,3.0,7.0,55,45,3.0,4.0,4-3-3,4-1-4-1,Rubí,D. Simeone
+878106,2023-01-14T15:15:00+00:00,8,Girona,Sevilla,2,1,0,1,La Liga,Regular Season - 17,2.42,3.38,3.2,,,,,,,7.0,2.0,46,54,5.0,1.0,4-4-2,5-3-2,Míchel,J. Sampaoli
+878107,2023-01-14T20:00:00+00:00,8,Real Sociedad,Athletic Club,3,1,2,1,La Liga,Regular Season - 17,2.47,3.03,3.48,,,,,1.59,2.49,5.0,2.0,58,42,4.0,2.0,4-1-3-2,4-2-3-1,Imanol Alguacil,Ernesto Valverde
+878108,2023-02-01T20:00:00+00:00,8,Real Betis,Barcelona,1,2,0,0,La Liga,Regular Season - 17,4.91,3.83,1.79,,,1.62,2.44,,,1.0,3.0,36,64,1.0,6.0,4-2-3-1,4-3-3,M. Pellegrini,Xavi
+878109,2023-01-14T17:30:00+00:00,8,Osasuna,Mallorca,1,0,0,0,La Liga,Regular Season - 17,2.24,3.03,4.07,,,,,1.75,2.18,4.0,2.0,62,38,3.0,1.0,4-3-3,5-4-1,Arrasate,J. Aguirre
+878110,2023-01-15T13:00:00+00:00,8,Getafe,Espanyol,1,2,1,1,La Liga,Regular Season - 17,2.45,2.95,3.64,,,1.45,2.94,1.67,2.32,2.0,4.0,62,38,5.0,1.0,5-3-2,3-4-2-1,Quique Sánchez Flores,Diego Martínez
+878111,2023-01-14T13:00:00+00:00,8,Valladolid,Rayo Vallecano,0,1,0,0,La Liga,Regular Season - 17,2.99,3.18,2.68,,,1.43,3.01,,,2.0,6.0,45,55,4.0,8.0,4-3-3,4-2-3-1,Pacheta,Andoni Iraola
+878112,2023-01-22T20:00:00+00:00,8,Athletic Club,Real Madrid,0,2,0,1,La Liga,Regular Season - 18,2.82,3.5,2.62,,,,,,,3.0,4.0,50,50,12.0,2.0,4-2-3-1,4-3-3,Ernesto Valverde,C. Ancelotti
+878113,2023-01-21T17:30:00+00:00,8,Atletico Madrid,Valladolid,3,0,3,0,La Liga,Regular Season - 18,1.38,5.01,9.8,,,,,2.05,1.85,8.0,1.0,47,53,4.0,1.0,4-1-4-1,5-3-2,D. Simeone,Pacheta
+878114,2023-01-22T17:30:00+00:00,8,Barcelona,Getafe,1,0,1,0,La Liga,Regular Season - 18,1.22,6.75,17.0,,,,,2.47,1.59,4.0,3.0,68,32,4.0,2.0,4-3-3,5-4-1,Xavi,Quique Sánchez Flores
+878115,2023-01-22T15:15:00+00:00,8,Elche,Osasuna,1,1,0,1,La Liga,Regular Season - 18,3.43,3.19,2.4,,,1.54,2.64,,,4.0,4.0,42,58,7.0,2.0,3-4-3,4-3-3,Pablo Machín,Arrasate
+878116,2023-01-21T13:00:00+00:00,8,Rayo Vallecano,Real Sociedad,0,2,0,2,La Liga,Regular Season - 18,3.07,3.1,2.68,,,1.54,2.64,1.46,2.89,2.0,7.0,54,46,3.0,4.0,4-2-3-1,4-3-1-2,Andoni Iraola,Imanol Alguacil
+878117,2023-01-21T15:15:00+00:00,8,Espanyol,Real Betis,1,0,1,0,La Liga,Regular Season - 18,2.86,3.13,2.84,,,1.43,3.05,,,2.0,4.0,30,70,7.0,4.0,4-4-2,4-2-3-1,Diego Martínez,M. Pellegrini
+878118,2023-01-20T20:00:00+00:00,8,Mallorca,Celta Vigo,1,0,0,0,La Liga,Regular Season - 18,3.01,2.79,3.02,,,1.63,2.4,1.62,2.43,3.0,3.0,42,58,4.0,6.0,5-4-1,5-3-2,J. Aguirre,Carlos Carvalhal
+878119,2023-01-21T20:00:00+00:00,8,Sevilla,Cadiz,1,0,0,0,La Liga,Regular Season - 18,1.73,3.78,5.52,,,,,1.76,2.17,9.0,1.0,75,25,8.0,1.0,3-4-2-1,4-4-2,J. Sampaoli,Sergio
+878120,2023-01-23T20:00:00+00:00,8,Valencia,Almeria,2,2,0,0,La Liga,Regular Season - 18,1.65,4.16,5.68,,,,,1.65,2.37,6.0,3.0,57,43,6.0,2.0,4-4-2,4-3-3,G. Gattuso,Rubí
+878121,2023-01-22T13:00:00+00:00,8,Villarreal,Girona,1,0,0,0,La Liga,Regular Season - 18,1.85,3.89,4.4,,,,,1.45,2.95,9.0,1.0,69,31,3.0,2.0,4-3-3,4-2-3-1,Quique Setién,Míchel
+878122,2023-01-28T13:00:00+00:00,8,Cadiz,Mallorca,2,0,2,0,La Liga,Regular Season - 19,2.93,2.69,3.24,,,1.6,2.47,1.68,2.31,4.0,2.0,42,58,6.0,2.0,4-4-2,5-4-1,Sergio,J. Aguirre
+878123,2023-01-29T20:00:00+00:00,8,Real Madrid,Real Sociedad,0,0,0,0,La Liga,Regular Season - 19,1.75,3.85,5.22,,,,,1.63,2.4,7.0,3.0,61,39,10.0,3.0,4-3-3,4-3-3,C. Ancelotti,Imanol Alguacil
+878124,2023-01-27T20:00:00+00:00,8,Almeria,Espanyol,3,1,1,0,La Liga,Regular Season - 19,2.42,3.23,3.35,,,,,1.44,2.97,7.0,3.0,57,43,2.0,2.0,4-3-3,4-1-3-2,Rubí,Diego Martínez
+878125,2023-01-29T17:30:00+00:00,8,Celta Vigo,Athletic Club,1,0,0,0,La Liga,Regular Season - 19,3.23,3.04,2.61,,,1.52,2.68,,,3.0,,49,51,2.0,5.0,4-4-2,4-2-3-1,Carlos Carvalhal,Ernesto Valverde
+878126,2023-01-29T15:15:00+00:00,8,Osasuna,Atletico Madrid,0,1,0,0,La Liga,Regular Season - 19,4.19,3.27,2.09,,,1.64,2.38,,,4.0,5.0,52,48,5.0,4.0,4-3-3,4-4-2,Arrasate,D. Simeone
+878127,2023-01-28T15:15:00+00:00,8,Girona,Barcelona,0,1,0,0,La Liga,Regular Season - 19,5.49,4.38,1.63,,,1.58,2.51,,,2.0,3.0,40,60,4.0,2.0,4-4-2,4-3-3,Míchel,Xavi
+878128,2023-01-28T20:00:00+00:00,8,Getafe,Real Betis,0,1,0,0,La Liga,Regular Season - 19,3.26,2.86,2.73,,,1.61,2.44,1.52,2.7,1.0,2.0,38,62,6.0,1.0,5-3-2,4-2-3-1,Quique Sánchez Flores,M. Pellegrini
+878129,2023-01-28T17:30:00+00:00,8,Sevilla,Elche,3,0,3,0,La Liga,Regular Season - 19,1.54,4.16,7.31,,,,,1.93,1.95,8.0,1.0,81,19,5.0,2.0,4-3-3,3-4-2-1,J. Sampaoli,Pablo Machín
+878130,2023-01-29T13:00:00+00:00,8,Valladolid,Valencia,1,0,0,0,La Liga,Regular Season - 19,3.39,3.27,2.37,,,1.46,2.92,,,6.0,2.0,53,47,4.0,7.0,4-3-3,4-3-3,Pacheta,G. Gattuso
+878131,2023-01-30T20:00:00+00:00,8,Villarreal,Rayo Vallecano,0,1,0,0,La Liga,Regular Season - 19,1.83,3.69,4.82,,,,,1.6,2.47,3.0,3.0,62,38,5.0,4.0,4-1-4-1,4-2-3-1,Quique Setién,Andoni Iraola
+878132,2023-02-03T20:00:00+00:00,8,Athletic Club,Cadiz,4,1,3,1,La Liga,Regular Season - 20,1.39,4.78,10.22,,,,,2.25,1.71,9.0,3.0,42,58,,3.0,4-1-4-1,4-1-4-1,Ernesto Valverde,Sergio
+878133,2023-02-04T17:30:00+00:00,8,Atletico Madrid,Getafe,1,1,0,0,La Liga,Regular Season - 20,1.44,4.25,10.62,,,,,2.45,1.61,4.0,1.0,63,37,8.0,,4-4-2,5-3-2,D. Simeone,Quique Sánchez Flores
+878134,2023-02-05T20:00:00+00:00,8,Barcelona,Sevilla,3,0,0,0,La Liga,Regular Season - 20,1.34,5.47,10.28,,,,,1.98,1.91,7.0,1.0,65,35,8.0,3.0,4-3-3,5-4-1,Xavi,J. Sampaoli
+878135,2023-02-04T20:00:00+00:00,8,Real Betis,Celta Vigo,3,4,2,2,La Liga,Regular Season - 20,2.13,3.24,4.1,,,,,1.63,2.41,7.0,7.0,55,45,5.0,5.0,4-2-3-1,4-4-2,M. Pellegrini,Carlos Carvalhal
+878136,2023-02-04T15:15:00+00:00,8,Elche,Villarreal,3,1,2,1,La Liga,Regular Season - 20,5.59,3.98,1.68,,,1.66,2.34,,,7.0,2.0,28,72,6.0,9.0,3-4-3,4-3-3,Pablo Machín,Quique Setién
+878137,2023-02-05T13:00:00+00:00,8,Mallorca,Real Madrid,1,0,1,0,La Liga,Regular Season - 20,5.38,3.59,1.79,,,1.79,2.13,,,1.0,1.0,26,74,1.0,12.0,5-4-1,4-3-3,J. Aguirre,C. Ancelotti
+878138,2023-02-04T13:00:00+00:00,8,Espanyol,Osasuna,1,1,0,1,La Liga,Regular Season - 20,2.85,3.12,2.85,,,1.47,2.87,1.47,2.89,4.0,3.0,41,59,4.0,3.0,4-4-2,4-1-4-1,Diego Martínez,Arrasate
+878139,2023-02-05T17:30:00+00:00,8,Real Sociedad,Valladolid,0,1,0,0,La Liga,Regular Season - 20,1.43,4.56,9.31,,,,,2.11,1.8,4.0,2.0,55,45,,4.0,4-3-2-1,4-2-3-1,Imanol Alguacil,Pacheta
+878140,2023-02-05T15:15:00+00:00,8,Girona,Valencia,1,0,0,0,La Liga,Regular Season - 20,2.3,3.38,3.42,,,,,,,8.0,4.0,52,48,8.0,4.0,4-4-2,4-1-4-1,Míchel,Voro
+878141,2023-02-06T20:00:00+00:00,8,Rayo Vallecano,Almeria,2,0,0,0,La Liga,Regular Season - 20,1.82,3.65,5.0,,,,,1.67,2.33,11.0,5.0,49,51,3.0,7.0,4-2-3-1,4-3-3,Andoni Iraola,Rubí
+878142,2023-02-12T13:00:00+00:00,8,Getafe,Rayo Vallecano,1,1,0,1,La Liga,Regular Season - 21,3.21,2.8,2.82,,,1.61,2.45,1.54,2.62,4.0,4.0,42,58,5.0,6.0,4-4-2,4-2-3-1,Quique Sánchez Flores,Andoni Iraola
+878143,2023-02-10T20:00:00+00:00,8,Cadiz,Girona,2,0,2,0,La Liga,Regular Season - 21,3.18,3.23,2.52,,,1.48,2.84,,,3.0,1.0,43,57,5.0,6.0,4-4-2,4-4-2,Sergio,Míchel
+878144,2023-02-13T20:00:00+00:00,8,Espanyol,Real Sociedad,2,3,0,1,La Liga,Regular Season - 21,3.98,3.11,2.23,,,1.65,2.36,,,6.0,5.0,44,56,4.0,3.0,4-4-2,4-1-3-2,Diego Martínez,Imanol Alguacil
+878145,2023-02-11T15:15:00+00:00,8,Almeria,Real Betis,2,3,1,2,La Liga,Regular Season - 21,2.88,3.39,2.64,,,,,,,9.0,7.0,52,48,8.0,2.0,4-2-3-1,4-2-3-1,Rubí,M. Pellegrini
+878146,2023-02-11T20:00:00+00:00,8,Valencia,Athletic Club,1,2,1,1,La Liga,Regular Season - 21,3.33,3.28,2.4,,,1.49,2.79,,,8.0,3.0,49,51,7.0,1.0,4-3-3,4-2-3-1,Voro,Ernesto Valverde
+878147,2023-02-12T15:15:00+00:00,8,Celta Vigo,Atletico Madrid,0,1,0,0,La Liga,Regular Season - 21,3.82,3.22,2.22,,,1.59,2.5,,,3.0,2.0,47,53,7.0,5.0,4-4-2,4-3-3,Carlos Carvalhal,D. Simeone
+878148,2023-02-12T20:00:00+00:00,8,Villarreal,Barcelona,0,1,0,1,La Liga,Regular Season - 21,4.77,4.01,1.77,,,1.58,2.53,,,2.0,4.0,53,47,6.0,2.0,4-4-2,4-3-3,Quique Setién,Xavi
+878149,2023-02-15T20:00:00+00:00,8,Real Madrid,Elche,4,0,3,0,La Liga,Regular Season - 21,1.21,7.22,15.92,,,,,2.19,1.73,13.0,,72,28,6.0,4.0,4-3-3,3-5-2,C. Ancelotti,Pablo Machín
+878150,2023-02-11T17:30:00+00:00,8,Sevilla,Mallorca,2,0,2,0,La Liga,Regular Season - 21,1.87,3.28,5.43,,,,,1.94,1.94,6.0,,65,35,8.0,2.0,3-4-2-1,5-4-1,J. Sampaoli,J. Aguirre
+878151,2023-02-12T17:30:00+00:00,8,Valladolid,Osasuna,0,0,0,0,La Liga,Regular Season - 21,2.61,3.19,3.07,,,,,1.43,3.05,5.0,4.0,50,50,10.0,4.0,4-2-3-1,4-3-3,Pacheta,Arrasate
+878152,2023-02-19T20:00:00+00:00,8,Barcelona,Cadiz,2,0,2,0,La Liga,Regular Season - 22,1.23,6.75,15.09,,,,,2.21,1.72,5.0,4.0,65,35,5.0,6.0,4-3-3,4-2-3-1,Xavi,Sergio
+878153,2023-02-18T15:15:00+00:00,8,Real Betis,Valladolid,2,1,2,1,La Liga,Regular Season - 22,1.67,4.12,5.51,,,,,1.6,2.47,10.0,3.0,48,52,4.0,4.0,4-2-3-1,4-2-3-1,M. Pellegrini,Pacheta
+878154,2023-02-19T13:00:00+00:00,8,Elche,Espanyol,0,1,0,0,La Liga,Regular Season - 22,2.67,3.05,3.13,,,,,1.5,2.76,5.0,4.0,46,54,10.0,5.0,3-4-3,3-5-2,Pablo Machín,Diego Martínez
+878155,2023-02-18T17:30:00+00:00,8,Mallorca,Villarreal,4,2,2,1,La Liga,Regular Season - 22,3.5,2.95,2.51,,,1.63,2.41,,,5.0,4.0,45,55,4.0,4.0,5-4-1,4-1-4-1,J. Aguirre,Quique Setién
+878156,2023-02-20T20:00:00+00:00,8,Getafe,Valencia,1,0,0,0,La Liga,Regular Season - 22,3.02,2.96,2.83,,,1.54,2.63,1.49,2.8,6.0,3.0,46,54,4.0,5.0,4-4-2,4-3-3,Quique Sánchez Flores,Rubén Baraja
+878157,2023-02-18T20:00:00+00:00,8,Osasuna,Real Madrid,0,2,0,0,La Liga,Regular Season - 22,5.4,3.85,1.72,,,1.66,2.34,,,4.0,6.0,47,53,5.0,5.0,4-2-3-1,4-3-3,Arrasate,C. Ancelotti
+878158,2023-02-19T15:15:00+00:00,8,Rayo Vallecano,Sevilla,1,1,0,1,La Liga,Regular Season - 22,2.57,3.12,3.21,,,,,1.52,2.69,5.0,2.0,58,42,7.0,3.0,4-1-4-1,5-4-1,Andoni Iraola,J. Sampaoli
+878159,2023-02-19T17:30:00+00:00,8,Atletico Madrid,Athletic Club,1,0,0,0,La Liga,Regular Season - 22,2.1,3.25,4.18,,,,,1.65,2.35,5.0,2.0,57,43,6.0,5.0,4-4-2,4-2-3-1,D. Simeone,Ernesto Valverde
+878160,2023-02-18T13:00:00+00:00,8,Real Sociedad,Celta Vigo,1,1,1,0,La Liga,Regular Season - 22,1.82,3.45,5.41,,,,,1.83,2.08,3.0,4.0,55,45,3.0,7.0,4-1-3-2,4-4-2,Imanol Alguacil,Carlos Carvalhal
+878161,2023-02-17T20:00:00+00:00,8,Girona,Almeria,6,2,4,0,La Liga,Regular Season - 22,1.88,3.71,4.5,,,,,1.55,2.59,8.0,4.0,52,48,1.0,7.0,4-4-2,4-3-3,Míchel,Rubí
+878162,2023-02-26T13:00:00+00:00,8,Athletic Club,Girona,2,3,1,3,La Liga,Regular Season - 23,1.65,4.02,5.86,,,,,1.75,2.19,3.0,4.0,60,40,11.0,3.0,4-2-3-1,4-1-4-1,Ernesto Valverde,Míchel
+878163,2023-02-26T15:15:00+00:00,8,Celta Vigo,Valladolid,3,0,2,0,La Liga,Regular Season - 23,1.71,4.03,5.22,,,,,1.65,2.36,4.0,3.0,53,47,5.0,4.0,4-4-2,4-2-3-1,Carlos Carvalhal,Pacheta
+878164,2023-02-25T15:15:00+00:00,8,Cadiz,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 23,3.02,3.04,2.77,,,1.49,2.8,1.45,2.93,3.0,2.0,42,58,4.0,6.0,4-4-2,4-4-2,Sergio,Andoni Iraola
+878165,2023-02-25T13:00:00+00:00,8,Espanyol,Mallorca,2,1,1,1,La Liga,Regular Season - 23,2.56,2.92,3.47,,,1.47,2.85,1.67,2.32,3.0,4.0,39,61,,4.0,4-3-3,5-3-2,Diego Martínez,J. Aguirre
+878166,2023-02-26T17:30:00+00:00,8,Almeria,Barcelona,1,0,1,0,La Liga,Regular Season - 23,6.57,4.67,1.5,,,1.64,2.39,,,4.0,1.0,28,72,4.0,7.0,4-4-2,4-3-3,Rubí,Xavi
+878167,2023-02-25T17:30:00+00:00,8,Real Madrid,Atletico Madrid,1,1,0,0,La Liga,Regular Season - 23,1.91,3.45,4.79,,,,,1.67,2.32,7.0,1.0,62,38,7.0,4.0,4-3-3,4-4-2,C. Ancelotti,D. Simeone
+878168,2023-02-24T20:00:00+00:00,8,Elche,Real Betis,2,3,2,0,La Liga,Regular Season - 23,3.9,3.5,2.08,,,1.51,2.73,,,2.0,9.0,35,65,3.0,3.0,3-4-2-1,4-2-3-1,Pablo Machín,M. Pellegrini
+878169,2023-02-27T20:00:00+00:00,8,Villarreal,Getafe,2,1,1,1,La Liga,Regular Season - 23,1.68,3.71,6.3,,,,,1.92,1.97,5.0,3.0,64,36,6.0,5.0,4-1-4-1,4-2-3-1,Quique Setién,Quique Sánchez Flores
+878170,2023-02-26T20:00:00+00:00,8,Sevilla,Osasuna,2,3,0,1,La Liga,Regular Season - 23,1.78,3.65,5.32,,,,,1.81,2.1,8.0,4.0,67,33,10.0,2.0,3-4-2-1,4-3-3,J. Sampaoli,Arrasate
+878171,2023-02-25T20:00:00+00:00,8,Valencia,Real Sociedad,1,0,1,0,La Liga,Regular Season - 23,3.26,3.14,2.52,,,1.52,2.7,,,3.0,3.0,37,63,7.0,8.0,4-3-3,4-1-4-1,Rubén Baraja,Imanol Alguacil
+878172,2023-03-04T20:00:00+00:00,8,Atletico Madrid,Sevilla,6,1,2,1,La Liga,Regular Season - 24,1.67,3.77,6.18,,,,,1.9,1.99,8.0,1.0,47,53,7.0,3.0,5-3-2,4-3-3,D. Simeone,J. Sampaoli
+878173,2023-03-05T15:15:00+00:00,8,Barcelona,Valencia,1,0,1,0,La Liga,Regular Season - 24,1.39,4.89,9.21,,,,,2.01,1.88,4.0,1.0,53,47,5.0,2.0,4-3-3,4-5-1,Xavi,Rubén Baraja
+878174,2023-03-05T20:00:00+00:00,8,Real Betis,Real Madrid,0,0,0,0,La Liga,Regular Season - 24,5.02,3.95,1.75,,,1.54,2.63,,,4.0,5.0,38,62,5.0,3.0,4-2-3-1,4-4-2,M. Pellegrini,C. Ancelotti
+878175,2023-03-04T13:00:00+00:00,8,Getafe,Girona,3,2,3,0,La Liga,Regular Season - 24,2.89,2.98,2.94,,,1.49,2.78,1.49,2.8,6.0,7.0,39,61,3.0,3.0,5-3-2,4-1-4-1,Quique Sánchez Flores,Míchel
+878176,2023-03-04T15:15:00+00:00,8,Almeria,Villarreal,0,2,0,0,La Liga,Regular Season - 24,3.38,3.57,2.24,,,,,,,,6.0,29,71,2.0,10.0,4-4-2,4-3-3,Rubí,Quique Setién
+878177,2023-03-05T17:30:00+00:00,8,Rayo Vallecano,Athletic Club,0,0,0,0,La Liga,Regular Season - 24,2.96,3.13,2.75,,,1.45,2.93,,,2.0,3.0,55,45,7.0,9.0,4-2-3-1,4-2-3-1,Andoni Iraola,Ernesto Valverde
+878178,2023-03-06T20:00:00+00:00,8,Osasuna,Celta Vigo,0,0,0,0,La Liga,Regular Season - 24,2.79,3.1,2.93,,,1.43,3.02,1.45,2.92,5.0,,64,36,6.0,4.0,4-3-3,4-4-2,Arrasate,Carlos Carvalhal
+878179,2023-03-04T17:30:00+00:00,8,Mallorca,Elche,0,1,0,0,La Liga,Regular Season - 24,1.69,3.52,6.67,,,,,2.06,1.84,3.0,6.0,56,44,6.0,7.0,5-3-2,3-1-4-2,J. Aguirre,Pablo Machín
+878180,2023-03-03T20:00:00+00:00,8,Real Sociedad,Cadiz,0,0,0,0,La Liga,Regular Season - 24,1.57,3.88,7.2,,,,,2.08,1.81,3.0,2.0,72,28,3.0,,4-1-3-2,4-2-3-1,Imanol Alguacil,Sergio
+878181,2023-03-05T13:00:00+00:00,8,Valladolid,Espanyol,2,1,1,0,La Liga,Regular Season - 24,2.33,3.27,3.49,,,,,1.49,2.79,5.0,2.0,44,56,9.0,6.0,4-3-3,4-2-3-1,Pacheta,Diego Martínez
+878182,2023-03-12T20:00:00+00:00,8,Athletic Club,Barcelona,0,1,0,1,La Liga,Regular Season - 25,3.27,3.36,2.39,,,1.46,2.89,,,5.0,2.0,37,63,5.0,3.0,4-2-3-1,4-3-3,Ernesto Valverde,Xavi
+878183,2023-03-11T17:30:00+00:00,8,Celta Vigo,Rayo Vallecano,3,0,0,0,La Liga,Regular Season - 25,2.11,3.34,4.01,,,,,1.57,2.55,6.0,3.0,43,57,3.0,7.0,4-4-2,4-2-3-1,Carlos Carvalhal,Andoni Iraola
+878184,2023-03-11T15:15:00+00:00,8,Elche,Valladolid,1,1,0,1,La Liga,Regular Season - 25,2.61,3.43,2.88,,,,,,,10.0,1.0,55,45,10.0,3.0,5-3-2,4-1-4-1,Pablo Machín,Pacheta
+878185,2023-03-12T13:00:00+00:00,8,Mallorca,Real Sociedad,1,1,0,1,La Liga,Regular Season - 25,3.82,2.81,2.48,,,1.83,2.08,1.53,2.67,2.0,2.0,37,63,3.0,2.0,5-3-2,4-1-3-2,J. Aguirre,Imanol Alguacil
+878186,2023-03-10T20:00:00+00:00,8,Cadiz,Getafe,2,2,1,0,La Liga,Regular Season - 25,2.59,2.88,3.4,,,1.5,2.71,1.67,2.31,4.0,10.0,52,48,2.0,6.0,4-4-2,3-4-3,Sergio,Quique Sánchez Flores
+878187,2023-03-13T20:00:00+00:00,8,Girona,Atletico Madrid,0,1,0,0,La Liga,Regular Season - 25,3.97,3.54,2.05,,,1.52,2.68,,,4.0,4.0,50,50,1.0,3.0,4-1-4-1,5-3-2,Míchel,D. Simeone
+878188,2023-03-12T17:30:00+00:00,8,Villarreal,Real Betis,1,1,0,1,La Liga,Regular Season - 25,1.79,3.97,4.72,,,,,1.56,2.59,4.0,3.0,57,43,2.0,4.0,4-3-3,4-2-3-1,Quique Setién,M. Pellegrini
+878189,2023-03-11T13:00:00+00:00,8,Real Madrid,Espanyol,3,1,2,1,La Liga,Regular Season - 25,1.26,6.16,13.66,,,,,2.26,1.69,7.0,3.0,71,29,7.0,4.0,4-3-3,4-4-2,C. Ancelotti,Diego Martínez
+878190,2023-03-11T20:00:00+00:00,8,Valencia,Osasuna,1,0,0,0,La Liga,Regular Season - 25,2.06,3.28,4.29,,,,,1.68,2.31,4.0,,54,46,12.0,3.0,4-3-3,4-3-3,Rubén Baraja,Arrasate
+878191,2023-03-12T15:15:00+00:00,8,Sevilla,Almeria,2,1,1,1,La Liga,Regular Season - 25,1.64,4.15,5.74,,,,,1.58,2.51,5.0,5.0,56,44,6.0,4.0,3-4-2-1,4-2-3-1,J. Sampaoli,Rubí
+878192,2023-03-18T20:00:00+00:00,8,Atletico Madrid,Valencia,3,0,1,0,La Liga,Regular Season - 26,1.57,4.09,6.85,,,,,1.89,1.99,6.0,1.0,56,44,4.0,2.0,5-3-2,4-5-1,D. Simeone,Rubén Baraja
+878193,2023-03-19T20:00:00+00:00,8,Barcelona,Real Madrid,2,1,1,1,La Liga,Regular Season - 26,2.15,3.55,3.63,,,,,,,7.0,3.0,54,46,8.0,1.0,4-3-3,4-2-3-1,Xavi,C. Ancelotti
+878194,2023-03-19T13:00:00+00:00,8,Real Betis,Mallorca,1,0,0,0,La Liga,Regular Season - 26,1.99,3.22,4.76,,,,,1.76,2.16,3.0,1.0,60,40,4.0,4.0,4-2-3-1,5-3-2,M. Pellegrini,J. Aguirre
+878195,2023-03-19T17:30:00+00:00,8,Getafe,Sevilla,2,0,0,0,La Liga,Regular Season - 26,2.91,3.05,2.85,,,1.52,2.68,1.5,2.77,4.0,4.0,37,63,4.0,1.0,3-4-3,5-4-1,Quique Sánchez Flores,J. Sampaoli
+878196,2023-03-19T15:15:00+00:00,8,Osasuna,Villarreal,0,3,0,1,La Liga,Regular Season - 26,3.1,3.22,2.57,,,1.46,2.89,,,2.0,6.0,55,45,7.0,1.0,4-3-3,4-3-3,Arrasate,Quique Setién
+878197,2023-03-18T13:00:00+00:00,8,Almeria,Cadiz,1,1,0,0,La Liga,Regular Season - 26,2.07,3.47,4.0,,,,,1.52,2.69,5.0,4.0,67,33,5.0,2.0,4-2-3-1,4-4-2,Rubí,Sergio
+878198,2023-03-17T20:00:00+00:00,8,Valladolid,Athletic Club,1,3,0,1,La Liga,Regular Season - 26,4.37,3.72,1.9,,,1.53,2.64,,,3.0,6.0,48,52,2.0,9.0,4-2-3-1,4-2-3-1,Pacheta,Ernesto Valverde
+878199,2023-03-18T17:30:00+00:00,8,Espanyol,Celta Vigo,1,3,0,2,La Liga,Regular Season - 26,3.05,3.15,2.66,,,1.47,2.88,,,3.0,4.0,56,44,4.0,1.0,4-2-3-1,4-4-2,Diego Martínez,Carlos Carvalhal
+878200,2023-03-19T15:15:00+00:00,8,Real Sociedad,Elche,2,0,0,0,La Liga,Regular Season - 26,1.44,4.48,9.06,,,,,2.11,1.8,4.0,3.0,61,39,5.0,3.0,4-1-3-2,5-3-2,Imanol Alguacil,Pablo Machín
+878201,2023-03-18T15:15:00+00:00,8,Rayo Vallecano,Girona,2,2,2,1,La Liga,Regular Season - 26,2.1,3.43,3.93,,,,,1.55,2.6,3.0,4.0,47,53,3.0,5.0,4-2-3-1,4-1-4-1,Andoni Iraola,Míchel
+878202,2023-04-01T14:15:00+00:00,8,Athletic Club,Getafe,0,0,0,0,La Liga,Regular Season - 27,1.68,3.65,6.35,,,,,1.99,1.9,3.0,1.0,65,35,13.0,3.0,4-3-3,5-3-2,Ernesto Valverde,Quique Sánchez Flores
+878203,2023-04-02T19:00:00+00:00,8,Atletico Madrid,Real Betis,1,0,0,0,La Liga,Regular Season - 27,1.5,4.44,7.58,,,,,1.87,2.02,7.0,2.0,54,46,5.0,1.0,5-3-2,4-4-2,D. Simeone,M. Pellegrini
+878204,2023-03-31T19:00:00+00:00,8,Mallorca,Osasuna,0,0,0,0,La Liga,Regular Season - 27,2.26,2.87,4.19,,,,,1.81,2.08,1.0,2.0,42,58,2.0,3.0,5-4-1,4-3-3,J. Aguirre,Arrasate
+878205,2023-04-01T16:30:00+00:00,8,Cadiz,Sevilla,0,2,0,0,La Liga,Regular Season - 27,3.5,3.12,2.4,,,1.55,2.61,,,3.0,5.0,50,50,8.0,4.0,4-4-2,4-2-3-1,Sergio,Mendilibar
+878206,2023-04-02T14:15:00+00:00,8,Real Madrid,Valladolid,6,0,4,0,La Liga,Regular Season - 27,1.2,8.12,13.5,,,,,1.95,1.92,17.0,2.0,60,40,9.0,1.0,4-2-3-1,3-5-2,C. Ancelotti,Pacheta
+878207,2023-04-01T19:00:00+00:00,8,Elche,Barcelona,0,4,0,1,La Liga,Regular Season - 27,9.69,5.4,1.36,,,1.94,1.94,,,2.0,6.0,41,59,11.0,3.0,4-4-1-1,4-3-3,S. Beccacece,Xavi
+878208,2023-04-01T12:00:00+00:00,8,Girona,Espanyol,2,1,0,0,La Liga,Regular Season - 27,1.86,3.6,4.64,,,,,1.55,2.56,4.0,1.0,62,38,5.0,2.0,4-1-4-1,4-4-1-1,Míchel,Diego Martínez
+878209,2023-04-02T16:30:00+00:00,8,Villarreal,Real Sociedad,2,0,0,0,La Liga,Regular Season - 27,2.61,3.13,3.14,,,,,1.45,2.95,4.0,3.0,52,48,4.0,4.0,4-3-3,4-1-3-2,Quique Setién,Imanol Alguacil
+878210,2023-04-03T19:00:00+00:00,8,Valencia,Rayo Vallecano,1,1,0,1,La Liga,Regular Season - 27,2.17,3.26,3.93,,,,,1.57,2.55,4.0,2.0,61,39,13.0,3.0,4-3-3,4-2-3-1,Rubén Baraja,Andoni Iraola
+878211,2023-04-02T12:00:00+00:00,8,Celta Vigo,Almeria,2,2,2,2,La Liga,Regular Season - 27,1.56,4.22,6.46,,,,,1.7,2.24,5.0,3.0,57,43,4.0,1.0,4-4-2,4-4-2,Carlos Carvalhal,Rubí
+878212,2023-04-10T19:00:00+00:00,8,Barcelona,Girona,0,0,0,0,La Liga,Regular Season - 28,1.33,5.96,9.48,,,,,1.76,2.17,3.0,,59,41,12.0,2.0,4-3-3,4-1-4-1,Xavi,Míchel
+878213,2023-04-09T14:15:00+00:00,8,Real Betis,Cadiz,0,2,0,0,La Liga,Regular Season - 28,1.73,3.66,5.58,,,,,1.76,2.14,3.0,4.0,46,54,5.0,6.0,4-2-3-1,4-4-2,M. Pellegrini,Sergio
+878214,2023-04-08T19:00:00+00:00,8,Real Madrid,Villarreal,2,3,1,1,La Liga,Regular Season - 28,1.49,4.9,6.66,,,,,1.56,2.56,4.0,8.0,49,51,6.0,7.0,4-3-3,4-3-3,C. Ancelotti,Quique Setién
+878215,2023-04-09T16:30:00+00:00,8,Almeria,Valencia,2,1,0,0,La Liga,Regular Season - 28,3.48,3.46,2.24,,,,,,,4.0,4.0,40,60,3.0,7.0,4-1-3-2,4-3-3,Rubí,Rubén Baraja
+878216,2023-04-08T14:15:00+00:00,8,Espanyol,Athletic Club,1,2,0,1,La Liga,Regular Season - 28,4.02,3.24,2.15,,,1.61,2.45,,,2.0,7.0,49,51,8.0,7.0,4-2-3-1,4-2-3-1,Luis García,Ernesto Valverde
+878217,2023-04-09T19:00:00+00:00,8,Rayo Vallecano,Atletico Madrid,1,2,0,2,La Liga,Regular Season - 28,4.91,3.58,1.85,,,1.74,2.21,,,3.0,4.0,51,49,8.0,2.0,4-2-3-1,5-3-2,Andoni Iraola,D. Simeone
+878218,2023-04-07T19:00:00+00:00,8,Sevilla,Celta Vigo,2,2,1,0,La Liga,Regular Season - 28,2.19,3.41,3.68,,,,,1.52,2.7,2.0,4.0,30,70,8.0,3.0,4-2-3-1,4-4-2,Mendilibar,Carlos Carvalhal
+878219,2023-04-08T12:00:00+00:00,8,Osasuna,Elche,2,1,0,1,La Liga,Regular Season - 28,1.78,3.56,5.34,,,,,1.78,2.12,6.0,1.0,62,38,9.0,2.0,4-3-3,4-3-3,Arrasate,S. Beccacece
+878220,2023-04-09T12:00:00+00:00,8,Valladolid,Mallorca,3,3,1,0,La Liga,Regular Season - 28,2.63,2.89,3.33,,,1.47,2.82,1.59,2.46,6.0,6.0,62,38,1.0,2.0,4-3-3,5-4-1,P. Pezzolano,J. Aguirre
+878221,2023-04-08T16:30:00+00:00,8,Real Sociedad,Getafe,2,0,1,0,La Liga,Regular Season - 28,1.72,3.47,6.49,,,,,2.1,1.81,6.0,4.0,61,39,3.0,2.0,4-3-1-2,3-4-3,Imanol Alguacil,Quique Sánchez Flores
+878222,2023-04-15T14:15:00+00:00,8,Athletic Club,Real Sociedad,2,0,1,0,La Liga,Regular Season - 29,2.26,3.05,3.96,,,,,1.69,2.29,5.0,4.0,51,49,5.0,2.0,4-2-3-1,4-1-3-2,Ernesto Valverde,Imanol Alguacil
+878223,2023-04-15T16:30:00+00:00,8,Real Betis,Espanyol,3,1,2,0,La Liga,Regular Season - 29,1.97,3.48,4.37,,,,,1.6,2.49,8.0,4.0,52,48,4.0,13.0,4-2-3-1,4-3-3,M. Pellegrini,Luis García
+878224,2023-04-17T19:00:00+00:00,8,Celta Vigo,Mallorca,0,1,0,1,La Liga,Regular Season - 29,1.83,3.36,5.57,,,,,1.93,1.95,3.0,2.0,73,27,7.0,5.0,4-4-2,5-3-2,Carlos Carvalhal,J. Aguirre
+878225,2023-04-15T19:00:00+00:00,8,Cadiz,Real Madrid,0,2,0,0,La Liga,Regular Season - 29,5.89,4.23,1.62,,,1.64,2.39,,,3.0,11.0,31,69,2.0,9.0,4-4-2,4-3-3,Sergio,C. Ancelotti
+878226,2023-04-15T12:00:00+00:00,8,Villarreal,Valladolid,1,2,0,2,La Liga,Regular Season - 29,1.41,5.24,8.1,,,,,1.74,2.2,7.0,7.0,70,30,8.0,5.0,4-3-3,3-4-1-2,Quique Setién,P. Pezzolano
+878227,2023-04-16T14:15:00+00:00,8,Getafe,Barcelona,0,0,0,0,La Liga,Regular Season - 29,5.52,3.66,1.76,,,1.83,2.07,,,1.0,3.0,34,66,1.0,5.0,5-3-2,4-3-3,Quique Sánchez Flores,Xavi
+878228,2023-04-16T12:00:00+00:00,8,Girona,Elche,2,0,1,0,La Liga,Regular Season - 29,1.44,4.82,8.11,,,,,1.84,2.06,4.0,5.0,48,52,3.0,4.0,4-1-4-1,4-2-3-1,Míchel,S. Beccacece
+878229,2023-04-14T19:00:00+00:00,8,Rayo Vallecano,Osasuna,2,1,2,0,La Liga,Regular Season - 29,2.07,3.18,4.46,,,,,1.69,2.27,3.0,4.0,46,54,2.0,3.0,4-2-3-1,4-3-3,Andoni Iraola,Arrasate
+878230,2023-04-16T19:00:00+00:00,8,Valencia,Sevilla,0,2,0,0,La Liga,Regular Season - 29,2.1,3.35,4.03,,,,,1.57,2.56,3.0,3.0,60,40,6.0,2.0,4-4-2,4-2-3-1,Rubén Baraja,Mendilibar
+878231,2023-04-16T16:30:00+00:00,8,Atletico Madrid,Almeria,2,1,2,1,La Liga,Regular Season - 29,1.21,7.34,14.22,,,,,1.98,1.89,7.0,1.0,65,35,9.0,2.0,5-3-2,3-4-2-1,D. Simeone,Rubí
+878232,2023-04-23T12:00:00+00:00,8,Elche,Valencia,0,2,0,2,La Liga,Regular Season - 30,4.49,3.61,1.88,,,1.61,2.43,,,1.0,3.0,66,34,11.0,6.0,5-3-2,5-3-2,S. Beccacece,Rubén Baraja
+878233,2023-04-23T19:00:00+00:00,8,Sevilla,Villarreal,2,1,1,0,La Liga,Regular Season - 30,3.07,3.39,2.49,,,,,,,4.0,5.0,38,62,5.0,3.0,4-2-3-1,4-4-2,Mendilibar,Quique Setién
+878234,2023-04-22T14:15:00+00:00,8,Almeria,Athletic Club,1,2,0,1,La Liga,Regular Season - 30,5.18,4.05,1.71,,,1.57,2.55,,,4.0,3.0,53,47,3.0,4.0,4-2-3-1,4-2-3-1,Rubí,Ernesto Valverde
+878235,2023-04-23T14:15:00+00:00,8,Barcelona,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 30,2.01,3.49,4.17,,,,,1.54,2.62,4.0,3.0,62,38,3.0,3.0,4-3-3,5-3-2,Xavi,D. Simeone
+878236,2023-04-22T12:00:00+00:00,8,Osasuna,Real Betis,3,2,3,1,La Liga,Regular Season - 30,2.7,3.15,2.94,,,1.42,3.02,1.47,2.85,5.0,6.0,38,62,5.0,13.0,4-3-3,4-2-3-1,Arrasate,M. Pellegrini
+878237,2023-04-22T19:00:00+00:00,8,Real Madrid,Celta Vigo,2,0,1,0,La Liga,Regular Season - 30,1.3,6.23,10.37,,,,,1.81,2.11,5.0,2.0,66,34,8.0,3.0,4-3-3,4-4-2,C. Ancelotti,Carlos Carvalhal
+878238,2023-04-23T16:30:00+00:00,8,Mallorca,Getafe,3,1,0,1,La Liga,Regular Season - 30,2.63,2.71,3.67,,,1.6,2.48,1.85,2.05,4.0,1.0,49,51,2.0,2.0,5-3-2,5-3-2,J. Aguirre,Quique Sánchez Flores
+878239,2023-04-21T19:00:00+00:00,8,Espanyol,Cadiz,0,0,0,0,La Liga,Regular Season - 30,2.09,3.35,4.06,,,,,1.63,2.4,5.0,2.0,57,43,6.0,4.0,5-3-2,4-4-2,Luis García,Sergio
+878240,2023-04-22T16:30:00+00:00,8,Real Sociedad,Rayo Vallecano,2,1,0,0,La Liga,Regular Season - 30,1.68,3.78,6.02,,,,,1.85,2.05,1.0,2.0,61,39,3.0,3.0,4-1-3-2,4-2-3-1,Imanol Alguacil,Andoni Iraola
+878241,2023-04-22T16:30:00+00:00,8,Valladolid,Girona,1,0,1,0,La Liga,Regular Season - 30,2.54,3.56,2.87,,,,,,,6.0,6.0,39,61,5.0,7.0,4-3-3,4-1-4-1,P. Pezzolano,Míchel
+878242,2023-04-27T20:00:00+00:00,8,Athletic Club,Sevilla,0,1,0,0,La Liga,Regular Season - 31,1.78,3.74,5.05,,,,,1.66,2.34,,1.0,55,45,8.0,2.0,4-2-3-1,4-2-3-1,Ernesto Valverde,Mendilibar
+878243,2023-04-26T17:30:00+00:00,8,Atletico Madrid,Mallorca,3,1,1,1,La Liga,Regular Season - 31,1.43,4.42,9.63,,,,,2.23,1.72,9.0,2.0,68,32,5.0,8.0,5-3-2,5-3-2,D. Simeone,J. Aguirre
+878244,2023-04-25T20:00:00+00:00,8,Real Betis,Real Sociedad,0,0,0,0,La Liga,Regular Season - 31,2.88,3.14,2.81,,,1.44,2.97,1.43,3.02,1.0,3.0,58,42,2.0,4.0,4-2-3-1,4-1-3-2,M. Pellegrini,Imanol Alguacil
+878245,2023-04-26T20:00:00+00:00,8,Celta Vigo,Elche,1,0,0,0,La Liga,Regular Season - 31,1.36,5.32,9.24,,,,,1.96,1.93,9.0,1.0,49,51,10.0,6.0,4-4-2,4-4-2,Carlos Carvalhal,S. Beccacece
+878246,2023-04-25T17:30:00+00:00,8,Cadiz,Osasuna,0,1,0,0,La Liga,Regular Season - 31,2.5,3.12,3.32,,,,,1.52,2.71,4.0,4.0,56,44,11.0,2.0,4-4-2,4-1-4-1,Sergio,Arrasate
+878247,2023-04-27T17:30:00+00:00,8,Valencia,Valladolid,2,1,0,1,La Liga,Regular Season - 31,1.71,3.92,5.31,,,,,1.63,2.4,6.0,2.0,49,51,6.0,2.0,5-4-1,5-3-2,Rubén Baraja,P. Pezzolano
+878248,2023-04-25T17:30:00+00:00,8,Girona,Real Madrid,4,2,2,1,La Liga,Regular Season - 31,5.16,4.44,1.65,,,1.47,2.88,,,5.0,3.0,28,72,3.0,8.0,4-1-4-1,4-3-3,Míchel,C. Ancelotti
+878249,2023-04-26T20:00:00+00:00,8,Rayo Vallecano,Barcelona,2,1,1,0,La Liga,Regular Season - 31,5.0,3.8,1.78,,,1.62,2.43,,,6.0,5.0,40,60,3.0,9.0,4-4-2,4-3-3,Andoni Iraola,Xavi
+878250,2023-04-27T17:30:00+00:00,8,Villarreal,Espanyol,4,2,0,1,La Liga,Regular Season - 31,1.55,4.53,6.21,,,,,1.63,2.4,13.0,4.0,64,36,9.0,2.0,4-2-3-1,4-4-1-1,Quique Setién,Luis García
+878251,2023-04-26T17:30:00+00:00,8,Getafe,Almeria,1,2,0,1,La Liga,Regular Season - 31,1.85,3.57,4.95,,,,,1.69,2.27,9.0,11.0,45,55,4.0,6.0,3-4-3,4-3-3,Quique Sánchez Flores,Rubí
+878252,2023-04-29T19:00:00+00:00,8,Barcelona,Real Betis,4,0,3,0,La Liga,Regular Season - 32,1.4,5.3,8.0,,,,,1.71,2.25,6.0,1.0,67,33,10.0,,4-3-3,4-2-3-1,Xavi,M. Pellegrini
+878253,2023-04-29T14:15:00+00:00,8,Elche,Rayo Vallecano,4,0,1,0,La Liga,Regular Season - 32,4.23,3.52,1.99,,,1.6,2.46,,,9.0,2.0,51,49,3.0,8.0,4-2-3-1,4-2-3-1,S. Beccacece,Andoni Iraola
+878254,2023-04-30T12:00:00+00:00,8,Cadiz,Valencia,2,1,1,0,La Liga,Regular Season - 32,3.24,3.15,2.52,,,1.5,2.76,,,4.0,4.0,40,60,5.0,6.0,4-4-2,5-4-1,Sergio,Rubén Baraja
+878255,2023-04-30T16:30:00+00:00,8,Espanyol,Getafe,1,0,1,0,La Liga,Regular Season - 32,2.5,3.02,3.43,,,,,1.57,2.54,8.0,2.0,57,43,6.0,3.0,5-3-2,4-4-2,Luis García,José Bordalás
+878256,2023-04-28T19:00:00+00:00,8,Osasuna,Real Sociedad,0,2,0,1,La Liga,Regular Season - 32,3.97,3.06,2.26,,,1.73,2.22,,,1.0,7.0,51,49,4.0,2.0,4-2-3-1,4-3-3,Arrasate,Imanol Alguacil
+878257,2023-05-01T17:00:00+00:00,8,Mallorca,Athletic Club,1,1,0,0,La Liga,Regular Season - 32,3.63,2.85,2.52,,,1.68,2.31,1.47,2.88,2.0,6.0,30,70,5.0,7.0,5-3-2,4-2-3-1,J. Aguirre,Ernesto Valverde
+878258,2023-04-30T19:00:00+00:00,8,Valladolid,Atletico Madrid,2,5,1,3,La Liga,Regular Season - 32,5.36,4.1,1.68,,,1.57,2.55,,,6.0,6.0,57,43,9.0,1.0,3-4-1-2,5-3-2,P. Pezzolano,D. Simeone
+878259,2023-04-30T14:15:00+00:00,8,Villarreal,Celta Vigo,3,1,2,1,La Liga,Regular Season - 32,1.73,4.09,4.96,,,,,1.49,2.79,3.0,5.0,52,48,4.0,9.0,4-2-3-1,4-4-2,Quique Setién,Carlos Carvalhal
+878260,2023-04-29T16:30:00+00:00,8,Real Madrid,Almeria,4,2,3,1,La Liga,Regular Season - 32,1.15,9.0,19.0,,,,,1.85,2.03,8.0,3.0,68,32,7.0,,4-3-3,4-5-1,C. Ancelotti,Rubí
+878261,2023-05-01T19:00:00+00:00,8,Sevilla,Girona,0,2,0,1,La Liga,Regular Season - 32,1.91,3.73,4.3,,,,,1.48,2.82,5.0,3.0,64,36,6.0,1.0,4-2-3-1,5-4-1,Mendilibar,Míchel
+878262,2023-05-04T20:00:00+00:00,8,Athletic Club,Real Betis,0,1,0,1,La Liga,Regular Season - 33,1.72,3.86,5.38,,,,,1.67,2.33,6.0,2.0,63,37,13.0,2.0,4-2-3-1,4-2-3-1,Ernesto Valverde,M. Pellegrini
+878263,2023-05-03T20:00:00+00:00,8,Atletico Madrid,Cadiz,5,1,2,0,La Liga,Regular Season - 33,1.28,6.18,11.6,,,,,2.1,1.79,8.0,1.0,61,39,5.0,2.0,5-3-2,4-1-4-1,D. Simeone,Sergio
+878264,2023-05-02T17:30:00+00:00,8,Barcelona,Osasuna,1,0,0,0,La Liga,Regular Season - 33,1.19,7.95,16.5,,,,,2.14,1.76,4.0,2.0,76,24,11.0,,4-2-3-1,4-2-3-1,Xavi,Arrasate
+878265,2023-05-03T17:30:00+00:00,8,Valencia,Villarreal,1,1,0,0,La Liga,Regular Season - 33,2.69,3.44,2.79,,,,,,,1.0,4.0,32,68,6.0,6.0,4-2-3-1,4-3-3,Rubén Baraja,Quique Setién
+878266,2023-05-04T20:00:00+00:00,8,Rayo Vallecano,Valladolid,2,1,0,0,La Liga,Regular Season - 33,2.07,3.5,3.94,,,,,1.53,2.67,6.0,4.0,51,49,3.0,4.0,4-2-3-1,3-4-1-2,Andoni Iraola,P. Pezzolano
+878267,2023-05-02T17:30:00+00:00,8,Almeria,Elche,2,1,1,0,La Liga,Regular Season - 33,1.69,4.14,5.12,,,,,1.46,2.89,4.0,1.0,47,53,7.0,13.0,4-3-3,4-4-2,Rubí,S. Beccacece
+878268,2023-05-04T17:30:00+00:00,8,Girona,Mallorca,2,1,1,0,La Liga,Regular Season - 33,1.9,3.42,4.89,,,,,1.71,2.24,7.0,2.0,63,37,9.0,5.0,4-1-4-1,5-4-1,Míchel,J. Aguirre
+878269,2023-05-03T20:00:00+00:00,8,Getafe,Celta Vigo,1,0,1,0,La Liga,Regular Season - 33,2.72,3.03,3.09,,,1.46,2.92,1.52,2.68,4.0,1.0,34,66,1.0,5.0,4-3-3,4-4-2,José Bordalás,Carlos Carvalhal
+878270,2023-05-04T17:30:00+00:00,8,Sevilla,Espanyol,3,2,1,2,La Liga,Regular Season - 33,1.79,3.8,4.92,,,,,1.61,2.46,6.0,3.0,64,36,9.0,,4-2-3-1,5-4-1,Mendilibar,Luis García
+878271,2023-05-02T20:00:00+00:00,8,Real Sociedad,Real Madrid,2,0,0,0,La Liga,Regular Season - 33,2.48,3.24,3.22,,,,,1.44,2.99,4.0,5.0,53,47,2.0,6.0,4-1-4-1,4-3-3,Imanol Alguacil,C. Ancelotti
+878272,2023-05-15T19:00:00+00:00,8,Real Betis,Rayo Vallecano,3,1,2,0,La Liga,Regular Season - 34,2.24,3.49,3.47,,,,,1.43,3.02,5.0,4.0,49,51,6.0,5.0,4-2-3-1,4-2-3-1,M. Pellegrini,Andoni Iraola
+878273,2023-05-14T12:00:00+00:00,8,Celta Vigo,Valencia,1,2,0,1,La Liga,Regular Season - 34,2.33,3.24,3.44,,,,,1.48,2.8,6.0,5.0,64,36,5.0,4.0,4-4-2,4-2-3-1,Carlos Carvalhal,Rubén Baraja
+878274,2023-05-13T16:30:00+00:00,8,Villarreal,Athletic Club,5,1,2,1,La Liga,Regular Season - 34,2.13,3.73,3.5,,,,,,,11.0,5.0,57,43,7.0,5.0,4-3-3,4-2-3-1,Quique Setién,Ernesto Valverde
+878275,2023-05-14T14:15:00+00:00,8,Elche,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 34,7.51,5.0,1.44,,,1.72,2.24,,,4.0,4.0,50,50,3.0,5.0,3-4-1-2,3-5-2,S. Beccacece,D. Simeone
+878276,2023-05-14T19:00:00+00:00,8,Espanyol,Barcelona,2,4,0,3,La Liga,Regular Season - 34,6.25,4.55,1.55,,,1.62,2.43,,,7.0,5.0,30,70,4.0,3.0,5-3-2,4-3-3,Luis García,Xavi
+878277,2023-05-13T19:00:00+00:00,8,Real Madrid,Getafe,1,0,0,0,La Liga,Regular Season - 34,1.67,3.97,5.82,,,,,1.74,2.2,3.0,2.0,77,23,,3.0,4-3-3,4-3-3,C. Ancelotti,José Bordalás
+878278,2023-05-12T19:00:00+00:00,8,Mallorca,Cadiz,1,0,1,0,La Liga,Regular Season - 34,2.27,3.01,4.02,,,,,1.69,2.29,3.0,4.0,43,57,3.0,7.0,3-4-3,4-4-2,J. Aguirre,Sergio
+878279,2023-05-14T16:30:00+00:00,8,Valladolid,Sevilla,0,3,0,0,La Liga,Regular Season - 34,2.59,3.39,2.94,,,,,,,6.0,5.0,55,45,8.0,3.0,4-3-3,4-2-3-1,P. Pezzolano,Mendilibar
+878280,2023-05-13T14:15:00+00:00,8,Osasuna,Almeria,3,1,0,0,La Liga,Regular Season - 34,2.07,3.72,3.63,,,,,,,7.0,3.0,56,44,4.0,1.0,4-3-3,4-3-3,Arrasate,Rubí
+878281,2023-05-13T12:00:00+00:00,8,Real Sociedad,Girona,2,2,2,2,La Liga,Regular Season - 34,1.66,3.97,5.64,,,,,1.7,2.24,5.0,6.0,51,49,7.0,4.0,4-4-2,4-1-4-1,Imanol Alguacil,Míchel
+878282,2023-05-20T14:15:00+00:00,8,Athletic Club,Celta Vigo,2,1,1,0,La Liga,Regular Season - 35,1.72,3.78,5.57,,,,,1.75,2.19,3.0,3.0,48,52,6.0,5.0,4-1-4-1,4-2-2-2,Ernesto Valverde,Carlos Carvalhal
+878283,2023-05-21T14:15:00+00:00,8,Atletico Madrid,Osasuna,3,0,1,0,La Liga,Regular Season - 35,1.46,4.98,7.1,,,,,1.67,2.32,5.0,2.0,53,47,8.0,10.0,5-3-2,4-3-3,D. Simeone,Arrasate
+878284,2023-05-20T19:00:00+00:00,8,Barcelona,Real Sociedad,1,2,0,1,La Liga,Regular Season - 35,1.78,3.98,4.62,,,,,1.52,2.66,4.0,6.0,67,33,8.0,2.0,4-3-3,4-2-3-1,Xavi,Imanol Alguacil
+878285,2023-05-19T19:00:00+00:00,8,Cadiz,Valladolid,2,0,0,0,La Liga,Regular Season - 35,2.24,3.44,3.49,,,,,,,4.0,3.0,46,54,4.0,3.0,4-2-3-1,3-5-2,Sergio,P. Pezzolano
+878286,2023-05-20T16:30:00+00:00,8,Almeria,Mallorca,3,0,2,0,La Liga,Regular Season - 35,2.34,3.35,3.37,,,,,1.45,2.94,3.0,3.0,54,46,4.0,5.0,4-3-3,5-4-1,Rubí,J. Aguirre
+878287,2023-05-20T12:00:00+00:00,8,Girona,Villarreal,1,2,1,1,La Liga,Regular Season - 35,2.66,3.9,2.53,,,,,,,3.0,5.0,45,55,3.0,1.0,4-2-3-1,4-2-3-1,Míchel,Quique Setién
+878288,2023-05-21T19:00:00+00:00,8,Sevilla,Real Betis,0,0,0,0,La Liga,Regular Season - 35,2.26,3.53,3.37,,,,,,,4.0,,53,47,4.0,3.0,4-2-3-1,4-2-3-1,Mendilibar,M. Pellegrini
+878289,2023-05-20T16:30:00+00:00,8,Getafe,Elche,1,1,1,1,La Liga,Regular Season - 35,1.62,3.97,6.14,,,,,1.81,2.07,5.0,4.0,38,62,5.0,6.0,3-4-2-1,5-3-2,José Bordalás,S. Beccacece
+878290,2023-05-21T12:00:00+00:00,8,Rayo Vallecano,Espanyol,1,2,1,1,La Liga,Regular Season - 35,2.04,3.74,3.67,,,,,,,5.0,6.0,64,36,4.0,4.0,4-4-2,4-2-3-1,Andoni Iraola,Luis García
+878291,2023-05-21T16:30:00+00:00,8,Valencia,Real Madrid,1,0,1,0,La Liga,Regular Season - 35,3.43,3.71,2.17,,,,,,,6.0,5.0,27,73,2.0,9.0,4-2-3-1,4-3-3,Rubén Baraja,C. Ancelotti
+878292,2023-05-24T20:00:00+00:00,8,Real Betis,Getafe,0,1,0,0,La Liga,Regular Season - 36,2.41,2.99,3.66,,,,,1.63,2.41,4.0,2.0,71,29,2.0,5.0,4-2-3-1,4-4-2,M. Pellegrini,José Bordalás
+878293,2023-05-23T17:30:00+00:00,8,Celta Vigo,Girona,1,1,1,0,La Liga,Regular Season - 36,2.16,3.44,3.72,,,,,1.49,2.8,7.0,3.0,41,59,9.0,2.0,4-3-3,4-4-2,Carlos Carvalhal,Míchel
+878294,2023-05-24T17:30:00+00:00,8,Elche,Sevilla,1,1,1,1,La Liga,Regular Season - 36,3.94,3.65,2.0,,,,,,,6.0,3.0,72,28,8.0,5.0,4-4-2,4-2-3-1,S. Beccacece,Mendilibar
+878295,2023-05-25T17:30:00+00:00,8,Mallorca,Valencia,1,0,0,0,La Liga,Regular Season - 36,3.35,3.0,2.56,,,1.55,2.61,,,3.0,5.0,41,59,2.0,4.0,3-4-3,4-2-3-1,J. Aguirre,Rubén Baraja
+878296,2023-05-25T19:30:00+00:00,8,Osasuna,Athletic Club,2,0,0,0,La Liga,Regular Season - 36,3.38,3.36,2.33,,,1.43,3.01,,,3.0,4.0,48,52,2.0,6.0,4-2-3-1,4-2-3-1,Arrasate,Ernesto Valverde
+878297,2023-05-24T20:00:00+00:00,8,Espanyol,Atletico Madrid,3,3,0,2,La Liga,Regular Season - 36,3.1,3.59,2.37,,,,,,,13.0,7.0,45,55,16.0,1.0,5-3-2,5-3-2,Luis García,D. Simeone
+878298,2023-05-23T20:00:00+00:00,8,Valladolid,Barcelona,3,1,2,0,La Liga,Regular Season - 36,3.67,3.86,2.01,,,,,,,4.0,6.0,30,70,2.0,6.0,4-2-3-1,4-3-3,P. Pezzolano,Xavi
+878299,2023-05-24T17:30:00+00:00,8,Villarreal,Cadiz,2,0,2,0,La Liga,Regular Season - 36,1.47,4.82,6.99,,,,,1.58,2.51,7.0,8.0,65,35,7.0,6.0,4-2-3-1,4-4-2,Quique Setién,Sergio
+878300,2023-05-24T17:30:00+00:00,8,Real Madrid,Rayo Vallecano,2,1,1,0,La Liga,Regular Season - 36,1.41,5.38,7.59,,,,,1.56,2.56,3.0,6.0,62,38,5.0,2.0,4-1-4-1,4-2-3-1,C. Ancelotti,Andoni Iraola
+878301,2023-05-23T17:30:00+00:00,8,Real Sociedad,Almeria,1,0,1,0,La Liga,Regular Season - 36,1.41,4.98,8.65,,,,,1.72,2.22,2.0,2.0,72,28,10.0,2.0,4-1-4-1,4-2-3-1,Imanol Alguacil,Rubí
+878302,2023-05-28T17:00:00+00:00,8,Athletic Club,Elche,0,1,0,0,La Liga,Regular Season - 37,1.34,5.61,9.15,,,,,1.77,2.13,8.0,1.0,64,36,18.0,3.0,4-2-3-1,5-3-2,Ernesto Valverde,S. Beccacece
+878303,2023-05-28T17:00:00+00:00,8,Atletico Madrid,Real Sociedad,2,1,1,0,La Liga,Regular Season - 37,2.31,3.26,3.54,,,,,1.47,2.85,5.0,4.0,51,49,6.0,4.0,5-4-1,4-1-4-1,D. Simeone,Imanol Alguacil
+878304,2023-05-28T17:00:00+00:00,8,Barcelona,Mallorca,3,0,2,0,La Liga,Regular Season - 37,1.24,6.3,13.31,,,,,2.14,1.75,9.0,1.0,78,22,14.0,3.0,4-3-3,5-4-1,Xavi,J. Aguirre
+878305,2023-05-28T17:00:00+00:00,8,Getafe,Osasuna,2,1,1,1,La Liga,Regular Season - 37,2.58,2.93,3.41,,,1.5,2.77,1.67,2.32,6.0,2.0,51,49,1.0,1.0,4-3-3,4-2-3-1,José Bordalás,Arrasate
+878306,2023-05-28T17:00:00+00:00,8,Cadiz,Celta Vigo,1,0,0,0,La Liga,Regular Season - 37,2.74,3.07,3.01,,,,,1.46,2.9,3.0,4.0,50,50,3.0,2.0,4-4-2,4-3-3,Sergio,Carlos Carvalhal
+878307,2023-05-28T17:00:00+00:00,8,Rayo Vallecano,Villarreal,2,1,0,0,La Liga,Regular Season - 37,3.09,3.89,2.26,,,,,,,4.0,2.0,31,69,4.0,6.0,4-2-3-1,4-2-3-1,Andoni Iraola,Quique Setién
+878308,2023-05-28T17:00:00+00:00,8,Almeria,Valladolid,0,0,0,0,La Liga,Regular Season - 37,2.21,3.51,3.51,,,,,,,7.0,2.0,49,51,2.0,3.0,4-3-3,4-3-3,Rubí,P. Pezzolano
+878309,2023-05-28T17:00:00+00:00,8,Girona,Real Betis,1,2,1,0,La Liga,Regular Season - 37,2.11,3.52,3.79,,,,,1.47,2.87,3.0,7.0,54,46,8.0,5.0,4-1-4-1,4-2-3-1,Míchel,M. Pellegrini
+878310,2023-05-28T17:00:00+00:00,8,Valencia,Espanyol,2,2,1,1,La Liga,Regular Season - 37,1.82,3.96,4.49,,,,,1.5,2.76,4.0,5.0,54,46,10.0,3.0,4-2-3-1,5-3-2,Rubén Baraja,Luis García
+878311,2023-05-27T17:00:00+00:00,8,Sevilla,Real Madrid,1,2,1,1,La Liga,Regular Season - 37,3.23,3.63,2.29,,,,,,,1.0,3.0,32,68,1.0,1.0,4-2-3-1,4-3-3,Mendilibar,C. Ancelotti
+878312,2023-06-04T19:00:00+00:00,8,Real Betis,Valencia,1,1,1,0,La Liga,Regular Season - 38,3.03,3.2,2.6,,,,,,,3.0,3.0,61,39,3.0,4.0,4-2-3-1,4-2-3-1,M. Pellegrini,Rubén Baraja
+878313,2023-06-04T16:30:00+00:00,8,Mallorca,Rayo Vallecano,3,0,0,0,La Liga,Regular Season - 38,3.06,3.33,2.5,,,,,,,3.0,4.0,47,53,2.0,6.0,5-3-2,4-3-1-2,J. Aguirre,Andoni Iraola
+878314,2023-06-04T16:30:00+00:00,8,Real Sociedad,Sevilla,2,1,1,0,La Liga,Regular Season - 38,1.58,4.32,5.97,,,,,1.67,2.31,6.0,4.0,55,45,5.0,2.0,4-1-4-1,4-2-3-1,Imanol Alguacil,Mendilibar
+878315,2023-06-04T16:30:00+00:00,8,Real Madrid,Athletic Club,1,1,0,0,La Liga,Regular Season - 38,1.71,4.32,4.63,,,,,,,2.0,8.0,65,35,4.0,6.0,4-3-3,4-2-3-1,C. Ancelotti,Ernesto Valverde
+878316,2023-06-04T16:30:00+00:00,8,Villarreal,Atletico Madrid,2,2,1,1,La Liga,Regular Season - 38,2.76,3.89,2.45,,,,,,,7.0,3.0,66,34,12.0,1.0,4-2-3-1,5-3-2,Quique Setién,D. Simeone
+878317,2023-06-04T19:00:00+00:00,8,Celta Vigo,Barcelona,2,1,1,0,La Liga,Regular Season - 38,2.65,3.83,2.56,,,,,,,9.0,2.0,28,72,2.0,4.0,4-3-3,4-3-3,Carlos Carvalhal,Xavi
+878318,2023-06-04T19:00:00+00:00,8,Valladolid,Getafe,0,0,0,0,La Liga,Regular Season - 38,2.1,3.25,4.1,,,,,1.63,2.38,,1.0,80,20,6.0,1.0,4-3-3,4-4-2,P. Pezzolano,José Bordalás
+878319,2023-06-04T19:00:00+00:00,8,Elche,Cadiz,1,1,0,1,La Liga,Regular Season - 38,2.65,3.26,2.91,,,,,,,5.0,3.0,67,33,7.0,4.0,4-1-4-1,4-4-2,S. Beccacece,Sergio
+878320,2023-06-04T19:00:00+00:00,8,Espanyol,Almeria,3,3,1,1,La Liga,Regular Season - 38,2.46,3.76,2.81,,,,,,,8.0,4.0,64,36,7.0,5.0,4-2-3-1,4-3-3,Luis García,Rubí
+878321,2023-06-04T16:30:00+00:00,8,Osasuna,Girona,2,1,0,0,La Liga,Regular Season - 38,2.1,3.73,3.53,,,,,,,7.0,6.0,37,63,5.0,2.0,4-3-3,4-1-4-1,Arrasate,Míchel
+1037952,2023-08-11T17:30:00+00:00,8,Almeria,Rayo Vallecano,0,2,0,2,La Liga,Regular Season - 1,2.61,3.28,2.99,,,,,,,5,4,60,40,8,3,4-2-3-1,4-2-3-1,Vicente Moreno,Francisco
+1037953,2023-08-12T19:30:00+00:00,8,Athletic Club,Real Madrid,0,2,0,2,La Liga,Regular Season - 1,3.34,3.5,2.29,,,,,,,1,8,46,54,7,5,4-2-3-1,4-3-1-2,Ernesto Valverde,C. Ancelotti
+1037954,2023-08-14T19:30:00+00:00,8,Atletico Madrid,Granada CF,3,1,1,0,La Liga,Regular Season - 1,1.33,5.78,9.67,,,,,1.88,2.0,5,4,45,55,2,3,3-5-2,5-3-2,D. Simeone,Paco López
+1037955,2023-08-13T15:00:00+00:00,8,Celta Vigo,Osasuna,0,2,0,1,La Liga,Regular Season - 1,2.08,3.29,4.19,,,,,1.61,2.44,1,5,53,47,7,2,4-4-2,4-3-3,Rafael Benítez,Arrasate
+1037956,2023-08-11T20:00:00+00:00,8,Sevilla,Valencia,1,2,0,0,La Liga,Regular Season - 1,1.98,3.4,4.46,,,,,1.68,2.31,3.0,3,55,45,8,1,4-2-3-1,4-4-2,Mendilibar,Rubén Baraja
+1037957,2023-08-12T17:30:00+00:00,8,Las Palmas,Mallorca,1,1,1,0,La Liga,Regular Season - 1,2.58,2.94,3.4,,,1.47,2.86,1.63,2.42,2.0,2,70,30,3,5,4-5-1,5-3-2,,J. Aguirre
+1037958,2023-08-13T19:30:00+00:00,8,Getafe,Barcelona,0,0,0,0,La Liga,Regular Season - 1,7.45,4.15,1.54,,,2.0,1.89,,,2.0,4,25,75,3,4,4-5-1,4-2-3-1,José Bordalás,Xavi
+1037959,2023-08-13T17:30:00+00:00,8,Villarreal,Real Betis,1,2,0,1,La Liga,Regular Season - 1,1.76,3.96,4.91,,,,,1.55,2.61,5.0,5,63,37,9,4,4-3-3,4-2-3-1,Quique Setién,M. Pellegrini
+1037960,2023-08-12T15:00:00+00:00,8,Real Sociedad,Girona,1,1,1,0,La Liga,Regular Season - 1,1.72,3.84,5.43,,,,,1.71,2.24,2.0,1,48,52,5,1,4-3-3,4-4-1-1,Imanol Alguacil,Míchel
+1037961,2023-08-14T17:30:00+00:00,8,Cadiz,Alaves,1,0,1,0,La Liga,Regular Season - 1,2.37,3.04,3.68,,,,,1.64,2.39,3.0,1,45,55,2,4,4-4-2,5-4-1,Sergio,Luis García
+1037962,2023-08-19T17:30:00+00:00,8,Almeria,Real Madrid,1,3,1,1,La Liga,Regular Season - 2,6.82,5.26,1.45,,,1.51,2.72,,,8.0,9,44,56,4,5,4-2-3-1,4-3-1-2,Vicente Moreno,C. Ancelotti
+1037963,2023-08-20T17:30:00+00:00,8,Barcelona,Cadiz,2,0,0,0,La Liga,Regular Season - 2,1.25,6.49,12.84,,,,,2.14,1.76,10.0,1,75,25,10,2,3-4-2-1,4-4-2,Xavi,Sergio
+1037964,2023-08-18T17:30:00+00:00,8,Mallorca,Villarreal,0,1,0,0,La Liga,Regular Season - 2,2.86,3.19,2.79,,,,,,,1.0,3,40,60,6,5,5-3-2,4-3-3,J. Aguirre,Quique Setién
+1037965,2023-08-21T19:30:00+00:00,8,Granada CF,Rayo Vallecano,0,2,0,0,La Liga,Regular Season - 2,2.73,3.16,2.94,,,,,1.44,2.98,7.0,9,49,51,5,6,4-3-3,4-4-2,Paco López,Francisco
+1037966,2023-08-21T17:00:00+00:00,8,Alaves,Sevilla,4,3,2,2,La Liga,Regular Season - 2,3.57,3.09,2.39,,,1.62,2.42,,,7.0,2,33,67,4,4,4-4-2,4-2-3-1,Luis García,Mendilibar
+1037967,2023-08-19T19:30:00+00:00,8,Osasuna,Athletic Club,0,2,0,2,La Liga,Regular Season - 2,3.08,3.01,2.74,,,1.49,2.78,1.44,2.99,7.0,2,62,38,5,3,4-3-3,4-2-3-1,Arrasate,Ernesto Valverde
+1037968,2023-08-20T19:30:00+00:00,8,Real Betis,Atletico Madrid,0,0,0,0,La Liga,Regular Season - 2,3.84,3.49,2.1,,,1.51,2.72,,,,1,53,47,2,7,4-2-3-1,5-3-2,M. Pellegrini,D. Simeone
+1037969,2023-08-19T15:00:00+00:00,8,Real Sociedad,Celta Vigo,1,1,1,0,La Liga,Regular Season - 2,1.78,3.51,5.67,,,,,1.91,1.98,2.0,6,52,48,9,7,4-3-3,4-4-2,Imanol Alguacil,Rafael Benítez
+1037970,2023-08-20T17:00:00+00:00,8,Girona,Getafe,3,0,1,0,La Liga,Regular Season - 2,1.96,3.21,4.93,,,,,1.89,2.0,6.0,2,65,35,3,2,4-1-4-1,4-2-3-1,Míchel,José Bordalás
+1037971,2023-08-18T19:30:00+00:00,8,Valencia,Las Palmas,1,0,0,0,La Liga,Regular Season - 2,1.58,3.99,6.98,,,,,1.98,1.9,4.0,1,39,61,6,4,4-4-2,4-3-3,Rubén Baraja,
+1037972,2023-08-27T19:30:00+00:00,8,Athletic Club,Real Betis,4,2,3,2,La Liga,Regular Season - 3,1.98,3.49,4.3,,,,,1.61,2.45,6.0,3,47,53,5,3,4-2-3-1,4-2-3-1,Ernesto Valverde,M. Pellegrini
+1037973,2023-08-25T19:30:00+00:00,8,Celta Vigo,Real Madrid,0,1,0,0,La Liga,Regular Season - 3,4.97,4.01,1.74,,,1.51,2.71,,,4.0,3,36,64,3,5,5-3-2,4-3-1-2,Rafael Benítez,C. Ancelotti
+1037974,2023-08-26T17:30:00+00:00,8,Granada CF,Mallorca,3,2,1,1,La Liga,Regular Season - 3,2.85,2.95,3.02,,,1.52,2.68,1.56,2.59,4.0,5,53,47,5,3,4-4-2,5-3-2,Paco López,J. Aguirre
+1037975,2023-08-25T17:30:00+00:00,8,Las Palmas,Real Sociedad,0,0,0,0,La Liga,Regular Season - 3,4.39,3.27,2.04,,,1.7,2.26,,,5.0,1,52,48,5,7,4-3-3,4-4-2,,Imanol Alguacil
+1037976,2023-08-26T17:00:00+00:00,8,Cadiz,Almeria,1,1,0,0,La Liga,Regular Season - 3,2.28,3.42,3.43,,,,,1.45,2.93,3.0,2,52,48,7,3,4-4-2,4-2-3-1,Sergio,Vicente Moreno
+1037977,2023-08-28T19:30:00+00:00,8,Rayo Vallecano,Atletico Madrid,0,7,0,3,La Liga,Regular Season - 3,4.22,3.48,2.0,,,1.58,2.52,,,3.0,10,56,44,8,3,4-2-3-1,5-3-2,Francisco,D. Simeone
+1037978,2023-08-27T15:30:00+00:00,8,Villarreal,Barcelona,3,4,2,2,La Liga,Regular Season - 3,3.45,3.69,2.17,,,,,,,6.0,11,39,61,2,6,4-4-2,4-3-3,Quique Setién,Xavi
+1037979,2023-08-26T19:30:00+00:00,8,Sevilla,Girona,1,2,1,1,La Liga,Regular Season - 3,1.96,3.65,4.17,,,,,1.49,2.8,4.0,3,51,49,6,6,4-2-3-1,4-1-4-1,Mendilibar,Míchel
+1037980,2023-08-27T17:30:00+00:00,8,Valencia,Osasuna,1,2,0,1,La Liga,Regular Season - 3,1.82,3.47,5.37,,,,,1.83,2.08,4.0,2,65,35,6,3,4-4-2,4-3-3,Rubén Baraja,Arrasate
+1037981,2023-08-28T17:30:00+00:00,8,Getafe,Alaves,1,0,0,0,La Liga,Regular Season - 3,2.42,2.8,3.97,,,1.53,2.65,1.88,2.01,4.0,2,47,53,4,4,4-4-2,4-3-3,José Bordalás,Luis García
+1037982,2023-09-01T20:00:00+00:00,8,Almeria,Celta Vigo,2,3,0,2,La Liga,Regular Season - 4,2.99,3.38,2.55,,,,,,,5.0,8,63,37,6,5,4-2-3-1,5-4-1,Vicente Moreno,Rafael Benítez
+1037983,2023-12-23T15:15:00+00:00,8,Atletico Madrid,Sevilla,1,0,0,0,La Liga,Regular Season - 4,1.59,4.28,5.94,,,,,1.65,2.36,4.0,2,50,50,6,5,5-4-1,3-5-2,D. Simeone,Quique Sánchez Flores
+1037984,2023-09-02T19:00:00+00:00,8,Real Betis,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 4,2.0,3.4,3.8,,,,,,,5.0,6,57,43,2,3,4-2-3-1,4-4-2,M. Pellegrini,Francisco
+1037985,2023-09-01T17:30:00+00:00,8,Cadiz,Villarreal,3,1,2,1,La Liga,Regular Season - 4,3.46,3.56,2.21,,,,,,,4.0,3,42,58,7,3,4-4-2,4-3-3,Sergio,Quique Setién
+1037986,2023-09-03T12:00:00+00:00,8,Girona,Las Palmas,1,0,0,0,La Liga,Regular Season - 4,1.75,3.85,5.19,,,,,1.64,2.39,6.0,5,46,54,3,5,4-1-4-1,4-3-3,Míchel,
+1037987,2023-09-02T16:30:00+00:00,8,Alaves,Valencia,1,0,1,0,La Liga,Regular Season - 4,3.27,2.94,2.67,,,1.58,2.52,1.47,2.87,1.0,4,39,61,1,2,4-2-3-1,4-4-2,Luis García,Rubén Baraja
+1037988,2023-09-03T14:15:00+00:00,8,Mallorca,Athletic Club,0,0,0,0,La Liga,Regular Season - 4,3.3,3.03,2.57,,,1.57,2.54,1.44,2.99,2.0,3,33,67,3,5,5-3-2,4-2-3-1,J. Aguirre,Ernesto Valverde
+1037989,2023-09-03T19:00:00+00:00,8,Osasuna,Barcelona,1,2,0,1,La Liga,Regular Season - 4,6.68,4.64,1.51,,,1.65,2.36,,,3.0,4,30,70,8,5,4-1-4-1,4-3-3,Arrasate,Xavi
+1037990,2023-09-02T14:15:00+00:00,8,Real Madrid,Getafe,2,1,0,1,La Liga,Regular Season - 4,1.38,5.02,9.59,,,,,2.12,1.79,12.0,2,76,24,11,1,4-3-1-2,4-1-3-2,C. Ancelotti,José Bordalás
+1037991,2023-09-02T12:00:00+00:00,8,Real Sociedad,Granada CF,5,3,2,1,La Liga,Regular Season - 4,1.45,4.72,8.0,,,,,1.88,2.01,6.0,5,62,38,2,5,4-3-3,3-4-3,Imanol Alguacil,Paco López
+1037992,2023-09-16T12:00:00+00:00,8,Athletic Club,Cadiz,3,0,0,0,La Liga,Regular Season - 5,1.63,3.91,6.33,,,,,1.92,1.97,9.0,4,66,34,5,4,4-2-3-1,4-4-2,Ernesto Valverde,Sergio
+1037993,2023-09-16T19:00:00+00:00,8,Barcelona,Real Betis,5,0,2,0,La Liga,Regular Season - 5,1.33,5.81,9.3,,,,,1.75,2.18,9.0,2,66,34,9,5,4-3-3,4-2-3-1,Xavi,M. Pellegrini
+1037994,2023-09-16T16:30:00+00:00,8,Celta Vigo,Mallorca,0,1,0,0,La Liga,Regular Season - 5,2.11,3.12,4.39,,,,,1.75,2.19,4.0,4,61,39,10,1,3-4-3,5-4-1,Rafael Benítez,J. Aguirre
+1037995,2023-09-17T12:00:00+00:00,8,Getafe,Osasuna,3,2,1,1,La Liga,Regular Season - 5,2.79,2.87,3.18,,,1.56,2.58,1.64,2.38,6.0,3,45,55,6,3,4-4-2,4-3-3,José Bordalás,Arrasate
+1037996,2023-09-17T19:00:00+00:00,8,Real Madrid,Real Sociedad,2,1,0,1,La Liga,Regular Season - 5,1.69,3.82,5.69,,,,,1.65,2.38,8.0,5,51,49,4,3,4-3-1-2,4-3-3,C. Ancelotti,Imanol Alguacil
+1037997,2023-09-17T14:15:00+00:00,8,Villarreal,Almeria,2,1,1,1,La Liga,Regular Season - 5,1.51,5.12,5.8,,,,,,,4.0,7,63,37,6,5,4-2-3-1,4-2-3-1,Pacheta,Vicente Moreno
+1037998,2023-09-16T14:15:00+00:00,8,Valencia,Atletico Madrid,3,0,2,0,La Liga,Regular Season - 5,3.47,3.26,2.34,,,1.48,2.83,,,7.0,3,37,63,5,7,4-2-3-1,5-3-2,Rubén Baraja,D. Simeone
+1037999,2023-09-18T19:00:00+00:00,8,Granada CF,Girona,2,4,0,3,La Liga,Regular Season - 5,2.77,3.6,2.61,,,,,,,5.0,7,42,58,4,5,4-4-2,4-1-4-1,Paco López,Míchel
+1038000,2023-09-17T16:30:00+00:00,8,Sevilla,Las Palmas,1,0,0,0,La Liga,Regular Season - 5,1.65,4.02,5.81,,,,,1.68,2.31,9.0,2,45,55,7,3,4-2-3-1,4-2-3-1,Mendilibar,
+1038001,2023-09-15T19:00:00+00:00,8,Rayo Vallecano,Alaves,2,0,1,0,La Liga,Regular Season - 5,2.11,3.19,4.28,,,,,1.72,2.23,11.0,1.0,52,48,5.0,3.0,4-2-3-1,4-2-3-1,Francisco,Luis García
+1038002,2023-09-23T19:00:00+00:00,8,Almeria,Valencia,2,2,0,1,La Liga,Regular Season - 6,2.76,3.52,2.66,,,,,,,10.0,5.0,61,39,7.0,3.0,4-2-3-1,4-2-3-1,Vicente Moreno,Rubén Baraja
+1038003,2023-09-24T19:00:00+00:00,8,Atletico Madrid,Real Madrid,3,1,2,1,La Liga,Regular Season - 6,2.85,3.42,2.64,,,,,,,4.0,5.0,36,64,6.0,11.0,5-3-2,4-3-1-2,D. Simeone,C. Ancelotti
+1038004,2023-09-23T16:30:00+00:00,8,Barcelona,Celta Vigo,3,2,0,1,La Liga,Regular Season - 6,1.27,6.53,11.39,,,,,1.82,2.06,6.0,7.0,75,25,2.0,3.0,4-3-3,5-3-2,Xavi,Rafael Benítez
+1038005,2023-09-24T16:30:00+00:00,8,Real Betis,Cadiz,1,1,0,1,La Liga,Regular Season - 6,1.81,3.63,5.07,,,,,1.68,2.31,7.0,1.0,63,37,10.0,8.0,4-2-3-1,4-4-2,M. Pellegrini,Sergio
+1038006,2023-09-23T12:00:00+00:00,8,Girona,Mallorca,5,3,4,1,La Liga,Regular Season - 6,1.95,3.44,4.55,,,,,1.67,2.32,9.0,5.0,56,44,6.0,5.0,4-1-4-1,5-4-1,Míchel,J. Aguirre
+1038007,2023-09-23T14:15:00+00:00,8,Osasuna,Sevilla,0,0,0,0,La Liga,Regular Season - 6,2.47,3.26,3.22,,,,,1.44,2.97,2.0,3.0,43,57,7.0,4.0,4-3-3,4-2-3-1,Arrasate,Mendilibar
+1038008,2023-09-24T14:15:00+00:00,8,Rayo Vallecano,Villarreal,1,1,1,1,La Liga,Regular Season - 6,2.54,3.5,2.91,,,,,,,6.0,5.0,41,59,1.0,8.0,4-2-3-1,4-4-2,Francisco,Pacheta
+1038009,2023-09-22T19:00:00+00:00,8,Alaves,Athletic Club,0,2,0,1,La Liga,Regular Season - 6,4.44,3.16,2.08,,,1.74,2.21,,,5.0,3.0,43,57,3.0,4.0,4-2-3-1,4-2-3-1,Luis García,Ernesto Valverde
+1038010,2023-09-24T12:00:00+00:00,8,Real Sociedad,Getafe,4,3,1,2,La Liga,Regular Season - 6,1.61,3.75,7.27,,,,,2.19,1.75,6.0,6.0,60,40,2.0,1.0,4-4-2,4-2-3-1,Imanol Alguacil,José Bordalás
+1038011,2023-09-24T16:30:00+00:00,8,Las Palmas,Granada CF,1,0,0,0,La Liga,Regular Season - 6,1.98,3.75,3.97,,,,,1.45,2.92,3.0,1.0,58,42,6.0,7.0,4-5-1,4-4-1-1,,Paco López
+1038012,2023-09-27T17:00:00+00:00,8,Athletic Club,Getafe,2,2,1,0,La Liga,Regular Season - 7,1.62,3.76,6.91,,,,,2.1,1.81,4.0,5.0,49,51,5.0,4.0,4-2-3-1,5-4-1,Ernesto Valverde,José Bordalás
+1038013,2023-09-27T19:30:00+00:00,8,Cadiz,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 7,2.75,3.05,3.02,,,,,1.45,2.93,2.0,4.0,52,48,1.0,2.0,4-4-2,4-2-3-1,Sergio,Francisco
+1038014,2023-09-26T17:00:00+00:00,8,Sevilla,Almeria,5,1,3,0,La Liga,Regular Season - 7,1.69,4.04,5.3,,,,,1.53,2.66,9.0,1.0,47,53,9.0,4.0,4-2-3-1,4-4-2,Mendilibar,Vicente Moreno
+1038015,2023-09-28T19:30:00+00:00,8,Osasuna,Atletico Madrid,0,2,0,1,La Liga,Regular Season - 7,4.09,3.47,2.04,,,1.56,2.58,,,2.0,3.0,55,45,7.0,2.0,4-3-3,5-3-2,Arrasate,D. Simeone
+1038016,2023-09-26T19:30:00+00:00,8,Mallorca,Barcelona,2,2,2,1,La Liga,Regular Season - 7,7.6,4.63,1.47,,,1.79,2.12,,,5.0,4.0,30,70,7.0,2.0,5-3-2,4-3-3,J. Aguirre,Xavi
+1038017,2023-09-28T17:00:00+00:00,8,Granada CF,Real Betis,1,1,0,0,La Liga,Regular Season - 7,2.98,3.5,2.5,,,,,,,7.0,3.0,39,61,5.0,7.0,4-4-2,4-2-3-1,Paco López,M. Pellegrini
+1038018,2023-09-27T17:00:00+00:00,8,Villarreal,Girona,1,2,0,0,La Liga,Regular Season - 7,2.26,3.67,3.25,,,,,,,3.0,5.0,53,47,5.0,6.0,4-4-2,4-5-1,Pacheta,Míchel
+1038019,2023-09-27T19:30:00+00:00,8,Valencia,Real Sociedad,0,1,0,1,La Liga,Regular Season - 7,2.83,3.06,2.93,,,1.47,2.88,1.48,2.81,2.0,1.0,37,63,,2.0,4-2-3-1,4-3-3,Rubén Baraja,Imanol Alguacil
+1038020,2023-09-27T17:00:00+00:00,8,Real Madrid,Las Palmas,2,0,1,0,La Liga,Regular Season - 7,1.22,7.13,14.58,,,,,2.0,1.87,9.0,2.0,48,52,7.0,2.0,4-3-1-2,4-5-1,C. Ancelotti,
+1038021,2023-09-28T17:00:00+00:00,8,Celta Vigo,Alaves,1,1,1,0,La Liga,Regular Season - 7,1.67,3.79,6.24,,,,,1.88,2.01,,10.0,46,54,2.0,8.0,5-3-2,4-2-3-1,Rafael Benítez,Luis García
+1038022,2023-10-01T12:00:00+00:00,8,Almeria,Granada CF,3,3,3,0,La Liga,Regular Season - 8,1.93,3.89,4.05,,,,,,,5.0,4.0,49,51,1.0,5.0,4-3-3,4-4-2,Vicente Moreno,Paco López
+1038023,2023-10-01T19:00:00+00:00,8,Atletico Madrid,Cadiz,3,2,1,2,La Liga,Regular Season - 8,1.33,5.39,10.9,,,,,2.1,1.81,9.0,4.0,70,30,5.0,3.0,3-5-2,5-3-2,D. Simeone,Sergio
+1038024,2023-09-29T19:00:00+00:00,8,Barcelona,Sevilla,1,0,0,0,La Liga,Regular Season - 8,1.38,5.47,8.11,,,,,1.6,2.46,5.0,3.0,59,41,13.0,3.0,4-3-3,4-2-3-1,Xavi,Mendilibar
+1038025,2023-10-01T19:00:00+00:00,8,Real Betis,Valencia,3,0,1,0,La Liga,Regular Season - 8,2.15,3.44,3.74,,,,,1.55,2.62,7.0,2.0,56,44,5.0,3.0,4-2-3-1,4-2-3-1,M. Pellegrini,Rubén Baraja
+1038026,2023-09-30T12:00:00+00:00,8,Getafe,Villarreal,0,0,0,0,La Liga,Regular Season - 8,2.6,3.28,3.01,,,,,,,9.0,,65,35,6.0,4.0,4-4-2,4-4-2,José Bordalás,Pacheta
+1038027,2023-09-30T16:30:00+00:00,8,Girona,Real Madrid,0,3,0,2,La Liga,Regular Season - 8,4.06,4.16,1.86,,,,,,,3.0,7.0,52,48,1.0,4.0,4-5-1,4-3-1-2,Míchel,C. Ancelotti
+1038028,2023-10-01T14:15:00+00:00,8,Alaves,Osasuna,0,2,0,1,La Liga,Regular Season - 8,2.69,3.02,3.13,,,1.45,2.96,1.52,2.68,3.0,3.0,46,54,4.0,2.0,4-2-3-1,4-3-3,Luis García,Arrasate
+1038029,2023-09-30T19:00:00+00:00,8,Real Sociedad,Athletic Club,3,0,1,0,La Liga,Regular Season - 8,2.35,3.11,3.63,,,,,1.59,2.49,5.0,3.0,51,49,5.0,7.0,4-4-2,4-2-3-1,Imanol Alguacil,Ernesto Valverde
+1038030,2023-10-02T19:00:00+00:00,8,Las Palmas,Celta Vigo,2,1,0,0,La Liga,Regular Season - 8,2.88,3.19,2.77,,,,,,,5.0,3.0,74,26,4.0,5.0,4-5-1,5-3-2,,Rafael Benítez
+1038031,2023-09-30T14:15:00+00:00,8,Rayo Vallecano,Mallorca,2,2,1,1,La Liga,Regular Season - 8,2.1,3.19,4.3,,,,,1.71,2.25,5.0,4.0,61,39,5.0,,4-2-3-1,4-4-2,Francisco,J. Aguirre
+1038032,2023-10-08T14:15:00+00:00,8,Atletico Madrid,Real Sociedad,2,1,1,0,La Liga,Regular Season - 9,1.9,3.51,4.7,,,,,1.6,2.49,5.0,4.0,37,63,1.0,4.0,3-5-2,4-3-3,D. Simeone,Imanol Alguacil
+1038033,2023-10-07T12:00:00+00:00,8,Cadiz,Girona,0,1,0,0,La Liga,Regular Season - 9,3.39,3.4,2.31,,,,,,,2.0,5.0,26,74,5.0,5.0,4-4-2,3-4-3,Sergio,Míchel
+1038034,2023-10-08T16:30:00+00:00,8,Celta Vigo,Getafe,2,2,2,2,La Liga,Regular Season - 9,2.09,3.25,4.22,,,,,1.63,2.4,11.0,2.0,75,25,13.0,1.0,4-4-2,4-4-2,Rafael Benítez,José Bordalás
+1038035,2023-10-07T16:30:00+00:00,8,Mallorca,Valencia,1,1,1,1,La Liga,Regular Season - 9,2.5,3.02,3.43,,,,,1.58,2.53,5.0,3.0,49,51,3.0,6.0,4-4-2,4-4-2,J. Aguirre,Rubén Baraja
+1038036,2023-10-08T16:30:00+00:00,8,Alaves,Real Betis,1,1,1,1,La Liga,Regular Season - 9,2.76,3.3,2.8,,,,,,,5.0,2.0,39,61,5.0,3.0,4-2-3-1,4-2-3-1,Luis García,M. Pellegrini
+1038037,2023-10-06T19:00:00+00:00,8,Athletic Club,Almeria,3,0,1,0,La Liga,Regular Season - 9,1.32,5.79,9.96,,,,,1.83,2.07,9.0,1.0,59,41,6.0,2.0,4-2-3-1,4-4-2,Ernesto Valverde,Alberto Lasarte
+1038038,2023-10-08T19:00:00+00:00,8,Granada CF,Barcelona,2,2,2,1,La Liga,Regular Season - 9,6.74,5.18,1.45,,,1.55,2.61,,,2.0,10.0,19,81,1.0,11.0,5-4-1,4-3-3,Paco López,Xavi
+1038039,2023-10-07T14:15:00+00:00,8,Real Madrid,Osasuna,4,0,1,0,La Liga,Regular Season - 9,1.3,6.16,10.51,,,,,1.87,2.02,9.0,1.0,67,33,5.0,4.0,4-3-1-2,4-3-3,C. Ancelotti,Arrasate
+1038040,2023-10-07T19:00:00+00:00,8,Sevilla,Rayo Vallecano,2,2,0,2,La Liga,Regular Season - 9,1.91,3.73,4.34,,,,,1.55,2.61,6.0,4.0,64,36,12.0,2.0,4-2-3-1,4-4-2,Mendilibar,Francisco
+1038041,2023-10-08T12:00:00+00:00,8,Villarreal,Las Palmas,1,2,0,1,La Liga,Regular Season - 9,1.74,4.06,4.95,,,,,1.51,2.73,4.0,5.0,49,51,7.0,2.0,4-2-3-1,4-5-1,Pacheta,
+1038042,2023-10-22T12:00:00+00:00,8,Las Palmas,Rayo Vallecano,0,1,0,0,La Liga,Regular Season - 10,2.73,3.1,3.01,,,,,1.46,2.92,6.0,4.0,61,39,10.0,5.0,4-5-1,4-4-2,,Francisco
+1038043,2023-10-22T14:15:00+00:00,8,Girona,Almeria,5,2,3,2,La Liga,Regular Season - 10,1.43,5.21,7.28,,,,,1.57,2.53,8.0,5.0,67,33,9.0,6.0,3-4-2-1,4-2-3-1,Míchel,Gaizka Garitano
+1038044,2023-10-22T19:00:00+00:00,8,Barcelona,Athletic Club,1,0,0,0,La Liga,Regular Season - 10,1.76,3.94,4.89,,,,,1.48,2.82,7.0,3.0,62,38,4.0,7.0,4-3-3,4-2-3-1,Xavi,Ernesto Valverde
+1038045,2023-10-21T19:00:00+00:00,8,Celta Vigo,Atletico Madrid,0,3,0,1,La Liga,Regular Season - 10,3.52,3.5,2.21,,,,,,,3.0,7.0,36,64,7.0,5.0,4-3-3,3-5-2,Rafael Benítez,D. Simeone
+1038046,2023-10-21T14:15:00+00:00,8,Getafe,Real Betis,1,1,1,1,La Liga,Regular Season - 10,2.49,3.16,3.3,,,,,1.48,2.83,3.0,3.0,45,55,4.0,8.0,4-4-2,4-2-3-1,José Bordalás,M. Pellegrini
+1038047,2023-10-23T19:00:00+00:00,8,Valencia,Cadiz,2,0,2,0,La Liga,Regular Season - 10,1.73,3.6,5.7,,,,,1.83,2.08,4.0,4.0,62,38,4.0,5.0,4-2-3-1,4-4-2,Rubén Baraja,Sergio
+1038048,2023-10-21T12:00:00+00:00,8,Real Sociedad,Mallorca,1,0,0,0,La Liga,Regular Season - 10,1.54,4.04,7.51,,,,,2.11,1.8,6.0,7.0,57,43,2.0,5.0,4-4-2,5-3-2,Imanol Alguacil,J. Aguirre
+1038049,2023-10-21T16:30:00+00:00,8,Sevilla,Real Madrid,1,1,0,0,La Liga,Regular Season - 10,4.73,4.1,1.76,,,,,,,7.0,5.0,49,51,4.0,6.0,4-3-3,4-3-1-2,Mendilibar,C. Ancelotti
+1038050,2023-10-20T19:00:00+00:00,8,Osasuna,Granada CF,2,0,1,0,La Liga,Regular Season - 10,1.68,4.06,5.5,,,,,1.62,2.43,6.0,3.0,57,43,1.0,7.0,4-3-3,4-2-3-1,Arrasate,Paco López
+1038051,2023-10-22T16:30:00+00:00,8,Villarreal,Alaves,1,1,0,0,La Liga,Regular Season - 10,2.02,3.49,4.16,,,,,1.55,2.62,3.0,7.0,68,32,9.0,3.0,3-1-4-2,4-2-3-1,Pacheta,Luis García
+1038052,2023-10-28T12:00:00+00:00,8,Almeria,Las Palmas,1,2,0,1,La Liga,Regular Season - 11,2.34,3.43,3.24,,,,,,,4.0,3.0,40,60,3.0,2.0,4-2-3-1,4-5-1,Gaizka Garitano,
+1038053,2023-10-29T17:30:00+00:00,8,Athletic Club,Valencia,2,2,1,0,La Liga,Regular Season - 11,1.66,3.87,5.85,,,,,1.81,2.1,7.0,5.0,57,43,10.0,4.0,4-2-3-1,4-4-2,Ernesto Valverde,Rubén Baraja
+1038054,2023-10-28T14:15:00+00:00,8,Barcelona,Real Madrid,1,2,1,0,La Liga,Regular Season - 11,2.55,3.56,2.82,,,,,,,3.0,4.0,52,48,6.0,3.0,3-4-1-2,4-1-3-2,Xavi,C. Ancelotti
+1038055,2023-10-29T13:00:00+00:00,8,Real Betis,Osasuna,2,1,1,0,La Liga,Regular Season - 11,2.04,3.44,4.05,,,,,1.55,2.61,2.0,1.0,50,50,6.0,3.0,4-2-3-1,4-2-3-1,M. Pellegrini,Arrasate
+1038056,2023-10-28T19:00:00+00:00,8,Cadiz,Sevilla,2,2,2,1,La Liga,Regular Season - 11,3.72,3.37,2.16,,,1.52,2.7,,,5.0,10.0,35,65,2.0,4.0,4-4-2,4-3-3,Sergio,D. Alonso
+1038057,2023-10-29T15:15:00+00:00,8,Rayo Vallecano,Real Sociedad,2,2,1,1,La Liga,Regular Season - 11,3.43,3.16,2.38,,,1.53,2.66,,,7.0,3.0,55,45,4.0,5.0,4-4-1-1,4-1-4-1,Francisco,Imanol Alguacil
+1038058,2023-10-30T20:00:00+00:00,8,Granada CF,Villarreal,2,3,2,3,La Liga,Regular Season - 11,3.22,3.6,2.27,,,,,,,8.0,5.0,46,54,4.0,1.0,4-2-3-1,4-4-2,Paco López,Pacheta
+1038059,2023-10-27T19:00:00+00:00,8,Girona,Celta Vigo,1,0,0,0,La Liga,Regular Season - 11,1.76,4.1,4.59,,,,,1.46,2.91,2.0,2.0,66,34,10.0,1.0,3-4-3,4-4-2,Míchel,Rafael Benítez
+1038060,2023-10-28T16:30:00+00:00,8,Mallorca,Getafe,0,0,0,0,La Liga,Regular Season - 11,2.32,2.99,3.82,,,,,1.69,2.27,4.0,,59,41,7.0,3.0,4-4-2,4-4-2,J. Aguirre,José Bordalás
+1038061,2023-10-29T20:00:00+00:00,8,Atletico Madrid,Alaves,2,1,2,0,La Liga,Regular Season - 11,1.4,4.89,8.9,,,,,1.99,1.9,7.0,1.0,64,36,4.0,4.0,3-5-2,4-2-3-1,D. Simeone,Luis García
+1038062,2023-11-04T15:15:00+00:00,8,Real Betis,Mallorca,2,0,1,0,La Liga,Regular Season - 12,1.9,3.42,4.74,,,,,1.7,2.26,3.0,1.0,57,43,6.0,1.0,4-2-3-1,5-3-2,M. Pellegrini,J. Aguirre
+1038063,2023-11-04T17:30:00+00:00,8,Celta Vigo,Sevilla,1,1,1,0,La Liga,Regular Season - 12,2.42,3.5,3.05,,,,,,,3.0,5.0,39,61,4.0,6.0,4-4-2,4-3-3,Rafael Benítez,D. Alonso
+1038064,2023-11-05T13:00:00+00:00,8,Alaves,Almeria,1,0,0,0,La Liga,Regular Season - 12,1.84,3.69,4.64,,,,,1.57,2.54,3.0,3.0,56,44,12.0,6.0,4-2-3-1,4-2-3-1,Luis García,Gaizka Garitano
+1038065,2023-11-05T17:30:00+00:00,8,Villarreal,Athletic Club,2,3,0,3,La Liga,Regular Season - 12,3.24,3.72,2.22,,,,,,,6.0,7.0,58,42,9.0,3.0,4-4-2,4-2-3-1,Pacheta,Ernesto Valverde
+1038066,2023-11-03T20:00:00+00:00,8,Las Palmas,Atletico Madrid,2,1,0,0,La Liga,Regular Season - 12,5.75,3.82,1.68,,,1.77,2.15,,,3.0,5.0,53,47,3.0,4.0,4-5-1,5-3-2,,D. Simeone
+1038067,2023-11-04T20:00:00+00:00,8,Real Sociedad,Barcelona,0,1,0,0,La Liga,Regular Season - 12,3.46,3.5,2.21,,,,,,,6.0,4.0,51,49,8.0,3.0,4-3-3,3-4-1-2,Imanol Alguacil,Xavi
+1038068,2023-11-06T20:00:00+00:00,8,Getafe,Cadiz,1,0,0,0,La Liga,Regular Season - 12,1.95,3.23,4.85,1.57,2.52,,,1.83,2.08,3.0,2.0,45,55,6.0,3.0,4-4-2,4-4-2,José Bordalás,Sergio
+1038069,2023-11-04T13:00:00+00:00,8,Osasuna,Girona,2,4,1,1,La Liga,Regular Season - 12,2.99,3.4,2.5,,,,,,,3.0,4.0,50,50,2.0,7.0,4-2-3-1,3-4-3,Arrasate,Míchel
+1038070,2023-11-05T20:00:00+00:00,8,Real Madrid,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 12,1.21,7.14,14.05,,,,,1.94,1.93,5.0,,63,37,11.0,1.0,4-3-1-2,4-1-4-1,C. Ancelotti,Francisco
+1038071,2023-11-05T15:15:00+00:00,8,Valencia,Granada CF,1,0,1,0,La Liga,Regular Season - 12,1.64,4.22,5.4,,,,,1.61,2.45,2.0,1.0,51,49,,4.0,4-4-2,4-3-3,Rubén Baraja,Paco López
+1038072,2023-11-11T15:15:00+00:00,8,Almeria,Real Sociedad,1,3,0,0,La Liga,Regular Season - 13,4.33,3.79,1.87,,,1.49,2.8,,,2.0,6.0,47,53,5.0,5.0,4-2-3-1,4-1-3-2,Gaizka Garitano,Imanol Alguacil
+1038073,2023-11-10T20:00:00+00:00,8,Athletic Club,Celta Vigo,4,3,2,2,La Liga,Regular Season - 13,1.66,4.19,5.31,,,,,1.57,2.54,12.0,5.0,58,42,7.0,2.0,4-2-3-1,4-4-2,Ernesto Valverde,Rafael Benítez
+1038074,2023-11-12T20:00:00+00:00,8,Atletico Madrid,Villarreal,3,1,1,1,La Liga,Regular Season - 13,1.34,5.87,8.79,,,,,1.67,2.33,10.0,7.0,50,50,6.0,3.0,3-5-2,4-4-2,D. Simeone,Miguel Tena
+1038075,2023-11-11T20:00:00+00:00,8,Real Madrid,Valencia,5,1,2,0,La Liga,Regular Season - 13,1.34,5.58,9.4,,,,,1.85,2.04,7.0,4.0,56,44,4.0,4.0,4-4-2,4-2-3-1,C. Ancelotti,Rubén Baraja
+1038076,2023-11-12T17:30:00+00:00,8,Sevilla,Real Betis,1,1,0,0,La Liga,Regular Season - 13,2.18,3.59,3.43,,,,,,,4.0,6.0,60,40,9.0,5.0,4-1-4-1,4-2-3-1,D. Alonso,M. Pellegrini
+1038077,2023-11-29T20:00:00+00:00,8,Mallorca,Cadiz,1,1,1,1,La Liga,Regular Season - 13,2.0,3.2,4.61,1.53,2.66,,,1.75,2.18,2.0,3.0,68,32,7.0,,5-3-2,4-4-2,J. Aguirre,Sergio
+1038078,2023-11-11T17:30:00+00:00,8,Granada CF,Getafe,1,1,1,1,La Liga,Regular Season - 13,2.65,3.12,3.04,,,,,1.43,3.02,6.0,6.0,58,42,3.0,5.0,4-2-2-2,4-2-3-1,Paco López,José Bordalás
+1038079,2023-11-11T13:00:00+00:00,8,Rayo Vallecano,Girona,1,2,1,1,La Liga,Regular Season - 13,3.19,3.5,2.33,,,,,,,9.0,7.0,46,54,8.0,3.0,4-4-2,4-3-3,Francisco,Míchel
+1038080,2023-11-11T17:30:00+00:00,8,Osasuna,Las Palmas,1,1,0,0,La Liga,Regular Season - 13,2.04,3.22,4.4,,,,,1.68,2.3,3.0,1.0,46,54,8.0,3.0,4-2-3-1,4-1-4-1,Arrasate,
+1038081,2023-11-12T15:15:00+00:00,8,Barcelona,Alaves,2,1,0,1,La Liga,Regular Season - 13,1.26,6.42,11.7,,,,,2.05,1.83,6.0,1.0,72,28,2.0,1.0,4-2-3-1,4-2-3-1,Xavi,Luis García
+1038082,2023-11-25T20:00:00+00:00,8,Atletico Madrid,Mallorca,1,0,0,0,La Liga,Regular Season - 14,1.33,5.33,10.71,,,,,2.18,1.75,3.0,1.0,68,32,7.0,3.0,3-4-2-1,5-4-1,D. Simeone,J. Aguirre
+1038083,2023-11-26T20:00:00+00:00,8,Real Betis,Las Palmas,1,0,1,0,La Liga,Regular Season - 14,1.7,3.8,5.57,,,,,1.76,2.16,6.0,4.0,39,61,7.0,6.0,4-2-3-1,4-1-4-1,M. Pellegrini,
+1038084,2023-11-26T17:30:00+00:00,8,Cadiz,Real Madrid,0,3,0,1,La Liga,Regular Season - 14,6.62,4.61,1.51,,,1.75,2.19,,,4.0,5.0,39,61,4.0,4.0,5-4-1,4-2-2-2,Sergio,C. Ancelotti
+1038085,2023-11-26T15:15:00+00:00,8,Real Sociedad,Sevilla,2,1,2,0,La Liga,Regular Season - 14,1.68,3.95,5.51,,,,,1.69,2.28,8.0,2.0,49,51,4.0,4.0,4-4-2,4-2-3-1,Imanol Alguacil,D. Alonso
+1038086,2023-11-24T20:00:00+00:00,8,Alaves,Granada CF,3,1,2,0,La Liga,Regular Season - 14,1.71,3.75,5.55,,,,,1.78,2.15,5.0,4.0,43,57,6.0,2.0,4-2-3-1,4-3-3,Luis García,Paco López
+1038087,2023-11-25T17:30:00+00:00,8,Getafe,Almeria,2,1,2,1,La Liga,Regular Season - 14,1.86,3.54,4.78,,,,,1.62,2.42,5.0,4.0,53,47,3.0,6.0,4-4-2,4-2-3-1,José Bordalás,Gaizka Garitano
+1038088,2023-11-27T20:00:00+00:00,8,Girona,Athletic Club,1,1,0,0,La Liga,Regular Season - 14,2.12,3.78,3.43,,,,,,,2.0,6.0,60,40,2.0,6.0,4-4-1-1,4-2-3-1,Míchel,Ernesto Valverde
+1038089,2023-11-25T13:00:00+00:00,8,Rayo Vallecano,Barcelona,1,1,1,0,La Liga,Regular Season - 14,4.79,4.21,1.71,,,1.47,2.89,,,4.0,4.0,33,67,1.0,4.0,4-4-2,4-2-3-1,Francisco,Xavi
+1038090,2023-11-25T15:15:00+00:00,8,Valencia,Celta Vigo,0,0,0,0,La Liga,Regular Season - 14,2.24,3.34,3.54,,,,,1.47,2.86,,1.0,55,45,5.0,7.0,4-4-2,4-4-2,Rubén Baraja,Rafael Benítez
+1038091,2023-11-26T13:00:00+00:00,8,Villarreal,Osasuna,3,1,0,0,La Liga,Regular Season - 14,2.15,3.48,3.62,,,,,,,3.0,6.0,45,55,2.0,4.0,4-4-2,4-2-3-1,Marcelino,Arrasate
+1038092,2023-12-03T15:15:00+00:00,8,Almeria,Real Betis,0,0,0,0,La Liga,Regular Season - 15,3.58,3.78,2.06,,,,,,,7.0,2.0,62,38,4.0,6.0,4-2-3-1,4-3-3,Gaizka Garitano,M. Pellegrini
+1038093,2023-12-02T15:15:00+00:00,8,Athletic Club,Rayo Vallecano,4,0,1,0,La Liga,Regular Season - 15,1.45,4.9,7.28,,,,,1.71,2.24,4.0,3.0,50,50,7.0,1.0,4-2-3-1,4-2-3-1,Ernesto Valverde,Francisco
+1038094,2023-12-02T13:00:00+00:00,8,Girona,Valencia,2,1,0,0,La Liga,Regular Season - 15,1.64,4.11,5.65,,,,,1.63,2.41,4.0,3.0,76,24,3.0,2.0,4-3-3,4-4-2,Míchel,Rubén Baraja
+1038095,2023-12-02T20:00:00+00:00,8,Osasuna,Real Sociedad,1,1,1,1,La Liga,Regular Season - 15,3.94,3.2,2.17,,,1.64,2.38,,,3.0,5.0,28,72,1.0,8.0,5-3-2,4-1-3-2,Arrasate,Imanol Alguacil
+1038096,2023-12-03T17:30:00+00:00,8,Sevilla,Villarreal,1,1,0,0,La Liga,Regular Season - 15,2.07,3.74,3.6,,,,,,,4.0,4.0,57,43,8.0,4.0,4-3-3,4-4-2,D. Alonso,Marcelino
+1038097,2023-12-03T20:00:00+00:00,8,Barcelona,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 15,2.01,3.77,3.76,,,,,,,2.0,3.0,59,41,7.0,2.0,4-3-3,5-3-2,Xavi,D. Simeone
+1038098,2023-12-04T20:00:00+00:00,8,Celta Vigo,Cadiz,1,1,0,1,La Liga,Regular Season - 15,1.52,4.35,6.91,,,,,1.81,2.1,7.0,1.0,68,32,12.0,1.0,4-4-2,4-4-2,Rafael Benítez,Sergio
+1038099,2023-12-01T20:00:00+00:00,8,Las Palmas,Getafe,2,0,1,0,La Liga,Regular Season - 15,2.49,2.96,3.49,1.64,2.38,1.45,2.93,1.65,2.36,6.0,3.0,71,29,4.0,4.0,4-5-1,4-4-1-1,,José Bordalás
+1038100,2023-12-02T17:30:00+00:00,8,Real Madrid,Granada CF,2,0,1,0,La Liga,Regular Season - 15,1.17,8.5,16.5,,,,,1.97,1.9,4.0,,71,29,6.0,,4-4-2,4-4-2,C. Ancelotti,Paco López
+1038101,2023-12-03T13:00:00+00:00,8,Mallorca,Alaves,0,0,0,0,La Liga,Regular Season - 15,2.56,2.93,3.38,1.65,2.37,1.47,2.87,1.63,2.4,3.0,4.0,63,37,5.0,4.0,4-2-3-1,4-2-3-1,J. Aguirre,Luis García
+1038102,2023-12-10T20:00:00+00:00,8,Barcelona,Girona,2,4,1,2,La Liga,Regular Season - 16,1.48,5.24,6.07,,,,,1.44,2.98,11.0,7.0,53,47,8.0,3.0,4-3-3,3-4-2-1,Xavi,Míchel
+1038103,2023-12-09T15:15:00+00:00,8,Real Betis,Real Madrid,1,1,0,0,La Liga,Regular Season - 16,4.72,4.15,1.73,,,1.49,2.8,,,5.0,2.0,37,63,7.0,6.0,4-2-3-1,4-2-3-1,M. Pellegrini,C. Ancelotti
+1038104,2023-12-10T17:30:00+00:00,8,Cadiz,Osasuna,1,1,1,0,La Liga,Regular Season - 16,3.01,3.06,2.71,,,1.47,2.87,1.42,3.08,4.0,5.0,43,57,2.0,4.0,4-4-2,4-3-3,Sergio,Arrasate
+1038105,2023-12-08T20:00:00+00:00,8,Getafe,Valencia,1,0,0,0,La Liga,Regular Season - 16,2.73,2.9,3.15,1.64,2.38,1.5,2.76,1.58,2.52,6.0,,68,32,7.0,,4-4-2,4-4-2,José Bordalás,Rubén Baraja
+1038106,2023-12-09T20:00:00+00:00,8,Mallorca,Sevilla,1,0,1,0,La Liga,Regular Season - 16,2.67,3.03,3.1,,,1.43,3.05,1.5,2.75,2.0,5.0,34,66,4.0,12.0,3-5-1-1,4-3-3,J. Aguirre,D. Alonso
+1038107,2023-12-09T13:00:00+00:00,8,Alaves,Las Palmas,0,1,0,1,La Liga,Regular Season - 16,2.08,3.19,4.28,,,,,1.69,2.27,5.0,2.0,40,60,11.0,3.0,4-4-1-1,4-5-1,Luis García,
+1038108,2023-12-10T13:00:00+00:00,8,Atletico Madrid,Almeria,2,1,2,0,La Liga,Regular Season - 16,1.18,8.36,13.82,,,,,1.93,1.94,4.0,5.0,57,43,3.0,14.0,3-4-2-1,3-4-1-2,D. Simeone,Gaizka Garitano
+1038109,2023-12-11T15:15:00+00:00,8,Granada CF,Athletic Club,1,1,0,1,La Liga,Regular Season - 16,4.17,3.68,1.93,,,1.48,2.82,,,3.0,4.0,48,52,1.0,8.0,4-2-3-1,4-2-3-1,A. Medina,Ernesto Valverde
+1038110,2023-12-11T20:00:00+00:00,8,Rayo Vallecano,Celta Vigo,0,0,0,0,La Liga,Regular Season - 16,2.76,3.25,2.8,,,,,,,4.0,2.0,63,37,8.0,1.0,4-2-3-1,4-4-2,Francisco,Rafael Benítez
+1038111,2023-12-09T17:30:00+00:00,8,Villarreal,Real Sociedad,0,3,0,3,La Liga,Regular Season - 16,3.4,3.45,2.25,,,,,,,4.0,5.0,51,49,5.0,3.0,4-4-2,4-4-2,Marcelino,Imanol Alguacil
+1038112,2023-12-17T13:00:00+00:00,8,Almeria,Mallorca,0,0,0,0,La Liga,Regular Season - 17,2.46,3.15,3.3,,,,,1.48,2.84,1.0,2.0,53,47,4.0,4.0,3-4-3,3-4-3,Gaizka Garitano,J. Aguirre
+1038113,2023-12-16T15:15:00+00:00,8,Athletic Club,Atletico Madrid,2,0,0,0,La Liga,Regular Season - 17,2.57,3.34,2.95,,,,,,,7.0,3.0,39,61,3.0,7.0,4-2-3-1,3-5-2,Ernesto Valverde,D. Simeone
+1038114,2023-12-16T13:00:00+00:00,8,Celta Vigo,Granada CF,1,0,1,0,La Liga,Regular Season - 17,1.71,3.85,5.37,,,,,1.65,2.37,4.0,2.0,40,60,7.0,1.0,4-4-2,4-2-3-1,Rafael Benítez,A. Medina
+1038115,2023-12-15T20:00:00+00:00,8,Osasuna,Rayo Vallecano,1,0,0,0,La Liga,Regular Season - 17,2.31,3.16,3.6,,,,,1.57,2.53,4.0,3.0,61,39,9.0,1.0,4-3-3,4-4-2,Arrasate,Francisco
+1038116,2023-12-17T20:00:00+00:00,8,Real Madrid,Villarreal,4,1,2,0,La Liga,Regular Season - 17,1.23,7.18,11.62,,,,,1.7,2.24,9.0,1.0,60,40,14.0,,4-4-2,4-4-2,C. Ancelotti,Marcelino
+1038117,2023-12-16T20:00:00+00:00,8,Valencia,Barcelona,1,1,0,0,La Liga,Regular Season - 17,5.47,4.39,1.61,,,1.54,2.64,,,4.0,8.0,36,64,4.0,6.0,4-4-2,4-3-3,Rubén Baraja,Xavi
+1038118,2023-12-17T15:15:00+00:00,8,Real Sociedad,Real Betis,0,0,0,0,La Liga,Regular Season - 17,1.59,4.18,6.12,,,,,1.75,2.18,4.0,3.0,57,43,1.0,7.0,4-3-3,4-2-3-1,Imanol Alguacil,M. Pellegrini
+1038119,2023-12-17T17:30:00+00:00,8,Las Palmas,Cadiz,1,1,1,0,La Liga,Regular Season - 17,2.06,3.25,4.24,,,,,1.68,2.29,2.0,5.0,65,35,4.0,6.0,4-5-1,4-4-2,,Sergio
+1038120,2023-12-16T17:30:00+00:00,8,Sevilla,Getafe,0,3,0,2,La Liga,Regular Season - 17,1.8,3.55,5.17,,,,,1.75,2.19,4.0,7.0,57,43,4.0,2.0,5-3-2,4-4-2,D. Alonso,José Bordalás
+1038121,2023-12-18T20:00:00+00:00,8,Girona,Alaves,3,0,2,0,La Liga,Regular Season - 17,1.58,4.29,6.06,,,,,1.6,2.47,4.0,2.0,67,33,3.0,2.0,3-4-2-1,3-4-3,Míchel,Luis García
+1038122,2023-12-20T20:30:00+00:00,8,Athletic Club,Las Palmas,1,0,0,0,La Liga,Regular Season - 18,1.36,5.31,9.15,,,,,1.97,1.92,10.0,1.0,51,49,5.0,2.0,4-2-3-1,4-5-1,Ernesto Valverde,
+1038123,2023-12-19T20:30:00+00:00,8,Atletico Madrid,Getafe,3,3,1,0,La Liga,Regular Season - 18,1.48,4.43,7.66,,,,,1.83,2.06,4.0,9.0,41,59,1.0,12.0,3-5-2,4-4-2,,
+1038124,2023-12-21T18:00:00+00:00,8,Real Betis,Girona,1,1,0,1,La Liga,Regular Season - 18,2.8,3.63,2.53,,,,,,,4.0,4.0,47,53,7.0,6.0,4-2-3-1,4-2-3-1,M. Pellegrini,Míchel
+1038125,2023-12-21T18:00:00+00:00,8,Cadiz,Real Sociedad,0,0,0,0,La Liga,Regular Season - 18,6.29,3.64,1.68,,,1.93,1.96,,,2.0,1.0,40,60,7.0,5.0,4-4-2,4-1-4-1,Sergio,Imanol Alguacil
+1038126,2023-12-21T20:30:00+00:00,8,Mallorca,Osasuna,3,2,1,1,La Liga,Regular Season - 18,2.29,2.9,4.05,1.71,2.26,1.43,3.01,1.78,2.13,8.0,6.0,42,58,6.0,,3-4-2-1,4-3-3,J. Aguirre,Arrasate
+1038127,2023-12-19T18:00:00+00:00,8,Rayo Vallecano,Valencia,0,1,0,0,La Liga,Regular Season - 18,2.3,3.14,3.64,,,,,1.58,2.51,1.0,3.0,59,41,7.0,1.0,4-4-2,4-4-2,Francisco,Rubén Baraja
+1038128,2023-12-19T20:30:00+00:00,8,Granada CF,Sevilla,0,3,0,2,La Liga,Regular Season - 18,3.07,3.16,2.59,,,1.45,2.95,,,3.0,5.0,51,49,6.0,4.0,4-1-4-1,3-5-2,,
+1038129,2023-12-21T20:30:00+00:00,8,Alaves,Real Madrid,0,1,0,0,La Liga,Regular Season - 18,5.9,4.16,1.61,,,1.63,2.4,,,2.0,4.0,40,60,3.0,3.0,4-2-3-1,4-3-1-2,Luis García,C. Ancelotti
+1038130,2023-12-20T18:00:00+00:00,8,Barcelona,Almeria,3,2,1,1,La Liga,Regular Season - 18,1.15,9.69,15.7,,,,,1.94,1.93,11.0,5.0,65,35,12.0,,4-3-3,5-3-2,Xavi,Gaizka Garitano
+1038131,2023-12-20T20:30:00+00:00,8,Villarreal,Celta Vigo,3,2,2,0,La Liga,Regular Season - 18,2.41,3.48,3.07,,,,,,,8.0,5.0,48,52,4.0,7.0,4-4-2,4-4-2,Marcelino,Rafael Benítez
+1038132,2024-01-02T16:00:00+00:00,8,Getafe,Rayo Vallecano,0,2,0,1,La Liga,Regular Season - 19,2.39,3.06,3.55,,,,,1.58,2.52,,8.0,39,61,2.0,3.0,4-4-2,4-4-2,José Bordalás,Francisco
+1038133,2024-01-02T20:30:00+00:00,8,Valencia,Villarreal,3,1,2,0,La Liga,Regular Season - 19,2.2,3.46,3.53,,,,,1.43,3.02,7.0,4.0,45,55,3.0,3.0,4-4-2,4-3-3,Rubén Baraja,Marcelino
+1038134,2024-01-04T16:00:00+00:00,8,Osasuna,Almeria,1,0,1,0,La Liga,Regular Season - 19,1.72,3.89,5.17,,,,,1.6,2.47,2.0,,52,48,4.0,4.0,4-3-3,4-2-3-1,Arrasate,Gaizka Garitano
+1038135,2024-01-04T18:15:00+00:00,8,Sevilla,Athletic Club,0,2,0,1,La Liga,Regular Season - 19,3.12,3.26,2.5,,,,,,,2.0,6.0,61,39,4.0,4.0,5-3-2,4-2-3-1,Quique Sánchez Flores,Ernesto Valverde
+1038136,2024-01-03T20:30:00+00:00,8,Girona,Atletico Madrid,4,3,3,2,La Liga,Regular Season - 19,2.65,3.68,2.64,,,,,,,9.0,12.0,52,48,7.0,8.0,4-4-1-1,3-1-4-2,Míchel,D. Simeone
+1038137,2024-01-04T20:30:00+00:00,8,Las Palmas,Barcelona,1,2,1,0,La Liga,Regular Season - 19,6.61,4.72,1.5,,,1.61,2.45,,,3.0,5.0,45,55,5.0,9.0,4-3-3,4-3-3,,Xavi
+1038138,2024-01-03T18:15:00+00:00,8,Celta Vigo,Real Betis,2,1,1,1,La Liga,Regular Season - 19,2.21,3.36,3.59,,,,,1.43,3.02,6.0,3.0,40,60,8.0,7.0,4-4-2,4-2-3-1,Rafael Benítez,M. Pellegrini
+1038139,2024-01-03T16:00:00+00:00,8,Granada CF,Cadiz,2,0,1,0,La Liga,Regular Season - 19,2.38,3.11,3.5,,,,,1.54,2.62,7.0,2.0,56,44,5.0,6.0,4-4-2,4-4-2,A. Medina,Sergio
+1038140,2024-01-03T18:15:00+00:00,8,Real Madrid,Mallorca,1,0,0,0,La Liga,Regular Season - 19,1.22,6.75,14.16,,,,,2.2,1.73,5.0,,68,32,4.0,4.0,4-2-2-2,5-4-1,C. Ancelotti,J. Aguirre
+1038141,2024-01-02T18:15:00+00:00,8,Real Sociedad,Alaves,1,1,0,0,La Liga,Regular Season - 19,1.52,3.94,8.47,,,,,2.13,1.78,6.0,2.0,53,47,6.0,4.0,4-3-3,4-2-3-1,Imanol Alguacil,Luis García
+1038142,2024-01-14T13:00:00+00:00,8,Almeria,Girona,0,0,0,0,La Liga,Regular Season - 20,4.41,3.99,1.81,,,,,,,3.0,1.0,46,54,4.0,3.0,4-1-4-1,4-4-1-1,Gaizka Garitano,Míchel
+1038143,2024-01-13T17:30:00+00:00,8,Athletic Club,Real Sociedad,2,1,2,0,La Liga,Regular Season - 20,2.14,3.09,4.21,,,,,1.66,2.34,3.0,1.0,49,51,5.0,5.0,4-2-3-1,4-1-4-1,Ernesto Valverde,Imanol Alguacil
+1038144,2024-01-31T20:00:00+00:00,8,Atletico Madrid,Rayo Vallecano,2,1,1,1,La Liga,Regular Season - 20,1.52,4.19,7.44,,,,,1.86,2.03,3.0,2.0,55,45,4.0,5.0,3-5-2,3-4-2-1,D. Simeone,Francisco
+1038145,2024-01-31T18:00:00+00:00,8,Barcelona,Osasuna,1,0,0,0,La Liga,Regular Season - 20,1.4,5.51,7.45,,,,,1.67,2.33,4.0,1.0,68,32,6.0,5.0,4-3-3,5-3-2,Xavi,Arrasate
+1038146,2024-01-13T20:00:00+00:00,8,Real Betis,Granada CF,1,0,0,0,La Liga,Regular Season - 20,1.74,3.82,5.19,,,,,1.63,2.4,6.0,2.0,57,43,13.0,0.0,4-2-3-1,4-4-2,M. Pellegrini,A. Medina
+1038147,2024-01-14T15:15:00+00:00,8,Cadiz,Valencia,1,4,1,1,La Liga,Regular Season - 20,3.18,2.86,2.75,1.63,2.41,1.57,2.54,1.49,2.79,2.0,5.0,57,43,3.0,1.0,4-5-1,4-4-2,Sergio,Rubén Baraja
+1038148,2024-02-01T20:00:00+00:00,8,Getafe,Real Madrid,0,2,0,1,La Liga,Regular Season - 20,6.86,4.23,1.54,,,1.72,2.23,,,2.0,9.0,42,58,2.0,6.0,4-4-2,4-3-1-2,José Bordalás,C. Ancelotti
+1038149,2024-01-13T13:00:00+00:00,8,Las Palmas,Villarreal,3,0,1,0,La Liga,Regular Season - 20,2.66,3.47,2.75,,,,,,,3.0,3.0,56,44,4.0,6.0,4-3-3,4-4-2,,Marcelino
+1038150,2024-01-13T15:15:00+00:00,8,Mallorca,Celta Vigo,1,1,1,1,La Liga,Regular Season - 20,2.42,2.99,3.57,1.56,2.58,,,1.6,2.46,5,1,57,43,10,1,5-4-1,5-3-2,J. Aguirre,Rafael Benítez
+1038151,2024-01-12T20:00:00+00:00,8,Sevilla,Alaves,2,3,0,2,La Liga,Regular Season - 20,2.01,3.34,4.31,,,,,1.68,2.3,4,8,68,32,5,4,4-4-2,4-2-3-1,Quique Sánchez Flores,Luis García
+1038152,2024-01-20T20:00:00+00:00,8,Celta Vigo,Real Sociedad,0,1,0,1,La Liga,Regular Season - 21,3.13,3.0,2.67,1.55,2.61,1.52,2.68,1.44,2.99,2,2,48,52,6,3,4-4-2,5-3-2,Rafael Benítez,Imanol Alguacil
+1038153,2024-01-21T20:00:00+00:00,8,Girona,Sevilla,5,1,3,1,La Liga,Regular Season - 21,1.79,4.01,4.54,,,,,1.45,2.95,8,3,55,45,4,5,4-4-2,5-3-2,Míchel,Quique Sánchez Flores
+1038154,2024-01-19T20:00:00+00:00,8,Alaves,Cadiz,1,0,0,0,La Liga,Regular Season - 21,1.7,3.53,6.24,1.55,2.59,,,2.02,1.87,3,1,49,51,4,4,4-2-3-1,4-4-2,Luis García,Sergio
+1038155,2024-01-21T15:15:00+00:00,8,Real Madrid,Almeria,3,2,0,2,La Liga,Regular Season - 21,1.13,9.75,23.0,,,,,2.06,1.82,6,2,73,27,6,3,4-3-1-2,5-4-1,C. Ancelotti,Gaizka Garitano
+1038156,2024-01-20T17:30:00+00:00,8,Valencia,Athletic Club,1,0,0,0,La Liga,Regular Season - 21,3.59,3.27,2.25,,,1.53,2.67,,,1,3,39,61,4,2,4-4-2,4-2-3-1,Rubén Baraja,Ernesto Valverde
+1038157,2024-01-22T20:00:00+00:00,8,Granada CF,Atletico Madrid,0,1,0,0,La Liga,Regular Season - 21,5.66,4.27,1.61,,,1.56,2.59,,,2,5,53,47,5,2,4-3-3,3-5-2,A. Medina,D. Simeone
+1038158,2024-01-21T17:30:00+00:00,8,Real Betis,Barcelona,2,4,0,1,La Liga,Regular Season - 21,3.98,4.12,1.87,,,,,,,5,4,36,64,3,3,4-2-3-1,4-3-3,M. Pellegrini,Xavi
+1038159,2024-01-21T13:00:00+00:00,8,Osasuna,Getafe,3,2,2,0,La Liga,Regular Season - 21,2.47,2.9,3.6,1.67,2.32,1.46,2.92,1.68,2.29,7,7,42,58,1,4,3-5-2,4-4-2,Arrasate,José Bordalás
+1038160,2024-01-20T15:15:00+00:00,8,Villarreal,Mallorca,1,1,1,0,La Liga,Regular Season - 21,2.12,3.41,3.79,,,,,1.51,2.73,5,2,51,49,4,6,4-4-2,5-4-1,Marcelino,J. Aguirre
+1038161,2024-01-20T13:00:00+00:00,8,Rayo Vallecano,Las Palmas,0,2,0,1,La Liga,Regular Season - 21,1.74,3.7,5.42,,,,,1.72,2.22,3,5,43,57,12,0,4-4-2,4-5-1,Francisco,
+1038162,2024-01-28T20:00:00+00:00,8,Atletico Madrid,Valencia,2,0,1,0,La Liga,Regular Season - 22,1.54,4.3,6.69,,,,,1.76,2.16,8,3,55,45,3,6,3-5-2,4-2-3-1,D. Simeone,Rubén Baraja
+1038163,2024-01-27T17:30:00+00:00,8,Barcelona,Villarreal,3,5,0,1,La Liga,Regular Season - 22,1.38,6.0,7.04,,,,,,,10,5,71,29,10,0,4-3-3,4-4-2,Xavi,Marcelino
+1038164,2024-01-28T13:00:00+00:00,8,Celta Vigo,Girona,0,1,0,1,La Liga,Regular Season - 22,2.65,3.56,2.71,,,,,,,4,6,39,61,5,7,3-4-3,4-2-3-1,Rafael Benítez,Míchel
+1038165,2024-01-29T20:00:00+00:00,8,Getafe,Granada CF,2,0,2,0,La Liga,Regular Season - 22,1.81,3.55,5.06,,,,,1.74,2.21,4,3,39,61,4,3,4-4-2,4-3-3,José Bordalás,A. Medina
+1038166,2024-01-27T15:15:00+00:00,8,Las Palmas,Real Madrid,1,2,0,0,La Liga,Regular Season - 22,6.88,4.86,1.47,,,1.64,2.38,,,2,5,53,47,1,6,4-5-1,4-3-1-2,,C. Ancelotti
+1038167,2024-01-28T15:15:00+00:00,8,Cadiz,Athletic Club,0,0,0,0,La Liga,Regular Season - 22,5.13,3.35,1.86,,,1.79,2.13,,,2,0,41,59,6,7,4-4-2,4-2-3-1,Sergio,Ernesto Valverde
+1038168,2024-01-27T20:00:00+00:00,8,Mallorca,Real Betis,0,1,0,1,La Liga,Regular Season - 22,2.09,3.21,4.19,,,,,1.65,2.36,1,2,53,47,5,4,5-3-2,4-2-3-1,J. Aguirre,M. Pellegrini
+1038169,2024-01-28T17:30:00+00:00,8,Sevilla,Osasuna,1,1,1,0,La Liga,Regular Season - 22,2.22,3.27,3.7,,,,,1.53,2.66,5,4,44,56,2,4,3-5-2,3-5-2,Quique Sánchez Flores,Arrasate
+1038170,2024-01-27T13:00:00+00:00,8,Real Sociedad,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 22,1.77,3.45,5.71,,,,,1.9,1.99,3,0,52,48,2,2,5-3-2,4-4-2,Imanol Alguacil,Francisco
+1038171,2024-01-26T20:00:00+00:00,8,Almeria,Alaves,0,3,0,1,La Liga,Regular Season - 22,2.89,3.1,2.79,,,1.43,3.04,,,7,3,64,36,11,3,4-2-3-1,4-2-3-1,Gaizka Garitano,Luis García
+1038172,2024-02-02T20:00:00+00:00,8,Athletic Club,Mallorca,4,0,2,0,La Liga,Regular Season - 23,1.55,3.99,7.33,,,,,2.02,1.88,6,2,62,38,6,2,4-2-3-1,5-4-1,Ernesto Valverde,J. Aguirre
+1038173,2024-02-04T17:30:00+00:00,8,Real Betis,Getafe,1,1,1,1,La Liga,Regular Season - 23,2.09,3.28,4.1,,,,,1.6,2.47,3,2,55,45,3,5,4-2-3-1,4-4-2,M. Pellegrini,José Bordalás
+1038174,2024-02-03T20:00:00+00:00,8,Girona,Real Sociedad,0,0,0,0,La Liga,Regular Season - 23,2.06,3.46,3.94,,,,,1.48,2.83,3,2,47,53,1,4,4-2-3-1,4-4-1-1,Míchel,Imanol Alguacil
+1038175,2024-02-05T20:00:00+00:00,8,Rayo Vallecano,Sevilla,1,2,1,2,La Liga,Regular Season - 23,2.25,3.26,3.6,,,,,1.53,2.67,5,6,67,33,6,0,4-4-2,4-4-2,Francisco,Quique Sánchez Flores
+1038176,2024-02-03T15:15:00+00:00,8,Granada CF,Las Palmas,1,1,1,0,La Liga,Regular Season - 23,2.13,3.38,3.79,,,,,1.5,2.77,1,5,23,77,2,8,4-1-4-1,4-5-1,A. Medina,
+1038177,2024-02-03T17:30:00+00:00,8,Alaves,Barcelona,1,3,0,1,La Liga,Regular Season - 23,4.1,3.66,1.95,,,1.49,2.79,,,2,5,35,65,12,5,4-2-3-1,4-3-3,Luis García,Xavi
+1038178,2024-02-03T13:00:00+00:00,8,Valencia,Almeria,2,1,2,0,La Liga,Regular Season - 23,1.74,3.88,5.08,,,,,1.63,2.41,2,5,49,51,0,6,4-4-2,4-2-3-1,Rubén Baraja,Gaizka Garitano
+1038179,2024-02-04T20:00:00+00:00,8,Real Madrid,Atletico Madrid,1,1,1,0,La Liga,Regular Season - 23,1.71,4.14,4.87,,,,,1.48,2.84,4,5,54,46,2,8,4-3-1-2,3-5-2,C. Ancelotti,D. Simeone
+1038180,2024-02-04T13:00:00+00:00,8,Villarreal,Cadiz,0,0,0,0,La Liga,Regular Season - 23,1.6,4.18,5.94,,,,,1.65,2.36,4,2,59,41,13,2,4-4-2,4-4-2,Marcelino,Sergio
+1038181,2024-02-04T15:15:00+00:00,8,Osasuna,Celta Vigo,0,3,0,2,La Liga,Regular Season - 23,2.2,3.1,3.98,1.56,2.58,,,1.68,2.31,1,5,70,30,9,1,5-3-2,3-4-3,Arrasate,Rafael Benítez
+1038182,2024-02-12T20:00:00+00:00,8,Almeria,Athletic Club,0,0,0,0,La Liga,Regular Season - 24,4.98,3.8,1.77,,,1.62,2.41,,,4,4,39,61,4,10,4-2-3-1,4-2-3-1,Gaizka Garitano,Ernesto Valverde
+1038183,2024-02-11T20:00:00+00:00,8,Barcelona,Granada CF,3,3,1,1,La Liga,Regular Season - 24,1.18,8.5,14.54,,,,,1.79,2.1,6,5,66,34,6,2,4-3-3,4-1-4-1,Xavi,A. Medina
+1038184,2024-02-11T15:15:00+00:00,8,Mallorca,Rayo Vallecano,2,1,0,0,La Liga,Regular Season - 24,2.53,2.79,3.65,1.79,2.12,1.52,2.68,1.76,2.16,5,4,49,51,5,1,5-4-1,4-2-3-1,J. Aguirre,Francisco
+1038185,2024-02-10T20:00:00+00:00,8,Las Palmas,Valencia,2,0,0,0,La Liga,Regular Season - 24,2.65,2.99,3.18,1.53,2.68,1.42,3.06,1.52,2.71,3,1,73,27,5,0,4-5-1,4-4-2,,Rubén Baraja
+1038186,2024-02-10T13:00:00+00:00,8,Alaves,Villarreal,1,1,1,1,La Liga,Regular Season - 24,2.25,3.43,3.44,,,,,1.43,3.03,4,4,50,50,10,9,4-2-3-1,4-4-2,Luis García,Marcelino
+1038187,2024-02-11T17:30:00+00:00,8,Sevilla,Atletico Madrid,1,0,1,0,La Liga,Regular Season - 24,3.76,3.6,2.06,,,1.43,3.01,,,6,5,40,60,2,7,4-4-2,3-5-2,Quique Sánchez Flores,D. Simeone
+1038188,2024-02-09T20:00:00+00:00,8,Cadiz,Real Betis,0,2,0,1,La Liga,Regular Season - 24,3.17,3.03,2.62,1.55,2.61,1.53,2.65,1.44,3.0,5,5,53,47,5,3,4-4-2,4-2-3-1,Sergio,M. Pellegrini
+1038189,2024-02-11T13:00:00+00:00,8,Getafe,Celta Vigo,3,2,2,0,La Liga,Regular Season - 24,2.21,3.12,3.9,1.56,2.58,,,1.67,2.32,4,4,49,51,0,4,4-4-2,3-4-3,José Bordalás,Rafael Benítez
+1038190,2024-02-10T17:30:00+00:00,8,Real Madrid,Girona,4,0,2,0,La Liga,Regular Season - 24,1.44,5.36,6.59,,,,,1.46,2.9,6,0,53,47,0,2,4-3-1-2,4-2-3-1,C. Ancelotti,Míchel
+1038191,2024-02-10T15:15:00+00:00,8,Real Sociedad,Osasuna,0,1,0,0,La Liga,Regular Season - 24,1.75,3.39,6.11,1.57,2.54,,,2.02,1.87,3,2,68,32,7,4,4-3-3,5-3-2,Imanol Alguacil,Arrasate
+1038192,2024-02-19T20:00:00+00:00,8,Athletic Club,Girona,3,2,1,0,La Liga,Regular Season - 25,1.92,3.83,4.05,,,,,,,7,6,31,69,3,4,4-2-3-1,4-2-3-1,Ernesto Valverde,Míchel
+1038193,2024-02-17T13:00:00+00:00,8,Atletico Madrid,Las Palmas,5,0,2,0,La Liga,Regular Season - 25,1.48,4.48,7.51,,,,,1.86,1.99,7,1,35,65,3,4,5-3-2,4-5-1,D. Simeone,
+1038194,2024-02-18T17:30:00+00:00,8,Mallorca,Real Sociedad,1,2,1,1,La Liga,Regular Season - 25,3.55,2.72,2.64,1.91,2.0,1.79,2.09,1.57,2.48,1,5,31,69,3,9,5-3-2,4-3-3,J. Aguirre,Imanol Alguacil
+1038195,2024-02-18T13:00:00+00:00,8,Rayo Vallecano,Real Madrid,1,1,1,1,La Liga,Regular Season - 25,5.75,4.04,1.64,,,1.6,2.43,,,3,4,40,60,4,10,4-4-2,4-2-3-1,Francisco,C. Ancelotti
+1038196,2024-02-18T15:15:00+00:00,8,Granada CF,Almeria,1,1,0,1,La Liga,Regular Season - 25,2.25,3.42,3.43,,,,,1.43,2.93,6,2,59,41,10,4,4-3-3,4-2-3-1,A. Medina,Gaizka Garitano
+1038197,2024-02-17T17:30:00+00:00,8,Celta Vigo,Barcelona,1,2,0,1,La Liga,Regular Season - 25,3.97,3.81,1.94,,,,,,,4,4,34,66,2,5,4-4-2,4-3-3,Rafael Benítez,Xavi
+1038198,2024-02-17T15:15:00+00:00,8,Osasuna,Cadiz,2,0,0,0,La Liga,Regular Season - 25,1.81,3.41,5.44,1.55,2.6,,,1.89,1.96,4,1,56,44,5,4,4-3-3,4-4-2,Arrasate,M. Pellegrino
+1038199,2024-02-16T20:00:00+00:00,8,Villarreal,Getafe,1,1,0,1,La Liga,Regular Season - 25,2.05,3.54,3.85,,,,,1.45,2.87,7,2,56,44,8,3,4-4-2,4-4-2,Marcelino,José Bordalás
+1038200,2024-02-17T20:00:00+00:00,8,Valencia,Sevilla,0,0,0,0,La Liga,Regular Season - 25,2.3,3.18,3.59,,,,,1.53,2.58,4,1,53,47,7,2,4-4-2,3-5-2,Rubén Baraja,Quique Sánchez Flores
+1038201,2024-02-18T20:00:00+00:00,8,Real Betis,Alaves,0,0,0,0,La Liga,Regular Season - 25,2.25,3.22,3.65,,,,,1.55,2.55,2,3,62,38,6,8,4-2-3-1,4-2-3-1,M. Pellegrini,Luis García
+1038202,2024-02-24T20:00:00+00:00,8,Almeria,Atletico Madrid,2,2,1,1,La Liga,Regular Season - 26,4.78,3.86,1.78,,,1.5,2.68,,,4,9,40,60,2,7,4-2-3-1,3-5-2,Gaizka Garitano,D. Simeone
+1038203,2024-02-24T15:15:00+00:00,8,Barcelona,Getafe,4,0,1,0,La Liga,Regular Season - 26,1.42,5.06,7.77,,,,,1.68,2.25,8,4,68,32,5,8,4-3-3,4-5-1,Xavi,José Bordalás
+1038204,2024-02-25T13:00:00+00:00,8,Cadiz,Celta Vigo,2,2,0,1,La Liga,Regular Season - 26,3.3,3.04,2.53,1.53,2.65,1.53,2.59,,,5,3,66,34,8,1,4-4-2,4-4-2,M. Pellegrino,Rafael Benítez
+1038205,2024-02-26T20:00:00+00:00,8,Girona,Rayo Vallecano,3,0,0,0,La Liga,Regular Season - 26,1.64,4.24,5.4,,,,,1.56,2.53,3,0,58,42,2,1,,,Míchel,Iñigo Pérez
+1038206,2024-02-25T20:00:00+00:00,8,Real Madrid,Sevilla,1,0,0,0,La Liga,Regular Season - 26,1.27,6.36,10.83,,,,,1.83,2.01,6,1,64,36,7,2,4-3-3,5-3-2,C. Ancelotti,Quique Sánchez Flores
+1038207,2024-02-23T20:00:00+00:00,8,Real Sociedad,Villarreal,1,3,0,1,La Liga,Regular Season - 26,1.66,3.98,5.62,,,,,1.65,2.31,7,4,70,30,12,2,4-1-4-1,4-4-2,Imanol Alguacil,Marcelino
+1038208,2024-04-04T18:00:00+00:00,8,Granada CF,Valencia,0,1,0,0,La Liga,Regular Season - 26,3.24,3.07,2.51,,,1.5,2.69,,,3,2,57,43,5,4,4-4-2,4-4-2,José Ramón Sandoval,Rubén Baraja
+1038209,2024-02-25T17:30:00+00:00,8,Las Palmas,Osasuna,1,1,0,0,La Liga,Regular Season - 26,2.48,3.07,3.34,,,,,1.51,2.65,3,2,72,28,6,7,4-5-1,3-5-2,,Arrasate
+1038210,2024-02-24T17:30:00+00:00,8,Alaves,Mallorca,1,1,0,0,La Liga,Regular Season - 26,1.99,3.08,4.95,1.66,2.34,,,1.91,1.94,1,7,52,48,3,3,4-2-3-1,5-4-1,Luis García,J. Aguirre
+1038211,2024-02-25T15:15:00+00:00,8,Real Betis,Athletic Club,3,1,2,1,La Liga,Regular Season - 26,4.02,3.32,2.09,,,1.53,2.6,,,5,1,58,42,5,3,4-2-3-1,4-2-3-1,M. Pellegrini,Ernesto Valverde
+1038212,2024-03-03T20:00:00+00:00,8,Athletic Club,Barcelona,0,0,0,0,La Liga,Regular Season - 27,2.98,3.51,2.46,,,,,,,2,2,40,60,4,4,4-2-3-1,4-3-3,Ernesto Valverde,Xavi
+1038213,2024-03-03T15:15:00+00:00,8,Atletico Madrid,Real Betis,2,1,2,0,La Liga,Regular Season - 27,1.59,4.33,5.87,,,,,1.62,2.36,11,6,43,57,4,6,3-5-2,4-2-3-1,D. Simeone,M. Pellegrini
+1038214,2024-03-02T17:30:00+00:00,8,Getafe,Las Palmas,3,3,3,1,La Liga,Regular Season - 27,2.02,3.27,4.4,,,,,1.64,2.33,5,5,27,73,4,3,4-3-3,4-5-1,José Bordalás,
+1038215,2024-03-01T20:00:00+00:00,8,Celta Vigo,Almeria,1,0,0,0,La Liga,Regular Season - 27,1.88,3.76,4.33,,,,,1.51,2.66,6,0,67,33,7,0,4-4-2,4-2-3-1,Rafael Benítez,Gaizka Garitano
+1038216,2024-03-02T15:15:00+00:00,8,Rayo Vallecano,Cadiz,1,1,0,0,La Liga,Regular Season - 27,1.76,3.51,5.64,,,,,1.85,2.0,5,4,54,46,4,9,4-2-3-1,4-4-2,Iñigo Pérez,M. Pellegrino
+1038217,2024-03-03T17:30:00+00:00,8,Mallorca,Girona,1,0,1,0,La Liga,Regular Season - 27,3.56,3.37,2.22,,,1.46,2.82,,,2,4,40,60,8,5,5-3-2,4-2-3-1,J. Aguirre,Míchel
+1038218,2024-03-02T20:00:00+00:00,8,Valencia,Real Madrid,2,2,2,1,La Liga,Regular Season - 27,5.52,3.96,1.68,,,1.68,2.26,,,4,5,29,71,2,2,4-4-2,4-3-1-2,Rubén Baraja,C. Ancelotti
+1038219,2024-03-02T13:00:00+00:00,8,Sevilla,Real Sociedad,3,2,2,1,La Liga,Regular Season - 27,2.8,2.99,2.93,1.54,2.61,1.45,2.83,1.47,2.74,5,4,39,61,2,5,5-3-2,4-1-3-2,Quique Sánchez Flores,Imanol Alguacil
+1038220,2024-03-03T13:00:00+00:00,8,Villarreal,Granada CF,5,1,3,0,La Liga,Regular Season - 27,1.72,4.22,4.69,,,,,1.42,2.97,10,3,48,52,6,4,4-4-2,3-4-3,Marcelino,A. Medina
+1038221,2024-03-04T20:00:00+00:00,8,Osasuna,Alaves,1,0,0,0,La Liga,Regular Season - 27,2.4,3.11,3.45,1.54,2.63,,,1.57,2.48,4,4,55,45,5,5,4-2-3-1,4-3-3,Arrasate,Luis García
+1038222,2024-03-11T20:00:00+00:00,8,Almeria,Sevilla,2,2,1,0,La Liga,Regular Season - 28,3.48,3.41,2.24,,,1.42,2.99,,,4,6,43,57,1,8,4-2-3-1,5-3-2,Gaizka Garitano,Quique Sánchez Flores
+1038223,2024-03-08T20:00:00+00:00,8,Barcelona,Mallorca,1,0,0,0,La Liga,Regular Season - 28,1.45,4.74,7.52,,,,,1.79,2.09,6,3,64,36,4,1,4-3-3,5-3-2,Xavi,J. Aguirre
+1038224,2024-03-10T20:00:00+00:00,8,Real Betis,Villarreal,2,3,2,1,La Liga,Regular Season - 28,2.02,3.73,3.68,,,,,,,4,4,54,46,11,4,4-2-3-1,4-4-2,M. Pellegrini,Marcelino
+1038225,2024-03-09T20:00:00+00:00,8,Girona,Osasuna,2,0,1,0,La Liga,Regular Season - 28,1.57,4.47,5.8,,,,,1.57,2.49,6,1,60,40,5,7,3-4-2-1,3-5-1-1,Míchel,Arrasate
+1038226,2024-03-09T17:30:00+00:00,8,Granada CF,Real Sociedad,2,3,2,1,La Liga,Regular Season - 28,4.87,3.39,1.89,,,1.77,2.11,,,6,8,36,64,3,6,4-4-2,4-1-4-1,A. Medina,Imanol Alguacil
+1038227,2024-03-10T13:00:00+00:00,8,Alaves,Rayo Vallecano,1,0,1,0,La Liga,Regular Season - 28,2.12,3.11,4.24,,,,,1.64,2.32,4,2,33,67,7,5,4-2-3-1,4-2-3-1,Luis García,Iñigo Pérez
+1038228,2024-03-10T15:15:00+00:00,8,Las Palmas,Athletic Club,0,2,0,1,La Liga,Regular Season - 28,4.85,3.52,1.85,,,1.63,2.35,,,1,2,71,29,10,3,4-1-4-1,4-2-3-1,,Ernesto Valverde
+1038229,2024-03-09T15:15:00+00:00,8,Cadiz,Atletico Madrid,2,0,1,0,La Liga,Regular Season - 28,4.83,3.68,1.81,,,1.61,2.39,,,3,4,40,60,3,1,4-4-2,5-3-2,M. Pellegrino,D. Simeone
+1038230,2024-03-10T17:30:00+00:00,8,Real Madrid,Celta Vigo,4,0,1,0,La Liga,Regular Season - 28,1.3,5.98,10.52,,,,,1.88,1.97,13,1,64,36,12,1,4-3-1-2,5-3-2,C. Ancelotti,Rafael Benítez
+1038231,2024-03-09T13:00:00+00:00,8,Valencia,Getafe,1,0,1,0,La Liga,Regular Season - 28,1.94,3.22,4.89,1.57,2.54,,,1.83,2.04,3,5,52,48,5,5,4-4-2,4-4-2,Rubén Baraja,José Bordalás
+1038232,2024-03-17T20:00:00+00:00,8,Atletico Madrid,Barcelona,0,3,0,1,La Liga,Regular Season - 29,2.28,3.65,3.18,,,,,,,3,5,41,59,7,3,3-4-3,4-3-3,D. Simeone,Xavi
+1038233,2024-03-16T17:30:00+00:00,8,Getafe,Girona,1,0,1,0,La Liga,Regular Season - 29,3.53,3.4,2.22,,,1.43,2.93,,,3,3,41,59,2,5,4-1-4-1,4-2-3-1,José Bordalás,Míchel
+1038234,2024-03-16T15:15:00+00:00,8,Osasuna,Real Madrid,2,4,1,2,La Liga,Regular Season - 29,6.63,4.4,1.53,,,1.75,2.13,,,4,9,37,63,5,7,3-5-2,4-3-3,Arrasate,C. Ancelotti
+1038235,2024-03-17T15:15:00+00:00,8,Las Palmas,Almeria,0,1,0,1,La Liga,Regular Season - 29,1.85,3.77,4.44,,,,,1.5,2.7,6,2,65,35,11,3,4-5-1,4-2-3-1,,Pepe Mel
+1038236,2024-03-17T17:30:00+00:00,8,Rayo Vallecano,Real Betis,2,0,1,0,La Liga,Regular Season - 29,2.55,3.1,3.2,,,,,1.48,2.77,4,1,38,62,4,8,4-4-2,4-2-3-1,Iñigo Pérez,M. Pellegrini
+1038237,2024-03-15T20:00:00+00:00,8,Real Sociedad,Cadiz,2,0,1,0,La Liga,Regular Season - 29,1.47,4.25,8.59,,,,,2.19,1.71,6,2,63,37,8,2,4-3-3,4-4-2,Imanol Alguacil,M. Pellegrino
+1038238,2024-03-17T13:00:00+00:00,8,Sevilla,Celta Vigo,1,2,1,0,La Liga,Regular Season - 29,1.87,3.66,4.53,,,,,1.53,2.59,4,5,36,64,2,8,5-3-2,3-4-2-1,Quique Sánchez Flores,Rafael Benítez
+1038239,2024-03-17T15:15:00+00:00,8,Villarreal,Valencia,1,0,0,0,La Liga,Regular Season - 29,2.2,3.46,3.52,,,,,,,7,7,53,47,5,2,4-3-3,4-4-2,Marcelino,Rubén Baraja
+1038240,2024-03-16T13:00:00+00:00,8,Mallorca,Granada CF,1,0,0,0,La Liga,Regular Season - 29,1.81,3.45,5.37,,,,,1.86,1.99,8,3,52,48,10,2,5-3-2,4-4-2,J. Aguirre,A. Medina
+1038241,2024-03-16T20:00:00+00:00,8,Athletic Club,Alaves,2,0,2,0,La Liga,Regular Season - 29,1.6,3.9,6.79,,,,,1.92,1.92,4,3,60,40,5,4,4-2-3-1,4-2-3-1,Ernesto Valverde,Luis García
+1038242,2024-03-30T15:15:00+00:00,8,Almeria,Osasuna,0,3,0,2,La Liga,Regular Season - 30,2.6,3.25,2.99,,,,,,,5,4,51,49,6,1,4-3-3,4-4-2,Pepe Mel,Arrasate
+1038243,2024-03-30T20:00:00+00:00,8,Barcelona,Las Palmas,1,0,0,0,La Liga,Regular Season - 30,1.25,6.72,10.88,,,,,1.74,2.14,2,0,71,29,6,1,4-3-3,4-5-1,Xavi,
+1038244,2024-03-29T20:00:00+00:00,8,Cadiz,Granada CF,1,0,0,0,La Liga,Regular Season - 30,2.05,3.25,4.31,,,,,1.67,2.27,5,2,59,41,5,2,4-4-2,5-4-1,M. Pellegrino,José Ramón Sandoval
+1038245,2024-03-31T12:00:00+00:00,8,Celta Vigo,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 30,1.93,3.41,4.46,,,,,1.62,2.34,0,2,60,40,3,2,3-4-2-1,4-2-3-1,Claudio Giráldez,Iñigo Pérez
+1038246,2024-03-30T13:00:00+00:00,8,Getafe,Sevilla,0,1,0,1,La Liga,Regular Season - 30,2.71,3.02,3.07,,,,,1.44,2.91,5,3,67,33,5,3,4-1-4-1,5-3-2,José Bordalás,Quique Sánchez Flores
+1038247,2024-03-31T16:30:00+00:00,8,Alaves,Real Sociedad,0,1,0,0,La Liga,Regular Season - 30,3.99,3.02,2.24,1.61,2.47,1.69,2.23,,,0,3,41,59,3,8,4-2-3-1,4-3-3,Luis García,Imanol Alguacil
+1038248,2024-03-31T19:00:00+00:00,8,Real Madrid,Athletic Club,2,0,1,0,La Liga,Regular Season - 30,1.61,4.27,5.76,,,,,1.61,2.4,4,3,58,42,4,7,4-2-2-2,4-2-3-1,C. Ancelotti,Ernesto Valverde
+1038249,2024-04-01T19:00:00+00:00,8,Villarreal,Atletico Madrid,1,2,0,1,La Liga,Regular Season - 30,3.23,3.67,2.24,,,,,,,2,8,52,48,3,3,4-3-3,5-3-2,Marcelino,D. Simeone
+1038250,2024-03-31T14:15:00+00:00,8,Girona,Real Betis,3,2,1,1,La Liga,Regular Season - 30,1.72,4.08,4.86,,,,,1.47,2.77,5,4,58,42,5,3,3-4-2-1,4-1-4-1,Míchel,M. Pellegrini
+1038251,2024-03-30T17:30:00+00:00,8,Valencia,Mallorca,0,0,0,0,La Liga,Regular Season - 30,2.23,3.01,4.04,1.66,2.35,,,1.75,2.14,5,3,53,47,3,3,4-4-2,5-3-2,Rubén Baraja,J. Aguirre
+1038252,2024-04-14T16:30:00+00:00,8,Athletic Club,Villarreal,1,1,0,0,La Liga,Regular Season - 31,1.6,4.33,5.66,,,,,1.53,2.61,6,2,53,47,3,1,4-2-3-1,4-4-2,Ernesto Valverde,Marcelino
+1038253,2024-04-13T12:00:00+00:00,8,Atletico Madrid,Girona,3,1,2,1,La Liga,Regular Season - 31,1.92,3.89,3.97,,,,,,,4,5,42,58,2,0,4-4-2,4-5-1,D. Simeone,Míchel
+1038254,2024-04-12T19:00:00+00:00,8,Real Betis,Celta Vigo,2,1,0,0,La Liga,Regular Season - 31,2.12,3.49,3.71,,,,,1.46,2.81,3,5,47,53,6,5,4-2-3-1,3-4-3,M. Pellegrini,Claudio Giráldez
+1038255,2024-04-13T16:30:00+00:00,8,Mallorca,Real Madrid,0,1,0,0,La Liga,Regular Season - 31,5.18,3.58,1.79,,,1.68,2.25,,,2,8,43,57,4,2,5-4-1,4-2-3-1,J. Aguirre,C. Ancelotti
+1038256,2024-04-15T19:00:00+00:00,8,Osasuna,Valencia,0,1,0,1,La Liga,Regular Season - 31,2.41,3.05,3.51,1.57,2.54,,,1.6,2.43,2,3,65,35,4,1,4-4-2,4-4-2,Arrasate,Rubén Baraja
+1038257,2024-04-14T12:00:00+00:00,8,Las Palmas,Sevilla,0,2,0,1,La Liga,Regular Season - 31,2.97,3.22,2.63,,,,,,,2,3,63,37,6,2,4-5-1,5-3-2,,Quique Sánchez Flores
+1038258,2024-04-14T19:00:00+00:00,8,Real Sociedad,Almeria,2,2,1,1,La Liga,Regular Season - 31,1.3,5.49,12.32,,,,,2.04,1.83,4,3,50,50,5,1,4-4-2,4-2-3-1,Imanol Alguacil,Pepe Mel
+1038259,2024-04-13T19:00:00+00:00,8,Cadiz,Barcelona,0,1,0,1,La Liga,Regular Season - 31,4.28,3.63,1.92,,,1.52,2.62,,,3,2,38,62,8,4,4-4-2,4-3-3,M. Pellegrino,Xavi
+1038260,2024-04-13T14:15:00+00:00,8,Rayo Vallecano,Getafe,0,0,0,0,La Liga,Regular Season - 31,2.33,3.05,3.7,1.55,2.61,,,1.61,2.4,2,0,64,36,3,0,4-4-2,4-4-1-1,Iñigo Pérez,José Bordalás
+1038261,2024-04-14T14:15:00+00:00,8,Granada CF,Alaves,2,0,2,0,La Liga,Regular Season - 31,3.06,3.09,2.65,,,1.45,2.86,,,3,2,39,61,1,5,4-4-2,4-2-3-1,José Ramón Sandoval,Luis García
+1038262,2024-04-21T14:15:00+00:00,8,Almeria,Villarreal,1,2,1,1,La Liga,Regular Season - 32,3.63,4.01,1.99,,,,,,,5,3,57,43,5,2,4-2-3-1,4-4-2,Pepe Mel,Marcelino
+1038263,2024-04-19T19:00:00+00:00,8,Athletic Club,Granada CF,1,1,1,1,La Liga,Regular Season - 32,1.28,5.98,11.9,,,,,2.09,1.79,6,0,67,33,11,4,4-2-3-1,4-4-2,Ernesto Valverde,José Ramón Sandoval
+1038264,2024-04-20T12:00:00+00:00,8,Celta Vigo,Las Palmas,4,1,2,1,La Liga,Regular Season - 32,1.7,3.95,5.27,,,,,1.62,2.36,13,4,32,68,8,3,3-4-3,4-5-1,Claudio Giráldez,
+1038265,2024-04-21T12:00:00+00:00,8,Getafe,Real Sociedad,1,1,1,1,La Liga,Regular Season - 32,3.95,3.08,2.19,1.57,2.51,1.68,2.24,,,4,3,40,60,0,4,4-2-3-1,4-3-3,José Bordalás,Imanol Alguacil
+1038266,2024-04-21T16:30:00+00:00,8,Alaves,Atletico Madrid,2,0,1,0,La Liga,Regular Season - 32,5.11,3.41,1.85,,,1.7,2.22,,,3,4,31,69,1,11,4-2-3-1,3-5-2,Luis García,D. Simeone
+1038267,2024-04-21T19:00:00+00:00,8,Real Madrid,Barcelona,3,2,1,1,La Liga,Regular Season - 32,1.82,4.34,4.01,,,,,,,8,6,47,53,2,8,4-3-1-2,4-3-3,C. Ancelotti,Xavi
+1038268,2024-04-20T16:30:00+00:00,8,Valencia,Real Betis,1,2,0,1,La Liga,Regular Season - 32,2.68,3.15,2.97,,,,,1.46,2.82,5,6,54,46,7,6,4-4-2,4-2-3-1,Rubén Baraja,M. Pellegrini
+1038269,2024-04-20T19:00:00+00:00,8,Girona,Cadiz,4,1,2,0,La Liga,Regular Season - 32,1.4,4.98,8.51,,,,,1.78,2.1,5,5,58,42,2,4,4-2-3-1,4-4-2,Míchel,M. Pellegrino
+1038270,2024-04-22T19:00:00+00:00,8,Sevilla,Mallorca,2,1,0,0,La Liga,Regular Season - 32,2.04,3.21,4.4,,,,,1.67,2.27,4,6,54,46,4,4,5-3-2,5-4-1,Quique Sánchez Flores,J. Aguirre
+1038271,2024-04-20T14:15:00+00:00,8,Rayo Vallecano,Osasuna,2,1,0,1,La Liga,Regular Season - 32,2.17,3.09,4.12,1.58,2.53,,,1.7,2.22,6,2,64,36,5,1,4-4-2,4-3-3,Iñigo Pérez,Arrasate
+1038272,2024-04-27T14:15:00+00:00,8,Almeria,Getafe,1,3,1,1,La Liga,Regular Season - 33,2.77,3.23,2.77,,,,,,,11,5,55,45,9,2,4-2-3-1,4-2-3-1,Pepe Mel,José Bordalás
+1038273,2024-04-29T19:00:00+00:00,8,Barcelona,Valencia,4,2,1,2,La Liga,Regular Season - 33,1.33,5.71,9.45,,,,,1.75,2.15,13,3,80,20,15,1,4-3-3,4-4-2,Xavi,Rubén Baraja
+1038274,2024-04-28T19:00:00+00:00,8,Real Betis,Sevilla,1,1,1,0,La Liga,Regular Season - 33,2.05,3.4,4.05,,,,,1.54,2.58,5,1,51,49,4,6,4-2-3-1,4-4-2,M. Pellegrini,Quique Sánchez Flores
+1038275,2024-04-28T12:00:00+00:00,8,Cadiz,Mallorca,1,1,0,1,La Liga,Regular Season - 33,2.84,2.81,3.13,1.7,2.27,1.53,2.58,1.59,2.43,2,2,59,41,3,1,4-4-2,5-4-1,M. Pellegrino,J. Aguirre
+1038276,2024-04-28T14:15:00+00:00,8,Granada CF,Osasuna,3,0,1,0,La Liga,Regular Season - 33,2.44,3.09,3.4,,,,,1.51,2.65,4,2,37,63,0,6,4-4-2,4-3-3,José Ramón Sandoval,Arrasate
+1038277,2024-04-27T16:30:00+00:00,8,Alaves,Celta Vigo,3,0,0,0,La Liga,Regular Season - 33,2.7,3.07,3.02,,,,,1.42,2.98,8,0,37,63,8,3,4-2-3-1,3-4-3,Luis García,Claudio Giráldez
+1038278,2024-04-27T19:00:00+00:00,8,Atletico Madrid,Athletic Club,3,1,1,1,La Liga,Regular Season - 33,1.99,3.53,4.11,,,,,1.5,2.68,3,1,42,58,3,5,3-5-2,4-2-3-1,D. Simeone,Ernesto Valverde
+1038279,2024-04-27T12:00:00+00:00,8,Las Palmas,Girona,0,2,0,1,La Liga,Regular Season - 33,4.57,3.98,1.77,,,1.45,2.84,,,5,3,61,39,4,2,4-5-1,4-2-3-1,,Míchel
+1038280,2024-04-28T16:30:00+00:00,8,Villarreal,Rayo Vallecano,3,0,1,0,La Liga,Regular Season - 33,1.83,3.81,4.54,,,,,1.51,2.66,7,4,45,55,3,6,4-4-2,4-2-3-1,Marcelino,Iñigo Pérez
+1038281,2024-04-26T19:00:00+00:00,8,Real Sociedad,Real Madrid,0,1,0,1,La Liga,Regular Season - 33,2.42,3.26,3.24,,,,,1.45,2.88,3,3,56,44,11,3,4-1-4-1,4-2-3-1,Imanol Alguacil,C. Ancelotti
+1038282,2024-05-05T14:15:00+00:00,8,Celta Vigo,Villarreal,3,2,2,1,La Liga,Regular Season - 34,2.37,3.71,2.98,,,,,,,7,3,54,46,2,1,3-4-3,4-4-2,Claudio Giráldez,Marcelino
+1038283,2024-05-05T19:00:00+00:00,8,Rayo Vallecano,Almeria,0,1,0,1,La Liga,Regular Season - 34,1.6,4.19,5.96,,,,,1.69,2.24,10,2,68,32,8,2,4-4-2,4-2-3-1,Iñigo Pérez,Pepe Mel
+1038284,2024-05-03T19:00:00+00:00,8,Getafe,Athletic Club,0,2,0,1,La Liga,Regular Season - 34,4.13,3.26,2.09,,,1.63,2.35,,,9,2,64,36,10,6,4-2-3-1,4-2-3-1,José Bordalás,Ernesto Valverde
+1038285,2024-05-04T19:00:00+00:00,8,Mallorca,Atletico Madrid,0,1,0,1,La Liga,Regular Season - 34,3.97,3.1,2.21,1.54,2.63,1.64,2.32,,,4,4,59,41,6,2,5-3-2,3-4-2-1,J. Aguirre,D. Simeone
+1038286,2024-05-04T16:30:00+00:00,8,Girona,Barcelona,4,2,1,2,La Liga,Regular Season - 34,2.87,3.76,2.42,,,,,,,7,7,40,60,5,4,4-2-3-1,4-3-3,Míchel,Xavi
+1038287,2024-05-05T12:00:00+00:00,8,Osasuna,Real Betis,0,2,0,2,La Liga,Regular Season - 34,3.4,3.22,2.37,,,1.48,2.73,,,2,4,41,59,8,5,4-5-1,4-2-3-1,Arrasate,M. Pellegrini
+1038288,2024-05-04T14:15:00+00:00,8,Real Madrid,Cadiz,3,0,0,0,La Liga,Regular Season - 34,1.38,5.05,9.35,,,,,1.96,1.89,9,2,71,29,7,4,4-3-3,4-5-1,C. Ancelotti,M. Pellegrino
+1038289,2024-05-05T19:00:00+00:00,8,Sevilla,Granada CF,3,0,1,0,La Liga,Regular Season - 34,1.71,4.08,5.02,,,,,1.54,2.56,5,3,60,40,5,4,3-4-2-1,4-4-2,Quique Sánchez Flores,José Ramón Sandoval
+1038290,2024-05-04T12:00:00+00:00,8,Real Sociedad,Las Palmas,2,0,2,0,La Liga,Regular Season - 34,1.34,5.27,10.24,,,,,2.16,1.74,4,1,52,48,7,2,4-1-4-1,4-4-2,Imanol Alguacil,
+1038291,2024-05-05T16:30:00+00:00,8,Valencia,Alaves,0,1,0,0,La Liga,Regular Season - 34,2.3,3.06,3.74,,,,,1.6,2.43,1,4,57,43,5,7,4-4-2,4-2-3-1,Rubén Baraja,Luis García
+1038292,2024-05-11T19:00:00+00:00,8,Athletic Club,Osasuna,2,2,0,1,La Liga,Regular Season - 35,1.44,4.52,8.77,,,,,1.94,1.91,6,3,67,33,8,6,4-2-3-1,4-1-4-1,Ernesto Valverde,Arrasate
+1038293,2024-05-12T14:15:00+00:00,8,Atletico Madrid,Celta Vigo,1,0,0,0,La Liga,Regular Season - 35,1.39,5.08,8.73,,,,,1.66,2.3,8,2,56,44,4,7,3-4-2-1,3-4-3,D. Simeone,Claudio Giráldez
+1038294,2024-05-13T19:00:00+00:00,8,Barcelona,Real Sociedad,2,0,1,0,La Liga,Regular Season - 35,1.71,4.06,5.02,,,,,1.5,2.69,5,3,57,43,6,2,4-3-3,3-4-2-1,Xavi,Imanol Alguacil
+1038295,2024-05-12T12:00:00+00:00,8,Cadiz,Getafe,1,0,1,0,La Liga,Regular Season - 35,2.15,3.22,3.89,,,,,1.62,2.34,6,4,45,55,6,2,4-4-2,5-3-2,M. Pellegrino,José Bordalás
+1038296,2024-05-11T16:30:00+00:00,8,Granada CF,Real Madrid,0,4,0,2,La Liga,Regular Season - 35,5.47,4.49,1.6,,,1.53,2.6,,,1,7,42,58,8,5,4-4-2,4-3-3,José Ramón Sandoval,C. Ancelotti
+1038297,2024-05-10T19:00:00+00:00,8,Alaves,Girona,2,2,1,2,La Liga,Regular Season - 35,3.39,3.66,2.18,,,,,,,8,5,35,65,5,3,4-2-3-1,4-2-3-1,Luis García,Míchel
+1038298,2024-05-12T19:00:00+00:00,8,Real Betis,Almeria,3,2,2,1,La Liga,Regular Season - 35,1.34,5.68,8.91,,,,,1.68,2.26,7,7,47,53,3,5,4-2-3-1,4-3-3,M. Pellegrini,Pepe Mel
+1038299,2024-05-12T16:30:00+00:00,8,Valencia,Rayo Vallecano,0,0,0,0,La Liga,Regular Season - 35,2.28,3.08,3.77,,,,,1.6,2.42,5,1,50,50,6,3,4-2-3-1,4-2-3-1,Rubén Baraja,Iñigo Pérez
+1038300,2024-05-11T14:15:00+00:00,8,Villarreal,Sevilla,3,2,1,2,La Liga,Regular Season - 35,1.92,4.0,3.86,,,,,,,7,4,59,41,10,1,4-4-2,5-3-2,Marcelino,Quique Sánchez Flores
+1038301,2024-05-11T12:00:00+00:00,8,Mallorca,Las Palmas,1,0,1,0,La Liga,Regular Season - 35,1.72,3.37,6.55,,,,,2.0,1.85,2,1,44,56,2,2,5-3-2,4-5-1,J. Aguirre,
+1038302,2024-05-16T19:30:00+00:00,8,Almeria,Barcelona,0,2,0,1,La Liga,Regular Season - 36,8.98,5.98,1.33,,,1.5,2.68,,,3,7,35,65,4,7,4-2-3-1,4-3-3,Pepe Mel,Xavi
+1038303,2024-05-14T20:00:00+00:00,8,Girona,Villarreal,0,1,0,0,La Liga,Regular Season - 36,1.66,4.68,4.65,,,,,,,5,3,66,34,5,1,4-2-3-1,4-4-2,Míchel,Marcelino
+1038304,2024-05-16T20:00:00+00:00,8,Real Sociedad,Valencia,1,0,1,0,La Liga,Regular Season - 36,1.57,4.0,6.8,,,,,1.93,1.92,5,3,59,41,3,3,4-3-3,4-4-2,Imanol Alguacil,Rubén Baraja
+1038305,2024-05-15T20:00:00+00:00,8,Celta Vigo,Athletic Club,2,1,0,1,La Liga,Regular Season - 36,2.5,3.36,3.03,,,,,,,4,2,53,47,2,3,3-4-3,4-2-3-1,Claudio Giráldez,Ernesto Valverde
+1038306,2024-05-15T20:00:00+00:00,8,Getafe,Atletico Madrid,0,3,0,2,La Liga,Regular Season - 36,5.3,3.8,1.73,,,1.62,2.36,,,3,3,45,55,6,3,4-4-1-1,5-4-1,José Bordalás,D. Simeone
+1038307,2024-05-16T17:30:00+00:00,8,Las Palmas,Real Betis,2,2,1,1,La Liga,Regular Season - 36,3.53,3.48,2.19,,,1.44,2.92,,,9,4,57,43,4,8,4-2-3-1,4-2-3-1,,M. Pellegrini
+1038308,2024-05-15T17:30:00+00:00,8,Sevilla,Cadiz,0,1,0,0,La Liga,Regular Season - 36,2.1,3.54,3.72,,,,,1.47,2.8,3,7,57,43,1,9,5-3-2,4-4-2,Quique Sánchez Flores,M. Pellegrino
+1038309,2024-05-14T17:30:00+00:00,8,Osasuna,Mallorca,1,1,1,0,La Liga,Regular Season - 36,2.84,2.94,2.98,1.65,2.37,1.52,2.63,1.55,2.55,4,4,52,48,2,4,4-3-3,5-4-1,Arrasate,J. Aguirre
+1038310,2024-05-15T17:30:00+00:00,8,Rayo Vallecano,Granada CF,2,1,1,0,La Liga,Regular Season - 36,1.53,4.21,7.01,,,,,1.91,1.94,9,1,31,69,6,6,4-2-3-1,4-2-3-1,Iñigo Pérez,José Ramón Sandoval
+1038311,2024-05-14T19:30:00+00:00,8,Real Madrid,Alaves,5,0,3,0,La Liga,Regular Season - 36,1.21,7.33,13.51,,,,,1.93,1.89,11,10,72,28,4,1,4-3-1-2,4-2-3-1,C. Ancelotti,Luis García
+1038312,2024-05-19T17:00:00+00:00,8,Athletic Club,Sevilla,2,0,2,0,La Liga,Regular Season - 37,1.62,4.2,5.69,,,,,1.58,2.45,6,4,53,47,8,3,4-2-3-1,3-4-2-1,Ernesto Valverde,Quique Sánchez Flores
+1038313,2024-05-19T17:00:00+00:00,8,Atletico Madrid,Osasuna,1,4,0,1,La Liga,Regular Season - 37,1.32,5.72,10.17,,,,,1.92,1.93,2,6,57,43,7,5,5-4-1,4-1-4-1,D. Simeone,Arrasate
+1038314,2024-05-19T17:00:00+00:00,8,Barcelona,Rayo Vallecano,3,0,1,0,La Liga,Regular Season - 37,1.32,5.85,9.53,,,,,1.69,2.23,6,4,72,28,7,5,4-2-3-1,4-1-4-1,Xavi,Iñigo Pérez
+1038315,2024-05-19T17:00:00+00:00,8,Real Betis,Real Sociedad,0,2,0,2,La Liga,Regular Season - 37,3.25,3.09,2.53,,,1.48,2.76,,,9,2,68,32,6,2,4-2-3-1,4-4-2,M. Pellegrini,Imanol Alguacil
+1038316,2024-05-19T17:00:00+00:00,8,Cadiz,Las Palmas,0,0,0,0,La Liga,Regular Season - 37,1.84,3.55,4.9,,,,,1.72,2.18,3,1,49,51,5,3,4-4-2,4-3-3,M. Pellegrino,
+1038317,2024-05-18T19:00:00+00:00,8,Alaves,Getafe,1,0,1,0,La Liga,Regular Season - 37,2.08,3.32,4.05,,,,,1.57,2.49,2,4,47,53,2,1,4-2-3-1,5-3-2,Luis García,José Bordalás
+1038318,2024-05-19T17:00:00+00:00,8,Mallorca,Almeria,2,2,1,1,La Liga,Regular Season - 37,1.4,4.68,9.47,,,,,2.14,1.75,8,3,51,49,12,2,5-3-2,4-2-3-1,J. Aguirre,Pepe Mel
+1038319,2024-05-19T17:00:00+00:00,8,Granada CF,Celta Vigo,1,2,0,0,La Liga,Regular Season - 37,3.93,3.53,2.03,,,1.43,2.95,,,3,5,49,51,10,2,4-3-3,3-5-2,José Ramón Sandoval,Claudio Giráldez
+1038320,2024-05-19T17:00:00+00:00,8,Valencia,Girona,1,3,0,1,La Liga,Regular Season - 37,3.47,3.72,2.12,,,,,,,6,5,36,64,5,4,4-4-2,4-2-3-1,Rubén Baraja,Míchel
+1038321,2024-05-19T17:00:00+00:00,8,Villarreal,Real Madrid,4,4,1,4,La Liga,Regular Season - 37,3.08,3.95,2.22,,,,,,,7,6,43,57,3,3,4-4-2,4-2-3-1,Marcelino,C. Ancelotti
+1038322,2024-05-25T16:30:00+00:00,8,Almeria,Cadiz,6,1,0,1,La Liga,Regular Season - 38,2.08,3.74,3.49,,,,,,,12,4,46,54,1,4,4-2-3-1,4-2-3-1,Pepe Mel,M. Pellegrino
+1038323,2024-05-26T14:15:00+00:00,8,Celta Vigo,Valencia,2,2,0,1,La Liga,Regular Season - 38,1.83,3.8,4.57,,,,,1.49,2.73,4,1,54,46,2,2,3-4-3,4-4-2,Claudio Giráldez,Rubén Baraja
+1038324,2024-05-26T12:00:00+00:00,8,Getafe,Mallorca,1,2,0,0,La Liga,Regular Season - 38,2.34,3.29,3.32,,,,,1.45,2.81,6,4,50,50,3,4,4-1-4-1,4-1-4-1,José Bordalás,J. Aguirre
+1038325,2024-05-24T19:00:00+00:00,8,Girona,Granada CF,7,0,3,0,La Liga,Regular Season - 38,1.22,7.52,11.61,,,,,1.61,2.38,9,2,70,30,4,2,4-3-3,4-2-3-1,Míchel,José Ramón Sandoval
+1038326,2024-05-25T12:00:00+00:00,8,Osasuna,Villarreal,1,1,1,0,La Liga,Regular Season - 38,2.81,3.77,2.42,,,,,,,6,3,43,57,6,4,4-1-4-1,4-4-2,Arrasate,Marcelino
+1038327,2024-05-25T16:30:00+00:00,8,Rayo Vallecano,Athletic Club,0,1,0,0,La Liga,Regular Season - 38,3.04,3.4,2.44,,,,,,,4,1,63,37,8,2,4-2-3-1,4-2-3-1,Iñigo Pérez,Ernesto Valverde
+1038328,2024-05-25T14:15:00+00:00,8,Real Sociedad,Atletico Madrid,0,2,0,1,La Liga,Regular Season - 38,2.43,3.41,3.04,,,,,,,4,4,60,40,8,4,4-3-3,5-3-2,Imanol Alguacil,D. Simeone
+1038329,2024-05-26T19:00:00+00:00,8,Sevilla,Barcelona,1,2,1,1,La Liga,Regular Season - 38,4.21,4.22,1.8,,,,,,,6,6,39,61,6,5,3-4-2-1,4-3-3,Quique Sánchez Flores,Xavi
+1038330,2024-05-25T19:00:00+00:00,8,Real Madrid,Real Betis,0,0,0,0,La Liga,Regular Season - 38,1.27,6.69,9.34,,,,,1.57,2.42,5,3,59,41,4,5,4-3-1-2,4-4-1-1,C. Ancelotti,M. Pellegrini
+1038331,2024-05-26T14:15:00+00:00,8,Las Palmas,Alaves,1,1,0,0,La Liga,Regular Season - 38,2.56,3.48,2.86,,,,,,,4,4,66,34,2,6,4-2-3-1,4-2-3-1,,Luis García
 1208494,2024-08-15T17:00:00+00:00,8,Athletic Club,Getafe,1,1,1,0,La Liga,Regular Season - 1,1.57,3.87,7.27,,,,,2.05,1.81,4,2,69,31,4,6,4-2-3-1,4-1-4-1,Ernesto Valverde,José Bordalás
 1208495,2024-08-15T19:30:00+00:00,8,Real Betis,Girona,1,1,1,0,La Liga,Regular Season - 1,2.48,3.43,3.0,,,,,,,4,2,39,61,4,4,4-2-3-1,4-3-3,M. Pellegrini,Míchel
 1208496,2024-08-18T19:30:00+00:00,8,Mallorca,Real Madrid,1,1,0,1,La Liga,Regular Season - 1,10.32,4.94,1.36,,,1.9,1.95,,,5,5,34,66,8,7,4-3-3,4-3-3,Arrasate,C. Ancelotti

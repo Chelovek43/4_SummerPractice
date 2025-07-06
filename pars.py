@@ -18,8 +18,8 @@ BASE_URL = "https://api.sstats.net"
 START_ID = 1208501 
 END_ID = 1208835
 """
-START_ID = 1208781
-END_ID = 1208783
+START_ID = 720739
+END_ID = 721108
 
 
 def fetch_match_data(match_id):
@@ -118,13 +118,21 @@ def save_matches_range(start_id, end_id):
     """Сохранение диапазона матчей в один файл"""
     all_matches = []
     processed_count = 0
+    request_count = 0  # Счетчик запросов
     
     print(f"Начинаем обработку матчей с ID {start_id} по {end_id}")
     
     for match_id in range(start_id, end_id + 1):
         print(f"Обрабатываем матч ID: {match_id}", end='\r')
         
+        # Проверяем лимит запросов
+        if request_count >= 150:
+            print("\nДостигнут лимит 150 запросов. Ожидаем 62 секунды...")
+            time.sleep(62)  # Ждем чуть больше минуты для надежности
+            request_count = 0  # Сбрасываем счетчик
+            
         match_json = fetch_match_data(match_id)
+        request_count += 1  # Увеличиваем счетчик после каждого запроса
         match_data = process_match_data(match_json)
         
         if match_data:
@@ -157,5 +165,5 @@ def save_matches_range(start_id, end_id):
 '''
 if __name__ == "__main__":
     save_matches_range(START_ID, END_ID)
-'''
- 
+
+ '''
