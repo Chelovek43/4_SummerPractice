@@ -39,17 +39,17 @@ class FootballMatchPredictor:
         Args:
             data_path (str): Путь к файлу с данными о матчах
         """
-        self.df = self._load_and_prepare_data(data_path)
-        self.home_model, self.away_model, self.features = self._train_poisson_models()
+        self.df = self.load_and_prepare_data(data_path)
+        self.home_model, self.away_model, self.features = self.train_poisson_models()
         
         # Инициализация Random Forest моделей
         self.rf_features = [
             "HomeForm", "AwayForm", "HomeAttack", "AwayDefense",
             "HeadToHeadWinRate", "HomeLast3Goals", "AwayLast3Conceded"
         ]
-        self.base_model, self.close_model = self._train_random_forest_models()
+        self.base_model, self.close_model = self.train_random_forest_models()
     
-    def _load_and_prepare_data(self, data_path):
+    def load_and_prepare_data(self, data_path):
         """
         Загрузка и подготовка данных.
         
@@ -88,7 +88,7 @@ class FootballMatchPredictor:
         df['AwayLast3Conceded'] = df.groupby('AwayTeam')['FTHG'].rolling(3).mean().reset_index(level=0, drop=True)
         
         # История личных встреч
-        df = self._calculate_head_to_head(df)
+        df = self.calculate_head_to_head(df)
         
         # Заполнение пропусков
         for col in ['HomeAttack', 'AwayDefense', 'HomeLast3Goals', 'AwayLast3Conceded']:
@@ -96,7 +96,7 @@ class FootballMatchPredictor:
             
         return df
     
-    def _calculate_head_to_head(self, df):
+    def calculate_head_to_head(self, df):
         """
         Расчет истории личных встреч между командами.
         
@@ -133,7 +133,7 @@ class FootballMatchPredictor:
         
         return df
     
-    def _train_random_forest_models(self):
+    def train_random_forest_models(self):
         """
         Обучение моделей Random Forest с выводом метрик.
         
@@ -212,9 +212,7 @@ class FootballMatchPredictor:
         return base_model, close_model
     
     def predict_with_rf(self, home_team, away_team):
-        print(f"\n=== Debug RF Predict ===")
-        print("Model classes:", self.base_model.classes_)
-        print("Class weights:", self.base_model.class_weight)
+
         """Прогноз с использованием комбинированной модели Random Forest"""
         try:
             # Получаем последние данные команд с проверкой на существование
@@ -235,7 +233,7 @@ class FootballMatchPredictor:
                 'AwayForm': away_data['AwayForm'],
                 'HomeAttack': home_data['HomeAttack'],
                 'AwayDefense': away_data['AwayDefense'],
-                'HeadToHeadWinRate': self._calculate_h2h_win_rate(home_team, away_team),
+                'HeadToHeadWinRate': self.calculate_h2h_win_rate(home_team, away_team),
                 'HomeLast3Goals': home_data['HomeLast3Goals'],
                 'AwayLast3Conceded': away_data['AwayLast3Conceded']
             }])
@@ -253,9 +251,6 @@ class FootballMatchPredictor:
             probabilities = model.predict_proba(match_features[self.rf_features])[0]
             outcome = model.predict(match_features[self.rf_features])[0]
 
-            print("Raw probabilities:", probabilities)
-            print("Is close match:", is_close_match)
-
             return {
                 'predicted_outcome': outcome,
                 'probabilities': {
@@ -271,7 +266,7 @@ class FootballMatchPredictor:
             print(f"Ошибка в predict_with_rf: {str(e)}")
             raise
     
-    def _calculate_h2h_win_rate(self, home_team, away_team):
+    def calculate_h2h_win_rate(self, home_team, away_team):
         """
         Расчет коэффициента побед домашней команды в личных встречах.
         
@@ -302,7 +297,7 @@ class FootballMatchPredictor:
 
         return np.mean(win_rates)
     
-    def _train_poisson_models(self):
+    def train_poisson_models(self):
         """
         Обучение моделей Пуассона для голов домашней и гостевой команд.
         
@@ -363,7 +358,7 @@ class FootballMatchPredictor:
             home_goals, away_goals)
         
         # Моделирование вероятных счетов
-        likely_scores = self._simulate_scores(home_goals, away_goals, n_simulations)
+        likely_scores = self.simulate_scores(home_goals, away_goals, n_simulations)
         
         return {
             'teams': {
@@ -404,7 +399,7 @@ class FootballMatchPredictor:
         
         return home_win_prob, draw_prob, away_win_prob
     
-    def _simulate_scores(self, home_exp, away_exp, n=10000):
+    def simulate_scores(self, home_exp, away_exp, n=10000):
         """
         Моделирование вероятных счетов методом Монте-Карло.
         
@@ -432,5 +427,7 @@ class FootballMatchPredictor:
         home_teams = sorted(self.df['HomeTeam'].unique().tolist())
         away_teams = sorted(self.df['AwayTeam'].unique().tolist())
         return home_teams, away_teams
+    
+    
 
 
