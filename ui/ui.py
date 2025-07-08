@@ -8,6 +8,7 @@ from PyQt6.QtGui import QDoubleValidator
 
 from core.predicrtor import FootballMatchPredictor
 from core.odds_predicror import OddsMatchPredictor
+from ui.graphics_and_statictic import StatsGraphManager
 
 
 class FootballPredictorApp(QMainWindow):
@@ -30,45 +31,59 @@ class FootballPredictorApp(QMainWindow):
 
     def init_ui(self):
         """Инициализация пользовательского интерфейса"""
+        # Центральный виджет
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         
+        # Главный layout (теперь для всего окна)
         self.main_layout = QVBoxLayout(central_widget)
+        
+        # Добавляем заголовок 
         self.setup_title()
+        
+        # Создаем виджет вкладок
+        self.tabs = QTabWidget()
+        self.main_layout.addWidget(self.tabs)
+        
+        # Вкладка 1: Прогноз 
+        self.tab_predict = QWidget()
+        self.tabs.addTab(self.tab_predict, "Прогноз")
+        
+        # Создаем отдельный layout для вкладки прогноза
+        self.predict_layout = QVBoxLayout(self.tab_predict)
+        
         self.setup_mode_switch()
         self.setup_odds_inputs()
         self.setup_team_selection()
         self.setup_predict_button()
         self.setup_result_display()
         self.load_teams()
-
-
-        
-        # Создаем вкладки
-        self.tabs = QTabWidget()
-        self.main_layout.addWidget(self.tabs)
-        
-        # Вкладка 1: Прогноз
-        tab1 = QWidget()
-        self.tabs.addTab(tab1, "Прогноз")
-        layout1 = QVBoxLayout(tab1)
-        self.label1 = QLabel("Здесь будет форма прогноза")
-        layout1.addWidget(self.label1)
         
         # Вкладка 2: Статистика
-        tab2 = QWidget()
-        self.tabs.addTab(tab2, "Статистика")
-        layout2 = QVBoxLayout(tab2)
-        self.label2 = QLabel("Здесь будет статистика команд")
-        layout2.addWidget(self.label2)
-        
+        self.tab_stats = StatsGraphManager(self)
+        self.tabs.addTab(self.tab_stats, "Статистика")
+
         # Вкладка 3: Графики
-        tab3 = QWidget()
-        self.tabs.addTab(tab3, "Графики")
-        layout3 = QVBoxLayout(tab3)
-        self.label3 = QLabel("Здесь будут графики анализа")
-        layout3.addWidget(self.label3)
+        self.tab_graphs = StatsGraphManager(self)
+        self.tabs.addTab(self.tab_graphs, "Графики")
+
         
+        # Подключаем обработчик смены вкладок
+        self.tabs.currentChanged.connect(self.on_tab_changed)
+        
+        # Загрузка данных
+        self.load_teams()
+        
+    def on_tab_changed(self, index):
+        """Обработчик переключения вкладок"""
+        print(f"Переключено на вкладку {index + 1}")
+
+        if index == 0:  # Прогноз
+            pass
+        elif index == 1:  # Статистика
+            self.tab_stats.show_stats()
+        elif index == 2:  # Графики
+            self.tab_graphs.show_graphs()
 
 
     def setup_title(self):
@@ -95,7 +110,7 @@ class FootballPredictorApp(QMainWindow):
         self.data_mode_combo.currentIndexChanged.connect(self.switch_data_mode)
         
         layout.addWidget(self.data_mode_combo)
-        self.main_layout.addLayout(layout)
+        self.predict_layout.addLayout(layout)
 
     def setup_odds_inputs(self):
         """Настройка полей ввода коэффициентов"""
@@ -110,7 +125,7 @@ class FootballPredictorApp(QMainWindow):
             self.odds_layout.addWidget(widget)
             widget.hide()
             
-        self.main_layout.addLayout(self.odds_layout)
+        self.predict_layout.addLayout(self.odds_layout)
 
     def create_odds_input(self, label):
         """Создание поля ввода коэффициента"""
@@ -126,15 +141,34 @@ class FootballPredictorApp(QMainWindow):
         return widget
 
     def setup_team_selection(self):
-        """Настройка выбора команд"""
+        """Настройка выбора команд (исправленная версия)"""
         layout = QHBoxLayout()
         
-        self.home_combo = self.create_team_combo("Домашняя команда:")
-        self.away_combo = self.create_team_combo("Гостевая команда:")
+        # Создаем комбобоксы напрямую (без create_team_combo)
+        self.home_combo = QComboBox()
+        self.away_combo = QComboBox()
         
-        layout.addLayout(self.home_combo)
-        layout.addLayout(self.away_combo)
-        self.main_layout.addLayout(layout)
+        # Добавляем подписи
+        home_label = QLabel("Домашняя команда:")
+        away_label = QLabel("Гостевая команда:")
+        
+        # Группируем в вертикальные layout
+        home_layout = QVBoxLayout()
+        home_layout.addWidget(home_label)
+        home_layout.addWidget(self.home_combo)
+        
+        away_layout = QVBoxLayout()
+        away_layout.addWidget(away_label)
+        away_layout.addWidget(self.away_combo)
+        
+        # Добавляем в основной layout
+        layout.addLayout(home_layout)
+        layout.addLayout(away_layout)
+        self.predict_layout.addLayout(layout)
+        
+        # Подключаем сигналы синхронизации
+        self.home_combo.currentTextChanged.connect(self.sync_team_selection)
+        self.away_combo.currentTextChanged.connect(self.sync_team_selection)
 
     def create_team_combo(self, label):
         """Создание выпадающего списка команд"""
@@ -142,9 +176,31 @@ class FootballPredictorApp(QMainWindow):
         layout.addWidget(QLabel(label))
         
         combo = QComboBox()
+        combo.addItems(["Команда 1", "Команда 2", "Команда 3"])  # Заглушка
         layout.addWidget(combo)
         
         return layout
+    
+    def sync_team_selection(self):
+        """Синхронизация выбора команд между вкладками"""
+        try:
+            # Получаем текущие выбранные команды
+            home_team = self.home_combo.currentText()
+            away_team = self.away_combo.currentText()
+            
+            # Убедимся, что вкладки инициализированы
+            if hasattr(self, 'tab_stats') and hasattr(self.tab_stats, 'home_combo'):
+                # Устанавливаем в статистике
+                self.tab_stats.home_combo.setCurrentText(home_team)
+                self.tab_stats.away_combo.setCurrentText(away_team)
+            
+            if hasattr(self, 'tab_graphs') and hasattr(self.tab_graphs, 'home_combo'):
+                # Устанавливаем в графиках
+                self.tab_graphs.home_combo.setCurrentText(home_team)
+                self.tab_graphs.away_combo.setCurrentText(away_team)
+                
+        except Exception as e:
+            print(f"Ошибка синхронизации: {e}")
 
     def setup_predict_button(self):
         """Настройка кнопки прогноза"""
@@ -161,29 +217,41 @@ class FootballPredictorApp(QMainWindow):
                 background-color: #45a049;
             }
         """)
-        self.main_layout.addWidget(self.predict_btn)
+        self.predict_layout.addWidget(self.predict_btn)
 
     def setup_result_display(self):
         """Настройка области результатов"""
         self.result_display = QTextEdit()
         self.result_display.setReadOnly(True)
         self.result_display.setStyleSheet("font-family: monospace;")
-        self.main_layout.addWidget(self.result_display)
+        self.predict_layout.addWidget(self.result_display)
 
     def load_teams(self):
-        """Загрузка списков команд"""
-        home_teams, away_teams = self.predictor.get_team_list()
-        
-        self.home_combo.itemAt(1).widget().clear()
-        self.away_combo.itemAt(1).widget().clear()
-        
-        self.home_combo.itemAt(1).widget().addItems(home_teams)
-        self.away_combo.itemAt(1).widget().addItems(away_teams)
-        
-        if home_teams:
-            self.home_combo.itemAt(1).widget().setCurrentIndex(0)
-        if away_teams:
-            self.away_combo.itemAt(1).widget().setCurrentIndex(0 if len(away_teams) == 1 else 1)
+        """Загрузка списков команд (исправленная версия)"""
+        try:
+            home_teams, away_teams = self.predictor.get_team_list()
+            
+            # Очищаем комбобоксы напрямую
+            self.home_combo.clear()
+            self.away_combo.clear()
+            
+            # Добавляем новые элементы
+            self.home_combo.addItems(home_teams)
+            self.away_combo.addItems(away_teams)
+            
+            # Устанавливаем разумные значения по умолчанию
+            if home_teams:
+                self.home_combo.setCurrentIndex(0)
+            if away_teams:
+                self.away_combo.setCurrentIndex(0 if len(away_teams) == 1 else 1)
+                
+            # Синхронизируем с другими вкладками
+            self.sync_team_selection()
+            
+        except Exception as e:
+            print(f"Ошибка загрузки команд: {e}")
+            # Можно добавить вывод ошибки в интерфейс
+            self.result_display.setText(f"Ошибка загрузки данных: {e}")
 
     def switch_data_mode(self, index):
         """Переключение между режимами ввода данных"""
@@ -209,8 +277,8 @@ class FootballPredictorApp(QMainWindow):
 
     def predict_by_teams(self):
         """Прогноз по командам"""
-        home_team = self.home_combo.itemAt(1).widget().currentText()
-        away_team = self.away_combo.itemAt(1).widget().currentText()
+        home_team = self.home_combo.currentText()
+        away_team = self.away_combo.currentText()
         
         if home_team == away_team:
             QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
@@ -330,3 +398,5 @@ class FootballPredictorApp(QMainWindow):
         ]
         
         self.result_display.setPlainText("\n".join(text))
+
+        
