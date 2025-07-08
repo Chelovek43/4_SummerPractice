@@ -354,7 +354,7 @@ class FootballMatchPredictor:
         away_goals = self.away_model.predict(match_features[self.features])[0]
         
         # Расчет вероятностей исходов
-        home_win_prob, draw_prob, away_win_prob = self._calculate_outcome_probabilities(
+        home_win_prob, draw_prob, away_win_prob = self.calculate_outcome_probabilities(
             home_goals, away_goals)
         
         # Моделирование вероятных счетов
@@ -377,7 +377,7 @@ class FootballMatchPredictor:
             'likely_scores': likely_scores
         }
     
-    def _calculate_outcome_probabilities(self, home_exp, away_exp, max_goals=10):
+    def calculate_outcome_probabilities(self, home_exp, away_exp, max_goals=10):
         """
         Расчет вероятностей исходов матча.
         
