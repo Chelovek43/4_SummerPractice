@@ -14,9 +14,16 @@ from stats.statistics import StatisticsManager
 class FootballPredictorApp(QMainWindow):
     def __init__(self):
         super().__init__()
+
+        self.tab_analytics = None
+        self.tab_graphs = None
+        self.stats_manager = StatisticsManager()
+        self.stats_manager.load_data("football.csv")
         self.setup_predictors()
         self.init_ui()
+        
         self.setup_window()
+        
         
     def setup_predictors(self):
         """Инициализация моделей предсказания"""
@@ -59,41 +66,42 @@ class FootballPredictorApp(QMainWindow):
         self.setup_result_display()
         self.load_teams()
         
-        # Вкладка Аналитика
-        self.tab_analytics = StatsGraphManager(self)
+        self.tab_analytics = StatsGraphManager(
+            self.stats_manager, 
+            self,
+            show_team_select=True
+        )
         self.tabs.addTab(self.tab_analytics, "Аналитика")
+        self.tab_analytics.show_stats()  # Показываем статистику по умолчанию
         
-        # Синхронизация при старте
-        if hasattr(self, 'home_combo'):
-            home = self.home_combo.currentText()
-            away = self.away_combo.currentText()
-            self.tab_analytics.update_stats(home, away)
-
-        # Вкладка 3: Графики
-        self.tab_graphs = StatsGraphManager(self)
+        # Вкладка Графики (тоже с выбором команд)
+        self.tab_graphs = StatsGraphManager(
+            self.stats_manager,
+            self,
+            show_team_select=True
+        )
         self.tabs.addTab(self.tab_graphs, "Графики")
+        self.tab_graphs.show_graphs()  # Показываем графики по умолчанию
 
         
         # Подключаем обработчик смены вкладок
         self.tabs.currentChanged.connect(self.on_tab_changed)
-        
-        # Загрузка данных
-        self.load_teams()
-        
+
+
     def on_tab_changed(self, index):
         """Обработчик переключения вкладок"""
         print(f"Переключено на вкладку {index + 1}")
 
         if index == 0:  # Прогноз
             pass
-        elif index == 1:  # Вкладка Аналитика
-            if hasattr(self, 'tab_analytics'):
-                home = self.home_combo.currentText()
-                away = self.away_combo.currentText()
-                self.tab_analytics.update_stats(home, away)
-                self.tab_analytics.show_stats()  # Показываем статистику по умолчанию
+        elif index == 1:  # Аналитика
+            home = self.home_combo.currentText()
+            away = self.away_combo.currentText()
+            self.tab_analytics.update_stats(home, away)
         elif index == 2:  # Графики
-            self.tab_graphs.show_graphs()
+            home = self.home_combo.currentText()
+            away = self.away_combo.currentText()
+            self.tab_graphs.update_stats(home, away)
 
 
     def setup_title(self):
@@ -189,10 +197,10 @@ class FootballPredictorApp(QMainWindow):
             away_team (str, optional): Если None - берёт из текущего комбобокса
         """
         try:
-            # Обновляем главные комбобоксы
-            if home_team is not None:
+            # Обновляем комбобоксы
+            if home_team:
                 self.home_combo.setCurrentText(home_team)
-            if away_team is not None:
+            if away_team:
                 self.away_combo.setCurrentText(away_team)
             
             # Получаем актуальные значения
@@ -200,7 +208,7 @@ class FootballPredictorApp(QMainWindow):
             current_away = away_team if away_team else self.away_combo.currentText()
             
             # Синхронизируем все вкладки
-            for tab in [getattr(self, name, None) for name in ['tab_stats', 'tab_graphs', 'tab_analytics']]:
+            for tab in [self.tab_analytics, self.tab_graphs]:
                 if tab and hasattr(tab, 'home_combo'):
                     tab.home_combo.blockSignals(True)
                     tab.home_combo.setCurrentText(current_home)
@@ -210,11 +218,13 @@ class FootballPredictorApp(QMainWindow):
                     tab.away_combo.blockSignals(True)
                     tab.away_combo.setCurrentText(current_away)
                     tab.away_combo.blockSignals(False)
-            
-            # Обновляем статистику
-            if hasattr(self, 'tab_analytics'):
-                self.tab_analytics.update_stats(current_home, current_away)
                 
+                # Обновляем данные
+                if tab == self.tab_analytics:
+                    tab.update_stats(current_home, current_away)
+                elif tab == self.tab_graphs:
+                    tab.update_stats(current_home, current_away)
+                        
         except Exception as e:
             print(f"Ошибка синхронизации: {e}")
 
@@ -243,41 +253,32 @@ class FootballPredictorApp(QMainWindow):
         self.predict_layout.addWidget(self.result_display)
 
     def load_teams(self):
-        """Загрузка списков команд с корректной установкой значений по умолчанию"""
-        try:
-            home_teams, away_teams = self.predictor.get_team_list()
-            
-            # Блокируем сигналы на время обновления
-            self.home_combo.blockSignals(True)
-            self.away_combo.blockSignals(True)
-            
-            # Очищаем и заполняем
-            self.home_combo.clear()
-            self.away_combo.clear()
-            self.home_combo.addItems(home_teams)
-            self.away_combo.addItems(away_teams)
-            
-            # Устанавливаем значения по умолчанию
-            if home_teams:
-                self.home_combo.setCurrentIndex(0)
-            if away_teams:
-                # Всегда первую команду, если не одна
-                self.away_combo.setCurrentIndex(min(1, len(away_teams)-1))
-            
-            # Разблокируем сигналы
-            self.home_combo.blockSignals(False)
-            self.away_combo.blockSignals(False)
-            
-            # Синхронизируем с другими вкладками
-            self.sync_team_selection(
-                home_team=self.home_combo.currentText(),
-                away_team=self.away_combo.currentText()
-            )
-            
-        except Exception as e:
-            print(f"Ошибка загрузки команд: {e}")
-            self.result_display.setText(f"Ошибка загрузки данных: {e}")
-
+        """Загружает команды во все компоненты"""
+        home_teams, away_teams = self.predictor.get_team_list()
+        
+        # Основные комбобоксы
+        self.home_combo.clear()
+        self.away_combo.clear()
+        self.home_combo.addItems(home_teams)
+        self.away_combo.addItems(away_teams)
+        
+        # Синхронизация аналитики
+        if hasattr(self, 'tab_analytics'):
+            if hasattr(self.tab_analytics, 'home_combo'):
+                self.tab_analytics.home_combo.clear()
+                self.tab_analytics.home_combo.addItems(home_teams)
+                
+            if hasattr(self.tab_analytics, 'away_combo'):
+                self.tab_analytics.away_combo.clear()
+                self.tab_analytics.away_combo.addItems(away_teams)
+        
+        # Установка начальных значений
+        if home_teams:
+            self.home_combo.setCurrentIndex(0)
+        if away_teams:
+            self.away_combo.setCurrentIndex(0 if len(away_teams) == 1 else 1)
+        
+        
     def switch_data_mode(self, index):
         """Переключение между режимами ввода данных"""
         is_odds_mode = (index == 1)

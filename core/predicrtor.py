@@ -96,42 +96,7 @@ class FootballMatchPredictor:
             
         return df
     
-    def calculate_head_to_head(self, df):
-        """
-        Расчет истории личных встреч между командами.
-        
-        Args:
-            df (pd.DataFrame): Исходный DataFrame
-            
-        Returns:
-            pd.DataFrame: DataFrame с добавленным столбцом HeadToHeadWinRate
-        """
-        df['HeadToHeadWinRate'] = 0.5  # Значение по умолчанию
-        
-        for i, row in df.iterrows():
-            home_team = row['HomeTeam']
-            away_team = row['AwayTeam']
-            
-            # Все предыдущие матчи между этими командами в два отдельных шага
-            prev_matches = df.iloc[:i]  # Сначала берем срез по индексу
-            prev_matches = prev_matches[
-                (prev_matches['HomeTeam'] == home_team) & (prev_matches['AwayTeam'] == away_team) |
-                (prev_matches['HomeTeam'] == away_team) & (prev_matches['AwayTeam'] == home_team)
-            ]
-            
-            if len(prev_matches) > 0:
-                win_rates = []
-                for _, match in prev_matches.iterrows():
-                    if match['HomeTeam'] == home_team:
-                        # Домашняя команда дома: H=победа, D=ничья, A=поражение
-                        win_rates.append(1 if match['FTR'] == 'H' else (0.5 if match['FTR'] == 'D' else 0))
-                    else:
-                        # Домашняя команда в гостях: A=победа, D=ничья, H=поражение
-                        win_rates.append(1 if match['FTR'] == 'A' else (0.5 if match['FTR'] == 'D' else 0))
-                
-                df.at[i, 'HeadToHeadWinRate'] = np.mean(win_rates)
-        
-        return df
+    
     
     def train_random_forest_models(self):
         """
@@ -233,7 +198,7 @@ class FootballMatchPredictor:
                 'AwayForm': away_data['AwayForm'],
                 'HomeAttack': home_data['HomeAttack'],
                 'AwayDefense': away_data['AwayDefense'],
-                'HeadToHeadWinRate': self.calculate_h2h_win_rate(home_team, away_team),
+                'HeadToHeadWinRate': self.calculate_head_to_head(self.df, home_team, away_team),
                 'HomeLast3Goals': home_data['HomeLast3Goals'],
                 'AwayLast3Conceded': away_data['AwayLast3Conceded']
             }])
@@ -266,36 +231,49 @@ class FootballMatchPredictor:
             print(f"Ошибка в predict_with_rf: {str(e)}")
             raise
     
-    def calculate_h2h_win_rate(self, home_team, away_team):
+    def calculate_head_to_head(self, df, home_team=None, away_team=None):
         """
-        Расчет коэффициента побед домашней команды в личных встречах.
+        Универсальный расчет статистики личных встреч.
         
         Args:
-            home_team (str): Название домашней команды
-            away_team (str): Название гостевой команды
+            df (pd.DataFrame): Исходный DataFrame
+            home_team (str, optional): Если None - обрабатывает весь DataFrame
+            away_team (str, optional): Если None - обрабатывает весь DataFrame
             
         Returns:
-            float: Коэффициент побед (0-1)
+            pd.DataFrame или float: В зависимости от режима вызова
         """
-        # Все матчи между командами (в любом порядке)
-        h2h_matches = self.df[
-            ((self.df['HomeTeam'] == home_team) & (self.df['AwayTeam'] == away_team)) |
-            ((self.df['HomeTeam'] == away_team) & (self.df['AwayTeam'] == home_team))
-        ]
-
-        if len(h2h_matches) == 0:
-            return 0.5  # Если нет истории
-
-        win_rates = []
-        for _, row in h2h_matches.iterrows():
-            if row['HomeTeam'] == home_team:
-                # Домашняя команда дома: H=победа, D=ничья, A=поражение
-                win_rates.append(1 if row['FTR'] == 'H' else (0.5 if row['FTR'] == 'D' else 0))
-            else:
-                # Домашняя команда в гостях: A=победа, D=ничья, H=поражение
-                win_rates.append(1 if row['FTR'] == 'A' else (0.5 if row['FTR'] == 'D' else 0))
-
-        return np.mean(win_rates)
+        # Режим расчета для конкретной пары команд
+        if home_team is not None and away_team is not None:
+            h2h_matches = df[
+                ((df['HomeTeam'] == home_team) & (df['AwayTeam'] == away_team)) |
+                ((df['HomeTeam'] == away_team) & (df['AwayTeam'] == home_team))
+            ]
+            
+            if len(h2h_matches) == 0:
+                return 0.5
+                
+            win_rates = []
+            for _, row in h2h_matches.iterrows():
+                if row['HomeTeam'] == home_team:
+                    win_rates.append(1 if row['FTR'] == 'H' else (0.5 if row['FTR'] == 'D' else 0))
+                else:
+                    win_rates.append(1 if row['FTR'] == 'A' else (0.5 if row['FTR'] == 'D' else 0))
+            
+            return np.mean(win_rates)
+        
+        # Режим обработки всего DataFrame
+        else:
+            df['HeadToHeadWinRate'] = 0.5
+            for i, row in df.iterrows():
+                home = row['HomeTeam']
+                away = row['AwayTeam']
+                
+                prev_matches = df.iloc[:i]
+                win_rate = self.calculate_head_to_head(prev_matches, home, away)
+                df.at[i, 'HeadToHeadWinRate'] = win_rate
+                
+            return df
     
     def train_poisson_models(self):
         """
