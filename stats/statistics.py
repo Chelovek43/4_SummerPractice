@@ -1,137 +1,79 @@
+import pandas as pd
+
 from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QLabel
 from PyQt6.QtCore import Qt
 
-class StatisticsManager(QWidget):
-    '''
-    def __init__(self, parent=None):
-        super().__init__(parent)
-        self.init_ui()
-        
-    def init_ui(self):
-        # Основной layout
-        main_layout = QVBoxLayout(self)
-        
-        # Заголовок
-        title = QLabel("Статистика команд")
-        title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        title.setStyleSheet("font-weight: bold;")
-        main_layout.addWidget(title)
-        
-        # Двухколоночный layout
-        columns = QHBoxLayout()
-        
-        # Левая колонка (Команда 1)
-        left_column = QVBoxLayout()
-        left_column.addWidget(QLabel("Команда 1"))
-        self.team1_stats = QTextEdit()
-        self.team1_stats.setReadOnly(True)
-        left_column.addWidget(self.team1_stats)
-        
-        # Правая колонка (Команда 2)
-        right_column = QVBoxLayout()
-        right_column.addWidget(QLabel("Команда 2"))
-        self.team2_stats = QTextEdit()
-        self.team2_stats.setReadOnly(True)
-        right_column.addWidget(self.team2_stats)
-        
-        columns.addLayout(left_column)
-        columns.addLayout(right_column)
-        main_layout.addLayout(columns)
-        
-        # Тестовые данные
-        self.update_stats("Команда 1", "Команда 2")
+from core.predicrtor import FootballMatchPredictor
 
-    def update_stats(self, team1, team2):
-        """Обновляет статистику для обеих команд"""
-        self.team1_stats.setPlainText(
-            f"Матчи: 100\n"
-            f"Победы: 5 (50%)\n"
-            f"Форма: 1.75"
-        )
-        self.team2_stats.setPlainText(
-            f"Матчи: 120\n"
-            f"Победы: 6 (50%)\n"
-            f"Форма: 1.80"
-        )
-    
-    def update_stats(self, home_team, away_team):
-        """Обновляет статистику для указанных команд"""
-        if not self.predictor or not hasattr(self.predictor, 'df'):
+class StatisticsManager:
+    def __init__(self, df=None):
+        """
+        Args:
+            df (pd.DataFrame): Опционально - готовый DataFrame с данными
+        """
+        self.df = df
+        
+    def load_data(self, data_path):
+        """Загрузка данных из CSV файла"""
+        self.df = pd.read_csv(data_path)
+        self._preprocess_data()
+        
+    def _preprocess_data(self):
+        """Базовая подготовка данных"""
+        if self.df is None:
             return
             
-        df = self.predictor.df
+        # Создаем числовые колонки для результатов
+        self.df['HomeWin'] = (self.df['FTR'] == 'H').astype(int)
+        self.df['AwayWin'] = (self.df['FTR'] == 'A').astype(int)
+        self.df['Draw'] = (self.df['FTR'] == 'D').astype(int)
         
-        try:
-            # Статистика домашней команды
-            home_games = df[df['HomeTeam'] == home_team]
-            away_as_home = df[df['AwayTeam'] == home_team]
-            
-            home_team_stats = (
-                f"Статистика для {home_team}:\n"
-                f"Всего матчей: {len(home_games) + len(away_as_home)}\n"
-                f"Домашние победы: {len(home_games[home_games['FTR'] == 'H'])}\n"
-                f"Гостевые победы: {len(away_as_home[away_as_home['FTR'] == 'A'])}\n"
-                f"Средняя форма: {home_games['HomeForm'].mean():.2f}"
-            )
-            
-            # Статистика гостевой команды
-            away_games = df[df['AwayTeam'] == away_team]
-            home_as_away = df[df['HomeTeam'] == away_team]
-            
-            away_team_stats = (
-                f"Статистика для {away_team}:\n"
-                f"Всего матчей: {len(away_games) + len(home_as_away)}\n"
-                f"Домашние победы: {len(home_as_away[home_as_away['FTR'] == 'H'])}\n"
-                f"Гостевые победы: {len(away_games[away_games['FTR'] == 'A'])}\n"
-                f"Средняя форма: {away_games['AwayForm'].mean():.2f}"
-            )
-            
-            # Обновляем отображение
-            self.home_stats.setPlainText(home_team_stats)
-            self.away_stats.setPlainText(away_team_stats)
-            
-        except Exception as e:
-            error_msg = f"Ошибка при загрузке статистики: {str(e)}"
-            self.home_stats.setPlainText(error_msg)
-            self.away_stats.setPlainText(error_msg)
-        
-    def show_team_stats(self, home_team: str, away_team: str):
-        """Показывает статистику для обеих команд"""
-        try:
-            df = self.predictor.df
-            
-            # Статистика домашней команды
-            home_stats = self._get_stats(df, home_team, is_home=True)
-            
-            # Статистика гостевой команды
-            away_stats = self._get_stats(df, away_team, is_home=False)
-            
-            # Формируем итоговый текст
-            stats_text = (
-                f"=== {home_team} ===\n{home_stats}\n\n"
-                f"=== {away_team} ===\n{away_stats}"
-            )
-            
-            self.display.setPlainText(stats_text)
-        except Exception as e:
-            self.display.setText(f"Ошибка: {str(e)}")
+        # Форма команды (последние 5 матчей)
+        self.df['HomeForm'] = self.df.groupby('HomeTeam')['HomeWin'].transform(
+            lambda x: x.rolling(5, min_periods=1).mean())
+        self.df['AwayForm'] = self.df.groupby('AwayTeam')['AwayWin'].transform(
+            lambda x: x.rolling(5, min_periods=1).mean())
 
-    def _get_stats(self, df, team, is_home):
-        """Возвращает статистику для одной команды"""
-        if is_home:
-            games = df[df['HomeTeam'] == team]
-            wins = len(games[games['FTR'] == 'H'])
-            form = games['HomeForm'].mean()
-        else:
-            games = df[df['AwayTeam'] == team]
-            wins = len(games[games['FTR'] == 'A'])
-            form = games['AwayForm'].mean()
+    def get_team_stats(self, team_name, period='all', opponent=None):
+        print(f"\nGetting stats for {team_name}, period: {period}, opponent: {opponent}")
+    
+        if self.df is None:
+            raise ValueError("Данные не загружены")
         
-        total = len(df[df['HomeTeam'] == team]) + len(df[df['AwayTeam'] == team])
+        df_filtered = self.df.copy()
         
-        return (
-            f"Всего матчей: {total}\n"
-            f"Побед: {wins}\n"
-            f"Средняя форма: {form:.2f}"
-        )
-    '''
+        # Фильтрация по периоду
+        if period == 'h2h' and opponent:
+            print("Filtering head-to-head matches")
+            df_filtered = df_filtered[
+                ((df_filtered['HomeTeam'] == team_name) & (df_filtered['AwayTeam'] == opponent)) |
+                ((df_filtered['HomeTeam'] == opponent) & (df_filtered['AwayTeam'] == team_name))
+            ]
+        elif period.isdigit():
+            print(f"Filtering last {period} matches")
+            n = int(period)
+            home_matches = df_filtered[df_filtered['HomeTeam'] == team_name].tail(n)
+            away_matches = df_filtered[df_filtered['AwayTeam'] == team_name].tail(n)
+            df_filtered = pd.concat([home_matches, away_matches]).sort_index().tail(n)
+        
+        print(f"Found {len(df_filtered)} matches after filtering")
+        
+        # Расчет статистики
+        home_matches = df_filtered[df_filtered['HomeTeam'] == team_name]
+        away_matches = df_filtered[df_filtered['AwayTeam'] == team_name]
+        
+        print(f"Home matches: {len(home_matches)}, Away matches: {len(away_matches)}")
+        
+        total_matches = len(home_matches) + len(away_matches)
+        wins = home_matches['HomeWin'].sum() + away_matches['AwayWin'].sum()
+        draws = home_matches['Draw'].sum() + away_matches['Draw'].sum()
+        
+        return {
+            'matches': total_matches,
+            'wins': wins,
+            'win_rate': round((wins + 0.5 * draws) / total_matches * 100, 2) if total_matches > 0 else 0,
+            'form': round((
+                home_matches['HomeForm'].mean() if not home_matches.empty else 0 + 
+                away_matches['AwayForm'].mean() if not away_matches.empty else 0
+            ) / 2, 2)
+        }

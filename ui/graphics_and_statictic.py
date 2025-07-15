@@ -3,79 +3,135 @@ from PyQt6.QtCore import Qt
 from stats.statistics import StatisticsManager
 
 class StatsGraphManager(QWidget):
-    def __init__(self, parent=None):
+    def __init__(self, stats_manager, parent=None, show_team_select=True):
         super().__init__(parent)
         self.parent = parent
+        self.stats_manager = stats_manager
+        self.show_team_select = show_team_select  # Флаг для отображения выбора команд
+        self.current_period = 'all'  # текущий выбранный период
         self.init_ui()
         
     def init_ui(self):
         self.layout = QVBoxLayout(self)
         
-        # Выбор команд 
-        self.setup_team_selection()
+        # Добавляем выбор команд только если нужно
+        if self.show_team_select:
+            self.setup_team_selection()
+        self.setup_period_selection()
+        self.setup_stats_display()
+        self.setup_graphs_display()
+
+    def setup_period_selection(self):
+        """Настройка выбора периода статистики"""
+        period_layout = QHBoxLayout()
         
-        # Заголовок статистики
+        period_label = QLabel("Период статистики:")
+        self.period_combo = QComboBox()
+        self.period_combo.addItem("Вся статистика", "all")
+        self.period_combo.addItem("Последние 5 матчей", "5")
+        self.period_combo.addItem("Последние 10 матчей", "10")
+        self.period_combo.addItem("Весь сезон (38 матчей)", "38")
+        self.period_combo.addItem("Только между этими командами", "h2h")
+        self.period_combo.currentIndexChanged.connect(self.on_period_changed)
+        
+        period_layout.addWidget(period_label)
+        period_layout.addWidget(self.period_combo)
+        period_layout.addStretch()  # Добавляем растягивающееся пространство
+        
+        self.layout.addLayout(period_layout)
+
+
+    def on_period_changed(self):
+        """Обработчик изменения выбранного периода статистики"""
+        self.current_period = self.period_combo.currentData()
+        self.refresh_stats() 
+
+    def setup_stats_display(self):
+        """Настройка отображения статистики"""
         self.stats_title = QLabel("Статистика команд")
         self.stats_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.stats_title.setStyleSheet("font-weight: bold;")
         self.layout.addWidget(self.stats_title)
         
-        # Двухколоночный контейнер для статистики
         self.stats_container = QHBoxLayout()
         self.layout.addLayout(self.stats_container)
         
-        # Колонка для Команды 1 (Домашняя)
+        # Колонки для команд
         self.team1_column = QVBoxLayout()
         self.team1_label = QLabel("Команда 1")
-        self.team1_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.team1_stats = QTextEdit()
         self.team1_stats.setReadOnly(True)
-        
         self.team1_column.addWidget(self.team1_label)
         self.team1_column.addWidget(self.team1_stats)
-        self.stats_container.addLayout(self.team1_column)
         
-        # Колонка для Команды 2 (Гостевая)
         self.team2_column = QVBoxLayout()
         self.team2_label = QLabel("Команда 2")
-        self.team2_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.team2_stats = QTextEdit()
         self.team2_stats.setReadOnly(True)
-        
         self.team2_column.addWidget(self.team2_label)
         self.team2_column.addWidget(self.team2_stats)
-        self.stats_container.addLayout(self.team2_column)
         
-        # Поле для графиков (изначально скрыто)
+        self.stats_container.addLayout(self.team1_column)
+        self.stats_container.addLayout(self.team2_column)
+
+    def setup_graphs_display(self):
+        """Настройка отображения графиков"""
         self.graphs_display = QTextEdit()
         self.graphs_display.setReadOnly(True)
         self.layout.addWidget(self.graphs_display)
         self.graphs_display.hide()
-        
-        # Показываем тестовые данные
-        self.show_test_stats()
-        
-    def show_test_stats(self):
-        """Показать тестовую статистику"""
-        self.team1_stats.setPlainText(
-            "Матчи: 10\n"
-            "Победы: 5 (50%)\n"
-            "Форма: 1.75"
-        )
-        self.team2_stats.setPlainText(
-            "Матчи: 12\n"
-            "Победы: 6 (50%)\n"
-            "Форма: 1.80"
-        )
 
     def update_stats(self, team1, team2):
-        """Обновить статистику для реальных команд"""
-        self.team1_label.setText(team1)
-        self.team2_label.setText(team2)
-        
-        # Здесь будет логика загрузки реальных данных
-        self.show_test_stats()  # Пока используем тестовые данные
+        """Обновление статистики с учетом выбранного периода"""
+        self.team1_name = team1
+        self.team2_name = team2
+        self.refresh_stats()
 
+    def refresh_stats(self):
+        """Обновление отображения статистики (использует текущие команды и период)"""
+        if not hasattr(self, 'team1_name') or not hasattr(self, 'team2_name'):
+            return
+        
+        print(f"\nRefreshing stats with period: {self.current_period}")
+        
+        stats1 = self.stats_manager.get_team_stats(
+            self.team1_name, 
+            period=str(self.current_period),  # убедитесь, что передается строка
+            opponent=self.team2_name if self.current_period == 'h2h' else None
+        )
+        
+        stats2 = self.stats_manager.get_team_stats(
+            self.team2_name,
+            period=str(self.current_period),
+            opponent=self.team1_name if self.current_period == 'h2h' else None
+        )
+        
+        print("Team 1 stats:", stats1)
+        print("Team 2 stats:", stats2)
+        
+        self.team1_stats.setPlainText(self.format_stats(stats1))
+        self.team2_stats.setPlainText(self.format_stats(stats2))
+
+    def format_stats(self, stats):
+        if not stats:
+            return "Статистика недоступна"
+        
+        try:
+            # Преобразуем numpy типы в стандартные Python типы
+            matches = int(stats.get('matches', 0))
+            wins = int(stats.get('wins', 0))
+            win_rate = float(stats.get('win_rate', 0))
+            form = float(stats.get('form', 0))
+            
+            return (
+                f"Матчи: {matches}\n"
+                f"Победы: {wins}\n"
+                f"Процент побед: {win_rate:.2f}%\n"
+                f"Форма: {form:.2f}"
+            )
+        except Exception as e:
+            return f"Ошибка форматирования статистики: {str(e)}"
+        
     def show_stats(self):
         """Показать статистику"""
         self.stats_title.show()
