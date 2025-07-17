@@ -60,6 +60,11 @@ class FootballMatchPredictor:
             pd.DataFrame: Подготовленный DataFrame
         """
         df = pd.read_csv(data_path)
+
+        # Создаем необходимые столбцы для результатов
+        df['HomeWin'] = (df['FTR'] == 'H').astype(int)  # 1 если домашняя победа
+        df['AwayWin'] = (df['FTR'] == 'A').astype(int)  # 1 если гостевая победа
+        df['Draw'] = (df['FTR'] == 'D').astype(int)     # 1 если ничья
         
         # Создаем временный числовой столбец для результатов
         df["FTR_numeric"] = df["FTR"].map({"H": 1, "D": 0.5, "A": 0})
@@ -406,6 +411,3 @@ class FootballMatchPredictor:
         away_teams = sorted(self.df['AwayTeam'].unique().tolist())
         return home_teams, away_teams
     
-    
-
-
