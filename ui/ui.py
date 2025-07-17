@@ -10,18 +10,24 @@ from core.predicrtor import FootballMatchPredictor
 from core.odds_predicror import OddsMatchPredictor
 from ui.graphics_and_statictic import StatsGraphManager
 from stats.statistics import StatisticsManager
+from stats.graphics import GraphsManager
 
 class FootballPredictorApp(QMainWindow):
     def __init__(self):
         super().__init__()
-
-        self.tab_analytics = None
-        self.tab_graphs = None
-        self.stats_manager = StatisticsManager()
-        self.stats_manager.load_data("football.csv")
-        self.setup_predictors()
-        self.init_ui()
+        # Сначала загружаем и подготавливаем данные через FootballMatchPredictor
+        self.predictor = FootballMatchPredictor("football.csv")
+        prepared_data = self.predictor.load_and_prepare_data("football.csv")  # Получаем подготовленный DataFrame
         
+        # Передаем подготовленные данные в StatisticsManager
+        self.stats_manager = StatisticsManager(df=prepared_data)
+        self.graphs_manager = GraphsManager(self.stats_manager, self)
+        
+        # Инициализация остальных компонентов
+        
+        self.odds_predictor = OddsMatchPredictor("Laliga.csv")
+        self.odds_predictor.train_model()
+        self.init_ui()
         self.setup_window()
         
         
@@ -280,12 +286,13 @@ class FootballPredictorApp(QMainWindow):
         
         
     def switch_data_mode(self, index):
+        
         """Переключение между режимами ввода данных"""
         is_odds_mode = (index == 1)
         
-        self.home_combo.itemAt(1).widget().setVisible(not is_odds_mode)
-        self.away_combo.itemAt(1).widget().setVisible(not is_odds_mode)
-        
+        self.home_combo.setVisible(not is_odds_mode)
+        self.away_combo.setVisible(not is_odds_mode)
+
         for widget in self.odds_inputs.values():
             widget.setVisible(is_odds_mode)
         

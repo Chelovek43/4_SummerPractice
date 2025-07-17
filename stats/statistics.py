@@ -1,17 +1,13 @@
 import pandas as pd
 
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QTextEdit, QLabel
-from PyQt6.QtCore import Qt
-
-from core.predicrtor import FootballMatchPredictor
-
 class StatisticsManager:
     def __init__(self, df=None):
         """
         Args:
-            df (pd.DataFrame): Опционально - готовый DataFrame с данными
+            df (pd.DataFrame): готовый DataFrame с данными
         """
         self.df = df
+        
         
     def load_data(self, data_path):
         """Загрузка данных из CSV файла"""
@@ -35,45 +31,75 @@ class StatisticsManager:
             lambda x: x.rolling(5, min_periods=1).mean())
 
     def get_team_stats(self, team_name, period='all', opponent=None):
-        print(f"\nGetting stats for {team_name}, period: {period}, opponent: {opponent}")
-    
+        print(self.df.head())
+        print(self.df.columns.tolist())
+        """Возвращает усредненные значения из подготовленного DataFrame"""
         if self.df is None:
             raise ValueError("Данные не загружены")
         
-        df_filtered = self.df.copy()
+        # Фильтрация данных
+        df_filtered = self.filter_by_period(team_name, period, opponent)
         
-        # Фильтрация по периоду
-        if period == 'h2h' and opponent:
-            print("Filtering head-to-head matches")
-            df_filtered = df_filtered[
-                ((df_filtered['HomeTeam'] == team_name) & (df_filtered['AwayTeam'] == opponent)) |
-                ((df_filtered['HomeTeam'] == opponent) & (df_filtered['AwayTeam'] == team_name))
-            ]
-        elif period.isdigit():
-            print(f"Filtering last {period} matches")
-            n = int(period)
-            home_matches = df_filtered[df_filtered['HomeTeam'] == team_name].tail(n)
-            away_matches = df_filtered[df_filtered['AwayTeam'] == team_name].tail(n)
-            df_filtered = pd.concat([home_matches, away_matches]).sort_index().tail(n)
-        
-        print(f"Found {len(df_filtered)} matches after filtering")
-        
-        # Расчет статистики
         home_matches = df_filtered[df_filtered['HomeTeam'] == team_name]
         away_matches = df_filtered[df_filtered['AwayTeam'] == team_name]
         
-        print(f"Home matches: {len(home_matches)}, Away matches: {len(away_matches)}")
+        # Расчет показателей без использования HomeWin/AwayWin/Draw
+        home_wins = (home_matches['FTR'] == 'H').sum()
+        away_wins = (away_matches['FTR'] == 'A').sum()
+        home_draws = (home_matches['FTR'] == 'D').sum()
+        away_draws = (away_matches['FTR'] == 'D').sum()
         
         total_matches = len(home_matches) + len(away_matches)
-        wins = home_matches['HomeWin'].sum() + away_matches['AwayWin'].sum()
-        draws = home_matches['Draw'].sum() + away_matches['Draw'].sum()
+        wins = home_wins + away_wins
+        draws = home_draws + away_draws
+        
         
         return {
-            'matches': total_matches,
+            'total_matches': total_matches,
             'wins': wins,
-            'win_rate': round((wins + 0.5 * draws) / total_matches * 100, 2) if total_matches > 0 else 0,
-            'form': round((
-                home_matches['HomeForm'].mean() if not home_matches.empty else 0 + 
-                away_matches['AwayForm'].mean() if not away_matches.empty else 0
-            ) / 2, 2)
+            'draws': draws,
+            'win_rate': ((wins + 0.5 * draws) / total_matches * 100) if total_matches > 0 else 0,
+            
+            # Берем средние значения из подготовленных столбцов
+            'HomeForm': home_matches['HomeForm'].mean(),
+            'AwayForm': away_matches['AwayForm'].mean(),
+            'HomeAttack': home_matches['HomeAttack'].mean(),
+            'AwayDefense': away_matches['AwayDefense'].mean(),
+            'HomeLast3Goals': home_matches['HomeLast3Goals'].mean(),
+            'AwayLast3Conceded': away_matches['AwayLast3Conceded'].mean(),
+        }
+
+
+    def filter_by_period(self, team_name, period, opponent=None):
+        """Фильтрует данные по периоду"""
+        if period == 'h2h' and opponent:
+            return self.df[
+                ((self.df['HomeTeam'] == team_name) & (self.df['AwayTeam'] == opponent)) |
+                ((self.df['HomeTeam'] == opponent) & (self.df['AwayTeam'] == team_name))
+            ]
+        elif period.isdigit():
+            n = int(period)
+            home = self.df[self.df['HomeTeam'] == team_name].tail(n)
+            away = self.df[self.df['AwayTeam'] == team_name].tail(n)
+            return pd.concat([home, away]).sort_index().tail(n)
+        return self.df
+
+    def get_head_to_head(self, team1, team2):
+        """Статистика личных встреч"""
+        h2h = self.df[
+            ((self.df['HomeTeam'] == team1) & (self.df['AwayTeam'] == team2)) |
+            ((self.df['HomeTeam'] == team2) & (self.df['AwayTeam'] == team1))
+        ]
+        
+        if h2h.empty:
+            return {}
+        
+        team1_wins = len(h2h[((h2h['HomeTeam'] == team1) & (h2h['FTR'] == 'H')) | 
+                        ((h2h['AwayTeam'] == team1) & (h2h['FTR'] == 'A'))])
+        
+        return {
+            'HeadToHeadMatches': len(h2h),
+            'HeadToHeadWinRate': (team1_wins / len(h2h)) * 100,
+            'HeadToHeadAvgGoals': h2h.apply(
+                lambda x: x['FTHG'] if x['HomeTeam'] == team1 else x['FTAG'], axis=1).mean()
         }

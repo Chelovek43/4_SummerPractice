@@ -1,6 +1,6 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QComboBox, QHBoxLayout
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QComboBox, QHBoxLayout, QScrollArea, QSizePolicy
 from PyQt6.QtCore import Qt
-from stats.statistics import StatisticsManager
+from stats.graphics import GraphsManager
 
 class StatsGraphManager(QWidget):
     def __init__(self, stats_manager, parent=None, show_team_select=True):
@@ -20,6 +20,7 @@ class StatsGraphManager(QWidget):
         self.setup_period_selection()
         self.setup_stats_display()
         self.setup_graphs_display()
+        self.show_stats()
 
     def setup_period_selection(self):
         """Настройка выбора периода статистики"""
@@ -47,45 +48,102 @@ class StatsGraphManager(QWidget):
         self.refresh_stats() 
 
     def setup_stats_display(self):
-        """Настройка отображения статистики"""
+        """Настройка отображения статистики с правильным заполнением пространства"""
         self.stats_title = QLabel("Статистика команд")
         self.stats_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.stats_title.setStyleSheet("font-weight: bold;")
+        self.stats_title.setStyleSheet("font-weight: bold; font-size: 14px;")
         self.layout.addWidget(self.stats_title)
         
-        self.stats_container = QHBoxLayout()
-        self.layout.addLayout(self.stats_container)
+        # Основной контейнер 
+        stats_widget = QWidget()
+        stats_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        self.stats_container = QHBoxLayout(stats_widget)
+        self.stats_container.setContentsMargins(0, 0, 0, 0)
+        self.stats_container.setSpacing(10)
         
-        # Колонки для команд
-        self.team1_column = QVBoxLayout()
+        # Колонка 1
+        team1_widget = QWidget()
+        team1_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        self.team1_column = QVBoxLayout(team1_widget)
+        self.team1_column.setContentsMargins(0, 0, 0, 0)
+        
         self.team1_label = QLabel("Команда 1")
+        self.team1_label.setStyleSheet("font-weight: bold;")
+        
         self.team1_stats = QTextEdit()
         self.team1_stats.setReadOnly(True)
-        self.team1_column.addWidget(self.team1_label)
-        self.team1_column.addWidget(self.team1_stats)
+        self.team1_stats.setLineWrapMode(QTextEdit.LineWrapMode.WidgetWidth)
+        self.team1_stats.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.team1_stats.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         
-        self.team2_column = QVBoxLayout()
+        self.team1_column.addWidget(self.team1_label)
+        self.team1_column.addWidget(self.team1_stats, stretch=1)  
+        
+        # Колонка 2 (аналогично)
+        team2_widget = QWidget()
+        team2_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        self.team2_column = QVBoxLayout(team2_widget)
+        self.team2_column.setContentsMargins(0, 0, 0, 0)
+        
         self.team2_label = QLabel("Команда 2")
+        self.team2_label.setStyleSheet("font-weight: bold;")
+        
         self.team2_stats = QTextEdit()
         self.team2_stats.setReadOnly(True)
-        self.team2_column.addWidget(self.team2_label)
-        self.team2_column.addWidget(self.team2_stats)
+        self.team2_stats.setLineWrapMode(QTextEdit.LineWrapMode.WidgetWidth)
+        self.team2_stats.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.team2_stats.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         
-        self.stats_container.addLayout(self.team1_column)
-        self.stats_container.addLayout(self.team2_column)
+        self.team2_column.addWidget(self.team2_label)
+        self.team2_column.addWidget(self.team2_stats, stretch=1)
+        
+        # Добавляем колонки
+        self.stats_container.addWidget(team1_widget, stretch=1)
+        self.stats_container.addWidget(team2_widget, stretch=1)
+        
+        # Добавляем в главный layout
+        self.layout.addWidget(stats_widget, stretch=1)  
+
 
     def setup_graphs_display(self):
-        """Настройка отображения графиков"""
-        self.graphs_display = QTextEdit()
-        self.graphs_display.setReadOnly(True)
-        self.layout.addWidget(self.graphs_display)
-        self.graphs_display.hide()
-
+        """Настройка отображения графиков с правильной прокруткой"""
+        # 1. Создаем ScrollArea
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)  # Важно!
+        scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        
+        # 2. Создаем контейнер для графиков
+        container = QWidget()
+        container.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
+        layout = QVBoxLayout(container)
+        layout.setContentsMargins(10, 10, 10, 10)  # Отступы
+        
+        # 3. Добавляем GraphsManager с фиксированными размерами
+        self.graphs_manager = GraphsManager(self.stats_manager, self)
+        self.graphs_manager.setMinimumSize(400,300)  # Минимальный размер
+        layout.addWidget(self.graphs_manager)
+        
+        # 4. Настраиваем ScrollArea
+        scroll.setWidget(container)
+        self.layout.addWidget(scroll)  # Добавляем в основной layout
+        
+        # 5. Скрываем по умолчанию
+        self.graphs_manager.hide()
     def update_stats(self, team1, team2):
-        """Обновление статистики с учетом выбранного периода"""
+        """Обновление статистики и графиков"""
         self.team1_name = team1
         self.team2_name = team2
-        self.refresh_stats()
+        
+        # Обновляем текстовую статистику
+        stats1 = self.stats_manager.get_team_stats(team1, period=str(self.current_period))
+        stats2 = self.stats_manager.get_team_stats(team2, period=str(self.current_period))
+        
+        self.team1_stats.setPlainText(self.format_stats(stats1))
+        self.team2_stats.setPlainText(self.format_stats(stats2))
+        
+        # Если графики видны - обновляем их
+        if self.graphs_manager.isVisible():
+            self.graphs_manager.update_teams(team1, team2)
 
     def refresh_stats(self):
         """Обновление отображения статистики (использует текущие команды и период)"""
@@ -96,7 +154,7 @@ class StatsGraphManager(QWidget):
         
         stats1 = self.stats_manager.get_team_stats(
             self.team1_name, 
-            period=str(self.current_period),  # убедитесь, что передается строка
+            period=str(self.current_period),  
             opponent=self.team2_name if self.current_period == 'h2h' else None
         )
         
@@ -117,38 +175,62 @@ class StatsGraphManager(QWidget):
             return "Статистика недоступна"
         
         try:
-            # Преобразуем numpy типы в стандартные Python типы
-            matches = int(stats.get('matches', 0))
-            wins = int(stats.get('wins', 0))
-            win_rate = float(stats.get('win_rate', 0))
-            form = float(stats.get('form', 0))
-            
-            return (
-                f"Матчи: {matches}\n"
-                f"Победы: {wins}\n"
-                f"Процент побед: {win_rate:.2f}%\n"
-                f"Форма: {form:.2f}"
+            text = (
+                f" Основная статистика:\n"
+                f"▪ Всего матчей: {int(stats['total_matches'])}\n"
+                f"▪ Победы: {int(stats['wins'])}\n"
+                f"▪ Ничьи: {int(stats['draws'])}\n"
+                f"▪ Процент побед: {stats['win_rate']:.1f}%\n\n"
+                
+                f" Форма команды:\n"
+                f"▪ Домашняя форма: {stats['HomeForm']:.2f}\n"
+                f"▪ Гостевая форма: {stats['AwayForm']:.2f}\n\n"
+                
+                f" Атака/защита:\n"
+                f"▪ Сила атаки (дома): {stats['HomeAttack']:.2f}\n"
+                f"▪ Надежность защиты (в гостях): {stats['AwayDefense']:.2f}\n"
+                f"▪ Голов за последние 3 матча: {stats['HomeLast3Goals']:.1f}\n"
+                f"▪ Пропущено за последние 3 матча: {stats['AwayLast3Conceded']:.1f}"
             )
+            
+            if 'HeadToHeadWinRate' in stats:
+                text += (
+                    f"\n\n Личные встречи:\n"
+                    f"▪ Всего матчей: {int(stats['HeadToHeadMatches'])}\n"
+                    f"▪ Процент побед: {stats['HeadToHeadWinRate']:.1f}%\n"
+                    f"▪ Средние голы: {stats['HeadToHeadAvgGoals']:.1f}"
+                )
+                
+            return text
+            
         except Exception as e:
-            return f"Ошибка форматирования статистики: {str(e)}"
+            print(f"Ошибка форматирования: {e}")
+            return "Ошибка при формировании статистики"
         
     def show_stats(self):
-        """Показать статистику"""
+        """Показать статистику и скрыть графики"""
         self.stats_title.show()
         self.team1_label.show()
         self.team1_stats.show()
         self.team2_label.show()
         self.team2_stats.show()
-        self.graphs_display.hide()
+        
+        if hasattr(self, 'graphs_manager'):
+            self.graphs_manager.hide()
 
     def show_graphs(self):
-        """Показать графики"""
+        """Показать графики и скрыть статистику"""
         self.stats_title.hide()
         self.team1_label.hide()
         self.team1_stats.hide()
         self.team2_label.hide()
         self.team2_stats.hide()
-        self.graphs_display.show()
+        
+        if hasattr(self, 'graphs_manager'):
+            # Обновляем графики перед показом
+            if hasattr(self, 'team1_name') and hasattr(self, 'team2_name'):
+                self.graphs_manager.update_teams(self.team1_name, self.team2_name)
+            self.graphs_manager.show()
 
     def setup_team_selection(self):
         """Настройка выбора команд с синхронизацией"""
