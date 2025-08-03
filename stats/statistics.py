@@ -3,7 +3,6 @@ import pandas as pd
 class StatisticsManager:
     def __init__(self, df=None):
         """
-        Args:
             df (pd.DataFrame): готовый DataFrame с данными
         """
         self.df = df
@@ -12,10 +11,14 @@ class StatisticsManager:
     def load_data(self, data_path):
         """Загрузка данных из CSV файла"""
         self.df = pd.read_csv(data_path)
-        self._preprocess_data()
+        self.preprocess_data()
         
-    def _preprocess_data(self):
-        """Базовая подготовка данных"""
+    def preprocess_data(self):
+        """
+        Выполняет базовую подготовку данных:
+        - Добавляет бинарные колонки для результата матча (победа хозяев, победа гостей, ничья).
+        - Вычисляет форму команды (доля побед за последние 5 матчей) для хозяев и гостей.
+        """
         if self.df is None:
             return
             
@@ -31,15 +34,25 @@ class StatisticsManager:
             lambda x: x.rolling(5, min_periods=1).mean())
 
     def get_team_stats(self, team_name, period='all', opponent=None):
+        """
+        Возвращает усреднённые статистические показатели для заданной команды за указанный период.
+
+        team_name: Название команды.
+        period: Период анализа ('all', число последних матчей или 'h2h' для личных встреч).
+        opponent: Имя соперника (используется для 'h2h').
+        return: Словарь с основными статистическими показателями.
+        """
+        # Отладка
         print(self.df.head())
         print(self.df.columns.tolist())
-        """Возвращает усредненные значения из подготовленного DataFrame"""
+
         if self.df is None:
             raise ValueError("Данные не загружены")
         
         # Фильтрация данных
         df_filtered = self.filter_by_period(team_name, period, opponent)
-        
+
+        # Разделяем матчи на домашние и гостевые для выбранной команды
         home_matches = df_filtered[df_filtered['HomeTeam'] == team_name]
         away_matches = df_filtered[df_filtered['AwayTeam'] == team_name]
         
@@ -52,7 +65,6 @@ class StatisticsManager:
         total_matches = len(home_matches) + len(away_matches)
         wins = home_wins + away_wins
         draws = home_draws + away_draws
-        
         
         return {
             'total_matches': total_matches,
@@ -71,12 +83,25 @@ class StatisticsManager:
 
 
     def filter_by_period(self, team_name, period, opponent=None):
-        """Фильтрует данные по периоду"""
+        """
+        Фильтрует DataFrame по заданному периоду:
+        - 'h2h' и opponent: только личные встречи между командами.
+        - число: последние N матчей команды (дом+гости).
+        - 'all': все матчи.
+
+        team_name: Название команды.
+        period: Период ('all', число, 'h2h').
+        opponent: Имя соперника (для 'h2h').
+        return: Отфильтрованный DataFrame.
+        """
+
+        # Личные встречи между двумя командами
         if period == 'h2h' and opponent:
             return self.df[
                 ((self.df['HomeTeam'] == team_name) & (self.df['AwayTeam'] == opponent)) |
                 ((self.df['HomeTeam'] == opponent) & (self.df['AwayTeam'] == team_name))
             ]
+        # Последние N матчей (домашние и гостевые)
         elif period.isdigit():
             n = int(period)
             home = self.df[self.df['HomeTeam'] == team_name].tail(n)
@@ -85,7 +110,15 @@ class StatisticsManager:
         return self.df
 
     def get_head_to_head(self, team1, team2):
-        """Статистика личных встреч"""
+        """
+        Возвращает статистику личных встреч между двумя командами.
+
+        team1: Название первой команды.
+        team2: Название второй команды.
+        return: Словарь с количеством матчей, процентом побед team1 и средними голами team1.
+        """
+
+        # Фильтруем все матчи между двумя командами
         h2h = self.df[
             ((self.df['HomeTeam'] == team1) & (self.df['AwayTeam'] == team2)) |
             ((self.df['HomeTeam'] == team2) & (self.df['AwayTeam'] == team1))

@@ -4,51 +4,77 @@ from stats.graphics import GraphsManager
 
 class StatsGraphManager(QWidget):
     def __init__(self, stats_manager, parent=None, show_team_select=True):
-        super().__init__(parent)
-        self.parent = parent
-        self.stats_manager = stats_manager
+        """
+        Конструктор класса для виджета статистики и графиков.
+
+        stats_manager: Экземпляр менеджера статистики, предоставляющий данные о командах.
+        parent: Родительский виджет (по умолчанию None).
+        show_team_select: Флаг, определяющий, отображать ли выбор команд (по умолчанию True).
+        """
+        super().__init__(parent)  
+        self.parent = parent  
+        self.stats_manager = stats_manager 
         self.show_team_select = show_team_select  # Флаг для отображения выбора команд
-        self.current_period = 'all'  # текущий выбранный период
-        self.init_ui()
-        
+        self.current_period = 'all'  # Текущий выбранный период статистики (по умолчанию — вся статистика)
+        self.init_ui()  
+
     def init_ui(self):
-        self.layout = QVBoxLayout(self)
-        
-        # Добавляем выбор команд только если нужно
+        """
+        Инициализация элементов пользовательского интерфейса.
+        Создаёт основной layout и добавляет необходимые компоненты:
+        выбор команд, выбор периода, отображение статистики и графиков.
+        """
+        self.layout = QVBoxLayout(self)  
+
+        # Добавляем выбор команд только если это предусмотрено флагом show_team_selection
         if self.show_team_select:
-            self.setup_team_selection()
-        self.setup_period_selection()
-        self.setup_stats_display()
-        self.setup_graphs_display()
-        self.show_stats()
+            self.setup_team_selection()  # Настройка выпадающих списков для выбора команд
+
+        self.setup_period_selection()  # Настройка выбора периода статистики (например, последние 5 матчей)
+        self.setup_stats_display()     # Настройка области отображения статистики команд
+        self.setup_graphs_display()    # Настройка области отображения графиков
+        self.show_stats()              
 
     def setup_period_selection(self):
         """Настройка выбора периода статистики"""
         period_layout = QHBoxLayout()
-        
         period_label = QLabel("Период статистики:")
         self.period_combo = QComboBox()
+        # Добавляем варианты выбора периода в выпадающий список
         self.period_combo.addItem("Вся статистика", "all")
         self.period_combo.addItem("Последние 5 матчей", "5")
         self.period_combo.addItem("Последние 10 матчей", "10")
         self.period_combo.addItem("Весь сезон (38 матчей)", "38")
         self.period_combo.addItem("Только между этими командами", "h2h")
+        # Подключаем обработчик изменения выбранного периода
         self.period_combo.currentIndexChanged.connect(self.on_period_changed)
         
         period_layout.addWidget(period_label)
         period_layout.addWidget(self.period_combo)
-        period_layout.addStretch()  # Добавляем растягивающееся пространство
+        # Добавляем растягивающееся пространство для выравнивания
+        period_layout.addStretch()
         
+        # Добавляем слой выбора периода в основной макет
         self.layout.addLayout(period_layout)
 
-
     def on_period_changed(self):
-        """Обработчик изменения выбранного периода статистики"""
-        self.current_period = self.period_combo.currentData()
-        self.refresh_stats() 
+        """
+        Обработчик события изменения выбранного периода статистики в выпадающем списке.
+
+        При изменении значения в self.period_combo:
+        - Сохраняет новое значение периода в self.current_period.
+        - Обновляет отображаемую статистику с учётом выбранного периода.
+        """
+        self.current_period = self.period_combo.currentData()  
+        self.refresh_stats()  # Перерисовываем статистику для новых параметров
 
     def setup_stats_display(self):
-        """Настройка отображения статистики с правильным заполнением пространства"""
+        """
+        Настраивает область отображения статистики команд.
+
+        Создаёт заголовок, две колонки для статистики каждой команды и размещает их в горизонтальном layout.
+        """
+
         self.stats_title = QLabel("Статистика команд")
         self.stats_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.stats_title.setStyleSheet("font-weight: bold; font-size: 14px;")
@@ -58,7 +84,7 @@ class StatsGraphManager(QWidget):
         stats_widget = QWidget()
         stats_widget.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.stats_container = QHBoxLayout(stats_widget)
-        self.stats_container.setContentsMargins(0, 0, 0, 0)
+        self.stats_container.setContentsMargins(0, 0, 0, 0) # Без внутренних отступов
         self.stats_container.setSpacing(10)
         
         # Колонка 1
@@ -106,29 +132,28 @@ class StatsGraphManager(QWidget):
 
 
     def setup_graphs_display(self):
-        """Настройка отображения графиков с правильной прокруткой"""
-        # 1. Создаем ScrollArea
+        """Настройка отображения графиков с прокруткой"""
+        # Создаем ScrollArea
         scroll = QScrollArea()
-        scroll.setWidgetResizable(True)  # Важно!
+        scroll.setWidgetResizable(True)  # Позволяет содержимому изменять размер вместе с окном
         scroll.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         
-        # 2. Создаем контейнер для графиков
+        # Создаем контейнер для графиков
         container = QWidget()
         container.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         layout = QVBoxLayout(container)
         layout.setContentsMargins(10, 10, 10, 10)  # Отступы
         
-        # 3. Добавляем GraphsManager с фиксированными размерами
+        # Добавляем GraphsManager с фиксированными размерами
         self.graphs_manager = GraphsManager(self.stats_manager, self)
         self.graphs_manager.setMinimumSize(400,300)  # Минимальный размер
         layout.addWidget(self.graphs_manager)
         
-        # 4. Настраиваем ScrollArea
         scroll.setWidget(container)
         self.layout.addWidget(scroll)  # Добавляем в основной layout
         
-        # 5. Скрываем по умолчанию
         self.graphs_manager.hide()
+        
     def update_stats(self, team1, team2):
         """Обновление статистики и графиков"""
         self.team1_name = team1
@@ -146,12 +171,21 @@ class StatsGraphManager(QWidget):
             self.graphs_manager.update_teams(team1, team2)
 
     def refresh_stats(self):
-        """Обновление отображения статистики (использует текущие команды и период)"""
+        """
+        Обновление отображения статистики для выбранных команд и периода.
+
+        Использует текущие значения self.team1_name и self.team2_name, а также self.current_period.
+        Если выбран режим 'h2h' (личные встречи), то статистика собирается только для матчей между этими командами.
+        В противном случае — по общему периоду.
+        """
+        # Проверяем, что имена обеих команд заданы (иначе обновлять нечего)
         if not hasattr(self, 'team1_name') or not hasattr(self, 'team2_name'):
             return
         
+        # Отладка
         print(f"\nRefreshing stats with period: {self.current_period}")
         
+        # Получаем статистику для команд
         stats1 = self.stats_manager.get_team_stats(
             self.team1_name, 
             period=str(self.current_period),  
@@ -164,6 +198,7 @@ class StatsGraphManager(QWidget):
             opponent=self.team1_name if self.current_period == 'h2h' else None
         )
         
+        # Отладка
         print("Team 1 stats:", stats1)
         print("Team 2 stats:", stats2)
         
@@ -171,6 +206,9 @@ class StatsGraphManager(QWidget):
         self.team2_stats.setPlainText(self.format_stats(stats2))
 
     def format_stats(self, stats):
+        """Форматирует словарь статистики команды в удобочитаемый текст для отображения в UI"""
+
+        # Если статистика отсутствует (None или пустой словарь)
         if not stats:
             return "Статистика недоступна"
         
@@ -193,6 +231,7 @@ class StatsGraphManager(QWidget):
                 f"▪ Пропущено за последние 3 матча: {stats['AwayLast3Conceded']:.1f}"
             )
             
+            # Если в статистике присутствуют данные о личных встречах — добавляем их в текст
             if 'HeadToHeadWinRate' in stats:
                 text += (
                     f"\n\n Личные встречи:\n"
@@ -208,18 +247,32 @@ class StatsGraphManager(QWidget):
             return "Ошибка при формировании статистики"
         
     def show_stats(self):
-        """Показать статистику и скрыть графики"""
+        """
+    Показывает элементы статистики команд и скрывает графики.
+
+    Используется для переключения отображения между статистикой и графиками.
+    Делает видимыми заголовок, названия команд и текстовые поля статистики.
+    Если менеджер графиков существует, скрывает его.
+    """
         self.stats_title.show()
         self.team1_label.show()
         self.team1_stats.show()
         self.team2_label.show()
         self.team2_stats.show()
         
+        # Скрываем менеджер графиков, если он есть
         if hasattr(self, 'graphs_manager'):
             self.graphs_manager.hide()
 
     def show_graphs(self):
-        """Показать графики и скрыть статистику"""
+        """
+    Показывает графики и скрывает элементы статистики команд.
+
+    Используется для переключения отображения между графиками и статистикой.
+    Делает невидимыми заголовок, названия команд и текстовые поля статистики.
+    Если менеджер графиков существует, обновляет его для выбранных команд и показывает.
+    """
+        
         self.stats_title.hide()
         self.team1_label.hide()
         self.team1_stats.hide()
@@ -227,13 +280,23 @@ class StatsGraphManager(QWidget):
         self.team2_stats.hide()
         
         if hasattr(self, 'graphs_manager'):
-            # Обновляем графики перед показом
+            # Перед показом графиков обновляем их для выбранных команд
             if hasattr(self, 'team1_name') and hasattr(self, 'team2_name'):
                 self.graphs_manager.update_teams(self.team1_name, self.team2_name)
             self.graphs_manager.show()
 
     def setup_team_selection(self):
-        """Настройка выбора команд с синхронизацией"""
+        """
+    Настройка выпадающих списков для выбора домашних и гостевых команд с синхронизацией с родительским виджетом.
+
+    - Проверяет наличие родителя и необходимых атрибутов.
+    - Копирует команды из родительских комбобоксов.
+    - Устанавливает текущие выбранные значения.
+    - Создаёт и размещает подписи и комбобоксы в layout.
+    - Подключает сигналы изменения выбора к обработчику родителя для синхронизации.
+    """
+        
+        # Проверяем, что у родителя есть необходимые комбобоксы для выбора команд
         if not self.parent or not hasattr(self.parent, 'home_combo'):
             return
             
