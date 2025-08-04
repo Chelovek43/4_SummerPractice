@@ -13,15 +13,42 @@ import pandas as pd
 import os
 import time
 
+from pathlib import Path
+from dotenv import load_dotenv
+
 # Конфигурация API
-API_KEY = "lhcuwv1jvp9rgakz"  # Используйте Публичный ключ (или мой ключ, забирайте, ограничение - 300 запросов/мин)
+load_dotenv() # Загружаем переменные из .env
+
+# Получаем API-ключ
+API_KEY = os.getenv('API_KEY')  # Используйте Публичный ключ (или свой ключ)
 BASE_URL = "https://api.sstats.net"
 
 # Укажите диапазон ID матчей для обработки (до 300 за раз)
 # Пример: START_ID = 1208501, END_ID = 1208835
-START_ID = 720739
+START_ID = 721039
 END_ID = 721108
 
+def get_output_dir():
+    """
+    Возвращает универсальный путь к папке для сохранения файлов.
+    Приоритеты:
+    1. Переменная окружения OUTPUT_DIR
+    2. Папка 'data/output' в проекте
+    3. Папка 'Python/output' на рабочем столе
+    """
+    # Вариант 1: из переменных окружения (.env)
+    if 'OUTPUT_DIR' in os.environ:
+        return os.environ['OUTPUT_DIR']
+    
+    # Вариант 2: относительный путь в проекте
+    project_path = Path(__file__).parent / 'data' / 'output'
+    if project_path.exists():
+        return str(project_path)
+    
+    # Вариант 3: на рабочем столе
+    desktop_path = Path.home() / 'Desktop' / 'Python' / 'output'
+    desktop_path.mkdir(parents=True, exist_ok=True)  # Создаст если нет
+    return str(desktop_path)
 
 def fetch_match_data(match_id):
     """
@@ -145,10 +172,13 @@ def save_matches_range(start_id, end_id):
     
     # Создаем DataFrame из списка матчей
     df = pd.DataFrame(all_matches)
+
     # Создаем папку если не существует
-    output_dir = r'C:\Users\ADMIN\Desktop\Python'
+    output_dir = get_output_dir()
+    print(f"Файлы будут сохраняться в: {output_dir}")
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f'matches_{start_id}_to_{end_id}.csv')
+
     # Сохраняем в CSV
     df.to_csv(output_file, index=False, encoding='utf-8')
     print(f"\nГотово! Обработано матчей: {processed_count}")
@@ -159,7 +189,6 @@ def save_matches_range(start_id, end_id):
     print(f"\nВремя выполнения: {execution_time:.2f} секунд")
 
 # Для запуска скрипта раскомментируйте блок ниже
-'''
+
 if __name__ == "__main__":
     save_matches_range(START_ID, END_ID)
-'''
