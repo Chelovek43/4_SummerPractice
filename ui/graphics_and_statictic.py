@@ -1,7 +1,8 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QComboBox, QHBoxLayout, QScrollArea, QSizePolicy
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QComboBox, QHBoxLayout, QScrollArea, QSizePolicy, QMessageBox
 from PyQt6.QtCore import Qt
 from stats.graphics import GraphsManager
 
+# TODO: Класс StatsGraphManager отвечает и за отображение статистики, и за графики, и за выбор команд
 class StatsGraphManager(QWidget):
     def __init__(self, stats_manager, parent=None, show_team_select=True):
         """
@@ -153,18 +154,37 @@ class StatsGraphManager(QWidget):
         self.layout.addWidget(scroll)  # Добавляем в основной layout
         
         self.graphs_manager.hide()
+
+    def check_same_teams(self, home_team, away_team):
+        """
+        Проверяет, выбраны ли одинаковые команды.
+        Если да — показывает QMessageBox и возвращает True.
+        Если нет — возвращает False.
+        """
+        if home_team == away_team:
+            QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
+            return True
+        return False
+    
+    def display_stats(self, team1, team2, period):
+        """Получает, форматирует и отображает статистику для двух команд."""
+        stats1 = self.stats_manager.get_team_stats(team1, period=str(period),
+                                                opponent=team2 if period == 'h2h' else None)
+        stats2 = self.stats_manager.get_team_stats(team2, period=str(period),
+                                                opponent=team1 if period == 'h2h' else None)
+        self.team1_stats.setPlainText(self.format_stats(stats1))
+        self.team2_stats.setPlainText(self.format_stats(stats2))
         
     def update_stats(self, team1, team2):
         """Обновление статистики и графиков"""
+        if self.check_same_teams(team1, team2):
+            return
+    
         self.team1_name = team1
         self.team2_name = team2
         
         # Обновляем текстовую статистику
-        stats1 = self.stats_manager.get_team_stats(team1, period=str(self.current_period))
-        stats2 = self.stats_manager.get_team_stats(team2, period=str(self.current_period))
-        
-        self.team1_stats.setPlainText(self.format_stats(stats1))
-        self.team2_stats.setPlainText(self.format_stats(stats2))
+        self.display_stats(team1, team2, self.current_period)
         
         # Если графики видны - обновляем их
         if self.graphs_manager.isVisible():
@@ -182,28 +202,13 @@ class StatsGraphManager(QWidget):
         if not hasattr(self, 'team1_name') or not hasattr(self, 'team2_name'):
             return
         
+        if self.check_same_teams(self.team1_name, self.team2_name):
+            return
+        
         # Отладка
         print(f"\nRefreshing stats with period: {self.current_period}")
         
-        # Получаем статистику для команд
-        stats1 = self.stats_manager.get_team_stats(
-            self.team1_name, 
-            period=str(self.current_period),  
-            opponent=self.team2_name if self.current_period == 'h2h' else None
-        )
-        
-        stats2 = self.stats_manager.get_team_stats(
-            self.team2_name,
-            period=str(self.current_period),
-            opponent=self.team1_name if self.current_period == 'h2h' else None
-        )
-        
-        # Отладка
-        print("Team 1 stats:", stats1)
-        print("Team 2 stats:", stats2)
-        
-        self.team1_stats.setPlainText(self.format_stats(stats1))
-        self.team2_stats.setPlainText(self.format_stats(stats2))
+        self.display_stats(self.team1_name, self.team2_name, self.current_period)
 
     def format_stats(self, stats):
         """Форматирует словарь статистики команды в удобочитаемый текст для отображения в UI"""
@@ -215,29 +220,29 @@ class StatsGraphManager(QWidget):
         try:
             text = (
                 f" Основная статистика:\n"
-                f"▪ Всего матчей: {int(stats['total_matches'])}\n"
-                f"▪ Победы: {int(stats['wins'])}\n"
-                f"▪ Ничьи: {int(stats['draws'])}\n"
-                f"▪ Процент побед: {stats['win_rate']:.1f}%\n\n"
+                f"- Всего матчей: {int(stats['total_matches'])}\n"
+                f"- Победы: {int(stats['wins'])}\n"
+                f"- Ничьи: {int(stats['draws'])}\n"
+                f"- Процент побед: {stats['win_rate']:.1f}%\n\n"
                 
                 f" Форма команды:\n"
-                f"▪ Домашняя форма: {stats['HomeForm']:.2f}\n"
-                f"▪ Гостевая форма: {stats['AwayForm']:.2f}\n\n"
+                f"- Домашняя форма: {stats['HomeForm']:.2f}\n"
+                f"- Гостевая форма: {stats['AwayForm']:.2f}\n\n"
                 
                 f" Атака/защита:\n"
-                f"▪ Сила атаки (дома): {stats['HomeAttack']:.2f}\n"
-                f"▪ Надежность защиты (в гостях): {stats['AwayDefense']:.2f}\n"
-                f"▪ Голов за последние 3 матча: {stats['HomeLast3Goals']:.1f}\n"
-                f"▪ Пропущено за последние 3 матча: {stats['AwayLast3Conceded']:.1f}"
+                f"- Сила атаки (дома): {stats['HomeAttack']:.2f}\n"
+                f"- Надежность защиты (в гостях): {stats['AwayDefense']:.2f}\n"
+                f"- Голов за последние 3 матча: {stats['HomeLast3Goals']:.1f}\n"
+                f"- Пропущено за последние 3 матча: {stats['AwayLast3Conceded']:.1f}"
             )
             
             # Если в статистике присутствуют данные о личных встречах — добавляем их в текст
             if 'HeadToHeadWinRate' in stats:
                 text += (
                     f"\n\n Личные встречи:\n"
-                    f"▪ Всего матчей: {int(stats['HeadToHeadMatches'])}\n"
-                    f"▪ Процент побед: {stats['HeadToHeadWinRate']:.1f}%\n"
-                    f"▪ Средние голы: {stats['HeadToHeadAvgGoals']:.1f}"
+                    f"- Всего матчей: {int(stats['HeadToHeadMatches'])}\n"
+                    f"- Процент побед: {stats['HeadToHeadWinRate']:.1f}%\n"
+                    f"- Средние голы: {stats['HeadToHeadAvgGoals']:.1f}"
                 )
                 
             return text
