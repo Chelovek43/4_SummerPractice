@@ -7,7 +7,6 @@ class StatisticsManager:
         """
         self.df = df
         
-        
     def load_data(self, data_path):
         """Загрузка данных из CSV файла"""
         self.df = pd.read_csv(data_path)
@@ -33,6 +32,14 @@ class StatisticsManager:
         self.df['AwayForm'] = self.df.groupby('AwayTeam')['AwayWin'].transform(
             lambda x: x.rolling(5, min_periods=1).mean())
 
+        # Примерные расчёты для attack/defense, goals, карточек, ударов
+        self.df['HomeAttack'] = self.df['FTHG']
+        self.df['AwayDefense'] = self.df['FTAG']
+        self.df['HomeLast3Goals'] = self.df.groupby('HomeTeam')['FTHG'].transform(
+            lambda x: x.rolling(3, min_periods=1).mean())
+        self.df['AwayLast3Conceded'] = self.df.groupby('AwayTeam')['FTAG'].transform(
+            lambda x: x.rolling(3, min_periods=1).mean())
+
     def get_team_stats(self, team_name, period='all', opponent=None):
         """
         Возвращает усреднённые статистические показатели для заданной команды за указанный период.
@@ -42,10 +49,6 @@ class StatisticsManager:
         opponent: Имя соперника (используется для 'h2h').
         return: Словарь с основными статистическими показателями.
         """
-        # Отладка
-        print(self.df.head())
-        print(self.df.columns.tolist())
-
         if self.df is None:
             raise ValueError("Данные не загружены")
         
@@ -65,22 +68,47 @@ class StatisticsManager:
         total_matches = len(home_matches) + len(away_matches)
         wins = home_wins + away_wins
         draws = home_draws + away_draws
-        
+
+        # Карточки и удары
+        home_yellow = home_matches['HY'].mean() if 'HY' in home_matches and not home_matches.empty else 0
+        away_yellow = away_matches['AY'].mean() if 'AY' in away_matches and not away_matches.empty else 0
+        home_red = home_matches['HR'].mean() if 'HR' in home_matches and not home_matches.empty else 0
+        away_red = away_matches['AR'].mean() if 'AR' in away_matches and not away_matches.empty else 0
+
+        home_shots = home_matches['HS'].mean() if 'HS' in home_matches and not home_matches.empty else 0
+        away_shots = away_matches['AS'].mean() if 'AS' in away_matches and not away_matches.empty else 0
+        home_shots_on_target = home_matches['HST'].mean() if 'HST' in home_matches and not home_matches.empty else 0
+        away_shots_on_target = away_matches['AST'].mean() if 'AST' in away_matches and not away_matches.empty else 0
+
+        # Head-to-head winrate (если нужен для графика)
+        h2h_stats = self.get_head_to_head(team_name, opponent) if opponent else {}
+
+        # Гарантируем, что все значения числовые (0 если None)
+        def safe_mean(val):
+            return 0 if pd.isnull(val) else val
+
         return {
             'total_matches': total_matches,
             'wins': wins,
             'draws': draws,
             'win_rate': ((wins + 0.5 * draws) / total_matches * 100) if total_matches > 0 else 0,
-            
-            # Берем средние значения из подготовленных столбцов
-            'HomeForm': home_matches['HomeForm'].mean(),
-            'AwayForm': away_matches['AwayForm'].mean(),
-            'HomeAttack': home_matches['HomeAttack'].mean(),
-            'AwayDefense': away_matches['AwayDefense'].mean(),
-            'HomeLast3Goals': home_matches['HomeLast3Goals'].mean(),
-            'AwayLast3Conceded': away_matches['AwayLast3Conceded'].mean(),
+            'HomeForm': safe_mean(home_matches['HomeForm'].mean()) if not home_matches.empty else 0,
+            'AwayForm': safe_mean(away_matches['AwayForm'].mean()) if not away_matches.empty else 0,
+            'HomeAttack': safe_mean(home_matches['HomeAttack'].mean()) if not home_matches.empty else 0,
+            'AwayDefense': safe_mean(away_matches['AwayDefense'].mean()) if not away_matches.empty else 0,
+            'HomeLast3Goals': safe_mean(home_matches['HomeLast3Goals'].mean()) if not home_matches.empty else 0,
+            'AwayLast3Conceded': safe_mean(away_matches['AwayLast3Conceded'].mean()) if not away_matches.empty else 0,
+            # Карточки
+            'HY': safe_mean(home_yellow),
+            'AY': safe_mean(away_yellow),
+            'HR': safe_mean(home_red),
+            'AR': safe_mean(away_red),
+            # Удары
+            'HS': safe_mean(home_shots),
+            'AS': safe_mean(away_shots),
+            'HST': safe_mean(home_shots_on_target),
+            'AST': safe_mean(away_shots_on_target),
         }
-
 
     def filter_by_period(self, team_name, period, opponent=None):
         """
@@ -102,7 +130,7 @@ class StatisticsManager:
                 ((self.df['HomeTeam'] == opponent) & (self.df['AwayTeam'] == team_name))
             ]
         # Последние N матчей (домашние и гостевые)
-        elif period.isdigit():
+        elif isinstance(period, str) and period.isdigit():
             n = int(period)
             home = self.df[self.df['HomeTeam'] == team_name].tail(n)
             away = self.df[self.df['AwayTeam'] == team_name].tail(n)
@@ -118,6 +146,9 @@ class StatisticsManager:
         return: Словарь с количеством матчей, процентом побед team1 и средними голами team1.
         """
 
+        if team2 is None:
+            return {}
+
         # Фильтруем все матчи между двумя командами
         h2h = self.df[
             ((self.df['HomeTeam'] == team1) & (self.df['AwayTeam'] == team2)) |
@@ -130,9 +161,13 @@ class StatisticsManager:
         team1_wins = len(h2h[((h2h['HomeTeam'] == team1) & (h2h['FTR'] == 'H')) | 
                         ((h2h['AwayTeam'] == team1) & (h2h['FTR'] == 'A'))])
         
+        # Средние голы team1 в очных встречах
+        avg_goals = h2h.apply(
+            lambda x: x['FTHG'] if x['HomeTeam'] == team1 else x['FTAG'], axis=1).mean()
+        avg_goals = 0 if pd.isnull(avg_goals) else avg_goals
+
         return {
             'HeadToHeadMatches': len(h2h),
-            'HeadToHeadWinRate': (team1_wins / len(h2h)) * 100,
-            'HeadToHeadAvgGoals': h2h.apply(
-                lambda x: x['FTHG'] if x['HomeTeam'] == team1 else x['FTAG'], axis=1).mean()
+            'HeadToHeadWinRate': (team1_wins / len(h2h)) * 100 if len(h2h) > 0 else 0,
+            'HeadToHeadAvgGoals': avg_goals
         }
