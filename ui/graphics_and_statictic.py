@@ -17,7 +17,6 @@ class StatsGraphManager(QWidget):
         self.stats_manager = stats_manager 
         self.show_team_select = show_team_select  # Флаг для отображения выбора команд
         self.current_period = 'all'  # Текущий выбранный период статистики (по умолчанию — вся статистика)
-        self.same_team_warning_shown = False  # Флаг для контроля показа окна
         self.init_ui()  
 
     def init_ui(self):
@@ -69,11 +68,6 @@ class StatsGraphManager(QWidget):
         """
         self.current_period = self.period_combo.currentData()  
         self.refresh_stats()  # Перерисовываем статистику для новых параметров
-
-        # Если графики видимы, обновить их тоже 
-        if hasattr(self, 'graphs_manager') and self.graphs_manager.isVisible():
-            if hasattr(self, 'team1_name') and hasattr(self, 'team2_name'):
-                self.graphs_manager.update_stats(self.team1_name, self.team2_name, self.current_period)
 
     def setup_stats_display(self):
         """
@@ -168,13 +162,8 @@ class StatsGraphManager(QWidget):
         Если нет — возвращает False.
         """
         if home_team == away_team:
-            if not self.same_team_warning_shown:
-                self.same_team_warning_shown = True
-                QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
+            QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
             return True
-        # Сбрасываем флаг только если он был установлен
-        if self.same_team_warning_shown:
-            self.same_team_warning_shown = False
         return False
     
     def display_stats(self, team1, team2, period):
@@ -197,9 +186,9 @@ class StatsGraphManager(QWidget):
         # Обновляем текстовую статистику
         self.display_stats(team1, team2, self.current_period)
         
-        # Если графики видны - обновляем их с учетом периода
+        # Если графики видны - обновляем их
         if self.graphs_manager.isVisible():
-            self.graphs_manager.update_stats(team1, team2, self.current_period)
+            self.graphs_manager.update_teams(team1, team2)
 
     def refresh_stats(self):
         """
@@ -298,7 +287,7 @@ class StatsGraphManager(QWidget):
         if hasattr(self, 'graphs_manager'):
             # Перед показом графиков обновляем их для выбранных команд
             if hasattr(self, 'team1_name') and hasattr(self, 'team2_name'):
-                self.graphs_manager.update_stats(self.team1_name, self.team2_name)
+                self.graphs_manager.update_teams(self.team1_name, self.team2_name)
             self.graphs_manager.show()
 
     def setup_team_selection(self):

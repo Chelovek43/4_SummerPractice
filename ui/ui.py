@@ -1,4 +1,3 @@
-import os
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QComboBox, QPushButton, QTextEdit,
@@ -21,25 +20,12 @@ class FootballPredictorApp(QMainWindow):
         self.setup_window()
 
     def setup_predictors(self):
-        """Инициализация моделей предсказания с проверкой наличия файлов и обработкой ошибок"""
-        try:
-            if not os.path.exists("football.csv"):
-                raise FileNotFoundError("Файл football.csv не найден.")
-            self.predictor = FootballMatchPredictor("football.csv")
-            self.stats_manager = StatisticsManager(df=self.predictor.df)
-            self.graphs_manager = GraphsManager(self.stats_manager, self)
-        except Exception as e:
-            QMessageBox.critical(self, "Ошибка загрузки данных", f"Ошибка при загрузке football.csv: {str(e)}")
-            raise
-
-        try:
-            if not os.path.exists("Laliga.csv"):
-                raise FileNotFoundError("Файл Laliga.csv не найден.")
-            self.odds_predictor = OddsMatchPredictor("Laliga.csv")
-            self.odds_predictor.train_model()
-        except Exception as e:
-            QMessageBox.critical(self, "Ошибка загрузки данных", f"Ошибка при загрузке Laliga.csv: {str(e)}")
-            raise
+        """Инициализация моделей предсказания"""
+        self.predictor = FootballMatchPredictor("football.csv")
+        self.stats_manager = StatisticsManager(df=self.predictor.df)
+        self.graphs_manager = GraphsManager(self.stats_manager, self)
+        self.odds_predictor = OddsMatchPredictor("Laliga.csv")
+        self.odds_predictor.train_model()
 
     def setup_window(self):
         """Настройка основного окна"""
@@ -108,12 +94,6 @@ class FootballPredictorApp(QMainWindow):
         print(f"Переключено на вкладку {index + 1}")
 
         if index == 0:  # Прогноз
-            """
-            Не требует автоматического обновления данных при переключении, потому что:
-            Все элементы (команды, коэффициенты, режим) уже синхронизированы через другие обработчики.
-            Прогноз строится только по нажатию кнопки "Прогноз".
-            Нет необходимости что-то обновлять автоматически при каждом переходе на эту вкладку.
-            """
             pass
         elif index == 1:  # Аналитика
             home = self.home_combo.currentText()
@@ -221,44 +201,30 @@ class FootballPredictorApp(QMainWindow):
     lambda: self.sync_team_selection(away_team=self.away_combo.currentText()))
     
     def sync_team_selection(self, home_team=None, away_team=None):
-        """Синхронизация выбора команд между вкладками с минимизацией лишних сигналов"""
+        """Синхронизация выбора команд между вкладками"""
 
         try:
-            # Обновляем значения в комбобоксах, если явно переданы новые значения и они отличаются
-            if home_team and self.home_combo.currentText() != home_team:
+            # Обновляем значения в комбобоксах, если явно переданы новые значения
+            if home_team:
                 self.home_combo.setCurrentText(home_team)
-            if away_team and self.away_combo.currentText() != away_team:
+            if away_team:
                 self.away_combo.setCurrentText(away_team)
             
             # Получаем актуальные значения
             current_home = home_team if home_team else self.home_combo.currentText()
             current_away = away_team if away_team else self.away_combo.currentText()
-
-            # Проверяем, что вкладки уже созданы
-            if not hasattr(self, 'tab_analytics') or not hasattr(self, 'tab_graphs'):
-                return
-            
-            # Проверка на одинаковые команды 
-            if current_home == current_away:
-                if not getattr(self, "_same_team_warning_shown", False):
-                    self._same_team_warning_shown = True
-                    QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
-                return
-            self._same_team_warning_shown = False
             
             # Синхронизируем все вкладки
             for tab in [self.tab_analytics, self.tab_graphs]:
                 if tab and hasattr(tab, 'home_combo'):
-                    if tab.home_combo.currentText() != current_home:
-                        tab.home_combo.blockSignals(True)
-                        tab.home_combo.setCurrentText(current_home)
-                        tab.home_combo.blockSignals(False)
-                        
+                    tab.home_combo.blockSignals(True)
+                    tab.home_combo.setCurrentText(current_home)
+                    tab.home_combo.blockSignals(False)
+                    
                 if tab and hasattr(tab, 'away_combo'):
-                    if tab.away_combo.currentText() != current_away:
-                        tab.away_combo.blockSignals(True)
-                        tab.away_combo.setCurrentText(current_away)
-                        tab.away_combo.blockSignals(False)
+                    tab.away_combo.blockSignals(True)
+                    tab.away_combo.setCurrentText(current_away)
+                    tab.away_combo.blockSignals(False)
                 
                 # Обновляем данные
                 if tab == self.tab_analytics:
