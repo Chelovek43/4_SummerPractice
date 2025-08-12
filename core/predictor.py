@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
+from core.draw_binary import DrawBinaryClassifier, add_features
+
 from sklearn.preprocessing import LabelEncoder # Кодирование категориальных признаков
 from sklearn.preprocessing import StandardScaler # Нормализация числовых признаков
 from sklearn.model_selection import train_test_split # Разделение данных на тренировочные и тестовые
 
 # Для самой модели
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report, precision_recall_curve, roc_curve, auc, average_precision_score
+from sklearn.metrics import accuracy_score, classification_report, f1_score
 
 
 from sklearn.linear_model import PoissonRegressor
@@ -47,62 +49,57 @@ class FootballMatchPredictor:
             "HomeForm", "AwayForm", "HomeAttack", "AwayDefense",
             "HeadToHeadWinRate", "HomeLast3Goals", "AwayLast3Conceded"
         ]
+        features = self.rf_features
         self.base_model, self.close_model = self.train_random_forest_models()
     
     def load_and_prepare_data(self, data_path):
         """
-        Загрузка и подготовка данных.
-        
-        Args:
-            data_path (str): Путь к файлу с данными
-            
-        Returns:
-            pd.DataFrame: Подготовленный DataFrame
+        Загрузка и подготовка данных без data leakage.
         """
         df = pd.read_csv(data_path)
+        df = df.sort_values("Date").reset_index(drop=True)
 
         # Создаем необходимые столбцы для результатов
-        df['HomeWin'] = (df['FTR'] == 'H').astype(int)  # 1 если домашняя победа
-        df['AwayWin'] = (df['FTR'] == 'A').astype(int)  # 1 если гостевая победа
-        df['Draw'] = (df['FTR'] == 'D').astype(int)     # 1 если ничья
-        
-        # Создаем временный числовой столбец для результатов
+        df['HomeWin'] = (df['FTR'] == 'H').astype(int)
+        df['AwayWin'] = (df['FTR'] == 'A').astype(int)
+        df['Draw'] = (df['FTR'] == 'D').astype(int)
         df["FTR_numeric"] = df["FTR"].map({"H": 1, "D": 0.5, "A": 0})
 
-        # Форма команд (последние 5 матчей)
+        # Rolling-признаки только по прошлым матчам (shift(1)), теперь через .transform
         df["HomeForm"] = (
             df.groupby("HomeTeam")["FTR_numeric"]
-            .rolling(5, min_periods=1)
-            .mean()
-            .reset_index(level=0, drop=True))
-        
+            .transform(lambda x: x.shift(1).rolling(5, min_periods=1).mean())
+        )
         df["AwayForm"] = (
             df.groupby("AwayTeam")["FTR_numeric"]
-            .rolling(5, min_periods=1)
-            .mean()
-            .reset_index(level=0, drop=True))
-        
-        # Средние показатели атаки и защиты
-        df["HomeAttack"] = df.groupby("HomeTeam")["FTHG"].transform(
-            lambda x: x.rolling(5, min_periods=1).mean())
-        df["AwayDefense"] = df.groupby("AwayTeam")["FTHG"].transform(
-            lambda x: x.rolling(5, min_periods=1).mean())
-        
-        # Последние 3 матча
-        df['HomeLast3Goals'] = df.groupby('HomeTeam')['FTHG'].rolling(3).mean().reset_index(level=0, drop=True)
-        df['AwayLast3Conceded'] = df.groupby('AwayTeam')['FTHG'].rolling(3).mean().reset_index(level=0, drop=True)
-        
-        # История личных встреч
+            .transform(lambda x: x.shift(1).rolling(5, min_periods=1).mean())
+        )
+        df["HomeAttack"] = (
+            df.groupby("HomeTeam")["FTHG"]
+            .transform(lambda x: x.shift(1).rolling(5, min_periods=1).mean())
+        )
+        df["AwayDefense"] = (
+            df.groupby("AwayTeam")["FTHG"]
+            .transform(lambda x: x.shift(1).rolling(5, min_periods=1).mean())
+        )
+        df["HomeLast3Goals"] = (
+            df.groupby("HomeTeam")["FTHG"]
+            .transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean())
+        )
+        df["AwayLast3Conceded"] = (
+            df.groupby("AwayTeam")["FTHG"]
+            .transform(lambda x: x.shift(1).rolling(3, min_periods=1).mean())
+        )
+
+        # История личных встреч только по прошлым матчам
         df = self.calculate_head_to_head(df)
-        
+
         # Заполнение пропусков
-        for col in ['HomeAttack', 'AwayDefense', 'HomeLast3Goals', 'AwayLast3Conceded']:
+        for col in ['HomeAttack', 'AwayDefense', 'HomeLast3Goals', 'AwayLast3Conceded', 'HomeForm', 'AwayForm']:
             df[col] = df[col].fillna(df[col].mean())
-            
+
         return df
-    
-    
-    
+
     def train_random_forest_models(self):
         """
         Обучение моделей Random Forest с выводом метрик.
@@ -141,6 +138,7 @@ class FootballMatchPredictor:
             (abs(self.df['HomeForm'] - self.df['AwayForm']) < 0.27) &
             (abs(self.df['HomeAttack'] - self.df['AwayDefense']) < 0.37)
         )
+        #print("Количество close matches:", close_matches_mask.sum(), "из", len(df))
         X_close = self.df.loc[close_matches_mask, self.rf_features]
         y_close = self.df.loc[close_matches_mask, target]
         
@@ -181,103 +179,38 @@ class FootballMatchPredictor:
         
         return base_model, close_model
     
-    def predict_with_rf(self, home_team, away_team):
-
-        """Прогноз с использованием комбинированной модели Random Forest"""
-        try:
-            # Получаем последние данные команд с проверкой на существование
-            home_matches = self.df[self.df['HomeTeam'] == home_team]
-            away_matches = self.df[self.df['AwayTeam'] == away_team]
-            
-            if len(home_matches) == 0:
-                raise ValueError(f"Нет данных о домашних матчах для команды {home_team}")
-            if len(away_matches) == 0:
-                raise ValueError(f"Нет данных о гостевых матчах для команды {away_team}")
-                
-            home_data = self.df[self.df['HomeTeam'] == home_team].iloc[-1]
-            away_data = self.df[self.df['AwayTeam'] == away_team].iloc[-1]
-
-            # Подготовка фичей для текущего матча
-            match_features = pd.DataFrame([{
-                'HomeForm': home_data['HomeForm'],
-                'AwayForm': away_data['AwayForm'],
-                'HomeAttack': home_data['HomeAttack'],
-                'AwayDefense': away_data['AwayDefense'],
-                'HeadToHeadWinRate': self.calculate_head_to_head(self.df, home_team, away_team),
-                'HomeLast3Goals': home_data['HomeLast3Goals'],
-                'AwayLast3Conceded': away_data['AwayLast3Conceded']
-            }])
-
-            # Проверка, является ли матч "близким"
-            is_close_match = (
-                (abs(home_data['HomeForm'] - away_data['AwayForm']) < 0.27) &
-                (abs(home_data['HomeAttack'] - away_data['AwayDefense']) < 0.37))
-            
-            # Выбор модели
-            model = self.close_model if is_close_match else self.base_model
-            model_name = "Модель для ничьих" if is_close_match else "Основная модель"
-
-            # Прогноз
-            probabilities = model.predict_proba(match_features[self.rf_features])[0]
-            outcome = model.predict(match_features[self.rf_features])[0]
-
-            return {
-                'predicted_outcome': outcome,
-                'probabilities': {
-                    'home_win': probabilities[2],
-                    'draw': probabilities[1],
-                    'away_win': probabilities[0]
-                },
-                'model_used': model_name,
-                'is_close_match': is_close_match
-            }
-            
-        except Exception as e:
-            print(f"Ошибка в predict_with_rf: {str(e)}")
-            raise
+    
     
     def calculate_head_to_head(self, df, home_team=None, away_team=None):
         """
-        Универсальный расчет статистики личных встреч.
-        
-        Args:
-            df (pd.DataFrame): Исходный DataFrame
-            home_team (str, optional): Если None - обрабатывает весь DataFrame
-            away_team (str, optional): Если None - обрабатывает весь DataFrame
-            
-        Returns:
-            pd.DataFrame или float: В зависимости от режима вызова
+        Универсальный расчет head-to-head только по прошлым матчам.
         """
-        # Режим расчета для конкретной пары команд
         if home_team is not None and away_team is not None:
+            # Для одного матча (например, будущего)
             h2h_matches = df[
-                ((df['HomeTeam'] == home_team) & (df['AwayTeam'] == away_team)) |
-                ((df['HomeTeam'] == away_team) & (df['AwayTeam'] == home_team))
+                (((df['HomeTeam'] == home_team) & (df['AwayTeam'] == away_team)) |
+                 ((df['HomeTeam'] == away_team) & (df['AwayTeam'] == home_team)))
+                & (df['FTR'].notna())
             ]
-            
             if len(h2h_matches) == 0:
                 return 0.5
-                
             win_rates = []
             for _, row in h2h_matches.iterrows():
                 if row['HomeTeam'] == home_team:
                     win_rates.append(1 if row['FTR'] == 'H' else (0.5 if row['FTR'] == 'D' else 0))
                 else:
                     win_rates.append(1 if row['FTR'] == 'A' else (0.5 if row['FTR'] == 'D' else 0))
-            
             return np.mean(win_rates)
-        
-        # Режим обработки всего DataFrame
         else:
+            # Для всего DataFrame
+            df = df.copy()
             df['HeadToHeadWinRate'] = 0.5
             for i, row in df.iterrows():
                 home = row['HomeTeam']
                 away = row['AwayTeam']
-                
                 prev_matches = df.iloc[:i]
                 win_rate = self.calculate_head_to_head(prev_matches, home, away)
                 df.at[i, 'HeadToHeadWinRate'] = win_rate
-                
             return df
     
     def train_poisson_models(self):
@@ -299,50 +232,44 @@ class FootballMatchPredictor:
         
         return home_model, away_model, features
     
-    def predict_match(self, home_team, away_team, n_simulations=10000):
+    def predict_with_rf(self, home_team, away_team, match_date=None):
         """
-        Прогноз для конкретного матча.
-        
-        Args:
-            home_team (str): Название домашней команды
-            away_team (str): Название гостевой команды
-            n_simulations (int): Количество симуляций для Монте-Карло
-            
-        Returns:
-            dict: Результаты прогноза с ожидаемым счетом, вероятностями исходов и вероятными счетами
-            
-        Raises:
-            ValueError: Если одна из команд не найдена в данных
+        Прогноз для будущего матча с использованием честных rolling-признаков и head-to-head.
         """
-        # Проверка наличия команд в данных
-        if home_team not in self.df['HomeTeam'].values:
-            raise ValueError(f"Домашняя команда '{home_team}' не найдена в данных")
-        if away_team not in self.df['AwayTeam'].values:
-            raise ValueError(f"Гостевая команда '{away_team}' не найдена в данных")
-        
-        # Получаем последние данные команд
-        home_data = self.df[self.df['HomeTeam'] == home_team].iloc[-1]
-        away_data = self.df[self.df['AwayTeam'] == away_team].iloc[-1]
-        
-        # Подготовка признаков
-        match_features = pd.DataFrame([{
-            'HomeAttack': home_data['HomeAttack'],
-            'AwayDefense': away_data['AwayDefense'],
-            'HomeLast3Goals': home_data['HomeLast3Goals'],
-            'AwayLast3Conceded': away_data['AwayLast3Conceded']
-        }])
-        
-        # Прогноз ожидаемых голов
+        try:
+            match_features = self.get_last_features_for_match(home_team, away_team, match_date)
+            is_close_match = (
+                abs(match_features["HomeForm"].iloc[0] - match_features["AwayForm"].iloc[0]) < 0.27 and
+                abs(match_features["HomeAttack"].iloc[0] - match_features["AwayDefense"].iloc[0]) < 0.37
+            )
+            model = self.close_model if is_close_match else self.base_model
+            model_name = "Модель для ничьих" if is_close_match else "Основная модель"
+            probabilities = model.predict_proba(match_features[self.rf_features])[0]
+            outcome = model.predict(match_features[self.rf_features])[0]
+            return {
+                'predicted_outcome': outcome,
+                'probabilities': {
+                    'home_win': probabilities[2],
+                    'draw': probabilities[1],
+                    'away_win': probabilities[0]
+                },
+                'model_used': model_name,
+                'is_close_match': is_close_match
+            }
+        except Exception as e:
+            print(f"Ошибка в predict_with_rf: {str(e)}")
+            raise
+
+    def predict_match(self, home_team, away_team, match_date=None, n_simulations=10000):
+        """
+        Прогноз для будущего матча с использованием Пуассона (rolling-признаки только по прошлым матчам).
+        """
+        match_features = self.get_last_features_for_match(home_team, away_team, match_date)
         home_goals = self.home_model.predict(match_features[self.features])[0]
         away_goals = self.away_model.predict(match_features[self.features])[0]
-        
-        # Расчет вероятностей исходов
         home_win_prob, draw_prob, away_win_prob = self.calculate_outcome_probabilities(
             home_goals, away_goals)
-        
-        # Моделирование вероятных счетов
         likely_scores = self.simulate_scores(home_goals, away_goals, n_simulations)
-        
         return {
             'teams': {
                 'home': home_team,
@@ -410,4 +337,138 @@ class FootballMatchPredictor:
         home_teams = sorted(self.df['HomeTeam'].unique().tolist())
         away_teams = sorted(self.df['AwayTeam'].unique().tolist())
         return home_teams, away_teams
+    
+    def get_last_features_for_match(predictor, home_team, away_team, match_date=None):
+        """
+        Получить rolling-признаки и head-to-head для будущего матча.
+        Если match_date не указана, берется конец истории.
+        """
+        df_hist = predictor.df
+        if match_date is not None:
+            df_hist = df_hist[df_hist["Date"] < match_date]
+
+        # Последние значения rolling-признаков для обеих команд
+        home_hist = df_hist[df_hist["HomeTeam"] == home_team]
+        away_hist = df_hist[df_hist["AwayTeam"] == away_team]
+        if home_hist.empty or away_hist.empty:
+            raise ValueError("Недостаточно истории для одной из команд")
+
+        home_data = home_hist.iloc[-1]
+        away_data = away_hist.iloc[-1]
+
+        # Head-to-head только по прошлым матчам
+        h2h = predictor.calculate_head_to_head(df_hist, home_team, away_team)
+
+        features = {
+            "HomeForm": home_data["HomeForm"],
+            "AwayForm": away_data["AwayForm"],
+            "HomeAttack": home_data["HomeAttack"],
+            "AwayDefense": away_data["AwayDefense"],
+            "HeadToHeadWinRate": h2h,
+            "HomeLast3Goals": home_data["HomeLast3Goals"],
+            "AwayLast3Conceded": away_data["AwayLast3Conceded"],
+        }
+        return pd.DataFrame([features])
+    
+    def combined_predict(self, draw_clf, home_team, away_team, match_date, draw_threshold=None):
+        """
+        Комбинированный прогноз: если вероятность ничьей по бинарному классификатору выше порога,
+        то прогнозируется ничья, иначе используется результат RF-модели.
+
+        Args:
+            draw_clf (DrawBinaryClassifier): обученный бинарный классификатор ничьих
+            home_team (str): название домашней команды
+            away_team (str): название гостевой команды
+            match_date (str или None): дата матча
+            draw_threshold (float или None): порог вероятности ничьей (если None — берётся оптимальный)
+
+        Returns:
+            dict: {
+                'predicted_outcome': str,
+                'draw_proba': float,
+                'rf_probabilities': dict,
+                'model_used': str
+            }
+        """
+        X_upcoming = self.get_last_features_for_match(home_team, away_team, match_date)
+        draw_proba = draw_clf.predict_proba(X_upcoming)[0]
+        threshold = draw_clf.best_threshold if draw_threshold is None else draw_threshold
+
+    
+        print("home_team:", home_team)
+        print("away_team:", away_team)
+        print("match_date:", match_date)
+        print("X_upcoming:", X_upcoming)
+        print("draw_proba:", draw_proba)
+        print("threshold:", threshold)
+
+        if draw_proba > threshold:
+            return {
+                'predicted_outcome': 'D',
+                'draw_proba': draw_proba,
+                'rf_probabilities': None,
+                'model_used': 'DrawBinaryClassifier'
+            }
+        else:
+            rf_pred = self.predict_with_rf(home_team, away_team, match_date)
+            return {
+                'predicted_outcome': rf_pred['predicted_outcome'],
+                'draw_proba': draw_proba,
+                'rf_probabilities': rf_pred['probabilities'],
+                'model_used': rf_pred['model_used']
+            }
+        
+    @staticmethod
+    def find_best_close_thresholds(
+        df,
+        rf_features,
+        base_model,
+        close_model,
+        target_col="FTR",
+        metric="accuracy",
+        form_range=(0.05, 0.5, 10),
+        attack_range=(0.05, 0.5, 10),
+    ):
+        """
+        Перебирает значения порогов для определения close match и выбирает лучшие по заданной метрике.
+        """
+        best_score = -np.inf
+        best_form_thr = None
+        best_attack_thr = None
+
+        form_thresholds = np.linspace(*form_range)
+        attack_thresholds = np.linspace(*attack_range)
+
+        X = df[rf_features]
+        y = df[target_col]
+
+        total = len(form_thresholds) * len(attack_thresholds)
+        counter = 0
+
+        for form_thr in form_thresholds:
+            for attack_thr in attack_thresholds:
+                counter += 1
+                print(f"Перебор: {counter}/{total} (form_thr={form_thr:.3f}, attack_thr={attack_thr:.3f})")
+                preds = []
+                for i, row in X.iterrows():
+                    is_close = (
+                        abs(row["HomeForm"] - row["AwayForm"]) < form_thr and
+                        abs(row["HomeAttack"] - row["AwayDefense"]) < attack_thr
+                    )
+                    model = close_model if is_close else base_model
+                    pred = model.predict(pd.DataFrame([row]))[0]
+                    preds.append(pred)
+                if metric == "accuracy":
+                    score = accuracy_score(y, preds)
+                elif metric == "f1":
+                    score = f1_score(y, preds, average="macro")
+                else:
+                    raise ValueError("Unknown metric")
+                if score > best_score:
+                    best_score = score
+                    best_form_thr = form_thr
+                    best_attack_thr = attack_thr
+
+        print(f"Лучшие пороги: form={best_form_thr:.3f}, attack={best_attack_thr:.3f}, {metric}={best_score:.4f}")
+        return best_form_thr, best_attack_thr, best_score
     
