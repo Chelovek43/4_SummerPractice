@@ -1,14 +1,19 @@
 import os
-from PyQt6.QtCore import Qt, QSettings
+import pandas as pd
+from PyQt6.QtCore import Qt, QSettings, QDate
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QLabel, QComboBox, QPushButton, QTextEdit,
-    QMessageBox, QLineEdit, QTabWidget
+    QMessageBox, QLineEdit, QTabWidget, QDateEdit
 )
 from PyQt6.QtGui import QDoubleValidator
 
+from sklearn.model_selection import train_test_split
+
 from core.predictor import FootballMatchPredictor
 from core.odds_predictor import OddsMatchPredictor
+from core.draw_binary import add_features
+from core.draw_binary import DrawBinaryClassifier 
 from ui.graphics_and_statictic import StatsGraphManager
 from stats.statistics import StatisticsManager
 from stats.graphics import GraphsManager
@@ -48,6 +53,20 @@ class FootballPredictorApp(QMainWindow):
             QMessageBox.critical(self, "Ошибка загрузки данных", f"Ошибка при загрузке Laliga.csv: {str(e)}")
             raise
 
+        features = [
+        "HomeForm", "AwayForm", "HomeAttack", "AwayDefense",
+        "HeadToHeadWinRate", "HomeLast3Goals", "AwayLast3Conceded"
+        ]
+        df_fit = self.predictor.df.dropna(subset=features + ["FTR"])
+        X = df_fit[features]
+        y = (df_fit["FTR"] == "D").astype(int)
+        
+        X_train, X_val, y_train, y_val = train_test_split(
+            X, y, test_size=0.1, random_state=42, stratify=y
+        )
+        self.draw_clf = DrawBinaryClassifier(features=features)
+        self.draw_clf.fit(df_fit, X_val=X_val, y_val=y_val, autotune_threshold=True, plot=True)
+
     def setup_window(self):
         """Настройка основного окна"""
         self.setWindowTitle("Football Match Predictor")
@@ -81,6 +100,7 @@ class FootballPredictorApp(QMainWindow):
         self.setup_mode_switch()      # Переключатель между игровыми данными и коэффициентами
         self.setup_odds_inputs()      # Поля ввода коэффициентов
         self.setup_team_selection()   # Выбор команд
+        self.setup_date_selection()   # Выбор даты
         self.setup_predict_button()   # Кнопка "Прогноз"
         self.load_teams()             # Загрузка списка команд
         self.setup_result_display()   # Область вывода результата
@@ -276,6 +296,23 @@ class FootballPredictorApp(QMainWindow):
         except Exception as e:
             print(f"Ошибка синхронизации: {e}")
 
+    def setup_date_selection(self):
+        """
+        Добавляет поле для выбора даты матча с календарём (QDateEdit).
+        """
+        layout = QHBoxLayout()
+        label = QLabel("Дата матча:")
+        self.date_edit = QDateEdit()
+        self.date_edit.setCalendarPopup(True)
+        self.date_edit.setDisplayFormat("yyyy-MM-dd")
+        self.date_edit.setDate(QDate.currentDate())
+        self.date_edit.setToolTip("Выберите дату матча (по умолчанию — сегодня)")
+
+        layout.addWidget(label)
+        layout.addWidget(self.date_edit)
+        layout.addStretch()
+        self.predict_layout.addLayout(layout)
+
     def setup_predict_button(self):
         """Настройка кнопки прогноза"""
 
@@ -364,20 +401,33 @@ class FootballPredictorApp(QMainWindow):
             self.predict_by_odds()
 
     def predict_by_teams(self):
-        """Прогноз по командам"""
         home_team = self.home_combo.currentText()
         away_team = self.away_combo.currentText()
-        
-        # Проверяем, что выбраны разные команды
         if home_team == away_team:
             QMessageBox.warning(self, "Ошибка", "Команды не должны быть одинаковыми!")
             return
-        
+
+        match_qdate = self.date_edit.date()
+        match_date = match_qdate.toString("yyyy-MM-dd") if match_qdate else None
+
         try:
-            prediction = self.predictor.predict_match(home_team, away_team)
-            self.display_prediction(prediction)
+            rf_result = self.predictor.predict_with_rf(home_team, away_team, match_date=match_date)
+            poisson_result = self.predictor.predict_match(home_team, away_team, match_date=match_date)
+            combined_result = self.predictor.combined_predict(
+                self.draw_clf, home_team, away_team, match_date
+            )
+
+            text_blocks = [
+                self.display_prediction(poisson_result, match_date=match_date),
+                "",
+                self.display_combined_prediction(combined_result, home_team, away_team, match_date)
+            ]
+            self.result_display.setPlainText("\n".join(text_blocks))
+
         except Exception as e:
             QMessageBox.critical(self, "Ошибка", f"Ошибка прогноза: {str(e)}")
+
+    
 
     def predict_by_odds(self):
         """Прогноз по коэффициентам"""
@@ -460,7 +510,7 @@ class FootballPredictorApp(QMainWindow):
 
 
     # TODO: кэшировать типа @lru_cache(maxsize=128)  
-    def display_prediction(self, prediction):
+    def display_prediction(self, prediction, match_date=None):
         """
         Отображение прогноза по командам (игровые данные)
 
@@ -473,11 +523,10 @@ class FootballPredictorApp(QMainWindow):
         try:
             home = prediction['teams']['home']
             away = prediction['teams']['away']
-            
-            rf_pred = self.predictor.predict_with_rf(home, away)
-
+            rf_pred = self.predictor.predict_with_rf(home, away, match_date=match_date)
+            date_str = f" на дату {match_date}" if match_date else ""
             text = [
-                f"=== Прогноз на матч {home} vs {away} ===",
+                f"=== Прогноз на матч {home} vs {away}{date_str} ===",
                 "",
                 "=== Модель Пуассона ===",
                 f"Ожидаемый счёт: {prediction['expected_score']['home']} - {prediction['expected_score']['away']}",
@@ -490,13 +539,9 @@ class FootballPredictorApp(QMainWindow):
                 "",
                 self.get_average_prediction_text(prediction, home, away, rf_pred)
             ]
-            
-            self.result_display.setPlainText("\n".join(text))
-            
+            return "\n".join(text)
         except Exception as e:
-            QMessageBox.critical(self, "Ошибка", f"Не удалось отобразить прогноз: {str(e)}")
-
-    
+            return f"Ошибка: {str(e)}"
 
     def display_odds_prediction(self, prediction):
         """
@@ -519,6 +564,15 @@ class FootballPredictorApp(QMainWindow):
         ]
         
         self.result_display.setPlainText("\n".join(text))
+
+    def display_combined_prediction(self, result, home, away, match_date=None):
+        date_str = f" на дату {match_date}" if match_date else ""
+        lines = [
+            f"=== Комбинированный прогноз на матч {home} vs {away}{date_str} ===",
+            f"Вероятность ничьей по бинарному классификатору: {result['draw_proba']:.2%}"
+        ]
+        rf_probs = result.get('rf_probabilities')
+        return "\n".join(lines)
 
     # Тест настроек сохранения выбора
     def restore_user_settings(self):
