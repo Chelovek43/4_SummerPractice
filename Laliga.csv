@@ -375,6 +375,88 @@ match_id,date,status,home_team,away_team,home_score,away_score,home_ht_score,awa
 721112,2022-05-22T18:00:00+00:00,8,Osasuna,Mallorca,0,2,0,0,La Liga,Regular Season - 38,2.8,3.4,2.5,,,,,,,1,6,63,37,5,7,4-3-3,5-3-2,Arrasate,J. Aguirre
 721113,2022-05-20T19:00:00+00:00,8,Real Madrid,Real Betis,0,0,0,0,La Liga,Regular Season - 38,1.5,5.0,5.5,,,,,,,3,2,52,48,8,5,4-3-3,4-2-3-1,C. Ancelotti,M. Pellegrini
 721114,2022-05-22T20:00:00+00:00,8,Real Sociedad,Atletico Madrid,1,2,0,0,La Liga,Regular Season - 38,2.7,3.1,2.8,,,,,,,3,5,62,38,3,2,4-3-1-2,3-1-4-2,Imanol Alguacil,D. Simeone
+721339,2021-10-04T19:00:00+00:00,8,Girona,Almeria,1,2,0,0,Segunda División,Regular Season - 8,,,,,,,,,,3,4,51,49,5,4,,,,
+721358,2021-10-09T16:15:00+00:00,8,Almeria,Las Palmas,1,1,1,0,Segunda División,Regular Season - 9,,,,,,,,,,5,4,40,60,9,4,,,,
+721399,2021-10-29T19:00:00+00:00,8,Almeria,Leganes,1,0,1,0,Segunda División,Regular Season - 13,,,,,,,,,,1,5,53,47,4,10,,,,
+721441,2021-11-20T19:30:00+00:00,8,Almeria,Valladolid,3,1,0,1,Segunda División,Regular Season - 17,,,,,,,,,,9,1,60,40,8,3,,,,
+721505,2022-01-09T20:30:00+00:00,8,Las Palmas,Almeria,1,1,1,0,Segunda División,Regular Season - 23,,,,,,,,,,2,2,59,41,1,3,,,,
+721613,2022-03-27T19:00:00+00:00,8,Almeria,Girona,0,1,0,1,Segunda División,Regular Season - 33,,,,,,,,,,4,6,60,40,5,2,4-2-3-1,5-3-2,Rubí,Míchel
+721652,2022-04-16T16:15:00+00:00,8,Valladolid,Almeria,2,2,1,1,Segunda División,Regular Season - 36,,,,,,,,,,6,2,57,43,6,8,4-3-3,4-2-3-1,Pacheta,Rubí
+721715,2022-05-29T18:00:00+00:00,8,Leganes,Almeria,2,2,2,1,Segunda División,Regular Season - 42,,,,,,,,,,3,6,35,65,2,9,3-4-3,4-2-3-1,M. Nafti,Rubí
+878328,2022-08-13T19:00:00+00:00,8,Leganes,Alaves,1,2,0,1,Segunda División,Regular Season - 1,,,,,,,,,,2,3,62,38,3,3,4-3-3,4-3-3,Imanol Idiakez,Luis García
+878355,2022-09-03T12:00:00+00:00,8,Alaves,Las Palmas,1,1,1,0,Segunda División,Regular Season - 4,,,,,,,,,,3,1,23,77,1,3,4-2-3-1,4-2-3-1,Luis García,
+878397,2022-09-26T19:00:00+00:00,8,Las Palmas,Granada CF,2,0,1,0,Segunda División,Regular Season - 7,,,,,,,,,,5,1,59,41,4,8,4-2-3-1,4-2-3-1,,Karanka
+878467,2022-11-03T20:00:00+00:00,8,Granada CF,Levante,0,0,0,0,Segunda División,Regular Season - 14,,,,,,,,,,3,1,56,44,8,1,4-2-3-1,4-3-3,Karanka,Javi Calleja
+878506,2022-11-27T15:00:00+00:00,8,Leganes,Granada CF,1,0,0,0,Segunda División,Regular Season - 17,,,,,,,,,,2,1,65,35,5,3,4-4-2,5-4-1,Imanol Idiakez,Karanka
+878512,2022-12-02T20:30:00+00:00,8,Granada CF,Alaves,3,1,2,1,Segunda División,Regular Season - 18,,,,,,,,,,7,2,77,23,4,2,4-3-3,4-3-3,Karanka,Luis García
+878531,2022-12-12T20:00:00+00:00,8,Alaves,Levante,0,2,0,2,Segunda División,Regular Season - 20,,,,,,,,,,1,5,50,50,6,2,4-4-2,4-2-3-1,Luis García,Javi Calleja
+878572,2023-01-14T20:00:00+00:00,8,Levante,Granada CF,3,1,2,1,Segunda División,Regular Season - 23,,,,,,,,,,5,4,45,55,7,1,4-3-3,4-1-4-1,Javi Calleja,Paco López
+878709,2023-04-15T14:15:00+00:00,8,Granada CF,Las Palmas,2,1,2,0,Segunda División,Regular Season - 36,,,,,,,,,,3,3,38,62,3,7,4-4-2,4-5-1,Paco López,
+878718,2023-04-23T19:00:00+00:00,8,Alaves,Leganes,2,1,1,0,Segunda División,Regular Season - 37,,,,,,,,,,3,1,53,47,6,0,4-3-3,4-2-3-1,Luis García,
+878733,2023-04-29T14:15:00+00:00,8,Levante,Alaves,2,0,2,0,Segunda División,Regular Season - 38,,,,,,,,,,7,0,48,52,11,8,4-2-2-2,4-2-3-1,Javi Calleja,Luis García
+878740,2023-05-05T19:00:00+00:00,8,Alaves,Granada CF,1,1,0,1,Segunda División,Regular Season - 39,,,,,,,,,,5,2,51,49,6,5,4-4-2,4-4-2,Luis García,Paco López
+878775,2023-05-27T19:00:00+00:00,8,Granada CF,Leganes,2,0,1,0,Segunda División,Regular Season - 42,,,,,,,,,,4,1,45,55,2,2,4-3-3,4-2-3-1,Paco López,
+878778,2023-05-27T19:00:00+00:00,8,Las Palmas,Alaves,0,0,0,0,Segunda División,Regular Season - 42,,,,,,,,,,1,2,64,36,2,2,4-5-1,4-2-3-1,,Luis García
+1031260,2023-06-11T19:00:00+00:00,8,Alaves,Levante,0,0,0,0,Segunda División,Promotion Play-offs - Finals,,,,,,,,,,2,4,55,45,5,2,4-3-3,4-4-2,Luis García,Javi Calleja
+1031261,2023-06-17T19:00:00+00:00,8,Levante,Alaves,0,1,0,0,Segunda División,Promotion Play-offs - Finals,,,,,,,,,,3,6,51,49,5,6,4-4-2,4-4-2,Javi Calleja,Luis García
+1045240,2023-09-08T19:00:00+00:00,8,Levante,Espanyol,1,4,1,2,Segunda División,Regular Season - 5,,,,,,,,,,3,10,58,42,5,3,4-4-2,4-4-2,Javi Calleja,Luis García
+1045247,2023-09-17T16:30:00+00:00,8,Elche,Leganes,1,0,1,0,Segunda División,Regular Season - 6,,,,,,,,,,5,3,57,43,6,4,3-3-1-3,4-4-2,S. Beccacece,Borja Jiménez
+1045288,2023-10-07T19:00:00+00:00,8,Leganes,Oviedo,0,0,0,0,Segunda División,Regular Season - 10,,,,,,,,,,3,2,37,63,1,4,4-3-3,4-4-2,Borja Jiménez,Álvaro
+1045300,2023-10-14T19:00:00+00:00,8,Espanyol,Valladolid,2,0,2,0,Segunda División,Regular Season - 11,,,,,,,,,,3,3,34,66,0,5,4-4-1-1,4-1-4-1,Luis García,P. Pezzolano
+1045311,2023-10-20T19:00:00+00:00,8,Espanyol,Leganes,0,1,0,0,Segunda División,Regular Season - 12,,,,,,,,,,3,4,60,40,4,1,4-4-2,5-3-2,Luis García,Borja Jiménez
+1045343,2023-11-10T19:30:00+00:00,8,Leganes,Levante,2,1,0,1,Segunda División,Regular Season - 15,,,,,,,,,,5,3,41,59,8,7,5-3-2,4-2-3-1,Borja Jiménez,Javi Calleja
+1045360,2023-11-18T20:00:00+00:00,8,Espanyol,Elche,2,0,2,0,Segunda División,Regular Season - 16,,,,,,,,,,5,3,44,56,8,5,4-4-2,4-4-2,Luis Miguel Ramis,S. Beccacece
+1045362,2023-11-17T20:00:00+00:00,8,Valladolid,Leganes,1,1,1,0,Segunda División,Regular Season - 16,,,,,,,,,,3,3,65,35,3,6,4-4-2,5-4-1,P. Pezzolano,Borja Jiménez
+1045379,2023-12-02T20:00:00+00:00,8,Levante,Valladolid,2,1,2,1,Segunda División,Regular Season - 18,,,,,,,,,,7,3,39,61,12,6,4-1-3-2,4-4-2,Javi Calleja,P. Pezzolano
+1045383,2023-12-01T19:30:00+00:00,8,Oviedo,Espanyol,2,0,1,0,Segunda División,Regular Season - 18,,,,,,,,,,5,2,53,47,7,4,4-2-3-1,4-4-2,Luis Carrión,Luis Miguel Ramis
+1045404,2023-12-15T19:30:00+00:00,8,Oviedo,Elche,3,2,1,2,Segunda División,Regular Season - 20,,,,,,,,,,6,4,58,42,5,2,4-4-2,4-4-2,Luis Carrión,S. Beccacece
+1045431,2024-01-21T20:00:00+00:00,8,Elche,Valladolid,0,0,0,0,Segunda División,Regular Season - 23,,,,,,,,,,2,1,57,43,3,2,5-4-1,4-4-2,S. Beccacece,P. Pezzolano
+1045449,2024-01-27T17:30:00+00:00,8,Oviedo,Leganes,1,0,0,0,Segunda División,Regular Season - 24,,,,,,,,,,5,2,64,36,9,3,4-4-2,5-3-2,Luis Carrión,Borja Jiménez
+1045453,2024-02-04T17:30:00+00:00,8,Espanyol,Levante,2,1,1,0,Segunda División,Regular Season - 25,,,,,,,,,,2,5,42,58,5,6,4-4-2,4-4-2,Luis Miguel Ramis,Javi Calleja
+1045454,2024-02-03T17:30:00+00:00,8,Leganes,Valladolid,0,0,0,0,Segunda División,Regular Season - 25,,,,,,,,,,1,0,43,57,3,4,4-2-3-1,4-4-2,Borja Jiménez,P. Pezzolano
+1045470,2024-02-09T19:30:00+00:00,8,Levante,Leganes,0,0,0,0,Segunda División,Regular Season - 26,,,,,,,,,,2,2,53,47,6,3,3-4-1-2,4-4-2,Javi Calleja,Borja Jiménez
+1045494,2024-02-23T19:30:00+00:00,8,Valladolid,Oviedo,3,0,1,0,Segunda División,Regular Season - 28,,,,,,,,,,4,3,48,52,6,5,4-1-4-1,4-4-2,P. Pezzolano,Luis Carrión
+1045504,2024-03-02T17:30:00+00:00,8,Oviedo,Levante,3,2,0,1,Segunda División,Regular Season - 29,,,,,,,,,,6,3,67,33,13,5,4-2-3-1,4-4-2,Luis Carrión,Javi Calleja
+1045547,2024-03-30T13:00:00+00:00,8,Valladolid,Levante,0,0,0,0,Segunda División,Regular Season - 33,,,,,,,,,,3,1,58,42,5,4,4-3-3,4-4-2,P. Pezzolano,
+1045552,2024-04-05T18:30:00+00:00,8,Elche,Oviedo,0,2,0,1,Segunda División,Regular Season - 34,,,,,,,,,,6,4,70,30,9,4,3-5-2,4-2-3-1,S. Beccacece,Luis Carrión
+1045570,2024-04-12T18:30:00+00:00,8,Leganes,Espanyol,0,0,0,0,Segunda División,Regular Season - 35,,,,,,,,,,3,1,43,57,3,0,4-2-3-1,4-4-2,Borja Jiménez,
+1045586,2024-04-27T16:30:00+00:00,8,Elche,Espanyol,2,2,1,1,Segunda División,Regular Season - 37,,,,,,,,,,3,4,59,41,6,4,3-4-2-1,4-4-2,S. Beccacece,Manolo González
+1045614,2024-05-11T16:30:00+00:00,8,Valladolid,Espanyol,0,0,0,0,Segunda División,Regular Season - 39,,,,,,,,,,2,1,58,42,3,4,4-3-3,4-4-2,P. Pezzolano,
+1045619,2024-05-20T18:30:00+00:00,8,Espanyol,Oviedo,2,1,1,1,Segunda División,Regular Season - 40,,,,,,,,,,2,4,43,57,2,7,4-4-2,4-2-3-1,Manolo González,Luis Carrión
+1206793,2024-06-16T16:30:00+00:00,8,Oviedo,Espanyol,1,0,0,0,Segunda División,Promotion Play-offs - Finals,,,,,,,,,,4,0,51,49,1,4,4-2-3-1,4-4-2,Luis Carrión,Manolo González
+1206794,2024-06-23T16:30:00+00:00,8,Espanyol,Oviedo,2,0,2,0,Segunda División,Promotion Play-offs - Finals,,,,,,,,,,2,3,46,54,7,5,4-4-2,4-2-3-1,Manolo González,Luis Carrión
+1217517,2024-08-24T17:00:00+00:00,8,Levante,Cadiz,1,1,0,0,Segunda División,Regular Season - 2,,,,,,,,,,6,7,44,56,6,4,4-2-3-1,4-3-3,Julián Calero,Paco López
+1217548,2024-09-15T19:00:00+00:00,8,Elche,Granada CF,2,2,1,0,Segunda División,Regular Season - 5,,,,,,,,,,3,3,59,41,3,6,3-5-2,3-4-3,,Guillermo Abascal
+1217571,2024-09-29T12:00:00+00:00,8,Levante,Almeria,4,2,2,2,Segunda División,Regular Season - 7,,,,,,,,,,8,4,44,56,5,3,4-4-1-1,4-2-3-1,Julián Calero,Rubí
+1217580,2024-10-06T16:30:00+00:00,8,Levante,Oviedo,0,0,0,0,Segunda División,Regular Season - 8,,,,,,,,,,1,1,51,49,1,9,4-2-3-1,4-2-3-1,Julián Calero,Javi Calleja
+1217593,2024-10-13T14:15:00+00:00,8,Oviedo,Almeria,3,2,2,1,Segunda División,Regular Season - 9,,,,,,,,,,9,5,59,41,6,0,4-1-4-1,4-4-2,Javi Calleja,Rubí
+1217621,2024-10-26T14:15:00+00:00,8,Cadiz,Oviedo,2,0,1,0,Segunda División,Regular Season - 12,,,,,,,,,,4,1,47,53,3,7,4-4-2,4-4-2,Paco López,Javi Calleja
+1217625,2024-10-27T20:00:00+00:00,8,Granada CF,Levante,1,2,0,2,Segunda División,Regular Season - 12,,,,,,,,,,5,8,58,42,3,7,4-4-2,4-2-3-1,Fran Escribá,Julián Calero
+1217647,2024-11-08T19:30:00+00:00,8,Elche,Almeria,1,2,1,1,Segunda División,Regular Season - 14,,,,,,,,,,4,6,58,42,4,1,4-4-2,4-4-2,,Rubí
+1217661,2024-11-16T17:30:00+00:00,8,Levante,Elche,1,1,0,1,Segunda División,Regular Season - 15,,,,,,,,,,2,9,45,55,5,5,4-2-3-1,4-4-2,Julián Calero,
+1217668,2024-11-24T20:00:00+00:00,8,Elche,Oviedo,4,0,2,0,Segunda División,Regular Season - 16,,,,,,,,,,9,1,49,51,6,0,4-4-2,4-2-3-1,,Javi Calleja
+1217672,2024-11-23T15:15:00+00:00,8,Granada CF,Cadiz,0,0,0,0,Segunda División,Regular Season - 16,,,,,,,,,,3,3,55,45,5,4,4-4-2,4-4-2,Fran Escribá,Paco López
+1217675,2024-11-30T15:15:00+00:00,8,Almeria,Granada CF,2,1,0,1,Segunda División,Regular Season - 17,,,,,,,,,,6,5,55,45,7,1,4-4-2,4-4-2,Rubí,Fran Escribá
+1217694,2024-12-07T13:00:00+00:00,8,Elche,Cadiz,2,1,0,1,Segunda División,Regular Season - 18,,,,,,,,,,9,4,79,21,4,1,4-3-3,4-4-2,,Paco López
+1217706,2024-12-14T20:00:00+00:00,8,Oviedo,Granada CF,2,0,0,0,Segunda División,Regular Season - 19,,,,,,,,,,4,1,44,56,6,8,4-2-3-1,4-4-2,Javi Calleja,Fran Escribá
+1217719,2024-12-22T17:30:00+00:00,8,Almeria,Cadiz,1,1,0,1,Segunda División,Regular Season - 21,,,,,,,,,,6,4,64,36,6,0,4-2-3-1,4-2-3-1,Rubí,Gaizka Garitano
+1217731,2025-01-12T15:15:00+00:00,8,Cadiz,Levante,0,0,0,0,Segunda División,Regular Season - 22,,,,,,,,,,3,1,44,56,2,2,4-4-2,4-2-3-1,Gaizka Garitano,Julián Calero
+1217749,2025-01-18T20:00:00+00:00,8,Levante,Granada CF,3,1,1,0,Segunda División,Regular Season - 23,,,,,,,,,,6,2,45,55,2,6,4-4-2,4-4-2,Julián Calero,Fran Escribá
+1217763,2025-02-01T17:30:00+00:00,8,Almeria,Oviedo,1,1,0,1,Segunda División,Regular Season - 25,,,,,,,,,,4,2,55,45,1,3,4-2-3-1,4-1-4-1,Rubí,Javi Calleja
+1217785,2025-02-17T19:30:00+00:00,8,Almeria,Elche,1,1,0,0,Segunda División,Regular Season - 27,,,,,,,,,,3,5,37,63,4,3,4-4-2,3-4-2-1,,
+1217831,2025-03-16T17:30:00+00:00,8,Cadiz,Granada CF,1,0,1,0,Segunda División,Regular Season - 31,,,,,,,,,,4,0,47,53,6,6,4-4-2,4-4-2,Gaizka Garitano,Fran Escribá
+1217839,2025-03-14T19:30:00+00:00,8,Oviedo,Elche,1,1,0,1,Segunda División,Regular Season - 31,,,,,,,,,,1,5,48,52,4,3,4-3-3,4-2-3-1,Javi Calleja,
+1217842,2025-03-22T20:00:00+00:00,8,Granada CF,Oviedo,1,0,1,0,Segunda División,Regular Season - 32,,,,,,,,,,5,3,42,58,5,5,4-1-4-1,4-4-1-1,Fran Escribá,Javi Calleja
+1217852,2025-03-29T20:00:00+00:00,8,Almeria,Levante,1,0,0,0,Segunda División,Regular Season - 33,,,,,,,,,,3,2,57,43,10,4,4-1-4-1,4-4-2,Rubí,Julián Calero
+1217869,2025-04-05T16:30:00+00:00,8,Granada CF,Almeria,3,1,1,0,Segunda División,Regular Season - 34,,,,,,,,,,8,8,41,59,4,4,4-4-2,4-1-3-2,Fran Escribá,Rubí
+1217875,2025-04-12T16:30:00+00:00,8,Cadiz,Elche,0,1,0,0,Segunda División,Regular Season - 35,,,,,,,,,,5,4,41,59,4,5,4-2-3-1,4-2-3-1,Gaizka Garitano,
+1217903,2025-04-26T16:30:00+00:00,8,Granada CF,Elche,1,1,1,1,Segunda División,Regular Season - 37,,,,,,,,,,2,3,42,58,4,2,4-2-3-1,4-2-3-1,Fran Escribá,
+1217905,2025-04-26T14:15:00+00:00,8,Oviedo,Levante,1,0,1,0,Segunda División,Regular Season - 37,,,,,,,,,,1,2,46,54,3,4,4-4-2,4-3-3,V. Paunovic,Julián Calero
+1217919,2025-05-10T16:30:00+00:00,8,Elche,Levante,1,3,0,2,Segunda División,Regular Season - 39,,,,,,,,,,5,5,78,22,11,2,4-4-2,4-4-2,,Julián Calero
+1217921,2025-05-09T18:30:00+00:00,8,Cadiz,Almeria,2,1,0,1,Segunda División,Regular Season - 39,,,,,,,,,,3,4,64,36,9,6,4-4-2,4-2-3-1,Gaizka Garitano,Rubí
+1217957,2025-06-01T16:30:00+00:00,8,Oviedo,Cadiz,2,1,2,1,Segunda División,Regular Season - 42,,,,,,,,,,7,5,52,48,8,3,4-2-3-1,3-4-1-2,V. Paunovic,Gaizka Garitano
+1377428,2025-06-07T19:00:00+00:00,8,Almeria,Oviedo,1,2,1,1,Segunda División,Promotion Play-offs - Semi-finals,,,,,,,,,,3,4,54,46,6,4,4-2-3-1,4-2-3-1,Rubí,V. Paunovic
+1377429,2025-06-11T19:00:00+00:00,8,Oviedo,Almeria,1,1,0,1,Segunda División,Promotion Play-offs - Semi-finals,,,,,,,,,,5,6,39,61,4,5,4-2-3-1,4-1-4-1,V. Paunovic,Rubí
 878040,2022-10-19T18:00:00+00:00,8,Real Sociedad,Mallorca,1,0,1,0,La Liga,Regular Season - 10,1.55,3.94,7.91,,,,,2.11,1.8,7,3,51,49,10,7.0,4-1-3-2,5-4-1,Imanol Alguacil,J. Aguirre
 878041,2022-10-20T18:00:00+00:00,8,Osasuna,Espanyol,1,0,0,0,La Liga,Regular Season - 10,2.21,3.39,3.64,,,,,1.52,2.68,5,3,65,35,9,2.0,4-1-4-1,4-4-2,Arrasate,Diego Martínez
 878042,2022-10-24T19:00:00+00:00,8,Celta Vigo,Getafe,1,1,0,1,La Liga,Regular Season - 11,1.75,3.46,6.12,,,,,1.86,2.03,5,1,72,28,10,,4-1-3-2,5-3-2,E. Coudet,Quique Sánchez Flores
