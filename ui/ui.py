@@ -568,7 +568,7 @@ class FootballPredictorApp(QMainWindow):
     def display_combined_prediction(self, result, home, away, match_date=None):
         date_str = f" на дату {match_date}" if match_date else ""
         lines = [
-            f"=== Комбинированный прогноз на матч {home} vs {away}{date_str} ===",
+            f"=== Ничья/не-ничья прогноз на матч {home} vs {away}{date_str} ===",
             f"Вероятность ничьей по бинарному классификатору: {result['draw_proba']:.2%}"
         ]
         rf_probs = result.get('rf_probabilities')

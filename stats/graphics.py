@@ -223,7 +223,7 @@ class GraphsManager(QWidget):
             ax,
             self.team1, self.team2,
             stats1, stats2,
-            labels=['Атака хозяев', 'Защита гостей'],
+            labels=['Атака', 'Защита'],
             team1_keys=['HomeAttack', 'AwayDefense'],
             team2_keys=['HomeAttack', 'AwayDefense'],
             ylabel='Показатели',

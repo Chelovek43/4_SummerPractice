@@ -138,48 +138,45 @@ def process_match_data(match_json):
         return None
 
 
-def save_matches_range(start_id, end_id):
+def save_selected_matches(match_ids):
     """
-    Основная функция: собирает данные по диапазону матчей и сохраняет их в CSV
+    Основная функция: собирает данные по списку произвольных матчей (массив ID) и сохраняет их в CSV
     - Контролирует лимит запросов (150 подряд, затем пауза)
+    - Не прерывается при сбое парсинга отдельного матча (идёт дальше)
     - Выводит прогресс и итоговую статистику
     """
-    start_time = time.time()  # Запоминаем время начала
+    start_time = time.time()
     all_matches = []
     processed_count = 0
-    request_count = 0  # Счетчик запросов
+    request_count = 0
 
-    print(f"Начинаем обработку матчей с ID {start_id} по {end_id}")
-    for match_id in range(start_id, end_id + 1):
+    print(f"Начинаем обработку {len(match_ids)} выбранных матчей: {match_ids}")
+    for match_id in match_ids:
         print(f"Обрабатываем матч ID: {match_id}", end='\r')
-        # Проверяем лимит запросов (150 подряд)
         if request_count >= 150:
             print("\nДостигнут лимит 150 запросов. Ожидаем 62 секунды...")
-            time.sleep(62)  # Ждем чуть больше минуты для надежности
-            request_count = 0  # Сбрасываем счетчик
+            time.sleep(62)
+            request_count = 0
 
         match_json = fetch_match_data(match_id)
-        request_count += 1  # Увеличиваем счетчик после каждого запроса
+        request_count += 1
         match_data = process_match_data(match_json)
 
         if match_data:
             all_matches.append(match_data)
             processed_count += 1
+        # Если не спарсился — просто идём дальше
 
     if not all_matches:
         print("\nНе удалось получить данные ни по одному матчу")
         return
-    
-    # Создаем DataFrame из списка матчей
-    df = pd.DataFrame(all_matches)
 
-    # Создаем папку если не существует
+    df = pd.DataFrame(all_matches)
     output_dir = get_output_dir()
     print(f"Файлы будут сохраняться в: {output_dir}")
     os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f'matches_{start_id}_to_{end_id}.csv')
-
-    # Сохраняем в CSV
+    match_ids_str = "_".join(str(x) for x in match_ids[:3]) + ("..." if len(match_ids) > 3 else "")
+    output_file = os.path.join(output_dir, f'matches_selected_{match_ids_str}.csv')
     df.to_csv(output_file, index=False, encoding='utf-8')
     print(f"\nГотово! Обработано матчей: {processed_count}")
     print(f"Результаты сохранены в: {output_file}")
@@ -188,7 +185,24 @@ def save_matches_range(start_id, end_id):
     execution_time = end_time - start_time
     print(f"\nВремя выполнения: {execution_time:.2f} секунд")
 
-# Для запуска скрипта раскомментируйте блок ниже
+# Для запуска скрипта раскомментируйте новый блок ниже
+# Пример: чтобы выбрать нужные матчи, укажите их так:
+# match_ids = [721047, 721050, 721062]  # Ваш список ID
+# save_selected_matches(match_ids)
+
 
 if __name__ == "__main__":
-    save_matches_range(START_ID, END_ID)
+    match_ids = [1206794, 1206793, 1045619, 1045614, 1045586, 1045570, 1045552, 1045547,
+                 1045504, 1045494, 1045470, 1045453, 1045454, 1045449, 1045431, 1045404,
+                 1045379, 1045383, 1045360, 1045362, 1045343, 1045311, 1045300, 1045288,
+                 1045247, 1045240, 1031261, 1031260, 878775, 878778, 878740, 878733,
+                 878718, 878709, 878572, 878531, 878512, 878506, 878467, 878397, 878355,
+                 878328, 721715, 721652, 721613, 721505, 721441, 721399, 721358, 721339,   # УКАЖИТЕ ЗДЕСЬ СВОЙ СПИСОК ID!
+
+        1377429, 1377428, 1217957, 1217919, 1217921, 1217903, 1217905, 1217875,
+                 1217869, 1217852, 1217842, 1217831, 1217839, 1217785, 1217763, 1217749,
+                 1217731, 1217719, 1217706, 1217694, 1217675, 1217668, 1217672, 1217661,
+                 1217647, 1217625, 1217621, 1217593, 1217580, 1217571, 1217548, 1217517]
+    match_ids = sorted(match_ids)  # сортировка от меньшего к большему (от старых к новым)
+    save_selected_matches(match_ids)
+    # save_matches_range(START_ID, END_ID)  # Если надо старое поведение — раскомментируйте
